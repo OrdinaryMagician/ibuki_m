@@ -19,7 +19,7 @@ If your health drops to zero, you will be incapacitated. In this state, you've g
 
 Your increased bone and muscle density make you unable to swim. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot.
 
-You're equipped with a **Forx® JetBurst™ Impulsor**, allowing you to pretty much fly wherever you want by pressing a dedicated button. A second press will disengage the jetpack. Fuel is limited, but it regenerates when not in use.
+Apart from some minimal clothing for *"modesty"* (a simple black bikini and jacket), you've got yourself the armored exoskeleton from your old WW3 days, with its mounted **Forx® JetBurst™ Impulsor** on the back. This allows you to pretty much fly wherever you want by pressing a dedicated button, then disengaging with a second press. Fuel is limited, but it regenerates when not in use.
 
 Note: **Ibuki** is 2.2m tall *(7'3" for 'mericans)*, which would generally make it difficult to move around in maps. While normal crouching is already a thing, there's also a special "auto-duck" feature that will allow her to easily fit into spots that are at least 56 map units tall, immediately fixing that issue. This feature is NOT dependent on crouching, so it won't break in maps that disable it.
 
@@ -47,13 +47,17 @@ A well-known *"edgy imitation"* of the **Heckler and Mok P7** handgun. Made famo
 
 Like its more modest counterpart, it is chambered for **9mm Parabellum**. Some sort of mechanism in the gun appears to imbue the rounds with a potent electric charge. The nature of this process is unknown.
 
-The utility key spins the gun, for coolness factor.
+Snugly held with both hands, the weapon has easily manageable recoil, making it quite useful in any situation. The gun is equipped with an under-barrel laser and flashlight combo for ease of aiming and illuminating dark areas, and also reflex sights to allow for even more precise long range aiming.
+
+Tapping the utility key toggles the flashlight. Holding the key spins the gun, just for the sake of coolness.
 
 ### Slot 3 - Ninnacht AA12 *[Pistol]*
 
 **Ibuki**'s most prized possession. She would never go out into the field without it. 12 Gauge, 300 RPM, 32-round drum mag, truly a beauty.
 
-Tap the utility key swaps between available ammo types.
+While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
+
+Tap the utility key swaps between available ammo types. Hold the key to kiss the gun. It's a good gun.
 
 ### Slot 4 - HM416 *[Shotgun]*
 
@@ -61,11 +65,15 @@ Tap the utility key swaps between available ammo types.
 
 This specific model is chambered for 6.8 SPC, rather than the usual 5.56mm that one would expect. It is considered a *"priceless jewel"* by some, one they could never part with, or replace with anything else. Truly, it is all they could ever need.
 
-Tap the utility key to switch between semi-auto and full-auto.
+This specific model has been with Ibuki since the early days, and it's been customized to her liking. 16.5" barrel with compensator, collapsible stock, holographic sight, angled foregrip, and a flashlight and laser pointer on each side, just for the sake of having it all *"pimped up"*. **Ibuki** had once experimented with giving it an under-barrel grenade launcher but it allegedly *"felt awkward to use"*.
+
+Tap the utility key to toggle the flashlight. A long hold of the utility key switches between semi-auto and full-auto.
 
 ### Slot 5 - Siesta Deliverer *[Super Shotgun]*
 
 Four barrels of blasting action. Loaded up with custom **16ga Kinylum saltshot** rounds for wonderful cyan-colored death dealing.
+
+Due to the employment of this ammunition, which for 16ga has to be packed quite dense, the receiver had to be replaced with a customized version specially ordered from **Blackmann Arms**. However this was definitely worth it in the end. Do note however that this beast makes a hell of a lot of noise, giving away your position easily.
 
 Tap the utility key to switch between single-shot and four-shot modes.
 
@@ -73,21 +81,31 @@ Tap the utility key to switch between single-shot and four-shot modes.
 
 A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big Tits)*. It's designed to handle **7.62mmMT** rounds, specifically, also of **ANFES** manufacture. **MT** ammunition is well-known for *"setting the air on fire"* as it travels, despite not containing any incendiary material.
 
+Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own.
+
+You can tap the utility key to pour any water you have in your inventory over the barrel, which might help it cool down faster (smaller bottles will be favored). Alternatively, putting it back into hammerspace also helps.
+
 ### Slot 7 - Kemet ST20 *[Rocket Launcher]*
 
 A man once thought about somehow custom-crafting **20mm tandem HEAT-MP** rounds, and despite all sane logic dictating this to be *very wrong and very not practical*, **he succeeded**. This is the only weapon ever made for that ammunition. Have fun!
 
 The fact that this weapon still exists and ammunition for it is still manufactured shows that there is **SOMEHOW** demand for something like this. The world is a strange place indeed.
 
+Holding the utility key while zoomed allows you to adjust the zoom level by also holding either primary or secondary fire.
+
 ### Slot 8 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
 
 One of humankind's proudest achievements in plasma weaponry. While it's definitely *"old-fashioned"* compared to the more modern solutions of **Nukuri** and **Xekkian** manufacture, it is sufficiently effective by human standards, having even survived the test of time through several revisions since its first introduction in the mid-2030s.
 
-Look, **Ibuki** just loves guns that have *"aged like a fine wine"*, and this is one of them.
+Look, **Ibuki** just loves guns that have *"aged like a fine wine"*, and this is one of them. One would probably also say she likes it because it's all black and red, her two favorite colors.
+
+Unlike most other plasma weapons of modern times, the Psyker doesn't need to let others know it's a plasma weapon by constantly emitting light.
 
 ### Slot 9 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
 
 Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
+
+The cannon is equipped with a side floodlight, which can be toggled with the utility key.
 
 ### Slot 0 - Areka "Boar Slayer" 50mm *[Chainsaw]*
 
@@ -201,7 +219,7 @@ As expected of an **Anarukon**, she will get back up after a while when she gets
 
 ### Nudist Mode
 
-Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is a belt to hold your Hammerspace devices and the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly.
+Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is a belt to hold your Hammerspace devices and the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly. However, to compensate, the damage resistance of oil will be more effective.
 
 Note: This doesn't affect the **Mischievous Ellen** follower. She's more than used to seeing **Ibuki** naked.
 
