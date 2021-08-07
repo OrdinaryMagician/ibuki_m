@@ -43,11 +43,11 @@ You can press the utility key to crack your knuckles. This doesn't serve any use
 
 ### Slot 2 - Shinigami ZC7 *[Pistol]*
 
-A well-known *"edgy imitation"* of the **Heckler and Mok P7** handgun. Made famous by the advertising material **Shinigami Inc.** distributed to promote the weapon, featuring a rather... *"lightly-dressed"* nun with cat ears.
+The ***"Zica Seven"*** is a well-known *"edgy imitation"* of the **Heckler and Mok P7** handgun, made famous by the advertising material **Shinigami Inc.** distributed to promote the weapon, featuring a rather... *"lightly-dressed"* nun with cat ears.
 
 Like its more modest counterpart, it is chambered for **9mm Parabellum**. Some sort of mechanism in the gun appears to imbue the rounds with a potent electric charge. The nature of this process is unknown.
 
-Snugly held with both hands, the weapon has easily manageable recoil, making it quite useful in any situation. The gun is equipped with an under-barrel laser and flashlight combo for ease of aiming and illuminating dark areas, and also reflex sights to allow for even more precise long range aiming.
+Snugly held with both hands (very snugly, considering **Ibuki**'s size), this weapon has easily manageable recoil, making it quite useful in any situation. The gun is equipped with an under-barrel laser and flashlight combo for ease of aiming and illuminating dark areas, and also reflex sights to allow for even more precise long range aiming.
 
 Tapping the utility key toggles the flashlight. Holding the key spins the gun, just for the sake of coolness.
 
@@ -57,7 +57,7 @@ Tapping the utility key toggles the flashlight. Holding the key spins the gun, j
 
 While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
 
-Tap the utility key swaps between available ammo types. Hold the key to kiss the gun. It's a good gun.
+A tap of the utility key swaps between available ammo types. Hold the key to kiss the gun. It's a good gun.
 
 ### Slot 4 - HM416 *[Shotgun]*
 
@@ -73,7 +73,7 @@ Tap the utility key to toggle the flashlight. A long hold of the utility key swi
 
 Four barrels of blasting action. Loaded up with custom **16ga Kinylum saltshot** rounds for wonderful cyan-colored death dealing.
 
-Due to the employment of this ammunition, which for 16ga has to be packed quite dense, the receiver had to be replaced with a customized version specially ordered from **Blackmann Arms**. However this was definitely worth it in the end. Do note however that this beast makes a hell of a lot of noise, giving away your position easily.
+Due to the employment of this ammunition, which for 16ga has to be packed quite dense, the receiver had to be replaced with a customized version specially ordered from **Blackmann Arms**. This was definitely worth it in the end. Do note however that this beast makes a hell of a lot of noise, giving away your position easily.
 
 Tap the utility key to switch between single-shot and four-shot modes.
 
@@ -213,7 +213,7 @@ A playlist of several instrumental **Nine Inch Nails** tracks, ready to be poppe
 
 ### Mischievous Ellen
 
-You can bring along an old friend to these adventures. The undying drunkard gremlin that married **Saya**'s brother right by your side. Share some of your vodka with her to make her get even more pumped up for combat. She carries two weapons, which she'll alternate between as needed. A beefy .50 AE **Eris** sidearm and her mainstay 4mm **Hyperion** gauss rifle, loaded with shock charge tipped bolts for extra knockback.
+You can bring along an old friend to these adventures. The undying drunkard gremlin that married **Saya**'s brother right by your side. Share some of your vodka with her to make her get even more pumped up for combat. She carries two weapons, which she'll alternate between as needed. A beefy .50 AE **Beagle** sidearm and her mainstay 4mm **Hyperion** gauss rifle, loaded with shock charge tipped bolts for extra knockback.
 
 As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her.
 
@@ -222,5 +222,51 @@ As expected of an **Anarukon**, she will get back up after a while when she gets
 Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is a belt to hold your Hammerspace devices and the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly. However, to compensate, the damage resistance of oil will be more effective.
 
 Note: This doesn't affect the **Mischievous Ellen** follower. She's more than used to seeing **Ibuki** naked.
+
+---
+
+## DLC
+
+Post-release I could attempt to add some extra weapons to expand this arsenal, perhaps some other personal favorites.
+
+### Slot 1 - The Purifier *[Chainsaw]*
+
+A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. Its previous owner allegedly used it to exorcise evil spirits.
+
+Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
+
+Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace.
+
+### Slot 4 - Ninnacht .50 AE Brave Beagle *[Shotgun]*
+
+A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them.
+
+It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
+
+Like your usual sidearm, this comes equipped with a flashlight and laser sight, the former being toggleable with a tap of the utility key.
+
+### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
+
+Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
+
+Holding the utility key will switch to two-shot mode, for when you truly want something erased.
+
+### Slot 6 - Shinigami MM95 *[Chaingun]*
+
+The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami Inc.**, meant to compete with popular western battle rifles at the time, such as the **HM417** and the **MDR**. As per usual convention it is chambered for 7.62×51mm, although conversion kits exist for lower AND higher calibers. It is additionally equipped with a holographic sight for improved sighted accuracy.
+
+The utility key alternates between semi auto, three round burst and full auto.
+
+### Slot 7 - Itamex "Rita" HRL *[Rocket Launcher]*
+
+Nicknamed the ***"Stick of Six Fires"*** by enthusiasts *(especially of the nerdy kind)*, the **Rita HRL** is a force to be reckoned with. Six revolving barrels, for up to six simultaneous micro-missile launches. Ammunition is fed from a 18-round drum mag, allowing for the user to dispense three full barrages of projectiles before needing to reload.
+
+Holding the utility key before firing engages a *"tight wad"* mode, wherein the missiles will remain close together, rather than spreading in a horizontal arc.
+
+### Slot 8 - Cyrus Stormbringer *[Plasma Rifle]*
+
+The very power of lightning at your fingertips. Unleashing potent arcs of high voltage death, the **Stormbringer** can melt through anything you aim it at, and cook raw poultry in a matter of milliseconds *(delicious)*.
+
+A tap of the utility key will toggle a focused mode which keeps the arcs from spreading too much, allowing them to focus entirely on one target at a time, for maximum cooking potential.
 
 ---
