@@ -47,9 +47,11 @@ The ***"Zica Seven"*** is a well-known *"edgy imitation"* of the **Heckler and M
 
 Like its more modest counterpart, it is chambered for **9mm Parabellum**. Some sort of mechanism in the gun appears to imbue the rounds with a potent electric charge. The nature of this process is unknown.
 
-Snugly held with both hands (very snugly, considering **Ibuki**'s size), this weapon has easily manageable recoil, making it quite useful in any situation. The gun is equipped with an under-barrel laser and flashlight combo for ease of aiming and illuminating dark areas, and also reflex sights to allow for even more precise long range aiming.
+Snugly held with both hands (very snugly, considering **Ibuki**'s size), this weapon has easily manageable recoil, making it quite useful in any situation. The gun is equipped with an under-barrel laser and flashlight combo for ease of aiming and illuminating dark areas.
 
 Tapping the utility key toggles the flashlight. Holding the key spins the gun, just for the sake of coolness.
+
+This weapon can be dual-wielded.
 
 ### Slot 3 - Ninnacht AA12 *[Pistol]*
 
@@ -81,9 +83,7 @@ Tap the utility key to switch between single-shot and four-shot modes.
 
 A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big Tits)*. It's designed to handle **7.62mmMT** rounds, specifically, also of **ANFES** manufacture. **MT** ammunition is well-known for *"setting the air on fire"* as it travels, despite not containing any incendiary material.
 
-Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own.
-
-You can tap the utility key to pour any water you have in your inventory over the barrel, which might help it cool down faster (smaller bottles will be favored). Alternatively, putting it back into hammerspace also helps.
+Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own. Putting it in hammerspace will make it cool down faster.
 
 ### Slot 7 - Kemet ST20 *[Rocket Launcher]*
 
@@ -105,7 +105,7 @@ Unlike most other plasma weapons of modern times, the Psyker doesn't need to let
 
 Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
 
-The cannon is equipped with a side floodlight, which can be toggled with the utility key.
+Tapping the utility key will cycle between available ammo types.
 
 ### Slot 0 - Areka "Boar Slayer" 50mm *[Chainsaw]*
 
@@ -121,7 +121,7 @@ All the goodies you can find scattered 'round. Delivery, as usual, courtesy of *
 
 ### 9mm Parabellum
 
-Generally found in full 7 round mags.
+Generally found in full 8 round mags.
 
 ### 12 Gauge *(#1 Buckshot / FRAG-12)*
 
@@ -147,9 +147,17 @@ Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** 
 
 Plasma ammunition is generally found in **NATO** standard 30x36mm compressed argon cells. Each of these allows for 20 shots of the **Psyker**.
 
-### 120mm "Quaker" Warhead
+### 120mm "Redeemer" Warhead
 
-They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find.
+They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
+
+### 120mm "Mad Dog" Canister Shot
+
+These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
+
+### 120mm "Caster" Plasma Charge
+
+Surprisingly more common than the other two. These things laugh in the face of the **UAC**'s prized **Botis Field Glyph**, employing far more efficient **Nokorokinylum** *(banned in all **White Scar** signatory countries)*. Each shot ejects high-pressure jets of incandescent liquid **Nokorokinylum** fuel, which bursts into searing clouds of **Nokron** and **Kinylum** plasma on impact.
 
 ### 50mm Areka
 
@@ -244,6 +252,8 @@ A beefy handcannon of the olden days, made quite popular thanks to it being feat
 It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
 
 Like your usual sidearm, this comes equipped with a flashlight and laser sight, the former being toggleable with a tap of the utility key.
+
+This weapon can be dual-wielded.
 
 ### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
