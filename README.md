@@ -21,6 +21,8 @@ Your increased bone and muscle density make you unable to swim. You will sink to
 
 Apart from some minimal clothing for *"modesty"* (a simple black bikini and jacket), you've got yourself the armored exoskeleton from your old WW3 days, with its mounted **Forx® JetBurst™ Impulsor** on the back. This allows you to pretty much fly wherever you want by pressing a dedicated button, then disengaging with a second press. Fuel is limited, but it regenerates when not in use.
 
+Unlike the **Demolitionist**, there is no need for **Ibuki** to use physical Hammerspace devices. Her natural magic bond has allowed her to develop something far more useful and easily accessible: The cleavage gateway *(no, seriously)*. The gap between her breasts is directly connected to a dedicated storage space, allowing her to switch weapons and manage her items by simply pulling them out or shoving them in. A direct mental link lets her keep track of everything in her inventory, and pick exactly what she wants beforehand.
+
 Note: **Ibuki** is 2.2m tall *(7'3" for 'mericans)*, which would generally make it difficult to move around in maps. While normal crouching is already a thing, there's also a special "auto-duck" feature that will allow her to easily fit into spots that are at least 56 map units tall, immediately fixing that issue. This feature is NOT dependent on crouching, so it won't break in maps that disable it.
 
 ---
@@ -227,7 +229,7 @@ As expected of an **Anarukon**, she will get back up after a while when she gets
 
 ### Nudist Mode
 
-Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is a belt to hold your Hammerspace devices and the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly. However, to compensate, the damage resistance of oil will be more effective.
+Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly. However, to compensate, the damage resistance of oil will be more effective.
 
 Note: This doesn't affect the **Mischievous Ellen** follower. She's more than used to seeing **Ibuki** naked.
 
