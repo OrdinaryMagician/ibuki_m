@@ -47,9 +47,9 @@ The ***"Zica Seven"*** is a well-known *"edgy imitation"* of the **Heckler and M
 
 Like its more modest counterpart, it is chambered for **9mm Parabellum**. Some sort of mechanism in the gun appears to imbue the rounds with a potent electric charge. The nature of this process is unknown.
 
-Snugly held with both hands (very snugly, considering **Ibuki**'s size), this weapon has easily manageable recoil, making it quite useful in any situation. The gun is equipped with an under-barrel laser and flashlight combo for ease of aiming and illuminating dark areas.
+Snugly held with both hands (very snugly, considering **Ibuki**'s size), this weapon has easily manageable recoil, making it quite useful in any situation.
 
-Tapping the utility key toggles the flashlight. Holding the key spins the gun, just for the sake of coolness.
+Tapping the utility key spins the gun, just for the sake of coolness.
 
 This weapon can be dual-wielded.
 
@@ -67,9 +67,9 @@ A tap of the utility key swaps between available ammo types. Hold the key to kis
 
 This specific model is chambered for 6.8 SPC, rather than the usual 5.56mm that one would expect. It is considered a *"priceless jewel"* by some, one they could never part with, or replace with anything else. Truly, it is all they could ever need.
 
-This specific model has been with Ibuki since the early days, and it's been customized to her liking. 16.5" barrel with compensator, collapsible stock, holographic sight, angled foregrip, and a flashlight and laser pointer on each side, just for the sake of having it all *"pimped up"*. **Ibuki** had once experimented with giving it an under-barrel grenade launcher but it allegedly *"felt awkward to use"*.
+This specific model has been with Ibuki since the early days, and it's been customized to her liking. 16.5" barrel with compensator, collapsible stock, holographic sight and angled foregrip. **Ibuki** had once experimented with giving it an under-barrel grenade launcher but it allegedly *"felt awkward to use"*, and made the weapon too *"pimped up"*.
 
-Tap the utility key to toggle the flashlight. A long hold of the utility key switches between semi-auto and full-auto.
+Tap the utility key to switch between semi-auto and full-auto.
 
 ### Slot 5 - Siesta Deliverer *[Super Shotgun]*
 
@@ -91,7 +91,7 @@ A man once thought about somehow custom-crafting **20mm tandem HEAT-MP** rounds,
 
 The fact that this weapon still exists and ammunition for it is still manufactured shows that there is **SOMEHOW** demand for something like this. The world is a strange place indeed.
 
-Holding the utility key while zoomed allows you to adjust the zoom level by also holding either primary or secondary fire.
+Holding the utility key while zoomed allows you to adjust the zoom level by pressing either primary or secondary fire.
 
 ### Slot 8 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
 
@@ -251,7 +251,7 @@ A beefy handcannon of the olden days, made quite popular thanks to it being feat
 
 It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
 
-Like your usual sidearm, this comes equipped with a flashlight and laser sight, the former being toggleable with a tap of the utility key.
+Like your usual sidearm, you can also give it a spin with the utility key.
 
 This weapon can be dual-wielded.
 
