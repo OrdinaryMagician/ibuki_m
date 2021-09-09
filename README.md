@@ -121,47 +121,47 @@ Ammo for this puppy is quite rare, however, but that's compensated by how devast
 
 All the goodies you can find scattered 'round. Delivery, as usual, courtesy of **Cyrus Enterprises**.
 
-### 9mm Parabellum
+### 9mm Parabellum *[Clip]*
 
 Generally found in full 8 round mags.
 
-### 12 Gauge *(#1 Buckshot / FRAG-12)*
+### 12 Gauge *(#1 Buckshot / FRAG-12)* *[Clip, Shells]*
 
 Shells are usually found in handfuls of 4, or in 12 round boxes. **FRAG-12** ammo is generally more rare.
 
-### 6.8 SPC
+### 6.8 SPC *[Shells, Shell Box]*
 
 Generally found in 30 round mags.
 
-### 16 Gauge *(Saltshot)*
+### 16 Gauge *(Saltshot)* *[Shell Box]*
 
 Saltshot can be found in the same distribution types as the other shells.
 
-### 7.62mmMT
+### 7.62×54mmMT *[Bullet Box]*
 
 Very likely to be found in 100 and 200 round belts.
 
-### 20mm Mk.299 Tandem HEAT-MP
+### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
 
 Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
 
-### Plasma Cell
+### Plasma Cell *[Cells]*
 
 Plasma ammunition is generally found in **NATO** standard 30x36mm compressed argon cells. Each of these allows for 20 shots of the **Psyker**.
 
-### 120mm "Redeemer" Warhead
+### 120mm "Redeemer" Warhead *[Cell Pack]*
 
 They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
 
-### 120mm "Mad Dog" Canister Shot
+### 120mm "Mad Dog" Canister Shot *[Cell Pack]*
 
 These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
 
-### 120mm "Caster" Plasma Charge
+### 120mm "Caster" Plasma Charge *[Cell Pack]*
 
 Surprisingly more common than the other two. These things laugh in the face of the **UAC**'s prized **Botis Field Glyph**, employing far more efficient **Nokorokinylum** *(banned in all **White Scar** signatory countries)*. Each shot ejects high-pressure jets of incandescent liquid **Nokorokinylum** fuel, which bursts into searing clouds of **Nokron** and **Kinylum** plasma on impact.
 
-### 50mm Areka
+### 50mm Areka *[Rockets]*
 
 Available in 5 round mags or single rounds. These things are big.
 
@@ -211,6 +211,14 @@ Cheap and easy night vision goggles. Can be toggled if you wanna save that batte
 
 The usual solution for getting into dangerous terrain. Just pop it and go for a dive.
 
+### Safety Tether *[Chaos Device]*
+
+Obligatory little helper for the Raven games. Warps your ass back to start when used, in case you get stuck somewhere and can't be arsed to reload a save.
+
+### Auxiliary Fuel Reserve *[Wings of Wrath]*
+
+Expands your fuel storage, to be able to fly for longer periods of time. For unspecified reasons, the device stops working once you leave the map (or hub in Hexen).
+
 ---
 
 ## Bonus Features
@@ -225,7 +233,7 @@ A playlist of several instrumental **Nine Inch Nails** tracks, ready to be poppe
 
 You can bring along an old friend to these adventures. The undying drunkard gremlin that married **Saya**'s brother right by your side. Share some of your vodka with her to make her get even more pumped up for combat. She carries two weapons, which she'll alternate between as needed. A beefy .50 AE **Beagle** sidearm and her mainstay 4mm **Hyperion** gauss rifle, loaded with shock charge tipped bolts for extra knockback.
 
-As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her.
+As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her. If she ever loses track of you somehow, she can easily employ the trusty magic skills of her **Yanikov** blood to warp to your position.
 
 ### Nudist Mode
 
@@ -247,9 +255,9 @@ Primary fire swings in front of you, can be held to charge up a wider swing. Sec
 
 Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace.
 
-### Slot 4 - Ninnacht .50 AE Brave Beagle *[Shotgun]*
+### Slot 4 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
 
-A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them.
+A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them.  The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
 It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
 
@@ -259,13 +267,13 @@ This weapon can be dual-wielded.
 
 ### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
-Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
+Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG over-under hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
 
 Holding the utility key will switch to two-shot mode, for when you truly want something erased.
 
 ### Slot 6 - Shinigami MM95 *[Chaingun]*
 
-The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami Inc.**, meant to compete with popular western battle rifles at the time, such as the **HM417** and the **MDR**. As per usual convention it is chambered for 7.62×51mm, although conversion kits exist for lower AND higher calibers. It is additionally equipped with a holographic sight for improved sighted accuracy.
+The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami Inc.**, meant to compete with popular western battle rifles at the time, such as the **HM417**. As per usual convention it is chambered for 7.62×51mm, although conversion kits exist for lower AND higher calibers. It is additionally equipped with a holographic sight for improved sighted accuracy. Bullets are enchanted for extra penetration, allowing them to cleave cleanly through everything, including some walls.
 
 The utility key alternates between semi auto, three round burst and full auto.
 
@@ -273,12 +281,36 @@ The utility key alternates between semi auto, three round burst and full auto.
 
 Nicknamed the ***"Stick of Six Fires"*** by enthusiasts *(especially of the nerdy kind)*, the **Rita HRL** is a force to be reckoned with. Six revolving barrels, for up to six simultaneous micro-missile launches. Ammunition is fed from a 18-round drum mag, allowing for the user to dispense three full barrages of projectiles before needing to reload.
 
+While aiming through the visor, you will mark whatever target you've got on your sights to lock on for homing missiles.
+
 Holding the utility key before firing engages a *"tight wad"* mode, wherein the missiles will remain close together, rather than spreading in a horizontal arc.
 
 ### Slot 8 - Cyrus Stormbringer *[Plasma Rifle]*
 
 The very power of lightning at your fingertips. Unleashing potent arcs of high voltage death, the **Stormbringer** can melt through anything you aim it at, and cook raw poultry in a matter of milliseconds *(delicious)*.
 
+Don't even think about using this underwater, although it is a very good strategy to aim for it as long as it's the enemy that's touching the stuff and not you.
+
 A tap of the utility key will toggle a focused mode which keeps the arcs from spreading too much, allowing them to focus entirely on one target at a time, for maximum cooking potential.
+
+### .50 PE *[Shells]*
+
+Found in 7 round mags.
+
+### .50 Oh My God *[Shell Box]*
+
+Found as either spare rounds or 20 round packs.
+
+### 7.62×51mm NATO *[Bullet Box]*
+
+Very standard stuff. Found in 30-round mags.
+
+### 20×30mm Micro-Missile *[Rockets]*
+
+Found as either spare rounds or full 18-round mags.
+
+### Dysedum Rod *[Cells]*
+
+You'll find these either all alone or in small handfuls.
 
 ---
