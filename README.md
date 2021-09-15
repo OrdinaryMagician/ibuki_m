@@ -257,13 +257,11 @@ Pressing the utility key throws a ball in front of you, which can be struck with
 
 ### Slot 4 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
 
-A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them.  The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
+A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
 It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
 
-Like your usual sidearm, you can also give it a spin with the utility key.
-
-This weapon can be dual-wielded.
+Like your usual sidearm, you can also give it a spin with the utility key. However, it can't be dual-wielded.
 
 ### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
