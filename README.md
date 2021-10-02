@@ -17,7 +17,7 @@ This will be made some day, I promise. For now, I'm just noting down the plans h
 
 If your health drops to zero, you will be incapacitated. In this state, you've got two choices: Either wait until you can revive again, or restart from the last save. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless.
 
-Your increased bone and muscle density make you unable to swim. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot.
+Your increased bone and muscle density make you unable to swim. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot which, unlike the "quick kick", can be used even while firing or reloading weapons.
 
 Apart from some minimal clothing for *"modesty"* (a simple black bikini and jacket), you've got yourself the armored exoskeleton from your old WW3 days, with its mounted **Forx® JetBurst™ Impulsor** on the back. This allows you to pretty much fly wherever you want by pressing a dedicated button, then disengaging with a second press. Fuel is limited, but it regenerates when not in use.
 
@@ -37,6 +37,8 @@ Mag management is entirely hassle-free, as ammunition is autoloaded on-demand wi
 
 ### Slot 1 - Unarmed *[Fist]*
 
+*"Sometimes you gotta do things manually."*
+
 Guns of your own making, two of them. Bash in some skulls.
 
 Primary fire punches, hold to punch harder. Secondary fire blocks, increasing damage resistance to frontal attacks.
@@ -44,6 +46,8 @@ Primary fire punches, hold to punch harder. Secondary fire blocks, increasing da
 You can press the utility key to crack your knuckles. This doesn't serve any useful purpose, but it looks cool.
 
 ### Slot 2 - Shinigami ZC7 *[Pistol]*
+
+*"Hello my sweet cat nun."*
 
 The ***"Zica Seven"*** is a well-known *"edgy imitation"* of the **Heckler and Mok P7** handgun, made famous by the advertising material **Shinigami Inc.** distributed to promote the weapon, featuring a rather... *"lightly-dressed"* nun with cat ears.
 
@@ -57,6 +61,8 @@ This weapon can be dual-wielded.
 
 ### Slot 3 - Ninnacht AA12 *[Pistol]*
 
+*"The perfect tool for solving problems in an advanced way."*
+
 **Ibuki**'s most prized possession. She would never go out into the field without it. 12 Gauge, 300 RPM, 32-round drum mag, truly a beauty.
 
 While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
@@ -65,7 +71,7 @@ A tap of the utility key swaps between available ammo types. Hold the key to kis
 
 ### Slot 4 - HM416 *[Shotgun]*
 
-***"416 IS ALL YOU NEED"***
+***"416 IS ALL YOU NEED."***
 
 This specific model is chambered for 6.8 SPC, rather than the usual 5.56mm that one would expect. It is considered a *"priceless jewel"* by some, one they could never part with, or replace with anything else. Truly, it is all they could ever need.
 
@@ -75,6 +81,8 @@ Tap the utility key to switch between semi-auto and full-auto.
 
 ### Slot 5 - Siesta Deliverer *[Super Shotgun]*
 
+*"RIP headphone users..."*
+
 Four barrels of blasting action. Loaded up with custom **16ga Kinylum saltshot** rounds for wonderful cyan-colored death dealing.
 
 Due to the employment of this ammunition, which for 16ga has to be packed quite dense, the receiver had to be replaced with a customized version specially ordered from **Blackmann Arms**. This was definitely worth it in the end. Do note however that this beast makes a hell of a lot of noise, giving away your position easily.
@@ -83,11 +91,15 @@ Tap the utility key to switch between single-shot and four-shot modes.
 
 ### Slot 6 - ANFES "Melisa" Machine Gun *[Chaingun]*
 
+*"I see we are kindred spirits, you and I."*
+
 A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big Tits)*. It's designed to handle **7.62mmMT** rounds, specifically, also of **ANFES** manufacture. **MT** ammunition is well-known for *"setting the air on fire"* as it travels, despite not containing any incendiary material.
 
 Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own. Putting it in hammerspace will make it cool down faster.
 
 ### Slot 7 - Kemet ST20 *[Rocket Launcher]*
+
+*"If you told me that the Gyrojet would eventually evolve into this, I wouldn't have believed you."*
 
 A man once thought about somehow custom-crafting **20mm tandem HEAT-MP** rounds, and despite all sane logic dictating this to be *very wrong and very not practical*, **he succeeded**. This is the only weapon ever made for that ammunition. Have fun!
 
@@ -97,6 +109,8 @@ Holding the utility key while zoomed allows you to adjust the zoom level by pres
 
 ### Slot 8 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
 
+*"Ah... Now this is a blast from the past."*
+
 One of humankind's proudest achievements in plasma weaponry. While it's definitely *"old-fashioned"* compared to the more modern solutions of **Nukuri** and **Xekkian** manufacture, it is sufficiently effective by human standards, having even survived the test of time through several revisions since its first introduction in the mid-2030s.
 
 Look, **Ibuki** just loves guns that have *"aged like a fine wine"*, and this is one of them. One would probably also say she likes it because it's all black and red, her two favorite colors.
@@ -105,11 +119,15 @@ Unlike most other plasma weapons of modern times, the Psyker doesn't need to let
 
 ### Slot 9 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
 
+*"This one's kinda hard to pull out of my cleavage, but it's worth it."*
+
 Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
 
 Tapping the utility key will cycle between available ammo types.
 
 ### Slot 0 - Areka "Boar Slayer" 50mm *[Chainsaw]*
+
+*"Got this one as a gift from a nice Xekkian girl. Oh, I still remember that night..."*
 
 The **Boar Slayer** is clearly not meant for human use, but that's definitely not going to stop you now, is it?
 
@@ -123,45 +141,67 @@ All the goodies you can find scattered 'round. Delivery, as usual, courtesy of *
 
 ### 9mm Parabellum *[Clip]*
 
+*"If you seek peace... Prepare for war..."*
+
 Generally found in full 8 round mags.
 
 ### 12 Gauge *(#1 Buckshot / FRAG-12)* *[Clip, Shells]*
+
+*"Small, but powerful."*
 
 Shells are usually found in handfuls of 4, or in 12 round boxes. **FRAG-12** ammo is generally more rare.
 
 ### 6.8 SPC *[Shells, Shell Box]*
 
+*"Honestly, I don't know what's so special about these."*
+
 Generally found in 30 round mags.
 
 ### 16 Gauge *(Saltshot)* *[Shell Box]*
+
+*"You're all going to be so salty..."*
 
 Saltshot can be found in the same distribution types as the other shells.
 
 ### 7.62×54mmMT *[Bullet Box]*
 
+*"Wait, you're telling me these aren't tracer rounds?"*
+
 Very likely to be found in 100 and 200 round belts.
 
 ### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
+
+*"This... This is literally a tiny thermonuclear bomb squeezed into 20 milimeters... How?"*
 
 Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
 
 ### Plasma Cell *[Cells]*
 
+*"Nice and simple, how things used to be before they started putting all those random fancy lights on them."*
+
 Plasma ammunition is generally found in **NATO** standard 30x36mm compressed argon cells. Each of these allows for 20 shots of the **Psyker**.
 
 ### 120mm "Redeemer" Warhead *[Cell Pack]*
+
+*"Adios, motherfucker..."*
 
 They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
 
 ### 120mm "Mad Dog" Canister Shot *[Cell Pack]*
 
+*"Now these are the kinds of balls I like to play with..."*
+
 These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
 
 ### 120mm "Caster" Plasma Charge *[Cell Pack]*
 
+*"Holy fucking shit..."*
+
 Surprisingly more common than the other two. These things laugh in the face of the **UAC**'s prized **Botis Field Glyph**, employing far more efficient **Nokorokinylum** *(banned in all **White Scar** signatory countries)*. Each shot ejects high-pressure jets of incandescent liquid **Nokorokinylum** fuel, which bursts into searing clouds of **Nokron** and **Kinylum** plasma on impact.
 
 ### 50mm Areka *[Rockets]*
+
+*"... I wonder if... With that size..."*
 
 Available in 5 round mags or single rounds. These things are big.
 
@@ -173,51 +213,63 @@ Gotta have some of these too to help in your adventure.
 
 ### Water Bottle *[Health Bonus, Stimpack, Medikit]*
 
+*"I know a sizable number of people who should drink more of this, because they sure are thirsty..."*
+
 Staying hydrated is important. Available in three sizes, recovering 10 HP, 50 HP and 100 HP each.
 
 ### Spiritual Stimulant *[Soulsphere, Megasphere]*
+
+*"Ohhhhh... That feels good..."*
 
 A potent overheal of 1000HP. Note that any healing above 1000 will wear off over time.
 
 ### Oil Bottle *[Armor Bonus, Green Armor, Blue Armor]*
 
-Increases your damage resistance, somehow *(something about **Ibuki**'s skin)*. The more you oil up, the better.
+*"Time to oil up..."*
+
+Increases your damage resistance, somehow *(something about **Ibuki**'s skin)*. The more you rub on, the better.
 
 ### Hammerspace Embiggener *[Backpack]*
+
+*"Heh... Nerd..."*
 
 Lets you carry more ammo. Your plan allows for up to 8 expansions. In addition, each redeemed card comes with a free delivery of ammo for most of your weapons.
 
 ### LiSA Anti-Barricade Device *[Blursphere]*
 
+*"Saya keeps laughing at the name of this thing. I don't really get it."*
+
 An explosive device that can tear apart many obstacles.
 
 ### Bootleg "Mischievous Ellen" Vodka *[Berserk]*
 
+*"Bottoms up!"*
+
 This will overheal for 250 HP and give you a fairly decent strength boost. Do note however that **Ibuki**'s body metabolizes the drunkedness away quickly. Part of **Ellen**'s seemingly unending stash.
 
-### Area Map *[Computer Map]*
+### Omnisight *[Computer Map]*
+
+*"Good thing I brought along my tablet, or I'd get lost in this dump."*
 
 Fills out the data for your automap, basically.
 
 ### Red Oni Milk Jug *[Invulnerability]*
 
+*"I taste so delicious~"*
+
 This thing can get you so pumped up you pretty much become unstoppable after chugging it. Talk about getting high off your own supply...
 
 ### Glow Visor *[Lite-Amp]*
+
+*"Pretty sure this is the same model Ellen-san used."*
 
 Cheap and easy night vision goggles. Can be toggled if you wanna save that battery.
 
 ### Elemental Coating *[Radsuit]*
 
+*"Sometimes you gotta wear protection..."*
+
 The usual solution for getting into dangerous terrain. Just pop it and go for a dive.
-
-### Safety Tether *[Chaos Device]*
-
-Obligatory little helper for the Raven games. Warps your ass back to start when used, in case you get stuck somewhere and can't be arsed to reload a save.
-
-### Auxiliary Fuel Reserve *[Wings of Wrath]*
-
-Expands your fuel storage, to be able to fly for longer periods of time. For unspecified reasons, the device stops working once you leave the map (or hub in Hexen).
 
 ---
 
@@ -227,15 +279,21 @@ Some extras that are entirely optional, but add to the experience.
 
 ### NIN Radio
 
+*"I could listen to these all day."*
+
 A playlist of several instrumental **Nine Inch Nails** tracks, ready to be popped into your trusty music player. Tracks are automatically shuffled and will play one after another, rather than looping per-map.
 
 ### Mischievous Ellen
 
-You can bring along an old friend to these adventures. The undying drunkard gremlin that married **Saya**'s brother right by your side. Share some of your vodka with her to make her get even more pumped up for combat. She carries two weapons, which she'll alternate between as needed. A beefy .50 AE **Beagle** sidearm and her mainstay 4mm **Hyperion** gauss rifle, loaded with shock charge tipped bolts for extra knockback.
+*"That's my gal pal right there."*
+
+You can bring along an old friend to these adventures. The undying drunkard gremlin that married **Saya**'s brother right by your side. Share some of your vodka with her to make her get even more pumped up for combat. She carries two weapons, which she'll alternate between as needed. A beefy .50 PE **Beagle** sidearm and her mainstay 4mm **Hyperion** gauss rifle, loaded with shock charge tipped bolts for extra knockback.
 
 As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her. If she ever loses track of you somehow, she can easily employ the trusty magic skills of her **Yanikov** blood to warp to your position.
 
 ### Nudist Mode
+
+*"It's so nice to finally feel the breeze..."*
 
 Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly. However, to compensate, the damage resistance of oil will be more effective.
 
@@ -249,6 +307,8 @@ Post-release I could attempt to add some extra weapons to expand this arsenal, p
 
 ### Slot 1 - The Purifier *[Chainsaw]*
 
+*"Ah, the American pastime..."*
+
 A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. Its previous owner allegedly used it to exorcise evil spirits.
 
 Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
@@ -256,6 +316,8 @@ Primary fire swings in front of you, can be held to charge up a wider swing. Sec
 Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace.
 
 ### Slot 4 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
+
+*"Oh, this doggy really does bite."*
 
 A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
@@ -265,17 +327,23 @@ Like your usual sidearm, you can also give it a spin with the utility key. Howev
 
 ### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
+*"There WAS a hell knight..."*
+
 Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG over-under hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
 
 Holding the utility key will switch to two-shot mode, for when you truly want something erased.
 
 ### Slot 6 - Shinigami MM95 *[Chaingun]*
 
+*"Well, I do like me some penetration once in a while."*
+
 The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami Inc.**, meant to compete with popular western battle rifles at the time, such as the **HM417**. As per usual convention it is chambered for 7.62×51mm, although conversion kits exist for lower AND higher calibers. It is additionally equipped with a holographic sight for improved sighted accuracy. Bullets are enchanted for extra penetration, allowing them to cleave cleanly through everything, including some walls.
 
 The utility key alternates between semi auto, three round burst and full auto.
 
 ### Slot 7 - Itamex "Rita" HRL *[Rocket Launcher]*
+
+*"Good things come in small packages... LOTS of exploding small packages."*
 
 Nicknamed the ***"Stick of Six Fires"*** by enthusiasts *(especially of the nerdy kind)*, the **Rita HRL** is a force to be reckoned with. Six revolving barrels, for up to six simultaneous micro-missile launches. Ammunition is fed from a 18-round drum mag, allowing for the user to dispense three full barrages of projectiles before needing to reload.
 
@@ -285,6 +353,8 @@ Holding the utility key before firing engages a *"tight wad"* mode, wherein the 
 
 ### Slot 8 - Cyrus Stormbringer *[Plasma Rifle]*
 
+*"Electricity isn't scary... But it's gonna be for you."*
+
 The very power of lightning at your fingertips. Unleashing potent arcs of high voltage death, the **Stormbringer** can melt through anything you aim it at, and cook raw poultry in a matter of milliseconds *(delicious)*.
 
 Don't even think about using this underwater, although it is a very good strategy to aim for it as long as it's the enemy that's touching the stuff and not you.
@@ -293,22 +363,34 @@ A tap of the utility key will toggle a focused mode which keeps the arcs from sp
 
 ### .50 PE *[Shells]*
 
+*"\*snicker\* Wait, it actually means THAT?"*
+
 Found in 7 round mags.
 
 ### .50 Oh My God *[Shell Box]*
+
+*"I don't think these really are that OMG-worthy, I've seen bigger."*
 
 Found as either spare rounds or 20 round packs.
 
 ### 7.62×51mm NATO *[Bullet Box]*
 
+*"Real... Fuckin'... NATO."*
+
 Very standard stuff. Found in 30-round mags.
 
 ### 20×30mm Micro-Missile *[Rockets]*
+
+*"It's not the size that matters..."*
 
 Found as either spare rounds or full 18-round mags.
 
 ### Dysedum Rod *[Cells]*
 
+*"We trust the rod... Or whatever it was that Sayacchi said."*
+
 You'll find these either all alone or in small handfuls.
 
 ---
+
+*"I'm just here to have fun, and you bastards are here to provide that fun."*
