@@ -1,4 +1,4 @@
-# 赤い鬼
+# 赤鬼
 ## UnSX Side Story: Ibuki
 
 ---
@@ -13,7 +13,7 @@ So, while **Demo-chan** was out there blastin' away in the US, **Ibuki** too had
 
 ## Abilities
 
-**Ibuki** is pretty goddamn hardcore, sporting a hefty 1000-point health pool and built-in resistances to many things. For starters, most things are very likely to not even deal any damage, especially bullets *(although they'll still stagger and cause some perceptible pain)*. Elemental damages don't really hurt directly, but cause certain debuff buildups, which WILL begin to hurt if they get too high. Due to the fact you can't bleed, you're immune to poison, unless it's breathed in.
+**Ibuki** is pretty goddamn hardcore. For starters, most things are very likely to not even deal any damage, especially bullets *(although they'll still stagger and cause some perceptible pain)*. Elemental damages don't really hurt directly, but cause certain debuff buildups, which WILL begin to hurt if they get too high. Due to the fact you can't bleed, you're immune to poison, unless it's breathed in.
 
 If your health drops to zero, you will be incapacitated. In this state, you've got two choices: Either wait until you can revive again, or restart from the last save. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless.
 
@@ -207,19 +207,19 @@ Gotta have some of these too to help in your adventure.
 
 *"I know a sizable number of people who should drink more of this, because they sure are thirsty..."*
 
-Staying hydrated is important. Available in three sizes, recovering 10 HP, 50 HP and 100 HP each.
+Staying hydrated is important. Available in three sizes, recovering 5 HP, 20 HP and 50 HP each.
 
 ### Spiritual Stimulant *[Soulsphere, Megasphere]*
 
 *"Ohhhhh... That feels good..."*
 
-A potent overheal of 1000HP. Note that any healing above 1000 will wear off over time.
+A potent overheal of 100 HP with no upper cap whatsoever. Note that any healing above 100 will wear off over time, faster the higher it's at.
 
 ### Oil Bottle *[Armor Bonus, Green Armor, Blue Armor]*
 
 *"Time to oil up..."*
 
-Increases your damage resistance, somehow *(something about **Ibuki**'s skin)*. The more you rub on, the better.
+Increases your damage resistance, somehow *(something about **Ibuki**'s skin)*. The more you rub on, the better. Note that going for a swim will cause you to rapidly lose this protection.
 
 ### Hammerspace Embiggener *[Backpack]*
 
@@ -227,17 +227,17 @@ Increases your damage resistance, somehow *(something about **Ibuki**'s skin)*. 
 
 Lets you carry more ammo. Your plan allows for up to 8 expansions. In addition, each redeemed card comes with a free delivery of ammo for most of your weapons.
 
-### LiSA Anti-Barricade Device *[Blursphere]*
+### LiSA Room Tearing Device *[Blursphere]*
 
 *"Saya keeps laughing at the name of this thing. I don't really get it."*
 
-An explosive device that can tear apart many obstacles.
+A very potent timed explosive. Make sure to take cover, because it hits hard.
 
 ### Bootleg "Mischievous Ellen" Vodka *[Berserk]*
 
 *"Bottoms up!"*
 
-This will overheal for 250 HP and give you a fairly decent strength boost. Do note however that **Ibuki**'s body metabolizes the drunkedness away quickly. Part of **Ellen**'s seemingly unending stash.
+This will bring you back to full health and give you a fairly decent strength boost. Do note however that **Ibuki**'s body metabolizes the drunkedness away quickly. Part of **Ellen**'s seemingly unending stash.
 
 ### Omnisight *[Computer Map]*
 
