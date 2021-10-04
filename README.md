@@ -7,7 +7,7 @@
 
 Hey guess what? **Ibuki** is pretty cool, and it would be nice to be able to play as the **Red Oni**. So maybe she deserves a standalone mod of her own, with really cool guns and stuff.
 
-This will be made some day, I promise. For now, I'm just noting down the plans here.
+So, while **Demo-chan** was out there blastin' away in the US, **Ibuki** too had her own adventures defending the home front. Many tales would be told by those among the invading demons who were lucky to survive, that a *"naked woman with gigantic breasts"* was slaughtering their forces. They would all get laughed at, of course, what kind of story is that?
 
 ---
 
@@ -17,11 +17,11 @@ This will be made some day, I promise. For now, I'm just noting down the plans h
 
 If your health drops to zero, you will be incapacitated. In this state, you've got two choices: Either wait until you can revive again, or restart from the last save. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless.
 
-Your increased bone and muscle density make you unable to swim. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot which, unlike the "quick kick", can be used even while firing or reloading weapons.
+Your increased bone and muscle density make you unable to float in water. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot which, unlike the "quick kick", can be used even while firing or reloading weapons.
 
-Apart from some minimal clothing for *"modesty"* (a simple black bikini and jacket), you've got yourself the armored exoskeleton from your old WW3 days, with its mounted **Forx® JetBurst™ Impulsor** on the back. This allows you to pretty much fly wherever you want by pressing a dedicated button, then disengaging with a second press. Fuel is limited, but it regenerates when not in use.
+As **Saya** often states, you are effectively *"bulletproof"* and therefore you don't really need to wear armor, or clothes, so all you've got on you is some minimal clothing for *"modesty"*: a simple black bikini and jacket, as well as some sandals.
 
-Unlike the **Demolitionist**, there is no need for **Ibuki** to use physical Hammerspace devices. Her natural magic bond has allowed her to develop something far more useful and easily accessible: The cleavage gateway *(no, seriously)*. The gap between her breasts is directly connected to a dedicated storage space, allowing her to switch weapons and manage her items by simply pulling them out or shoving them in. A direct mental link lets her keep track of everything in her inventory, and pick exactly what she wants beforehand.
+Now, you might be wondering: *"Where would your equipment go?"*. Well, unlike the **Demolitionist**, there is no need for **Ibuki** to use physical Hammerspace devices. Her natural magic bond has allowed her to develop something far more useful and easily accessible: The cleavage gateway *(no, seriously)*. The gap between her breasts is directly connected to a dedicated storage space, allowing her to switch weapons and manage her items by simply pulling them out or shoving them in. A direct mental link lets her keep track of everything in her inventory, and pick exactly what she wants beforehand.
 
 Note: **Ibuki** is 2.2m tall *(7'3" for 'mericans)*, which would generally make it difficult to move around in maps. While normal crouching is already a thing, there's also a special "auto-duck" feature that will allow her to easily fit into spots that are at least 56 map units tall, immediately fixing that issue. This feature is NOT dependent on crouching, so it won't break in maps that disable it.
 
@@ -59,6 +59,12 @@ Tapping the utility key spins the gun, just for the sake of coolness.
 
 This weapon can be dual-wielded.
 
+#### 9mm Parabellum *[Clip]*
+
+*"If you seek peace... Prepare for war..."*
+
+Generally found in full 8 round mags.
+
 ### Slot 3 - Ninnacht AA12 *[Pistol]*
 
 *"The perfect tool for solving problems in an advanced way."*
@@ -68,6 +74,12 @@ This weapon can be dual-wielded.
 While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
 
 A tap of the utility key swaps between available ammo types. Hold the key to kiss the gun. It's a good gun.
+
+#### 12 Gauge *(#1 Buckshot / FRAG-12)* *[Clip, Shells]*
+
+*"Small, but powerful."*
+
+Shells are usually found in handfuls of 4, or in 12 round boxes. **FRAG-12** ammo is generally more rare.
 
 ### Slot 4 - HM416 *[Shotgun]*
 
@@ -79,6 +91,12 @@ This specific model has been with Ibuki since the early days, and it's been cust
 
 Tap the utility key to switch between semi-auto and full-auto.
 
+#### 6.8 SPC *[Shells, Shell Box]*
+
+*"Honestly, I don't know what's so special about these."*
+
+Generally found in 30 round mags.
+
 ### Slot 5 - Siesta Deliverer *[Super Shotgun]*
 
 *"RIP headphone users..."*
@@ -89,6 +107,12 @@ Due to the employment of this ammunition, which for 16ga has to be packed quite 
 
 Tap the utility key to switch between single-shot and four-shot modes.
 
+#### 16 Gauge *(Saltshot)* *[Shell Box]*
+
+*"You're all going to be so salty..."*
+
+Saltshot can be found in the same distribution types as the other shells.
+
 ### Slot 6 - ANFES "Melisa" Machine Gun *[Chaingun]*
 
 *"I see we are kindred spirits, you and I."*
@@ -96,6 +120,12 @@ Tap the utility key to switch between single-shot and four-shot modes.
 A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big Tits)*. It's designed to handle **7.62mmMT** rounds, specifically, also of **ANFES** manufacture. **MT** ammunition is well-known for *"setting the air on fire"* as it travels, despite not containing any incendiary material.
 
 Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own. Putting it in hammerspace will make it cool down faster.
+
+#### 7.62×54mmMT *[Bullet Box]*
+
+*"Wait, you're telling me these aren't tracer rounds?"*
+
+Very likely to be found in 100 and 200 round belts.
 
 ### Slot 7 - Kemet ST20 *[Rocket Launcher]*
 
@@ -107,6 +137,12 @@ The fact that this weapon still exists and ammunition for it is still manufactur
 
 Holding the utility key while zoomed allows you to adjust the zoom level by pressing either primary or secondary fire.
 
+#### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
+
+*"This... This is literally a tiny thermonuclear bomb squeezed into 20 milimeters... How?"*
+
+Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
+
 ### Slot 8 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
 
 *"Ah... Now this is a blast from the past."*
@@ -117,6 +153,12 @@ Look, **Ibuki** just loves guns that have *"aged like a fine wine"*, and this is
 
 Unlike most other plasma weapons of modern times, the Psyker doesn't need to let others know it's a plasma weapon by constantly emitting light.
 
+#### Plasma Cell *[Cells]*
+
+*"Nice and simple, how things used to be before they started putting all those random fancy lights on them."*
+
+Plasma ammunition is generally found in **NATO** standard 30x36mm compressed argon cells. Each of these allows for 20 shots of the **Psyker**.
+
 ### Slot 9 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
 
 *"This one's kinda hard to pull out of my cleavage, but it's worth it."*
@@ -124,6 +166,24 @@ Unlike most other plasma weapons of modern times, the Psyker doesn't need to let
 Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
 
 Tapping the utility key will cycle between available ammo types.
+
+#### 120mm "Redeemer" Warhead *[Cell Pack]*
+
+*"Adios, motherfucker..."*
+
+They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
+
+#### 120mm "Mad Dog" Canister Shot *[Cell Pack]*
+
+*"Now these are the kinds of balls I like to play with..."*
+
+These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
+
+#### 120mm "Caster" Plasma Charge *[Cell Pack]*
+
+*"Holy fucking shit..."*
+
+Surprisingly more common than the other two. These things laugh in the face of the **UAC**'s prized **Botis Field Glyph**, employing far more efficient **Nokorokinylum** *(banned in all **White Scar** signatory countries)*. Each shot ejects high-pressure jets of incandescent liquid **Nokorokinylum** fuel, which bursts into searing clouds of **Nokron** and **Kinylum** plasma on impact.
 
 ### Slot 0 - Areka "Boar Slayer" 50mm *[Chainsaw]*
 
@@ -133,79 +193,11 @@ The **Boar Slayer** is clearly not meant for human use, but that's definitely no
 
 Ammo for this puppy is quite rare, however, but that's compensated by how devastating even a single shot can be.
 
----
-
-## Ammo
-
-All the goodies you can find scattered 'round. Delivery, as usual, courtesy of **Cyrus Enterprises**.
-
-### 9mm Parabellum *[Clip]*
-
-*"If you seek peace... Prepare for war..."*
-
-Generally found in full 8 round mags.
-
-### 12 Gauge *(#1 Buckshot / FRAG-12)* *[Clip, Shells]*
-
-*"Small, but powerful."*
-
-Shells are usually found in handfuls of 4, or in 12 round boxes. **FRAG-12** ammo is generally more rare.
-
-### 6.8 SPC *[Shells, Shell Box]*
-
-*"Honestly, I don't know what's so special about these."*
-
-Generally found in 30 round mags.
-
-### 16 Gauge *(Saltshot)* *[Shell Box]*
-
-*"You're all going to be so salty..."*
-
-Saltshot can be found in the same distribution types as the other shells.
-
-### 7.62×54mmMT *[Bullet Box]*
-
-*"Wait, you're telling me these aren't tracer rounds?"*
-
-Very likely to be found in 100 and 200 round belts.
-
-### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
-
-*"This... This is literally a tiny thermonuclear bomb squeezed into 20 milimeters... How?"*
-
-Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
-
-### Plasma Cell *[Cells]*
-
-*"Nice and simple, how things used to be before they started putting all those random fancy lights on them."*
-
-Plasma ammunition is generally found in **NATO** standard 30x36mm compressed argon cells. Each of these allows for 20 shots of the **Psyker**.
-
-### 120mm "Redeemer" Warhead *[Cell Pack]*
-
-*"Adios, motherfucker..."*
-
-They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
-
-### 120mm "Mad Dog" Canister Shot *[Cell Pack]*
-
-*"Now these are the kinds of balls I like to play with..."*
-
-These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
-
-### 120mm "Caster" Plasma Charge *[Cell Pack]*
-
-*"Holy fucking shit..."*
-
-Surprisingly more common than the other two. These things laugh in the face of the **UAC**'s prized **Botis Field Glyph**, employing far more efficient **Nokorokinylum** *(banned in all **White Scar** signatory countries)*. Each shot ejects high-pressure jets of incandescent liquid **Nokorokinylum** fuel, which bursts into searing clouds of **Nokron** and **Kinylum** plasma on impact.
-
-### 50mm Areka *[Rockets]*
+#### 50mm Areka *[Rockets]*
 
 *"... I wonder if... With that size..."*
 
 Available in 5 round mags or single rounds. These things are big.
-
----
 
 ## Items
 
@@ -295,7 +287,7 @@ As expected of an **Anarukon**, she will get back up after a while when she gets
 
 *"It's so nice to finally feel the breeze..."*
 
-Removes your exoskeleton, jetpack and the minimal clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is the very important **Lucky Collar** that **Saya** gave you. Do note that the added *"looseness"* will increase your view bob as you run, and for obvious reasons you'll lose the ability to fly. However, to compensate, the damage resistance of oil will be more effective.
+Sheds all that clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is the very important **Lucky Collar** that **Saya** gave you. Although this makes you a bit more awkwardly *"bouncy"* in your movements, you also gain the advantage of damage resistance from oil being more effective, since you can now apply it everywhere.
 
 Note: This doesn't affect the **Mischievous Ellen** follower. She's more than used to seeing **Ibuki** naked.
 
@@ -325,6 +317,12 @@ It would seemingly kick like a mule, but Ibuki doesn't have much trouble with th
 
 Like your usual sidearm, you can also give it a spin with the utility key. However, it can't be dual-wielded.
 
+#### .50 PE *[Shells]*
+
+*"\*snicker\* Wait, it actually means THAT?"*
+
+Found in 7 round mags.
+
 ### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
 *"There WAS a hell knight..."*
@@ -333,6 +331,12 @@ Having miraculously come out unscathed from the **White Scar**, the **Garrett Gu
 
 Holding the utility key will switch to two-shot mode, for when you truly want something erased.
 
+#### .50 Oh My God *[Shell Box]*
+
+*"I don't think these really are that OMG-worthy, I've seen bigger."*
+
+Found as either spare rounds or 20 round packs.
+
 ### Slot 6 - Shinigami MM95 *[Chaingun]*
 
 *"Well, I do like me some penetration once in a while."*
@@ -340,6 +344,12 @@ Holding the utility key will switch to two-shot mode, for when you truly want so
 The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami Inc.**, meant to compete with popular western battle rifles at the time, such as the **HM417**. As per usual convention it is chambered for 7.62×51mm, although conversion kits exist for lower AND higher calibers. It is additionally equipped with a holographic sight for improved sighted accuracy. Bullets are enchanted for extra penetration, allowing them to cleave cleanly through everything, including some walls.
 
 The utility key alternates between semi auto, three round burst and full auto.
+
+#### 7.62×51mm NATO *[Bullet Box]*
+
+*"Real... Fuckin'... NATO."*
+
+Very standard stuff. Found in 30-round mags.
 
 ### Slot 7 - Itamex "Rita" HRL *[Rocket Launcher]*
 
@@ -351,6 +361,12 @@ While aiming through the visor, you will mark whatever target you've got on your
 
 Holding the utility key before firing engages a *"tight wad"* mode, wherein the missiles will remain close together, rather than spreading in a horizontal arc.
 
+#### 20×30mm Micro-Missile *[Rockets]*
+
+*"It's not the size that matters..."*
+
+Found as either spare rounds or full 18-round mags.
+
 ### Slot 8 - Cyrus Stormbringer *[Plasma Rifle]*
 
 *"Electricity isn't scary... But it's gonna be for you."*
@@ -361,31 +377,7 @@ Don't even think about using this underwater, although it is a very good strateg
 
 A tap of the utility key will toggle a focused mode which keeps the arcs from spreading too much, allowing them to focus entirely on one target at a time, for maximum cooking potential.
 
-### .50 PE *[Shells]*
-
-*"\*snicker\* Wait, it actually means THAT?"*
-
-Found in 7 round mags.
-
-### .50 Oh My God *[Shell Box]*
-
-*"I don't think these really are that OMG-worthy, I've seen bigger."*
-
-Found as either spare rounds or 20 round packs.
-
-### 7.62×51mm NATO *[Bullet Box]*
-
-*"Real... Fuckin'... NATO."*
-
-Very standard stuff. Found in 30-round mags.
-
-### 20×30mm Micro-Missile *[Rockets]*
-
-*"It's not the size that matters..."*
-
-Found as either spare rounds or full 18-round mags.
-
-### Dysedum Rod *[Cells]*
+#### Dysedum Rod *[Cells]*
 
 *"We trust the rod... Or whatever it was that Sayacchi said."*
 
