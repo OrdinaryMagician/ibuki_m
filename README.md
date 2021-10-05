@@ -283,14 +283,6 @@ You can bring along an old friend to these adventures. The undying drunkard grem
 
 As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her. If she ever loses track of you somehow, she can easily employ the trusty magic skills of her **Yanikov** blood to warp to your position.
 
-### Nudist Mode
-
-*"It's so nice to finally feel the breeze..."*
-
-Sheds all that clothing **Ibuki** begrudgingly wears to not *"titillate"* people too much in public. All that's left is the very important **Lucky Collar** that **Saya** gave you. Although this makes you a bit more awkwardly *"bouncy"* in your movements, you also gain the advantage of damage resistance from oil being more effective, since you can now apply it everywhere.
-
-Note: This doesn't affect the **Mischievous Ellen** follower. She's more than used to seeing **Ibuki** naked.
-
 ---
 
 ## DLC
