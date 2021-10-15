@@ -139,7 +139,7 @@ Holding the utility key while zoomed allows you to adjust the zoom level by pres
 
 #### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
 
-*"This... This is literally a tiny thermonuclear bomb squeezed into 20 milimeters... How?"*
+*"This... This is literally a tiny thermonuclear bomb squeezed into 20 millimeters... How?"*
 
 Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
 
@@ -157,7 +157,7 @@ Unlike most other plasma weapons of modern times, the Psyker doesn't need to let
 
 *"Nice and simple, how things used to be before they started putting all those random fancy lights on them."*
 
-Plasma ammunition is generally found in **NATO** standard 30x36mm compressed argon cells. Each of these allows for 20 shots of the **Psyker**.
+Plasma ammunition is generally found in **NATO** standard 60x72mm compressed argon cells. Each of these allows for 30 shots of the **Psyker**. Note that your autoloader has support for consolidating plasma charges too, so partial reloads won't be as wasteful.
 
 ### Slot 9 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
 
@@ -253,7 +253,7 @@ This thing can get you so pumped up you pretty much become unstoppable after chu
 
 ### Glow Visor *[Lite-Amp]*
 
-*"Pretty sure this is the same model Ellen-san used."*
+*"Pretty sure this is the same model Ellen-san uses."*
 
 Cheap and easy night vision goggles. Can be toggled if you wanna save that battery.
 
@@ -283,6 +283,8 @@ You can bring along an old friend to these adventures. The undying drunkard grem
 
 As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her. If she ever loses track of you somehow, she can easily employ the trusty magic skills of her **Yanikov** blood to warp to your position.
 
+You can share healing and powerups with her *(Yes, this includes the milk)*.
+
 ---
 
 ## DLC
@@ -293,11 +295,11 @@ Post-release I could attempt to add some extra weapons to expand this arsenal, p
 
 *"Ah, the American pastime..."*
 
-A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. Its previous owner allegedly used it to exorcise evil spirits.
+A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. **Saya** allegedly asked **Misa** to make this because it would allow you to *"exorcise evil spirits"* with it.
 
 Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
 
-Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace.
+Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
 
 ### Slot 4 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
 
@@ -343,21 +345,21 @@ The utility key alternates between semi auto, three round burst and full auto.
 
 Very standard stuff. Found in 30-round mags.
 
-### Slot 7 - Itamex "Rita" HRL *[Rocket Launcher]*
+### Slot 7 - Itamex "Rita" Micro-Missile Launcher *[Rocket Launcher]*
 
 *"Good things come in small packages... LOTS of exploding small packages."*
 
-Nicknamed the ***"Stick of Six Fires"*** by enthusiasts *(especially of the nerdy kind)*, the **Rita HRL** is a force to be reckoned with. Six revolving barrels, for up to six simultaneous micro-missile launches. Ammunition is fed from a 18-round drum mag, allowing for the user to dispense three full barrages of projectiles before needing to reload.
+Nicknamed the ***"Eightball"*** by enthusiasts *(especially of the nerdy kind, who in addition don't realize what that name actually referred to)*, the **Rita** is a force to be reckoned with. Eight revolving barrels, for up to eight simultaneous micro-missile launches. Ammunition is fed from a 24-round internal magazine, allowing for the user to dispense three full barrages of projectiles before needing to reload.
 
 While aiming through the visor, you will mark whatever target you've got on your sights to lock on for homing missiles.
 
-Holding the utility key before firing engages a *"tight wad"* mode, wherein the missiles will remain close together, rather than spreading in a horizontal arc.
+The utility key loads the barrels, up to eight in total. All will be fired simultaneously in a tight wad upon pressing the fire button. Note that if you didn't preload and press the fire button, it will load just one missile beforehand.
 
 #### 20×30mm Micro-Missile *[Rockets]*
 
 *"It's not the size that matters..."*
 
-Found as either spare rounds or full 18-round mags.
+Found as either spare rounds or 8-round packs.
 
 ### Slot 8 - Cyrus Stormbringer *[Plasma Rifle]*
 
@@ -373,7 +375,17 @@ A tap of the utility key will toggle a focused mode which keeps the arcs from sp
 
 *"We trust the rod... Or whatever it was that Sayacchi said."*
 
-You'll find these either all alone or in small handfuls.
+You'll find these either all alone or in small handfuls. The Stormbringer takes seven of them.
+
+---
+
+## Compatibility
+
+**Doom** is pretty much the baseline here. **Heretic** support could *"maybe"* be added post-release but it wouldn't really be a priority. I don't think it'd fit much with this both gameplay and story-wise. Same with **Hexen**. It's very likely that it'll remain solely **Doom** compatible and nothing more. As there's not much id-specific here like there was with **SWWM GZ**, it could also work with **Freedoom**, I suppose.
+
+Note: Playing through vanilla maps with this would be considered a storyline discrepancy, but I'm not gonna stop you.
+
+Also Note: This would have potential with **H-Doom**, like, genuinely. **Ibuki** would totally be up for some demon pussy slaying, but I'm not even sure how that would work considering they're sprites and the player is 3D modeled.
 
 ---
 
