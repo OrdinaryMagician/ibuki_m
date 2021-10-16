@@ -17,7 +17,7 @@ So, while **Demo-chan** was out there blastin' away in the US, **Ibuki** too had
 
 If your health drops to zero, you will be incapacitated. In this state, you've got two choices: Either wait until you can revive again, or restart from the last save. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless.
 
-Your increased bone and muscle density make you unable to float in water. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot which, unlike the "quick kick", can be used even while firing or reloading weapons.
+Your increased bone and muscle density make you unable to float in water. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot which, unlike the "quick kick", can be used even while firing or reloading weapons. Do note that you need to be standing on a solid surface to use it, as it involves stomping on the floor with all your strength.
 
 As **Saya** often states, you are effectively *"bulletproof"* and therefore you don't really need to wear armor, or clothes, so all you've got on you is some minimal clothing for *"modesty"*: a simple black bikini and jacket, as well as some sandals.
 
@@ -201,7 +201,7 @@ Available in 5 round mags or single rounds. These things are big.
 
 ## Items
 
-Gotta have some of these too to help in your adventure.
+Gotta have some of these too to help in your adventure. **Ibuki** will happily hoard what she doesn't need to use right away.
 
 ### Water Bottle *[Health Bonus, Stimpack, Medikit]*
 
@@ -213,7 +213,7 @@ Staying hydrated is important. Available in three sizes, recovering 5 HP, 20 HP 
 
 *"Ohhhhh... That feels good..."*
 
-A potent overheal of 100 HP with no upper cap whatsoever. Note that any healing above 100 will wear off over time, faster the higher it's at.
+A potent overheal of 100 HP with no upper cap whatsoever. Note that any healing above 100 will wear off over time, faster the higher it's at. Megaspheres are replaced by two of them, for a 200 HP boost.
 
 ### Oil Bottle *[Armor Bonus, Green Armor, Blue Armor]*
 
@@ -231,7 +231,7 @@ Lets you carry more ammo. Your plan allows for up to 8 expansions. In addition, 
 
 *"Saya keeps laughing at the name of this thing. I don't really get it."*
 
-A very potent timed explosive. Make sure to take cover, because it hits hard.
+A very potent timed explosive. Make sure to take cover, because it hits hard. Used through a dedicated keybind, rather than the inventory bar.
 
 ### Bootleg "Mischievous Ellen" Vodka *[Berserk]*
 
