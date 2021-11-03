@@ -1,7 +1,5 @@
-# 赤鬼
-## UnSX Side Story: Ibuki
-
----
+# SWWM GZ Side Story ~ RED ONI
+![](docimg/OniLogo.png)
 
 ## Teh Intro
 
