@@ -1,0 +1,144 @@
+OptionValue "SWWMEnemyDropType"
+{
+	-1, "$SWWM_DROPS_NONE"
+	0, "$SWWM_DROPS_AMMO"
+	1, "$SWWM_DROPS_WEAPONS"
+}
+OptionValue "SWWMDRLASkill"
+{
+	0, "$SWWM_DRLASKILL_BABY"
+	1, "$SWWM_DRLASKILL_EASY"
+	2, "$SWWM_DRLASKILL_NORMAL"
+	3, "$SWWM_DRLASKILL_HARD"
+	4, "$SWWM_DRLASKILL_NIGHTMARE"
+	5, "$SWWM_DRLASKILL_TECHNOPHOBIA"
+	6, "$SWWM_DRLASKILL_ARMAGEDDON"
+	7, "$SWWM_DRLASKILL_ADAPTIVE"
+}
+OptionValue "SWWMPistolStart"
+{
+	0, "$TXT_NO"
+	1, "$SWWM_PISTOLSTART_MAP"
+	2, "$SWWM_PISTOLSTART_CLUSTER"
+}
+OptionMenu "OniOptionMenu"
+{
+	Class "SWWMOptionMenu"
+	Title "$ONI_MTITLE"
+
+	SafeCommand "$SWWM_CRESET", "event swwmresetcvars"
+	StaticText " "
+
+	StaticText "$SWWM_PTITLE", "DarkRed"
+	SWWMPlayTime "$SWWM_PLAYTIME", "oni_playtime"
+	StaticText " "
+	StaticText "$SWWM_OTITLE", "DarkRed"
+	Option "$SWWM_SHADERS", "oni_shaders", "YesNo"
+	Slider "$SWWM_FLASH", "oni_flashstrength", 0.0, 1.0, 0.1, 1
+	Slider "$SWWM_BUMP", "oni_bumpstrength", 0.0, 1.0, 0.1, 1
+	Option "$SWWM_FUZZ", "oni_fuzz", "YesNo"
+	StaticText " "
+	StaticText "$SWWM_ETITLE", "DarkRed"
+	Option "$SWWM_SHADOWS", "oni_shadows", "YesNo"
+	ScaleSlider "$SWWM_SHADOWDIST", "oni_shadowdist", -1, 4000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
+	Option "$SWWM_BLOOD", "oni_blood", "YesNo"
+	ScaleSlider "$SWWM_MAXBLOOD", "oni_maxblood", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
+	ScaleSlider "$SWWM_MAXGIBS", "oni_maxgibs", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
+	ScaleSlider "$SWWM_MAXCASINGS", "oni_maxcasings", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
+	ScaleSlider "$SWWM_MAXDEBRIS", "oni_maxdebris", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
+	StaticText " "
+	StaticText "$SWWM_BTITLE", "DarkRed"
+	Option "$SWWM_PISTOLSTART", "oni_pistolstart", "SWWMPistolStart"
+	Option "$SWWM_ENEMYDROPS", "oni_enemydrops", "SWWMEnemyDropType"
+	StaticText " "
+	StaticText "$SWWM_ITITLE", "DarkRed"
+	Option "$SWWM_SINGLEFIRST", "oni_singlefirst", "YesNo"
+	Option "$SWWM_WEAPONTOOLTIPS", "oni_weapontooltips", "YesNo"
+	SafeCommand "$SWWM_RESETTOOLTIPS", "event swwmresettooltips"
+	StaticText " "
+	StaticText "$SWWM_MCTITLE", "DarkRed"
+	Option "$SWWM_DRLASKILL", "oni_drlaskill", "SWWMDRLASkill"
+	StaticText " "
+	StaticText " "
+
+}
+AddOptionMenu "OptionsMenu"
+{
+	Submenu "$ONI_MTITLE", "OniOptionMenu"
+	Submenu "$ONI_MCREDS", "OniCreditsMenu"
+}
+AddOptionMenu "OptionsMenuSimple"
+{
+	Submenu "$ONI_MTITLE", "OniOptionMenu"
+	Submenu "$ONI_MCREDS", "OniCreditsMenu"
+}
+ListMenu "MainMenu"
+{
+	Class "SWWMMainMenu"
+	Size Clean
+	Font "TewiShadedOutline", "DarkGray", "Red"
+	Selector "graphics/IbukiIcon.png", -24, 0
+	LineSpacing 36
+	SWWMLogo
+	Position 0, 56
+	SWWMTextItemM "$MNU_NEWGAME", "n", "PlayerclassMenu"
+	SWWMTextItemM "$MNU_OPTIONS", "o", "OptionsMenu"
+	SWWMTextItemM "$MNU_GAMEFILES", "g", "GameFilesMenu"
+	SWWMTextItemM "$MNU_INFO", "i", "ReadThisMenu"
+	SWWMTextItemM "$MNU_QUITGAME", "q", "QuitMenu"
+}
+ListMenu "MainMenuTextOnly"
+{
+	Class "SWWMMainMenu"
+	Size Clean
+	Font "TewiShadedOutline", "DarkGray", "Red"
+	Selector "graphics/IbukiIcon.png", -24, 0
+	LineSpacing 36
+	SWWMLogo
+	Position 0, 56
+	SWWMTextItemM "$MNU_NEWGAME", "n", "PlayerclassMenu"
+	SWWMTextItemM "$MNU_OPTIONS", "o", "OptionsMenu"
+	SWWMTextItemM "$MNU_GAMEFILES", "g", "GameFilesMenu"
+	SWWMTextItemM "$MNU_INFO", "i", "ReadThisMenu"
+	SWWMTextItemM "$MNU_QUITGAME", "q", "QuitMenu"
+}
+ListMenu "GameFilesMenu"
+{
+	Class "SWWMCleanMenu"
+	Size Clean
+	Font "TewiShadedOutline", "DarkGray", "Red"
+	Selector "graphics/IbukiIcon.png", -24, 0
+	LineSpacing 36
+	Position 0, 88
+	SWWMTextItemM "$MNU_LOADGAME", "l", "LoadGameMenu"
+	SWWMTextItemM "$MNU_SAVEGAME", "s", "SaveGameMenu"
+}
+ListMenu "EpisodeMenu"
+{
+	Class "SWWMBigMenuHack"
+	Size Clean
+	IfGame(Doom, Heretic, Hexen, Strife)
+	{
+		NetgameMessage "$NEWGAME"
+	}
+	IfGame(Chex)
+	{
+		NetgameMessage "$CNEWGAME"
+	}
+	Font "TewiShadedOutline", "DarkGray", "Red"
+	Selector "graphics/IbukiIcon.png", -24, 0
+	LineSpacing 0
+	SWWMStaticTextM 0, 0, "$MNU_EPISODE", "DarkRed"
+	Position 0, 0
+}
+
+ListMenu "SkillMenu"
+{
+	Class "SWWMBigMenuHack"
+	Size Clean
+	Font "TewiShadedOutline", "DarkGray", "Red"
+	Selector "graphics/IbukiIcon.png", -24, 0
+	LineSpacing 0
+	SWWMStaticTextM 0, 0, "$MNU_CHOOSESKILL", "DarkRed"
+	Position 0, 0
+}

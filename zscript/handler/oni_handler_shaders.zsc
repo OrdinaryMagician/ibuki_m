@@ -1,0 +1,12 @@
+extend Class SWWMHandler
+{
+	private ui void RenderShaders( RenderEvent e )
+	{
+		// nothing here yet
+	}
+
+	static clearscope void ClearAllShaders( PlayerInfo p, bool noscope = false )
+	{
+		// nothing here yet
+	}
+}

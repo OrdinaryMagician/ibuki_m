@@ -1,0 +1,75 @@
+HardwareShader Texture "graphics/tempbg.png"
+{
+	Shader "shaders/glsl/Fuzz.fp"
+	Texture "noisetex" "textures/graynoise.png"
+	Define "ONICOLORS"
+}
+HardwareShader Texture "graphics/title_ibuki.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_ibuki_dark.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_ibuki_eye.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_ibuki_smoke.png"
+{
+	Shader "shaders/glsl/Bilinear_wave.fp"
+}
+HardwareShader Texture "graphics/title_smoke_0.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_1.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_2.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_3.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_4.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_5.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_6.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_7.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/OniLogoL.png"
+{
+	Shader "shaders/glsl/OniLogoAnimated.fp"
+	Define "TEX_SZ" = "vec2(1024.,1024.)"
+	Define "TEX_AR" = "1."
+	Texture "LogoTex" "graphics/OniLogoL_Layers.png"
+}
+HardwareShader Texture "graphics/OniLogoR.png"
+{
+	Shader "shaders/glsl/OniLogoAnimated.fp"
+	Define "TEX_SZ" = "vec2(1024.,1024.)"
+	Define "TEX_AR" = "1."
+	Texture "LogoTex" "graphics/OniLogoR_Layers.png"
+}
+HardwareShader Texture "graphics/M_REDONI.png"
+{
+	Shader "shaders/glsl/OniLogoAnimated.fp"
+	Define "TEX_SZ" = "vec2(256.,128.)"
+	Define "TEX_AR" = "2."
+	Texture "LogoTex" "graphics/M_REDONI_Layers.png"
+}

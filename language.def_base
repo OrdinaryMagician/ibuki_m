@@ -1,0 +1,24 @@
+[default]
+// tags, pickups
+// quit messages
+QUITMSG = "Leaving already?\nI'll be waiting, sweetie...";
+QUITMSG1 = "Oh, don't worry, I'm sure\nwe can have more fun later.";
+QUITMSG2 = "Hope you come back soon.\nI like playing with you.";
+QUITMSG3 = "You'll come back for sure.\nYou already had your first taste.";
+QUITMSG4 = "If you promise to come back,\nI'll give you a nice treat.";
+QUITMSG5 = "Do you like killing demons?\nLet's kill more demons next time.";
+QUITMSG6 = "Farewell, my cute little player...";
+QUITMSG7 = "Have you met Demo-chan?\nTheir adventures are fun too.";
+QUITMSG8 = "Ah, my tits feel heavy...\nWill you hold them for me?";
+QUITMSG9 = "Don't forget to stay hydrated.\nYou'll definitely need it.";
+QUITMSG10 = "I suppose you need a break.\nThat's understandable, of course.";
+QUITMSG11 = "Aw, leaving already?\nThat's a shame...";
+// obituaries
+// misc
+ONI_TITLEPRESENTSA = "UnSX Team";
+ONI_TITLEPRESENTSB = "presents";
+ONI_TITLEMODBYA = "a mod by";
+ONI_TITLEMODBYB = "Marisa Kirisame";
+ONI_TITLEINTROA = "\"and he thus said to his people: do no evil, lest you wish";
+ONI_TITLEINTROB = "to bring upon yourself the unyielding fury of the \crRED ONI\c-\"";
+// weapon tooltips

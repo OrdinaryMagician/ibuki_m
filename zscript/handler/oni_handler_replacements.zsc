@@ -1,0 +1,10 @@
+// Red Oni replacements
+
+extend Class SWWMHandler
+{
+	private bool ModReplacement( ReplaceEvent e )
+	{
+		// nothing here yet
+		return false;
+	}
+}

@@ -1,0 +1,73 @@
+version "4.7.1"
+
+/*
+   RED ONI Main Codebase
+   (C)2021 Marisa Kirisame, UnSX Team
+   This copyright and the attached LICENSE.code file apply to all files
+   included from here, with the exception of any third-party libraries
+*/
+
+/// SWWM GZ Common Library
+// library constants
+const SWWMMODPREFIX = "oni";
+const SWWMMAXBACKPACK = 8;
+const SWWMHEALTHFLASH = Color(64,96,255);
+const SWWMARMORFLASH = Color(255,224,64);
+const SWWMLOGONAME = "M_REDONI";
+const SWWMCREDITSCOL0 = Font.CR_DARKRED;
+const SWWMCREDITSCOL1 = Font.CR_RED;
+const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
+// Gutamatics
+#include "zscript/swwm_Gutamatics/Include.zsc"
+// utility code
+#include "zscript/utility/swwm_coordutil.zsc"
+#include "zscript/utility/swwm_utility.zsc"
+// base code
+#include "zscript/swwm_common.zsc"
+#include "zscript/swwm_common_fx.zsc"
+#include "zscript/swwm_handler.zsc"
+#include "zscript/swwm_statichandler.zsc"
+#include "zscript/swwm_thinkers.zsc"
+#include "zscript/swwm_player.zsc"
+#include "zscript/swwm_blod.zsc"
+// handler code
+#include "zscript/handler/swwm_handler_damage.zsc"
+#include "zscript/handler/swwm_handler_flash.zsc"
+#include "zscript/handler/swwm_handler_iwantdie.zsc"
+#include "zscript/handler/swwm_handler_process.zsc"
+#include "zscript/handler/swwm_handler_queues.zsc"
+#include "zscript/handler/swwm_handler_replacements.zsc"
+#include "zscript/handler/swwm_handler_worldload.zsc"
+#include "zscript/handler/swwm_handler_worldthings.zsc"
+// menu code
+#include "zscript/menu/swwm_menus.zsc"
+#include "zscript/menu/swwm_credits.zsc"
+// compat code
+#include "zscript/compat/swwm_compat.zsc"
+// hud
+#include "zscript/hud/swwm_hudextra.zsc"
+// items
+#include "zscript/items/swwm_baseitem.zsc"
+#include "zscript/items/swwm_basehealth.zsc"
+#include "zscript/items/swwm_basearmor.zsc"
+#include "zscript/items/swwm_baseammo.zsc"
+#include "zscript/items/swwm_ammoextra.zsc"
+// weapons
+#include "zscript/weapons/swwm_baseweapon.zsc"
+#include "zscript/weapons/swwm_baseweapon_fx.zsc"
+#include "zscript/weapons/swwm_baseweapon_melee.zsc"
+// monsters
+#include "zscript/swwm_monsters.zsc"
+
+/// RED ONI Specific Code
+// utility code
+#include "zscript/utility/oni_utility.zsc"
+// base code
+#include "zscript/oni_player.zsc"
+// handler code
+#include "zscript/handler/oni_handler_shaders.zsc"
+#include "zscript/handler/oni_handler_replacements.zsc"
+#include "zscript/handler/oni_statichandler_fonts.zsc"
+// menu code
+#include "zscript/menu/oni_title.zsc"
+#include "zscript/menu/oni_credits.zsc"

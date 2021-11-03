@@ -237,7 +237,7 @@ A very potent timed explosive. Make sure to take cover, because it hits hard. Us
 
 *"Bottoms up!"*
 
-This will bring you back to full health and give you a fairly decent strength boost. Do note however that **Ibuki**'s body metabolizes the drunkedness away quickly. Part of **Ellen**'s seemingly unending stash.
+This will bring you back to full health and give you a fairly decent strength boost *(Enough to tear enemies apart with your bare hands)*. Do note however that **Ibuki**'s body metabolizes the drunkedness away quickly. Part of **Ellen**'s seemingly unending stash.
 
 ### Omnisight *[Computer Map]*
 
@@ -262,6 +262,18 @@ Cheap and easy night vision goggles. Can be toggled if you wanna save that batte
 *"Sometimes you gotta wear protection..."*
 
 The usual solution for getting into dangerous terrain. Just pop it and go for a dive.
+
+### Aerial Amulet *[Wings of Wrath]*
+
+*"It's surprising that this thing can even lift me off the ground."*
+
+A convenient little magic artifact that allows you to float in mid-air. Far more comfortable than the **Gravity Suppressor**, but unlike that one, this has a weight limit *(poor **Demo-chan**, their shiny metal butt is just too damn heavy)*. Its effects can be conveniently toggled at will, allowing you to save up energy when needed.
+
+### Safety Tether *[Chaos Device]*
+
+*"I'm outta here, bitches."*
+
+Allows you to make a quick escape back to the start of the map when activated. Also releases some damaging shockwaves on both endpoints in the process. Useful when you're trapped in some inescapable room, or get surrounded by an overwhelming amount of enemies.
 
 ---
 
@@ -381,7 +393,7 @@ You'll find these either all alone or in small handfuls. The Stormbringer takes 
 
 ## Compatibility
 
-**Doom** is pretty much the baseline here. **Heretic** support could *"maybe"* be added post-release but it wouldn't really be a priority. I don't think it'd fit much with this both gameplay and story-wise. Same with **Hexen**. It's very likely that it'll remain solely **Doom** compatible and nothing more. As there's not much id-specific here like there was with **SWWM GZ**, it could also work with **Freedoom**, I suppose.
+**Doom** is pretty much the baseline here. **Heretic** support will be added later on but it won't be a high priority. In regards to **Hexen** I don't think it'd fit much both gameplay and story-wise. It's very likely that it'll remain solely **Doom** and **Heretic** compatible and nothing more. As there's not much id-specific here like there was with **SWWM GZ**, it could also work with **Freedoom**, I suppose.
 
 Note: Playing through vanilla maps with this would be considered a storyline discrepancy, but I'm not gonna stop you.
 

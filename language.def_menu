@@ -1,0 +1,18 @@
+[default]
+// keybinds
+// skills
+ONI_SKCHILL="\cv5.56x45mm\c-";
+ONI_SKEASY="\cd7.62x51mm\c-";
+ONI_SKNORMAL="\cf12.7x99mm\c-";
+ONI_SKHARD="\ci14.5x114mm\c-";
+ONI_SKHARDCORE="\cr20x102mm\c-";
+ONI_SKHARDCORECONFIRM="\crAre you sure you want to do that?\nYou might get your ass kicked if you pick this.\c-\n\n(Press Y for a challenge)";
+ONI_SKLUNATIC="\cm30x173mm\c-";
+ONI_SKLUNATICCONFIRM="\cmYou've clearly got a death wish.\nChoose this skill if you dare.\c-\n\n(Press Y to die instantly)";
+// mod menu
+ONI_MTITLE = "RED ONI Options";
+ONI_MCREDS = "RED ONI Credits";
+// credits
+ONI_CSTITLE = "UnSX Side Story: Ibuki";
+ONI_CSTITLE2 = "Big Tiddy Supersoldier Goth GF";
+// Help menu

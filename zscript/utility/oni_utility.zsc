@@ -1,0 +1,14 @@
+// mod-specific utility code
+extend Class SWWMUtility
+{
+	// IsZeroDamage() can lead to some false negatives, we have to account for that
+	static play bool ValidProjectile( Actor a )
+	{
+		if ( !a.bMISSILE ) return false;
+		// TODO add mod projectiles here
+		if ( !a.IsZeroDamage() ) return true;
+		return false;
+	}
+
+	// TODO slot replacers
+}

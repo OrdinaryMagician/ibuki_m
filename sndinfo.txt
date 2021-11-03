@@ -1,0 +1,14 @@
+$pitchshiftrange 0
+
+aa12/fire1		sounds/aa12/aa12_fire1.ogg
+aa12/fire2		sounds/aa12/aa12_fire2.ogg
+aa12/fire3		sounds/aa12/aa12_fire3.ogg
+$random aa12/fire { aa12/fire1 aa12/fire2 aa12/fire3 }
+aa12/magin		sounds/aa12/aa12_magin.ogg
+aa12/magout		sounds/aa12/aa12_magout.ogg
+aa12/boltback		sounds/aa12/aa12_boltback.ogg
+aa12/boltforward	sounds/aa12/aa12_boltforward.ogg
+aa12/titlecock		sounds/aa12/aa12_titlecock.ogg
+aa12/titlefire		sounds/aa12/aa12_titlefire.ogg
+
+title/thump	sounds/titlethump.ogg

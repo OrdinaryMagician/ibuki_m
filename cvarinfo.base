@@ -1,0 +1,19 @@
+// shared cvars
+nosave float oni_flashstrength = 1.0;
+nosave bool oni_shaders = true;
+server bool oni_blood = true;
+server int oni_maxblood = 400;
+server int oni_maxgibs = 100;
+server int oni_maxcasings = 200;
+server int oni_maxdebris = 500;
+nosave bool oni_fuzz = true;
+server int oni_enemydrops = 0;
+server bool oni_shadows = true;
+nosave int oni_shadowdist = 2000;
+server int oni_pistolstart = 0;
+server int oni_drlaskill = 3;
+server bool oni_singlefirst = false;
+nosave bool oni_weapontooltips = true;
+nosave string oni_tooltipshown = "";
+nosave noarchive bool oni_tooltipnote = false;
+nosave int oni_playtime = 0;
