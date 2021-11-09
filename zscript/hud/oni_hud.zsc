@@ -1,0 +1,318 @@
+// RED ONI HUD
+
+Class OniStatusBar : SWWMStatusBar
+{
+	TextureID StatusTex, AmmoTex[3], InvTex, WeaponTex, HealthTex[4], OilTex, GenTex[3];
+	Array<String> AmmoClasses, AmmoNames;
+	Array<int> AmmoFlash;		// flash when new ammo is received
+	Array<int> AmmoOldAmounts;	// to detect when to flash
+	int HealthFlash, OilFlash;	// flash when healing or gaining armor
+	int LastHealth, LastOil;	// to detect when to flash
+
+	DynamicValueInterpolator HealthInter, OilInter;
+
+	override void FlushNotify()
+	{
+		Super.FlushNotify();
+		// flush interpolators (useful since this virtual gets called
+		// when loading saves, too)
+		HealthInter.Reset(CPlayer.Health);
+		OilInter.Reset(CPlayer.mo.CountInv("OniOilArmor"));
+	}
+	override void UpdateInterpolators()
+	{
+		int hp = CPlayer.Health;
+		int oil = CPlayer.mo.CountInv("OniOilArmor");
+		HealthInter.Update(hp);
+		OilInter.Update(oil);
+		// flash 'em
+		if ( hp > LastHealth ) HealthFlash = gametic+25;
+		if ( oil > LastOil ) OilFlash = gametic+25;
+		LastHealth = hp;
+		LastOil = oil;
+	}
+
+	// hello??? why is this function clearscope???
+	override void ReceivedWeapon( Weapon weapn )
+	{
+		Super.ReceivedWeapon(weapn);
+		int dummy, slot;
+		[dummy, slot] = players[consoleplayer].weapons.LocateWeapon(weapn.GetClass());
+		EventHandler.SendNetworkEvent("oniweaponreceive",slot);
+	}
+
+	override void Init()
+	{
+		Super.Init();
+		StatusTex = TexMan.CheckForTexture("graphics/HUD/StatusBox.png",TexMan.Type_Any);
+		AmmoTex[0] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxTop.png",TexMan.Type_Any);
+		AmmoTex[1] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxLine.png",TexMan.Type_Any);
+		AmmoTex[2] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxBottom.png",TexMan.Type_Any);
+		InvTex = TexMan.CheckForTexture("graphics/HUD/InventoryBox.png",TexMan.Type_Any);
+		WeaponTex = TexMan.CheckForTexture("graphics/HUD/WeaponBox.png",TexMan.Type_Any);
+		HealthTex[0] = TexMan.CheckForTexture("graphics/HUD/HealthBar.png",TexMan.Type_Any);
+		HealthTex[1] = TexMan.CheckForTexture("graphics/HUD/HealthBarEx.png",TexMan.Type_Any);
+		HealthTex[2] = TexMan.CheckForTexture("graphics/HUD/HealthBarInvul.png",TexMan.Type_Any);
+		HealthTex[3] = TexMan.CheckForTexture("graphics/HUD/FlashBar.png",TexMan.Type_Any);
+		OilTex = TexMan.CheckForTexture("graphics/HUD/OilBar.png",TexMan.Type_Any);
+		GenTex[0] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxL.png",TexMan.Type_Any);
+		GenTex[1] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxM.png",TexMan.Type_Any);
+		GenTex[2] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxR.png",TexMan.Type_Any);
+		LastHealth = 0;
+		LastOil = 0;
+		HealthInter = DynamicValueInterpolator.Create(LastHealth,.1,1,100);
+		OilInter = DynamicValueInterpolator.Create(LastOil,.1,1,100);
+		AmmoClasses.Clear();
+		AmmoNames.Clear();
+		int lmp = Wads.CheckNumForFullName("ammotable.lst");
+		if ( lmp == -1 ) ThrowAbortException("'ammotable.lst' not found!");
+		String dat = Wads.ReadLump(lmp);
+		Array<String> list;
+		// fucking Windows
+		dat.Replace("\r","");
+		list.Clear();
+		dat.Split(list,"\n");
+		for ( int i=0; i<list.Size(); i++ )
+		{
+			if ( (list[i].Length() == 0) || (list[i].Left(1) == "#") || (list[i].Left(1) == "") )
+				continue;
+			int comma = list[i].IndexOf(",");
+			AmmoClasses.Push(list[i].Left(comma));
+			AmmoNames.Push(list[i].Mid(comma+1));
+			let a = (Class<Ammo>)(list[i].Left(comma));
+			AmmoFlash.Push(0);
+			AmmoOldAmounts.Push(int.min);
+		}
+	}
+
+	override void GetMinimapColors()
+	{
+		mm_backcolor = "10 10 10";
+		mm_cdwallcolor = "50 30 30";
+		mm_efwallcolor = "a0 80 80";
+		mm_fdwallcolor = "70 50 50";
+		mm_interlevelcolor = "ff 00 60";
+		mm_intralevelcolor = "00 60 ff";
+		mm_lockedcolor = "00 90 80";
+		mm_notseencolor = "30 20 20";
+		mm_portalcolor = "40 30 20";
+		mm_secretsectorcolor = "80 00 ff";
+		mm_secretwallcolor = "60 40 80";
+		mm_specialwallcolor = "ff a0 00";
+		mm_tswallcolor = "30 20 40";
+		mm_unexploredsecretcolor = "40 00 80";
+		mm_wallcolor = "e0 c0 c0";
+		mm_yourcolor = "80 00 00";
+	}
+
+	override void DrawInventory()
+	{
+		// TODO
+	}
+
+	override void DrawWeapons()
+	{
+		if ( CPlayer.ReadyWeapon is 'SWWMWeapon' ) SWWMWeapon(CPlayer.ReadyWeapon).DrawWeapon(FracTic,ss.x-(margin+58),ss.y-(margin+14),hs,ss);
+		else if ( CPlayer.ReadyWeapon )
+		{
+			// generic display
+			double xx = ss.x-(margin+60), yy = ss.y-(margin+24);
+			String str;
+			int len;
+			if ( CPlayer.ReadyWeapon.Ammo2 && (CPlayer.ReadyWeapon.Ammo2 != CPlayer.ReadyWeapon.Ammo1) )
+			{
+				str = String.Format("%d",CPlayer.ReadyWeapon.Ammo2.Amount);
+				len = str.Length();
+				yy -= 10;
+				Screen.DrawTexture(GenTex[2],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				for ( int i=0; i<len; i++ )
+				{
+					xx -= 4;
+					Screen.DrawTexture(GenTex[1],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				}
+				Screen.DrawTexture(GenTex[0],false,xx-2,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				Screen.DrawText(mMiniHUDFont.mFont,mhudfontcol[(CPlayer.ReadyWeapon.Ammo2.Amount<=0)?MCR_RED:MCR_BRASS],xx,yy+2,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				yy += 10;
+			}
+			xx = ss.x-(margin+60);
+			if ( CPlayer.ReadyWeapon.Ammo1 )
+			{
+				str = String.Format("%d",CPlayer.ReadyWeapon.Ammo1.Amount);
+				len = str.Length();
+				Screen.DrawTexture(GenTex[2],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				for ( int i=0; i<len; i++ )
+				{
+					xx -= 4;
+					Screen.DrawTexture(GenTex[1],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				}
+				Screen.DrawTexture(GenTex[0],false,xx-2,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+				Screen.DrawText(mMiniHUDFont.mFont,mhudfontcol[(CPlayer.ReadyWeapon.Ammo1.Amount<=0)?MCR_RED:MCR_BRASS],xx,yy+2,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			}
+		}
+		Screen.DrawTexture(WeaponTex,false,ss.x-(margin+80),ss.y-(margin+10),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		double xx = ss.x-(margin+78), yy = ss.y-(margin+8);
+		for ( int i=1; i<=10; i++,xx+=8 )
+		{
+			if ( !CPlayer.HasWeaponsInSlot(i%10) ) continue;
+			int ncolor = mhudfontcol[MCR_WHITE];
+			bool selected = false;
+			bool dummy;
+			int slot;
+			if ( CPlayer.PendingWeapon && (CPlayer.PendingWeapon != WP_NOCHANGE) )
+			{
+				[dummy, slot] = CPlayer.weapons.LocateWeapon(CPlayer.PendingWeapon.GetClass());
+				if ( slot == (i%10) ) selected = true;
+			}
+			else if ( (!CPlayer.PendingWeapon || (CPlayer.PendingWeapon == WP_NOCHANGE)) && CPlayer.ReadyWeapon )
+			{
+				[dummy, slot] = CPlayer.weapons.LocateWeapon(CPlayer.ReadyWeapon.GetClass());
+				if ( slot == (i%10) ) selected = true;
+			}
+			if ( selected ) ncolor = mhudfontcol[MCR_BRASS];
+			else
+			{
+				bool hasammo = false;
+				for ( Inventory inv=CPlayer.mo.Inv; inv; inv=inv.Inv )
+				{
+					if ( inv is 'Weapon' ) [dummy, slot] = CPlayer.weapons.LocateWeapon(Weapon(inv).GetClass());
+					else continue;
+					if ( slot != (i%10) ) continue;
+					// CheckAmmo can't be called from ui, so we have to improvise
+					// for SWWM weapons I made a function for this at least
+					if ( (inv is 'SWWMWeapon') && SWWMWeapon(inv).ReportHUDAmmo() )
+						hasammo = true;
+					else if ( !(inv is 'SWWMWeapon') && ((!Weapon(inv).Ammo1 || (Weapon(inv).Ammo1.Amount > 0) || Weapon(inv).bAMMO_OPTIONAL) || (Weapon(inv).Ammo2 && ((Weapon(inv).Ammo2.Amount > 0) || Weapon(inv).bALT_AMMO_OPTIONAL))) )
+						hasammo = true;
+				}
+				if ( !hasammo ) ncolor = mhudfontcol[MCR_RED];
+			}
+			Screen.DrawText(mMiniHUDFont.mFont,ncolor,xx,yy,String.Format("%d",(i%10)),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			int f = hnd.WeaponFlash[i%10];
+			if ( f && (gametic < f) )
+			{
+				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				Screen.DrawText(mMiniHUDFont.mFont,mhudfontcol[MCR_FLASH],xx,yy,String.Format("%d",(i%10)),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+			}
+		}
+		xx = ss.x-(margin+54);
+		yy = ss.y-(margin+18+AmmoClasses.Size()*6);
+		Screen.DrawTexture(AmmoTex[0],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		yy += 2;
+		String str;
+		for ( int i=0; i<AmmoClasses.Size(); i++, yy+=6 )
+		{
+			Screen.DrawTexture(AmmoTex[1],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			int amt, amax;
+			bool selected = false;
+			Class<Ammo> a = AmmoClasses[i];
+			if ( !a )
+			{
+				// fallback for undefined ammo
+				amt = 0;
+				amax = 0;
+				selected = false;
+			}
+			else
+			{
+				let cur = Ammo(CPlayer.mo.FindInventory(a));
+				if ( !cur )
+				{
+					amt = 0;
+					amax = GetDefaultByType(a).MaxAmount;
+					if ( a is 'SWWMAmmo' )
+					{
+						let def = GetDefaultByType((Class<SWWMAmmo>)(a));
+						if ( def.MagAmmoType ) amax *= GetDefaultByType(def.MagAmmoType).ClipSize;
+					}
+				}
+				else
+				{
+					amt = cur.Amount;
+					amax = cur.MaxAmount;
+					if ( (cur is 'SWWMAmmo') && SWWMAmmo(cur).MagAmmoType )
+					{
+						let mag = MagAmmo(CPlayer.mo.FindInventory(SWWMAmmo(cur).MagAmmoType));
+						// theoretically this should never be null, but nevertheless...
+						if ( mag )
+						{
+							amt = amt*mag.ClipSize+mag.Amount;
+							amax = amax*mag.ClipSize+mag.MaxAmount;
+						}
+						else
+						{
+							let def = GetDefaultByType(SWWMAmmo(cur).MagAmmoType);
+							amt = amt*def.ClipSize;
+							amax = amax*def.ClipSize+def.MaxAmount;
+						}
+					}
+					if ( CPlayer.ReadyWeapon )
+					{
+						if ( CPlayer.ReadyWeapon is 'SWWMWeapon' )
+							selected = SWWMWeapon(CPlayer.ReadyWeapon).IsCurrentAmmo(cur);
+						else selected = (CPlayer.ReadyWeapon.Ammo1 == cur)||(CPlayer.ReadyWeapon.Ammo2 == cur);
+					}
+				}
+			}
+			int ncolor = (amt>0)?mhudfontcol[MCR_WHITE]:mhudfontcol[MCR_RED];
+			String cols = selected?"\c[MiniBrass]":"\c[MiniWhite]";
+			str = String.Format("%s%-4s \c-%03d%s/%03d\c-",cols,AmmoNames[i],clamp(amt,0,999),cols,clamp(amax,0,999));
+			Screen.DrawText(mMiniHUDFont.mFont,ncolor,xx+2,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			if ( (AmmoOldAmounts[i] != int.min) && (amt > AmmoOldAmounts[i]) ) AmmoFlash[i] = gametic+25;
+			AmmoOldAmounts[i] = amt;
+			let f = AmmoFlash[i];
+			if ( f && (gametic < f) )
+			{
+				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				str = String.Format("%03d",clamp(amt,0,999));
+				Screen.DrawText(mMiniHUDFont.mFont,mhudfontcol[MCR_FLASH],xx+20,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+			}
+		}
+		Screen.DrawTexture(AmmoTex[2],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+	}
+
+	override void DrawStatus()
+	{
+		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		String str;
+		double ot = clamp(OilInter.GetValue()/10.,0,100);
+		str = String.Format("%3d",clamp(ot,0,999));
+		double ow = min(ot,100);
+		Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0));
+		Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow);
+		Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_BRASS],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		int f = OilFlash;
+		if ( f && (gametic < f) )
+		{
+			double alph = ((f-(gametic+FracTic))/25.)**1.5;
+			Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+		}
+		double ht = clamp(HealthInter.GetValue()/10.,0,1000);
+		str = String.Format("%3d",clamp(ht,0,999));
+		double hw = min(ht,100);
+		Screen.DrawTexture(HealthTex[0],false,margin+3,ss.y-(margin+7),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_ColorOverlay,Color(255,0,0,0));
+		if ( isInvulnerable() )
+		{
+			Screen.DrawTexture(HealthTex[2],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw);
+			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_WHITE],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		}
+		else
+		{
+			Screen.DrawTexture(HealthTex[0],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw);
+			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_RED],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			if ( ht > 100 )
+			{
+				double alph = ((ht-100)/900.)**.5;
+				Screen.DrawTexture(HealthTex[1],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph);
+				Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_BLUE],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
+			}
+		}
+		f = HealthFlash;
+		if ( f && (gametic < f) )
+		{
+			double alph = ((f-(gametic+FracTic))/25.)**1.5;
+			Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+		}
+	}
+}

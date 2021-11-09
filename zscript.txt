@@ -45,6 +45,7 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 // compat code
 #include "zscript/compat/swwm_compat.zsc"
 // hud
+#include "zscript/hud/swwm_hud.zsc"
 #include "zscript/hud/swwm_hudextra.zsc"
 // items
 #include "zscript/items/swwm_baseitem.zsc"
@@ -65,9 +66,19 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 // base code
 #include "zscript/oni_player.zsc"
 // handler code
+#include "zscript/handler/oni_handler_process.zsc"
 #include "zscript/handler/oni_handler_shaders.zsc"
 #include "zscript/handler/oni_handler_replacements.zsc"
 #include "zscript/handler/oni_statichandler_fonts.zsc"
 // menu code
 #include "zscript/menu/oni_title.zsc"
 #include "zscript/menu/oni_credits.zsc"
+// hud
+#include "zscript/hud/oni_hud.zsc"
+// items
+#include "zscript/items/oni_ammoitems.zsc"
+#include "zscript/items/oni_ammospawn.zsc"
+#include "zscript/items/oni_armor.zsc"
+#include "zscript/items/oni_health.zsc"
+#include "zscript/items/oni_powerups.zsc"
+// weapons

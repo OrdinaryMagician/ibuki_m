@@ -1,0 +1,20 @@
+// Red Oni event processing
+
+extend Class SWWMHandler
+{
+	transient int WeaponFlash[10];
+
+	private ui void ModConsoleProcess( ConsoleEvent e )
+	{
+		// nothing here yet
+	}
+
+	private void ModNetworkProcess( ConsoleEvent e )
+	{
+		if ( e.Name ~== "oniweaponreceive" )
+		{
+			if ( (e.Args[0] < 0) || (e.Args[0] > 9) ) return;
+			WeaponFlash[e.Args[0]] = gametic+25;
+		}
+	}
+}

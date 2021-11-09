@@ -57,7 +57,7 @@ Tapping the utility key spins the gun, just for the sake of coolness.
 
 This weapon can be dual-wielded.
 
-#### 9mm Parabellum *[Clip]*
+#### 9mm Parabellum *[Bullets]*
 
 *"If you seek peace... Prepare for war..."*
 
@@ -89,7 +89,7 @@ This specific model has been with Ibuki since the early days, and it's been cust
 
 Tap the utility key to switch between semi-auto and full-auto.
 
-#### 6.8 SPC *[Shells, Shell Box]*
+#### 6.8 SPC *[Shells]*
 
 *"Honestly, I don't know what's so special about these."*
 
@@ -105,7 +105,7 @@ Due to the employment of this ammunition, which for 16ga has to be packed quite 
 
 Tap the utility key to switch between single-shot and four-shot modes.
 
-#### 16 Gauge *(Saltshot)* *[Shell Box]*
+#### 16 Gauge *(Saltshot)* *[Shells]*
 
 *"You're all going to be so salty..."*
 
@@ -119,7 +119,7 @@ A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big
 
 Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own. Putting it in hammerspace will make it cool down faster.
 
-#### 7.62×54mmMT *[Bullet Box]*
+#### 7.62×54mmMT *[Bullets]*
 
 *"Wait, you're telling me these aren't tracer rounds?"*
 
@@ -165,19 +165,19 @@ Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**.
 
 Tapping the utility key will cycle between available ammo types.
 
-#### 120mm "Redeemer" Warhead *[Cell Pack]*
+#### 120mm "Redeemer" Warhead *[Cells]*
 
 *"Adios, motherfucker..."*
 
 They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
 
-#### 120mm "Mad Dog" Canister Shot *[Cell Pack]*
+#### 120mm "Mad Dog" Canister Shot *[Cells]*
 
 *"Now these are the kinds of balls I like to play with..."*
 
 These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
 
-#### 120mm "Caster" Plasma Charge *[Cell Pack]*
+#### 120mm "Caster" Plasma Charge *[Cells]*
 
 *"Holy fucking shit..."*
 
@@ -199,7 +199,7 @@ Available in 5 round mags or single rounds. These things are big.
 
 ## Items
 
-Gotta have some of these too to help in your adventure. **Ibuki** will happily hoard what she doesn't need to use right away.
+Gotta have some of these too to help in your adventure. **Ibuki** will happily hoard what she doesn't need to use right away. Items that are at max capacity will not be picked up, but nevertheless they will still be tallied and have their script specials activate when touched.
 
 ### Water Bottle *[Health Bonus, Stimpack, Medikit]*
 
@@ -335,7 +335,7 @@ Having miraculously come out unscathed from the **White Scar**, the **Garrett Gu
 
 Holding the utility key will switch to two-shot mode, for when you truly want something erased.
 
-#### .50 Oh My God *[Shell Box]*
+#### .50 Oh My God *[Shells]*
 
 *"I don't think these really are that OMG-worthy, I've seen bigger."*
 
@@ -349,7 +349,7 @@ The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami I
 
 The utility key alternates between semi auto, three round burst and full auto.
 
-#### 7.62×51mm NATO *[Bullet Box]*
+#### 7.62×51mm NATO *[Bullets]*
 
 *"Real... Fuckin'... NATO."*
 

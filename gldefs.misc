@@ -73,3 +73,10 @@ HardwareShader Texture "graphics/M_REDONI.png"
 	Define "TEX_AR" = "2."
 	Texture "LogoTex" "graphics/M_REDONI_Layers.png"
 }
+HardwareShader Texture "graphics/HUD/HealthBarInvul.png"
+{
+	Shader "shaders/glsl/Fuzz.fp"
+	Texture "noisetex" "textures/graynoise.png"
+	Define "GRAY_COLORS"
+	Define "BASE_RES" = "vec2(100.,5.)"
+}

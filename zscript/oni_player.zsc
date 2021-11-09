@@ -1,3 +1,30 @@
+// The Red Oni herself
+
 Class IbukiPlayer : SWWMPlayer
 {
+	Default
+	{
+		Tag "$T_ONIIBUKI";
+		Speed 1;
+		Radius 16;
+		Height 70;
+		Mass 150;
+		PainChance 255;
+		Health 1000;
+		Player.DisplayName "$T_ONIIBUKI";
+		Player.ViewHeight 65;
+		Player.AirCapacity 0;
+		Player.GruntSpeed 20;
+		Player.ForwardMove 1., 1.;
+		Player.SideMove 1., 1.;
+		Player.SoundClass "ibuki";
+		DamageFactor "Drowning", 0.;
+		DamageFactor "Falling", 0.;
+		+NOBLOOD;
+		+DONTGIB;
+		+NOICEDEATH;
+		+DONTMORPH;
+		+DONTDRAIN;
+		+DONTCORPSE;
+	}
 }

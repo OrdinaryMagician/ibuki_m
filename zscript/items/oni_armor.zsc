@@ -1,0 +1,19 @@
+// All the armor items go here
+Class OniOilArmor : SWWMArmor
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 1000;
+		Inventory.InterHubAmount 1000;
+		SWWMArmor.ArmorPriority 1;
+		+SWWMARMOR.NOHITFLASH;
+		+SWWMARMOR.NOHITSOUND;
+	}
+
+	override int HandleDamage( int damage, Name damageType, int flags )
+	{
+		double factor = amount*.001;
+		return int(ceil(damage*factor));
+	}
+}

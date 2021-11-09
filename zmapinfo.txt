@@ -1,8 +1,8 @@
 GameInfo
 {
 	AddEventHandlers = "SWWMStaticHandler", "SWWMHandler"
-	//PlayerClasses = "IbukiPlayer"
-	//StatusBarClass = "OniStatusBar"
+	PlayerClasses = "IbukiPlayer"
+	StatusBarClass = "OniStatusBar"
 	BackpackType = "HammerspaceEmbiggener"
 	QuitSound = "misc/teleport"
 	QuitMessages = "$QUITMSG", "$QUITMSG1", "$QUITMSG2", "$QUITMSG3",
@@ -30,8 +30,8 @@ GameInfo
 	//HelpMenuClass = "OniHelpMenu"
 	MenuDelegateClass = "SWWMMenuDelegate"
 	PauseSign = "graphics/onipause.png"
-	//BorderFlat = "graphics/bord_flat.png"
-	//Border = 2, 0, "graphics/bord_tr.png", "graphics/bord_t.png", "graphics/bord_tl.png", "graphics/bord_r.png", "graphics/bord_l.png", "graphics/bord_br.png", "graphics/bord_b.png", "graphics/bord_bl.png"
+	BorderFlat = "graphics/bord_flat.png"
+	Border = 2, 0, "graphics/bord_tr.png", "graphics/bord_t.png", "graphics/bord_tl.png", "graphics/bord_r.png", "graphics/bord_l.png", "graphics/bord_br.png", "graphics/bord_b.png", "graphics/bord_bl.png"
 	ForceTextInMenus = true
 	TelefogHeight = 28
 	// precache all intro sounds
