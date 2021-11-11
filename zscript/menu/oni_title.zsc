@@ -158,7 +158,7 @@ Class OniTitleStuff : EventHandler
 		String str;
 		double zoomscl = Screen.GetHeight()/400.;
 		double texscl = Screen.GetHeight()/2700.;
-		double logoscl = max(floor(Screen.GetHeight()/1024.),1.);
+		double logoscl = Screen.GetHeight()/1024.;
 		// intro texts
 		if ( level.maptime < (42*GameTicRate) )
 		{

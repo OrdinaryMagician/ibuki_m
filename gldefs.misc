@@ -71,6 +71,7 @@ HardwareShader Texture "graphics/M_REDONI.png"
 	Shader "shaders/glsl/OniLogoAnimated.fp"
 	Define "TEX_SZ" = "vec2(256.,128.)"
 	Define "TEX_AR" = "2."
+	Define "NO_BILINEAR"
 	Texture "LogoTex" "graphics/M_REDONI_Layers.png"
 }
 HardwareShader Texture "graphics/HUD/HealthBarInvul.png"
