@@ -58,10 +58,10 @@ Class OniStatusBar : SWWMStatusBar
 		GenTex[0] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxL.png",TexMan.Type_Any);
 		GenTex[1] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxM.png",TexMan.Type_Any);
 		GenTex[2] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxR.png",TexMan.Type_Any);
-		LastHealth = 0;
-		LastOil = 0;
-		HealthInter = DynamicValueInterpolator.Create(LastHealth,.1,1,100);
-		OilInter = DynamicValueInterpolator.Create(LastOil,.1,1,100);
+		LastOil = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("OniOilArmor"):0;
+		LastHealth = CPlayer?CPlayer.health:100;
+		HealthInter = DynamicValueInterpolator.Create(0,.1,1,100);
+		OilInter = DynamicValueInterpolator.Create(0,.1,1,100);
 		AmmoClasses.Clear();
 		AmmoNames.Clear();
 		int lmp = Wads.CheckNumForFullName("ammotable.lst");
@@ -274,9 +274,9 @@ Class OniStatusBar : SWWMStatusBar
 	{
 		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		String str;
-		double ot = clamp(OilInter.GetValue()/10.,0,100);
+		double ot = clamp(OilInter.GetValue(),0,1000);
 		str = String.Format("%3d",clamp(ot,0,999));
-		double ow = min(ot,100);
+		double ow = min(ot/10.,100);
 		Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0));
 		Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow);
 		Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_BRASS],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
@@ -287,7 +287,7 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
-		double ht = clamp(HealthInter.GetValue()/10.,0,1000);
+		double ht = clamp(HealthInter.GetValue(),0,1000);
 		str = String.Format("%3d",clamp(ht,0,999));
 		double hw = min(ht,100);
 		Screen.DrawTexture(HealthTex[0],false,margin+3,ss.y-(margin+7),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_ColorOverlay,Color(255,0,0,0));

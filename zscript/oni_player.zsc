@@ -10,8 +10,12 @@ Class IbukiPlayer : SWWMPlayer
 		Height 70;
 		Mass 150;
 		PainChance 255;
-		Health 1000;
+		Health 100;
 		Player.DisplayName "$T_ONIIBUKI";
+		Player.StartItem "OniInternalArmor";
+		Player.StartItem "OniLuckyCollar";
+		Player.JumpZ 12;
+		Player.UseRange 80;
 		Player.ViewHeight 65;
 		Player.AirCapacity 0;
 		Player.GruntSpeed 20;
@@ -27,4 +31,30 @@ Class IbukiPlayer : SWWMPlayer
 		+DONTDRAIN;
 		+DONTCORPSE;
 	}
+
+	override void Tick()
+	{
+		Super.Tick();
+		if ( player && (player.mo == self) )
+		{
+			if ( Health > 1000 ) player.Health = Health -= 8;
+			else if ( Health > 900 ) player.Health = Health -= 4;
+			else if ( Health > 800 ) player.Health = Health -= 2;
+			else if ( Health > 700 ) player.Health = Health -= 1;
+			else if ( !(level.maptime&1) && (Health > 600) ) player.Health = Health -= 1;
+			else if ( !(level.maptime&3) && (Health > 500) ) player.Health = Health -= 1;
+			else if ( !(level.maptime&5) && (Health > 400) ) player.Health = Health -= 1;
+			else if ( !(level.maptime&7) && (Health > 300) ) player.Health = Health -= 1;
+			else if ( !(level.maptime&15) && (Health > 200) ) player.Health = Health -= 1;
+			else if ( !(level.maptime&31) && (Health > 100) ) player.Health = Health -= 1;
+		}
+	}
+
+	// DEBUG
+	/*override int DamageMobj( Actor inflictor, Actor source, int damage, Name mod, int flags, double angle )
+	{
+		int dmg = Super.DamageMobj(inflictor,source,damage,mod,flags,angle);
+		Console.Printf("reduced %d %s damage to %d",damage,mod,dmg);
+		return dmg;
+	}*/
 }

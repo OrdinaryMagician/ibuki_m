@@ -1,19 +1,160 @@
 // All the armor items go here
+
+// oil that enhances built-in resistances
 Class OniOilArmor : SWWMArmor
 {
 	Default
 	{
 		Inventory.Amount 1;
-		Inventory.MaxAmount 1000;
-		Inventory.InterHubAmount 1000;
-		SWWMArmor.ArmorPriority 1;
+		Inventory.MaxAmount int.max;
+		Inventory.InterHubAmount int.max;
+		SWWMArmor.ArmorPriority 3;
 		+SWWMARMOR.NOHITFLASH;
 		+SWWMARMOR.NOHITSOUND;
 	}
 
+	override void DoEffect()
+	{
+		Super.DoEffect();
+		if ( !(level.maptime&3) && (Owner.waterlevel > 2) && (Amount > 0) ) Amount--;
+		if ( !(level.maptime&7) && (Owner.waterlevel > 1) && (Amount > 250) ) Amount--;
+		if ( !(level.maptime&15) && (Owner.waterlevel > 0) && (Amount > 500) ) Amount--;
+		if ( !(level.maptime&31) && ((Owner.pos.z <= floorz) && Owner.GetFloorTerrain().IsLiquid) && (Amount > 750)) Amount--;
+		if ( !(level.maptime%clamp(10-Amount/1000,1,10)) && (Amount > 1000) ) Amount -= int(ceil((Amount-1000)/10.));
+	}
+
 	override int HandleDamage( int damage, Name damageType, int flags )
 	{
-		double factor = amount*.001;
-		return int(ceil(damage*factor));
+		// damage resistance
+		double dr = (amount*.001)**.5;
+		// damage threshold
+		int dt = min(amount/50,20);
+		return clamp(int(damage*dr)+dt,0,damage);
+	}
+}
+
+// always-worn armor that applies special protections
+Class OniLuckyCollar : SWWMArmor
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 1;
+		Inventory.InterHubAmount 1;
+		SWWMArmor.ArmorPriority 1;
+		+INVENTORY.UNCLEARABLE;
+		// SWWMArmor flags are not needed as this overrides AbsorbDamage directly
+	}
+
+	override void AbsorbDamage( int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags )
+	{
+		if ( (damage <= 0) || (flags&(DMG_FORCED|DMG_NO_ARMOR)) ) return;
+		newdamage = damage;
+		// oopsies are halved
+		if ( source == Owner ) newdamage = max(1,newdamage/2);
+		// in danger? reduce to a quarter
+		if ( (Owner.Health-newdamage < 25) )
+		{
+			int splitdmg[2];
+			splitdmg[0] = max(0,Owner.Health-25);	// non-reduced part (>=25% health)
+			splitdmg[1] = max(1,(newdamage-splitdmg[0])/4);	// reduced part (<25% health)
+			newdamage = splitdmg[0]+splitdmg[1];
+		}
+	}
+}
+
+// internal armor that handles built-in resistances
+Class OniInternalArmor : SWWMArmor
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 1;
+		Inventory.InterHubAmount 1;
+		SWWMArmor.ArmorPriority 2;
+		+INVENTORY.UNCLEARABLE;
+		+SWWMARMOR.NOHITFLASH;
+		+SWWMARMOR.NOHITSOUND;
+		+SWWMARMOR.NODRAIN;
+	}
+
+	override bool HandlePickup( Inventory item )
+	{
+		// disallow vanilla armors
+		if ( (item is 'BasicArmor') || (item is 'BasicArmorBonus') || (item is 'BasicArmorPickup') || (item is 'HexenArmor') )
+		{
+			item.bPickupGood = true;	// but act as if we picked them up
+			return true;
+		}
+		return false;
+	}
+
+	override int HandleDamage( int damage, Name damageType, int flags )
+	{
+		double dr = 0.;
+		int dt = 0;
+		switch ( damageType )
+		{
+		case 'Fire':
+		case 'Lava':
+		case 'Magma':
+		case 'Heat':
+		case 'Thermal':
+			dr = .6;
+			dt = 5;
+			break;
+		case 'Ice':
+		case 'Cold':
+			dr = .8;
+			dt = 6;
+			break;
+		case 'Poison':
+			// non-splash poison damage is ignored entirely
+			if ( !(flags&DMG_EXPLOSION) )
+				return damage;
+		case 'PoisonCloud':
+			dr = .6;
+			dt = 4;
+			break;
+		case 'Toxic':
+		case 'Toxin':
+			dr = .5;
+			dt = 3;
+			break;
+		case 'Slime':
+		case 'Acid':
+			dr = .75;
+			dt = 4;
+			break;
+		case 'Lightning':
+		case 'Electricity':
+		case 'Electric':
+		case 'Plasma':
+		case 'Chaos':
+			dr = .6;
+			dt = 10;
+			break;
+		case 'Bullet':
+		case 'Hitscan':
+		case 'Shot':
+			dr = .8;
+			dt = 5;
+			break;
+		case 'Melee':
+			dr = .75;
+			dt = 8;
+			break;
+		default:
+			dr = .6;
+			dt = 5;
+			break;
+		}
+		// 75% general splash reduction
+		if ( flags&DMG_EXPLOSION )
+			dr = (3.+dr)/4.;
+		// extra tolerance to high damage
+		if ( (damage*dr) > 10 )
+			dt += min((damage/20)**1.5,damage/2);
+		return clamp(int(damage*dr)+dt,0,damage);
 	}
 }

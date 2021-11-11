@@ -11,7 +11,7 @@ So, while **Demo-chan** was out there blastin' away in the US, **Ibuki** too had
 
 ## Abilities
 
-**Ibuki** is pretty goddamn hardcore. For starters, most things are very likely to not even deal any damage, especially bullets *(although they'll still stagger and cause some perceptible pain)*. Elemental damages don't really hurt directly, but cause certain debuff buildups, which WILL begin to hurt if they get too high. Due to the fact you can't bleed, you're immune to poison, unless it's breathed in.
+**Ibuki** is pretty goddamn hardcore. For starters, most things are very likely to not even deal any damage unless they hit REALLY hard. Bullets and melee will simply tickle you most of the time, and various other damages will also be reduced. Also, due to the fact you can't bleed, you're immune to poison, unless it's breathed in.
 
 If your health drops to zero, you will be incapacitated. In this state, you've got two choices: Either wait until you can revive again, or restart from the last save. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless.
 
@@ -42,6 +42,18 @@ Guns of your own making, two of them. Bash in some skulls.
 Primary fire punches, hold to punch harder. Secondary fire blocks, increasing damage resistance to frontal attacks.
 
 You can press the utility key to crack your knuckles. This doesn't serve any useful purpose, but it looks cool.
+
+### Slot 1 - The Purifier *[Chainsaw]*
+
+*"Ah, the American pastime..."*
+
+A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. **Saya** allegedly asked **Misa** to make this because it would allow you to *"exorcise evil spirits"* with it.
+
+Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
+
+Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
+
+Should be noted that this weapon also allows you to strike at enemy projectiles to send them back, too, if timed correctly.
 
 ### Slot 2 - Shinigami ZC7 *[Pistol]*
 
@@ -187,15 +199,15 @@ Surprisingly more common than the other two. These things laugh in the face of t
 
 *"Got this one as a gift from a nice Xekkian girl. Oh, I still remember that night..."*
 
-The **Boar Slayer** is clearly not meant for human use, but that's definitely not going to stop you now, is it?
+The **Boar Slayer** is clearly not meant for human use, but that's definitely not going to stop you now, is it? This has received the designation of a *"pistol rifle"* by **Xekkians**, although some would describe it more as a pump-action grenade launcher that happens to fire 50mm bullets.
 
-Ammo for this puppy is quite rare, however, but that's compensated by how devastating even a single shot can be.
+Ammo for this *(very large)* puppy is quite rare, but that's compensated by how devastating even a single shot can be. Takes 5 bullets in the mag plus one in the chamber, though usually just one bullet is enough to absolutely destroy several targets.
 
 #### 50mm Areka *[Rockets]*
 
 *"... I wonder if... With that size..."*
 
-Available in 5 round mags or single rounds. These things are big.
+Available in 5 round packs or single rounds. These things are big.
 
 ## Items
 
@@ -300,16 +312,6 @@ You can share healing and powerups with her *(Yes, this includes the milk)*.
 ## DLC
 
 Post-release I could attempt to add some extra weapons to expand this arsenal, perhaps some other personal favorites.
-
-### Slot 1 - The Purifier *[Chainsaw]*
-
-*"Ah, the American pastime..."*
-
-A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. **Saya** allegedly asked **Misa** to make this because it would allow you to *"exorcise evil spirits"* with it.
-
-Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
-
-Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
 
 ### Slot 4 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
 
