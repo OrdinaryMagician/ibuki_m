@@ -1,7 +1,0 @@
-extend Class SWWMStaticHandler
-{
-	private void PreloadModFonts()
-	{
-		// nothing here yet
-	}
-}

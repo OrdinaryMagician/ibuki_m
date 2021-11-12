@@ -94,7 +94,7 @@ ListMenu "MainMenu"
 {
 	Class "SWWMMainMenu"
 	Size Clean
-	Font "TewiShadedOutline", "DarkGray", "Red"
+	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
 	LineSpacing 36
 	SWWMLogo
@@ -109,7 +109,7 @@ ListMenu "MainMenuTextOnly"
 {
 	Class "SWWMMainMenu"
 	Size Clean
-	Font "TewiShadedOutline", "DarkGray", "Red"
+	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
 	LineSpacing 36
 	SWWMLogo
@@ -124,7 +124,7 @@ ListMenu "GameFilesMenu"
 {
 	Class "SWWMCleanMenu"
 	Size Clean
-	Font "TewiShadedOutline", "DarkGray", "Red"
+	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
 	LineSpacing 36
 	Position 0, 88
@@ -143,7 +143,7 @@ ListMenu "EpisodeMenu"
 	{
 		NetgameMessage "$CNEWGAME"
 	}
-	Font "TewiShadedOutline", "DarkGray", "Red"
+	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
 	LineSpacing 0
 	SWWMStaticTextM 0, 0, "$MNU_EPISODE", "DarkRed"
@@ -154,7 +154,7 @@ ListMenu "SkillMenu"
 {
 	Class "SWWMBigMenuHack"
 	Size Clean
-	Font "TewiShadedOutline", "DarkGray", "Red"
+	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
 	LineSpacing 0
 	SWWMStaticTextM 0, 0, "$MNU_CHOOSESKILL", "DarkRed"

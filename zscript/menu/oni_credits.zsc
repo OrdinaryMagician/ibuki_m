@@ -4,8 +4,8 @@ Class OniCreditsMenu : SWWMCreditsMenu
 {
 	override void ChildInit( Menu parent )
 	{
-		cmusic.Push(new("SWWMCreditsEntry").Init(sfnt,"BouncyTEM","Demon's Regret"));
-		cmusic.Push(new("SWWMCreditsEntry").Init(sfnt,"Teque","Rock Bug Opera"));
+		cmusic.Push(new("SWWMCreditsEntry").Init("BouncyTEM","Demon's Regret"));
+		cmusic.Push(new("SWWMCreditsEntry").Init("Teque","Rock Bug Opera"));
 	}
 	override String, int GetCreditsMus()
 	{
