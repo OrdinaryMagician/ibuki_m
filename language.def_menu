@@ -1,5 +1,12 @@
 [default]
 // keybinds
+ONI_KEYS = "RED ONI Bindings";
+ONI_PRIMARYFIRE = "Primary Fire";
+ONI_SECONDARYFIRE = "Aim / Melee Block";
+ONI_RELOADFIRE = "Reload";
+ONI_ZOOMFIRE = "Utility";
+ONI_MELEE = "Quick Kick";
+ONI_EXTRAFIRE = "Grenade";
 // skills
 ONI_SKCHILL="\cv5.56x45mm\c-";
 ONI_SKEASY="\cd7.62x51mm\c-";
@@ -16,3 +23,58 @@ ONI_MCREDS = "RED ONI Credits";
 ONI_CSTITLE = "UnSX Side Story: Ibuki";
 ONI_CSTITLE2 = "Big Tiddy Supersoldier Goth GF";
 // Help menu
+ONI_HELP_NPAGE = "6";
+ONI_HELP_PAGE1 = "The Story So Far";
+ONI_HELP_PAGE1_TXT =
+"June 6th, 2148, the day the \crDemolitionist\c- was deployed on \crUnion States\c- soil in order to fight back against the \crDemonic Invasion\c- brought forth by the \crUAC\c-, right at the heart of it all. It's been some time since their mission started, and many other brave heroes have taken action as well all over the world. Of course, back at home here in \crJapan\c-, there's no hero better known than the \crRed Oni\c-.\n"
+"\n"
+"Now, there's not much to do here, as the obscenely powerful \crEarth Defense Force\c- of the land of the rising sun, boasting firepower that would make anyone blush, is doing a fairly decent job preventing the demons from seeping through. So, you decide to take a little trip abroad. Where to? That's up to you, the player.\n"
+"\n"
+"The \crRed Oni\c- has entered the fray, and no demon will stand a chance against this unstoppable force.\n"
+"\n"
+"\crLet them taste their own guts!\c-";
+$ifgame(heretic) ONI_HELP_PAGE1_TXT =
+"April 10, 2171, the \crAkari Project\c- is moving along smoothly, and a new world has been discovered, a world of fantasy, full of dangerous creatures and arcane powers. Clearly, the ideal spot to have some adventures, right?\n"
+"\n"
+"Although the \crDemolitionist\c- was assigned to this mission, you too decide to tag along on your own, to also do some exploration, because why not? That's just how the \crRed Oni\c- rolls.\n"
+"\n"
+"And so, the land of \crParthoris\c- shall bear witness to the sheer power of this unstoppable killing machine.\n"
+"\n"
+"\crBring them on!\c-";
+ONI_HELP_PAGE2 = "Who Is The Red Oni";
+ONI_HELP_PAGE2_TXT =
+"Born in September 9th, 2074, \crIbuki Miyamoto\c- is the result of the quite expensive and desperately planned \crRed Oni\c- program. Created as a powerful super-soldier capable of changing the tides of \crWorld War 3\c-, her deployment unfortunately came too late, as in August of 2077, the \crUnited States\c- were strategically \"glassed\" from orbit. Since then, for several years, she survived as a roaming mercenary in the wastelands, until her retrieval in 2091.\n"
+"\n"
+"\crIbuki\c- is quite the looker, standing at 2.2 meters, sporting some fine musculature and (somehow natural) body tattoos. Of course, if there's one detail that is even more notable, that would be... Her brilliant red eyes. Proof of her belonging to the \crMiyamoto\c- household, and the royal \crLunarian\c- ancestry of her blood. She is something fierce alright.\n"
+"\n"
+"Oh, and how can we forget, her fairly notable assets as well. \crIbuki\c- has quite a personal collection of firearms of all kinds (more on that later), many of which have some historical significance, while others are simply there because she loves them.\n"
+"\n"
+"She also has huge boobs, some serious honkers, like, a real set of badonkers, I mean... Packing some dobonhonkeros right there, massive dohoonkabhankoloos... Big ol' tonhongerekoogers...";
+ONI_HELP_PAGE3 = "Red Oni's Arsenal (Part 1: Weapons)";
+ONI_HELP_PAGE3_TXT =
+"\cr*Ahem*\c- As mentioned in the previous section, \crIbuki\c- really loves her guns. She's collected all sorts of weaponry over the years since her very first mission. You may find that most of these are fairly mundane... Or maybe not.\n"
+"\n"
+"The general operation of any of these firearms is pretty straightforward. You press \crPrimary fire\c- to shoot, and you can hold \crSecondary fire\c- to aim down the sights, simple as that. Note of course that you can \crReload\c- at any time, and that some weapons may have additional functions attached to the \crUtility key\c-.\n"
+"\n"
+"And there's also the melee, of course. Anything in slot 1 will operate just about the same, where \crPrimary fire\c- attacks, and \crSecondary fire\c- blocks. And before I forget, in any of these situations, you can press the \crQuick Kick\c- key to, well, kick. Oh, and if you've got any bombs on ya, you can yeet them with a dedicated \crGrenade\c- key.";
+ONI_HELP_PAGE4 = "Red Oni's Arsenal (Part 2: Items)";
+ONI_HELP_PAGE4_TXT =
+"And what else could we have around here to help along, but some classic health and armor, and other little things here and there.\n"
+"\n"
+"Healing is done by drinking water, since staying hydrated is very important. Don't worry about drinking too much, this is a videogame, so you don't need to set time aside to deal with the consequences. For armor, you have oil. Yeah, exactly, oil. You oil up to enhance your physical defenses, it works wonders. Just keep your skin nicely moisturized and it'll all be gucci. If you're planning on taking a dive, do keep in mind water gradually washes it off.\n"
+"\n"
+"Unlike with our friend the \crDemolitionist\c-, here healing and armor items don't get auto-used as needed while carried, so do keep that in mind.";
+ONI_HELP_PAGE5 = "Red Oni's Arsenal (Part 3: Powerups)";
+ONI_HELP_PAGE5_TXT =
+"Can't be a proper mod without those. There's a whole lot of stuff available for ya, although you gotta keep in mind one thing: Invisibility sucks as a powerup, honestly, so it's been replaced by something else. You'll see.\n"
+"\n"
+"Powerups will be used automatically on pickup... EXCEPT when a copy of them is still active. Extras will be stashed away so you don't waste 'em running over multiple powerups at once, which is handy. This is also true for the superheals that replace the Soulsphere and Megasphere, which will not be auto-used if you're already above 100 HP.\n"
+"\n"
+"As always, active powerups show their remaining duration on the left side of the HUD, so you know when they're about to run out more precisely than waiting for them to start \"blinking\".";
+ONI_HELP_PAGE6 = "Additional Tips";
+ONI_HELP_PAGE6_TXT =
+"Guess what? You can still activate switches and open doors by punching or kicking them, or even ramming into them while sprinting. Yeah, sprinting, by itself, allows you to also push enemies out of the way, provided you're going fast enough.\n"
+"\n"
+"Do also remember that items from this mod have more \"form-fitting\" hitboxes, which is why you can press use to yoink them from afar. \crIbuki\c-'s got longer reach, by the way.\n"
+"\n"
+"Lastly, you can breathe underwater, thanks to a convenient rebreather connected to a plentiful natural air supply in \crHammerspace\c-. Oh yeah I haven't talked about that yet, \crHammerspace\c-. It is accessed through \crIbuki\c-'s cleavage (no really), which makes for some rather amusing mental images if you want to imagine what inventory management is like for her.";

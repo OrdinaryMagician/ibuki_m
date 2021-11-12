@@ -22,7 +22,7 @@ T_ONISLAYER = "Boar Slayer";
 I_ONISLAYER = "Areka \"Boar Slayer\" Pistol Rifle";
 T_ONIBATTER = "Purifier";
 I_ONIBATTER = "Unissix \"Purifier\" Almasteel Bat";
-T_ONIBEAGLE = "Beagle";
+T_ONIBEAGLE = "Brave Beagle";
 I_ONIBEAGLE = "Ninnacht \"Brave Beagle\" Semi-Auto Pistol";
 T_ONISURVIVOR = "Survivor";
 I_ONISURVIVOR = "Garrett MK.77 \"Survivor\" Hunting Rifle";
@@ -113,12 +113,146 @@ QUITMSG8 = "Ah, my tits feel heavy...\nWill you hold them for me?";
 QUITMSG9 = "Don't forget to stay hydrated.\nYou'll definitely need it.";
 QUITMSG10 = "I suppose you need a break.\nThat's understandable, of course.";
 QUITMSG11 = "Aw, leaving already?\nThat's a shame...";
-// obituaries
 // misc
+D_ONIVODKA = "You are no longer drunk as all fuck.";
+D_ONIMILK = "The effects of your milk have worn off.";
+D_ONIVISOR = "The Glow Visor ran out of battery.";
+D_ONIBARRIER = "The Elemental Coating wore off.";
+D_ONIFLIGHT = "The Aerial Amulet ran out of power.";
+D_ONITETHERFAIL = "The Safety Tether link was obstructed.";
+ONI_REFUSE = "I don't need that.";
+ONI_GETWATER = "Thanks.";
+ONI_GETVODKA = "Bottoms up!";
+ONI_GETMILK = "Hehe, thanks for the treat.";
+ONI_REFUSE_DRUNK = "Don't want that...";
+ONI_GETWATER_DRUNK = "Water! Water!";
+ONI_GETVODKA_DRUNK = "Eyyyyyy more of the good stuff!";
+ONI_GETMILK_DRUNK = "Gimme yer milkies Ibuki! Hehe...";
+ONI_FALLEN = "Ellen has died.";
+ONI_REVIVE = "Ellen has revived.";
+ONI_MODESHOT = "Buckshot";
+ONI_MODEFRAG = "FRAG-12";
+ONI_MODESEMI = "Semi-Auto";
+ONI_MODEBURST = "Burst";
+ONI_MODEFULL = "Full-Auto";
+ONI_MODESINGLE = "Single-Shot";
+ONI_MODEDUAL = "Dual-Shot";
+ONI_MODEQUAD = "Quad-Shot";
 ONI_TITLEPRESENTSA = "UnSX Team";
 ONI_TITLEPRESENTSB = "presents";
 ONI_TITLEMODBYA = "a mod by";
 ONI_TITLEMODBYB = "Marisa Kirisame";
 ONI_TITLEINTROA = "\"and he thus said to his people: do no evil, lest you wish";
 ONI_TITLEINTROB = "to bring upon yourself the unyielding fury of the \crRED ONI\c-\"";
+ONI_INTERDONE = "DOMINATED";
+ONI_INTERNEXT = "NEXT STOP";
+ONI_INTERKILLS = "SUCKERS SLAIN:";
+ONI_INTERITEMS = "SHINIES SNATCHED:";
+ONI_INTERSECRETS = "SECRETS SPOTTED:";
+ONI_INTERTIME = "YOUR TIME:";
+ONI_INTERPAR = "PAR TIME:";
+ONI_INTERTOTAL = "TOTAL TIME:";
 // weapon tooltips
+TT_ONIFIST =
+"\cf\"Sometimes you gotta do things manually.\"\c-\n"
+"\n"
+"\cfPrimary fire\c- to punch, hold to charge.\n"
+"\cfSecondary fire\c- to block, reduces damage.\n"
+"\cfUtility key\c- to blow a magic kiss.";
+TT_ONIPISTOL =
+"\cf\"Hello my sweet cat nun.\"\c-\n"
+"\n"
+"\cf9×19mm Parabellum\c-, 8+1 rounds.\n"
+"\cfElectrically charged\c- ammunition.\n"
+"Press the \cfUtility key\c- to spin.";
+TT_ONIPISTOL2 =
+"\cf\"Twice the cat nun gun, for more fun.\"\c-\n"
+"\n"
+"\cfPrimary fire\c- for left hand gun,\n"
+"\cfSecondary fire\c- for right hand gun.\n"
+"The \cfUtility key\c- spins both.";
+TT_ONISHOTGUN =
+"\cf\"The perfect tool for solving problems in an advanced way.\"\c-\n"
+"\n"
+"\cf12-gauge #1 Buckshot\c-, 32 rounds.\n"
+"\cfFRAG-12\c- available as alternate ammunition.\n"
+"Tap the \cfUtility key\c- to alternate ammo types,\n"
+"hold it to kiss the gun, it's a good gun.";
+TT_ONIRIFLE =
+"\cf\"416 IS ALL YOU NEED.\"\c-\n"
+"\n"
+"\cf6.8×43mm Special\c-, 30+1 rounds.\n"
+"Tap the \cfUtility key\c- to toggle fire modes,\n"
+"between \cfSemi-auto\c- and \cfFull-auto\c-.";
+TT_ONIQUADSHOT =
+"\cf\"You're all going to be so salty...\"\c-\n"
+"\n"
+"\cf16-gauge Kinylum Saltshot\c-, 4 rounds.\n"
+"Tap the \cfUtility key\c- to toggle between\n"
+"\cfSingle-shot\c- and \cfQuad-shot\c- modes.";
+TT_ONIMACHINEGUN =
+"\cf\"I see we are kindred spirits, you and I.\"\c-\n"
+"\n"
+"\cf7.62×54mmMT\c-, 200 rounds.\n"
+"Overheats on extended use, causing loss of accuracy\n"
+"and potential misfires. Cools down faster when stored.";
+TT_ONIGYROJET =
+"\cf\"Very wrong and very not practical? Nonsense.\"\c-\n"
+"\n"
+"\cf20mm Mk.299 Tandem HEAT-MP\c-, 4+1 rounds.\n"
+"Holding the \cfUtility key\c- while using the scope\n"
+"allows you to adjust zoom level with both fire keys.";
+TT_ONIPLASMARIFLE =
+"\cf\"Now this is a blast from the past.\"\c-\n"
+"\n"
+"\cf60x72mm Argon Cell\c-, 30 shots.\n"
+"This weapon's usage is very straightforward.";
+TT_ONICANNON =
+"\cf\"Kinda hard to pull out of my cleavage, but it's worth it.\"\c-\n"
+"\n"
+"\cf120×935mm\c-, single shot.\n"
+"Ammunition is fed directly from hammerspace,\n"
+"but requires manual user reloading.\n"
+"Tap the \cfUtility key\c- to cycle ammo type.";
+TT_ONISLAYER =
+"\cf\"Oh, I still remember that night...\"\c-\n"
+"\n"
+"\cf50×110mm Areka\c-, 5+1 rounds.\n"
+"Large size and weight, immense recoil,\n"
+"guaranteed to cause great destruction.";
+TT_ONIBATTER =
+"\cf\"Ahh, the American pastime...\"\c-\n"
+"\n"
+"\cfPrimary fire\c- to swing, hold to charge.\n"
+"\cfSecondary fire\c- to block, deflects bullets.\n"
+"Tap the \cfUtility key\c- to summon a baseball,\n"
+"which you can then hit with primary.";
+TT_ONIBEAGLE =
+"\cf\"Oh, this doggy really does bite.\"\c-\n"
+"\n"
+"\cf.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
+"Press the \cfUtility key\c- to spin.\n"
+"Cannot be dual-wielded.";
+TT_ONISURVIVOR =
+"\cf\"There WAS a hell knight...\"\c-\n"
+"\n"
+"\cf.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
+"Hold the \cfUtility key\c- for two-shot mode.";
+TT_ONIMASAMUNE =
+"\cf\"Well, I do like me some penetration once in a while.\"\c-\n"
+"\n"
+"\cf7.62×51mm\c-, 20+1 rounds.\n"
+"\cfHigh penetration\c- ammunition.\n"
+"Tap the \cfUtility key\c- to alternate fire modes,\n"
+"between \cfSemi-auto\c-, \cfBurst\c- and \cfFull-auto\c-.";
+TT_ONIEIGHTBALL =
+"\cf\"It's not the size that matters...\"\c-\n"
+"\n"
+"\cf20×30mm Micro-Missile\c-, 24+8 rounds.\n"
+"\cfUtility key\c- loads additional rounds,\n"
+"\cfTarget Seeking\c- available through scope.";
+TT_ONISTORMRIFLE =
+"\cf\"Electricity isn't scary... But it's gonna be for you.\"\c-\n"
+"\n"
+"10×72mm Dysedum Rod\c-, 7+1 rounds.\n"
+"Tap the \cfUtility key\c- to toggle focused mode.";

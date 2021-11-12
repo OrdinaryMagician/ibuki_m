@@ -40,6 +40,7 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 #include "zscript/handler/swwm_handler_worldload.zsc"
 #include "zscript/handler/swwm_handler_worldthings.zsc"
 // menu code
+#include "zscript/menu/swwm_help.zsc"
 #include "zscript/menu/swwm_menus.zsc"
 #include "zscript/menu/swwm_credits.zsc"
 // compat code

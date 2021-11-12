@@ -27,7 +27,7 @@ GameInfo
 	MenuSliderBackColor = "DarkGray"
 	MenuBackButton = "graphics/oniback.png"
 	MessageBoxClass = "SWWMMessageBox"
-	//HelpMenuClass = "OniHelpMenu"
+	HelpMenuClass = "SWWMHelpMenu"
 	MenuDelegateClass = "SWWMMenuDelegate"
 	PauseSign = "graphics/onipause.png"
 	BorderFlat = "graphics/bord_flat.png"

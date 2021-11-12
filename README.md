@@ -41,7 +41,7 @@ Guns of your own making, two of them. Bash in some skulls.
 
 Primary fire punches, hold to punch harder. Secondary fire blocks, increasing damage resistance to frontal attacks.
 
-You can press the utility key to crack your knuckles. This doesn't serve any useful purpose, but it looks cool.
+You can press the utility key to blow a magic kiss at enemies. Do note that your kisses are much stronger than **Demo-chan**'s.
 
 ### Slot 1 - The Purifier *[Chainsaw]*
 
@@ -355,7 +355,7 @@ The utility key alternates between semi auto, three round burst and full auto.
 
 *"Real... Fuckin'... NATO."*
 
-Very standard stuff. Found in 30-round mags.
+Very standard stuff. Found in 20-round mags.
 
 ### Slot 7 - Itamex "Rita" Micro-Missile Launcher *[Rocket Launcher]*
 

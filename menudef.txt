@@ -4,6 +4,12 @@ OptionValue "SWWMEnemyDropType"
 	0, "$SWWM_DROPS_AMMO"
 	1, "$SWWM_DROPS_WEAPONS"
 }
+OptionValue "SWWMForceStats"
+{
+	0, "$SWWM_STATS_DISABLED"
+	1, "$SWWM_STATS_ALWAYS"
+	2, "$SWWM_STATS_MAPNAME"
+}
 OptionValue "SWWMDRLASkill"
 {
 	0, "$SWWM_DRLASKILL_BABY"
@@ -36,6 +42,15 @@ OptionMenu "OniOptionMenu"
 	Option "$SWWM_SHADERS", "oni_shaders", "YesNo"
 	Slider "$SWWM_FLASH", "oni_flashstrength", 0.0, 1.0, 0.1, 1
 	Slider "$SWWM_BUMP", "oni_bumpstrength", 0.0, 1.0, 0.1, 1
+	Option "$SWWM_MM_ENABLE", "oni_mm_enable", "YesNo"
+	Option "$SWWM_FORCESTATS", "oni_forcestats", "SWWMForceStats"
+	Slider "$SWWM_HUDMARGIN", "oni_hudmargin", 0, 40, 1, 0
+	Slider "$SWWM_MAXMSG", "oni_maxshown", 1, 10, 1, 0
+	Slider "$SWWM_MAXMSGBIG", "oni_maxshownbig", 1, 20, 1, 0
+	Slider "$SWWM_MAXPICK", "oni_maxpickup", 1, 10, 1, 0
+	Slider "$SWWM_CHATLEN", "oni_chatduration", 1, 30, 1, 0
+	Slider "$SWWM_MSGLEN", "oni_msgduration", 1, 30, 1, 0
+	Slider "$SWWM_PICKLEN", "oni_pickduration", 1, 30, 1, 0
 	Option "$SWWM_FUZZ", "oni_fuzz", "YesNo"
 	StaticText " "
 	StaticText "$SWWM_ETITLE", "DarkRed"
@@ -48,7 +63,10 @@ OptionMenu "OniOptionMenu"
 	ScaleSlider "$SWWM_MAXDEBRIS", "oni_maxdebris", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
 	StaticText " "
 	StaticText "$SWWM_BTITLE", "DarkRed"
-	Option "$SWWM_PISTOLSTART", "oni_pistolstart", "SWWMPistolStart"
+	Option "$SWWM_PS_FULLRESET", "oni_ps_fullreset", "SWWMPistolStart"
+	Option "$SWWM_PS_RESETAMMO", "oni_ps_resetammo", "SWWMPistolStart"
+	Option "$SWWM_PS_RESETITEMS", "oni_ps_resetitems", "SWWMPistolStart"
+	Option "$SWWM_PS_RESETHEALTH", "oni_ps_resethealth", "SWWMPistolStart"
 	Option "$SWWM_ENEMYDROPS", "oni_enemydrops", "SWWMEnemyDropType"
 	StaticText " "
 	StaticText "$SWWM_ITITLE", "DarkRed"
