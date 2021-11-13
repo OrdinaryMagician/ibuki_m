@@ -6,3 +6,10 @@ models/*.blend1
 models/*.xcf
 models/modelnotes.txt
 tools
+graphics/HUD/Icons/I_Devastation.png
+models/DevaSigil*
+shaders/pp/Devascreen.fp
+sounds/items/deva*
+zscript/items/swwm_angerysigil.zsc
+gldefs.devasigil
+modeldef.devasigil

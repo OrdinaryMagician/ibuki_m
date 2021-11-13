@@ -16,6 +16,7 @@ Class IbukiPlayer : SWWMPlayer
 		Player.StartItem "OniLuckyCollar";
 		Player.JumpZ 12;
 		Player.UseRange 80;
+		Player.AttackZOffset 20;
 		Player.ViewHeight 65;
 		Player.AirCapacity 0;
 		Player.GruntSpeed 20;

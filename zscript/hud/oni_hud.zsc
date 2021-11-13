@@ -105,11 +105,6 @@ Class OniStatusBar : SWWMStatusBar
 		mm_yourcolor = "80 00 00";
 	}
 
-	override void DrawInventory()
-	{
-		// TODO
-	}
-
 	override void DrawWeapons()
 	{
 		if ( CPlayer.ReadyWeapon is 'SWWMWeapon' ) SWWMWeapon(CPlayer.ReadyWeapon).DrawWeapon(FracTic,ss.x-(margin+58),ss.y-(margin+14),hs,ss);
@@ -270,23 +265,27 @@ Class OniStatusBar : SWWMStatusBar
 		Screen.DrawTexture(AmmoTex[2],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 	}
 
-	override void DrawStatus()
+	override int DrawStatus()
 	{
-		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		String str;
 		double ot = clamp(OilInter.GetValue(),0,1000);
-		str = String.Format("%3d",clamp(ot,0,999));
-		double ow = min(ot/10.,100);
-		Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0));
-		Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow);
-		Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_BRASS],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
-		int f = OilFlash;
-		if ( f && (gametic < f) )
+		if ( ot > 0 )
 		{
-			double alph = ((f-(gametic+FracTic))/25.)**1.5;
-			Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
-			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+			Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			str = String.Format("%3d",clamp(ot,0,999));
+			double ow = min(ot/10.,100);
+			Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0));
+			Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow);
+			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_BRASS],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			int f = OilFlash;
+			if ( f && (gametic < f) )
+			{
+				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+				Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+			}
 		}
+		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+10),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		double ht = clamp(HealthInter.GetValue(),0,1000);
 		str = String.Format("%3d",clamp(ht,0,999));
 		double hw = min(ht,100);
@@ -307,12 +306,13 @@ Class OniStatusBar : SWWMStatusBar
 				Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_BLUE],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 			}
 		}
-		f = HealthFlash;
+		int f = HealthFlash;
 		if ( f && (gametic < f) )
 		{
 			double alph = ((f-(gametic+FracTic))/25.)**1.5;
 			Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(mMiniHudFont.mFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
+		return (ot>0)?46:36;
 	}
 }

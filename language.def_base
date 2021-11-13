@@ -8,30 +8,30 @@ T_ONISHOTGUN = "AA-12";
 I_ONISHOTGUN = "Ninnacht \"Auto Assault-12\" Shotgun";
 T_ONIRIFLE = "HM416";
 I_ONIRIFLE = "Heckler & Mok HM416 Assault Rifle";
-T_ONIQUADSHOT = "Deliverer";
-I_ONIQUADSHOT = "Siesta \"Deliverer\" Quad-Shotgun";
+T_ONISSHOTGUN = "Deliverer";
+I_ONISSHOTGUN = "Siesta \"Deliverer\" Quad-Shotgun";
 T_ONIMACHINEGUN = "Melisa";
 I_ONIMACHINEGUN = "ANFES \"Melisa\" Light Machine Gun";
-T_ONIGYROJET = "ST-20";
-I_ONIGYROJET = "Kemet ST-20 Self-Propelled Projectile Launcher";
+T_ONIEXPLODER = "ST-20";
+I_ONIEXPLODER = "Kemet ST-20 Self-Propelled Projectile Launcher";
 T_ONIPLASMARIFLE = "Psyker";
 I_ONIPLASMARIFLE = "Cryptik \"Psyker\" Plasma Carbine";
-T_ONICANNON = "Quaker";
-I_ONICANNON = "Cyrus \"Quaker\" Portable Cannon";
+T_ONITANKGUN = "Quaker";
+I_ONITANKGUN = "Cyrus \"Quaker\" Portable Cannon";
 T_ONISLAYER = "Boar Slayer";
 I_ONISLAYER = "Areka \"Boar Slayer\" Pistol Rifle";
 T_ONIBATTER = "Purifier";
 I_ONIBATTER = "Unissix \"Purifier\" Almasteel Bat";
 T_ONIBEAGLE = "Brave Beagle";
 I_ONIBEAGLE = "Ninnacht \"Brave Beagle\" Semi-Auto Pistol";
-T_ONISURVIVOR = "Survivor";
-I_ONISURVIVOR = "Garrett MK.77 \"Survivor\" Hunting Rifle";
-T_ONIMASAMUNE = "MM95";
-I_ONIMASAMUNE = "Shinigami \"Masamune 95\" Battle Rifle";
-T_ONIEIGHTBALL = "Rita";
-I_ONIEIGHTBALL = "Itamex \"Rita\" Micro-Missile Launcher";
-T_ONISTORMRIFLE = "Stormbringer";
-I_ONISTORMRIFLE = "Cyrus \"Stormbringer\" Arc Lance";
+T_ONIHRIFLE = "Survivor";
+I_ONIHRIFLE = "Garrett MK.77 \"Survivor\" Hunting Rifle";
+T_ONIBRIFLE = "MM95";
+I_ONIBRIFLE = "Shinigami \"Masamune 95\" Battle Rifle";
+T_ONIROCKET = "Rita";
+I_ONIROCKET = "Itamex \"Rita\" Micro-Missile Launcher";
+T_ONILIGHTNING = "Stormbringer";
+I_ONILIGHTNING = "Cyrus \"Stormbringer\" Arc Lance";
 T_ONIZC7AMMO = "ZC7 Mag";
 T_ONIZC7AMMOS = "ZC7 Mags";
 T_ONIZC7BULLET = "9mm Round";
@@ -52,8 +52,8 @@ T_ONISALTSHELL = "16ga Saltshot Shell";
 T_ONISALTSHELLS = "16ga Saltshot Shells";
 T_ONIMELISABULLET = "7.62mmMT Round";
 T_ONIMELISABULLET = "7.62mmMT Rounds";
-T_ONIGYROJETROUND = "20mm Mk.299 Tandem HEAT-MP Round";
-T_ONIGYROJETROUNDS = "20mm Mk.299 Tandem HEAT-MP Rounds";
+T_ONIEXPLODERROUND = "20mm Mk.299 Tandem HEAT-MP Round";
+T_ONIEXPLODERROUNDS = "20mm Mk.299 Tandem HEAT-MP Rounds";
 T_ONIPLASMAAMMO = "60mm Plasma Cell";
 T_ONIPLASMAAMMO = "60mm Plasma Cells";
 T_ONIWARHEAD = "\"Redeemer\" Warhead";
@@ -89,14 +89,10 @@ T_ONILARGEOIL = "Large Oil Bottle";
 T_ONISPIRIT = "Spiritual Stimulant";
 T_ONIVODKA = "Vodka";
 I_ONIVODKA = "Bootleg \"Mischievous Ellen\" Vodka";
-T_ONISIGHT = "Omnisight";
-I_ONISIGHT = "Omnisight Mapping Unit";
 T_ONIMILK = "Milk Jug";
 I_ONIMILK = "Red Oni Milk Jug";
 T_ONIVISOR = "Glow Visor";
-T_ONIBARRIER = "Elemental Coating";
 T_ONIFLIGHT = "Aerial Amulet";
-T_ONITETHER = "Safety Tether";
 T_ONIRADIO = "NIИ Radio";
 T_ONIIBUKI = "Ibuki Miyamoto";
 T_ONIELLEN = "Mischievous Ellen";
@@ -117,9 +113,7 @@ QUITMSG11 = "Aw, leaving already?\nThat's a shame...";
 D_ONIVODKA = "You are no longer drunk as all fuck.";
 D_ONIMILK = "The effects of your milk have worn off.";
 D_ONIVISOR = "The Glow Visor ran out of battery.";
-D_ONIBARRIER = "The Elemental Coating wore off.";
 D_ONIFLIGHT = "The Aerial Amulet ran out of power.";
-D_ONITETHERFAIL = "The Safety Tether link was obstructed.";
 ONI_REFUSE = "I don't need that.";
 ONI_GETWATER = "Thanks.";
 ONI_GETVODKA = "Bottoms up!";
@@ -184,38 +178,38 @@ TT_ONIRIFLE =
 "\cf6.8×43mm Special\c-, 30+1 rounds.\n"
 "Tap the \cfUtility key\c- to toggle fire modes,\n"
 "between \cfSemi-auto\c- and \cfFull-auto\c-.";
-TT_ONIQUADSHOT =
-"\cf\"You're all going to be so salty...\"\c-\n"
+TT_ONISSHOTGUN =
+"\cf\"We're going to have a nice party.\"\c-\n"
 "\n"
 "\cf16-gauge Kinylum Saltshot\c-, 4 rounds.\n"
 "Tap the \cfUtility key\c- to toggle between\n"
 "\cfSingle-shot\c- and \cfQuad-shot\c- modes.";
 TT_ONIMACHINEGUN =
-"\cf\"I see we are kindred spirits, you and I.\"\c-\n"
+"\cf\"Let's play a song together.\"\c-\n"
 "\n"
 "\cf7.62×54mmMT\c-, 200 rounds.\n"
 "Overheats on extended use, causing loss of accuracy\n"
 "and potential misfires. Cools down faster when stored.";
-TT_ONIGYROJET =
-"\cf\"Very wrong and very not practical? Nonsense.\"\c-\n"
+TT_ONIEXPLODER =
+"\cf\"Ah, the ultimate problem solver.\"\c-\n"
 "\n"
 "\cf20mm Mk.299 Tandem HEAT-MP\c-, 4+1 rounds.\n"
 "Holding the \cfUtility key\c- while using the scope\n"
 "allows you to adjust zoom level with both fire keys.";
 TT_ONIPLASMARIFLE =
-"\cf\"Now this is a blast from the past.\"\c-\n"
+"\cf\"Quite the relic here.\"\c-\n"
 "\n"
 "\cf60x72mm Argon Cell\c-, 30 shots.\n"
 "This weapon's usage is very straightforward.";
-TT_ONICANNON =
-"\cf\"Kinda hard to pull out of my cleavage, but it's worth it.\"\c-\n"
+TT_ONITANKGUN =
+"\cf\"Hmmmm, I like me some big guns.\"\c-\n"
 "\n"
 "\cf120×935mm\c-, single shot.\n"
 "Ammunition is fed directly from hammerspace,\n"
 "but requires manual user reloading.\n"
 "Tap the \cfUtility key\c- to cycle ammo type.";
 TT_ONISLAYER =
-"\cf\"Oh, I still remember that night...\"\c-\n"
+"\cf\"Man, this thing fucks...\"\c-\n"
 "\n"
 "\cf50×110mm Areka\c-, 5+1 rounds.\n"
 "Large size and weight, immense recoil,\n"
@@ -233,26 +227,26 @@ TT_ONIBEAGLE =
 "\cf.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
 "Press the \cfUtility key\c- to spin.\n"
 "Cannot be dual-wielded.";
-TT_ONISURVIVOR =
+TT_ONIHRIFLE =
 "\cf\"There WAS a hell knight...\"\c-\n"
 "\n"
 "\cf.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
 "Hold the \cfUtility key\c- for two-shot mode.";
-TT_ONIMASAMUNE =
-"\cf\"Well, I do like me some penetration once in a while.\"\c-\n"
+TT_ONIBRIFLE =
+"\cf\"Not your typical soldier's gun.\"\c-\n"
 "\n"
 "\cf7.62×51mm\c-, 20+1 rounds.\n"
 "\cfHigh penetration\c- ammunition.\n"
 "Tap the \cfUtility key\c- to alternate fire modes,\n"
 "between \cfSemi-auto\c-, \cfBurst\c- and \cfFull-auto\c-.";
-TT_ONIEIGHTBALL =
+TT_ONIROCKET =
 "\cf\"It's not the size that matters...\"\c-\n"
 "\n"
 "\cf20×30mm Micro-Missile\c-, 24+8 rounds.\n"
 "\cfUtility key\c- loads additional rounds,\n"
 "\cfTarget Seeking\c- available through scope.";
-TT_ONISTORMRIFLE =
-"\cf\"Electricity isn't scary... But it's gonna be for you.\"\c-\n"
+TT_ONILIGHTNINT =
+"\cf\"Now we're playing with power.\"\c-\n"
 "\n"
 "10×72mm Dysedum Rod\c-, 7+1 rounds.\n"
 "Tap the \cfUtility key\c- to toggle focused mode.";

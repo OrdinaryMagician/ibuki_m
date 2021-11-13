@@ -54,6 +54,9 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 #include "zscript/items/swwm_basearmor.zsc"
 #include "zscript/items/swwm_baseammo.zsc"
 #include "zscript/items/swwm_ammoextra.zsc"
+#include "zscript/items/swwm_ebarrier.zsc"
+#include "zscript/items/swwm_omnisight.zsc"
+#include "zscript/items/swwm_safetytether.zsc"
 // weapons
 #include "zscript/weapons/swwm_baseweapon.zsc"
 #include "zscript/weapons/swwm_baseweapon_fx.zsc"

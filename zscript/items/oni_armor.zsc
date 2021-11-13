@@ -16,10 +16,14 @@ Class OniOilArmor : SWWMArmor
 	override void DoEffect()
 	{
 		Super.DoEffect();
-		if ( !(level.maptime&3) && (Owner.waterlevel > 2) && (Amount > 0) ) Amount--;
-		if ( !(level.maptime&7) && (Owner.waterlevel > 1) && (Amount > 250) ) Amount--;
-		if ( !(level.maptime&15) && (Owner.waterlevel > 0) && (Amount > 500) ) Amount--;
-		if ( !(level.maptime&31) && ((Owner.pos.z <= floorz) && Owner.GetFloorTerrain().IsLiquid) && (Amount > 750)) Amount--;
+		// wear off while in contact with liquids, unless having a coating active
+		if ( !Owner.FindInventory("BarrierPower") )
+		{
+			if ( !(level.maptime&3) && (Owner.waterlevel > 2) && (Amount > 0) ) Amount--;
+			if ( !(level.maptime&7) && (Owner.waterlevel > 1) && (Amount > 250) ) Amount--;
+			if ( !(level.maptime&15) && (Owner.waterlevel > 0) && (Amount > 500) ) Amount--;
+			if ( !(level.maptime&31) && ((Owner.pos.z <= floorz) && Owner.GetFloorTerrain().IsLiquid) && (Amount > 750)) Amount--;
+		}
 		if ( !(level.maptime%clamp(10-Amount/1000,1,10)) && (Amount > 1000) ) Amount -= int(ceil((Amount-1000)/10.));
 	}
 
