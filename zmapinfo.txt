@@ -3,6 +3,7 @@ GameInfo
 	AddEventHandlers = "SWWMStaticHandler", "SWWMHandler"
 	PlayerClasses = "IbukiPlayer"
 	StatusBarClass = "OniStatusBar"
+	StatScreen_Single = "OniStatScreen"
 	BackpackType = "HammerspaceEmbiggener"
 	QuitSound = "misc/teleport"
 	QuitMessages = "$QUITMSG", "$QUITMSG1", "$QUITMSG2", "$QUITMSG3",

@@ -74,8 +74,9 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 #include "zscript/handler/oni_handler_shaders.zsc"
 #include "zscript/handler/oni_handler_replacements.zsc"
 // menu code
-#include "zscript/menu/oni_title.zsc"
 #include "zscript/menu/oni_credits.zsc"
+#include "zscript/menu/oni_inter.zsc"
+#include "zscript/menu/oni_title.zsc"
 // hud
 #include "zscript/hud/oni_hud.zsc"
 // items

@@ -11,7 +11,6 @@ Struct TitleSmoke
 Class OniTitleStuff : EventHandler
 {
 	ui TextureID bgtex;
-	ui CVar dofuzz;
 	ui TextureID ibukitex[4];
 	ui TitleSmoke smk[128];
 	ui Shape2D smk_shape;
@@ -135,8 +134,7 @@ Class OniTitleStuff : EventHandler
 	override void RenderUnderlay( RenderEvent e )
 	{
 		double GameSecs = (level.maptime+e.FracTic)/GameTicRate;
-		if ( !dofuzz ) dofuzz = CVar.FindCVar(SWWMMODPREFIX.."_fuzz");
-		if ( dofuzz.GetBool() )
+		if ( oni_fuzz )
 		{
 			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
 			Vector2 tsize = TexMan.GetScaledSize(bgtex);
