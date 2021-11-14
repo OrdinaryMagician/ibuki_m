@@ -58,6 +58,13 @@ Class OniStatusBar : SWWMStatusBar
 		GenTex[0] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxL.png",TexMan.Type_Any);
 		GenTex[1] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxM.png",TexMan.Type_Any);
 		GenTex[2] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxR.png",TexMan.Type_Any);
+		tclabel = Font.CR_DARKRED;
+		tcvalue = Font.CR_DARKGRAY;
+		tcextra = Font.CR_BLACK;
+		tccompl = Font.CR_WHITE;
+		tcsucks = Font.CR_RED;
+		tclabel_s = "r";
+		tcextra_s = "m";
 		LastOil = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("OniOilArmor"):0;
 		LastHealth = CPlayer?CPlayer.health:100;
 		HealthInter = DynamicValueInterpolator.Create(0,.1,1,100);
