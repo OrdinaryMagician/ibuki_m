@@ -1,4 +1,4 @@
-[default]
+[es]
 // tags, pickups
 T_ONIFIST = "Mano a Mano";
 I_ONIPISTOL = "Pistola Semiautomática Shinigami \"Zica-Seven\"";

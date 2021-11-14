@@ -1,4 +1,4 @@
-[default]
+[es]
 // keybinds
 ONI_KEYS = "Teclas de RED ONI";
 ONI_PRIMARYFIRE = "Fuego Primario";
