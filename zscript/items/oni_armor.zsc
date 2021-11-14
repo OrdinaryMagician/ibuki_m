@@ -158,7 +158,7 @@ Class OniInternalArmor : SWWMArmor
 			dr = (3.+dr)/4.;
 		// extra tolerance to high damage
 		if ( (damage*dr) > 10 )
-			dt += min((damage/20)**1.5,damage/2);
+			dt += min(int((damage/20)**1.5),damage/2);
 		return clamp(int(damage*dr)+dt,0,damage);
 	}
 }
