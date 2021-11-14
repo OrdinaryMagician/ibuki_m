@@ -104,7 +104,7 @@ QUITMSG3 = "You'll come back for sure.\nYou already had your first taste.";
 QUITMSG4 = "If you promise to come back,\nI'll give you a nice treat.";
 QUITMSG5 = "Do you like killing demons?\nLet's kill more demons next time.";
 QUITMSG6 = "Farewell, my cute little player...";
-QUITMSG7 = "Have you met Demo-chan?\nTheir adventures are fun too.";
+QUITMSG7 = "Have you met Demo-chan yet?\nTheir adventures are fun too.";
 QUITMSG8 = "Ah, my tits feel heavy...\nWill you hold them for me?";
 QUITMSG9 = "Don't forget to stay hydrated.\nYou'll definitely need it.";
 QUITMSG10 = "I suppose you need a break.\nThat's understandable, of course.";
@@ -194,8 +194,7 @@ TT_ONIEXPLODER =
 "\cf\"Ah, the ultimate problem solver.\"\c-\n"
 "\n"
 "\cf20mm Mk.299 Tandem HEAT-MP\c-, 4+1 rounds.\n"
-"Holding the \cfUtility key\c- while using the scope\n"
-"allows you to adjust zoom level with both fire keys.";
+"Bolt has to be manually racked after each shot.";
 TT_ONIPLASMARIFLE =
 "\cf\"Quite the relic here.\"\c-\n"
 "\n"

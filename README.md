@@ -139,13 +139,11 @@ Very likely to be found in 100 and 200 round belts.
 
 ### Slot 7 - Kemet ST20 *[Rocket Launcher]*
 
-*"If you told me that the Gyrojet would eventually evolve into this, I wouldn't have believed you."*
+*"Ah yes, the ultimate problem solver. Just shoot them with this, and watch all those problems fly away."*
 
 A man once thought about somehow custom-crafting **20mm tandem HEAT-MP** rounds, and despite all sane logic dictating this to be *very wrong and very not practical*, **he succeeded**. This is the only weapon ever made for that ammunition. Have fun!
 
 The fact that this weapon still exists and ammunition for it is still manufactured shows that there is **SOMEHOW** demand for something like this. The world is a strange place indeed.
-
-Holding the utility key while zoomed allows you to adjust the zoom level by pressing either primary or secondary fire.
 
 #### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
 

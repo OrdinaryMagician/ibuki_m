@@ -1,0 +1,237 @@
+[default]
+// tags, pickups
+T_ONIFIST = "Mano a Mano";
+I_ONIPISTOL = "Pistola Semiautomática Shinigami \"Zica-Seven\"";
+T_ONIPISTOL2 = "ZC7s duales";
+I_ONISHOTGUN = "Escopeta Ninnacht \"Auto Assault-12\"";
+I_ONIRIFLE = "Rifle de Asalto Heckler & Mok HM416";
+T_ONISSHOTGUN = "Libertadora";
+I_ONISSHOTGUN = "Escopeta Cuádruple Siesta \"Libertadora\"";
+I_ONIMACHINEGUN = "Metralleta Ligera ANFES \"Melisa\"";
+I_ONIEXPLODER = "Lanzador de Proyectiles Autopropulsados Kemet ST-20";
+I_ONIPLASMARIFLE = "Carabina de Plasma Cryptik \"Psyker\"";
+T_ONITANKGUN = "Estremecedor";
+I_ONITANKGUN = "Cañón Portátil Cyrus \"Estremecedor\"";
+T_ONISLAYER = "Mata-Jabalíes";
+I_ONISLAYER = "Pistola Rifle Areka \"Mata-Jabalíes\"";
+T_ONIBATTER = "Purificador";
+I_ONIBATTER = "Bate de Almacero Unissix \"Purificador\"";
+T_ONIBEAGLE = "Sabueso Valiente";
+I_ONIBEAGLE = "Pistola Semiautomática Ninnacht \"Sabueso Valiente\"";
+T_ONIHRIFLE = "Superviviente";
+I_ONIHRIFLE = "Rifle de Caza Garrett MK.77 \"Superviviente\"";
+I_ONIBRIFLE = "Rifle de Combate Shinigami \"Masamune 95\"";
+I_ONIROCKET = "Lanzador de Micro-Misiles Itamex \"Rita\"";
+I_ONILIGHTNING = "Lanza de Arco Cyrus \"Stormbringer\"";
+T_ONIZC7AMMO = "Cargador de ZC7";
+T_ONIZC7AMMOS = "Cargadores de ZC7";
+T_ONIZC7BULLET = "Bala de 9mm";
+T_ONIZC7BULLETS = "Balas de 9mm";
+T_ONIAA12AMMO = "Tambor de AA-12";
+T_ONIAA12AMMOS = "Tambores de AA-12";
+T_ONIAA12ALTAMMO = "Tambor de AA-12 (FRAG-12)";
+T_ONIAA12ALTAMMOS = "Tambores AA-12 (FRAG-12)";
+T_ONIAA12SHELL = "Cartucho de 12ga";
+T_ONIAA12SHELLS = "Cartuchos de 12ga";
+T_ONIAA12ALTSHELL = "Cartucho FRAG-12";
+T_ONIAA12ALTSHELLS = "Cartuchos FRAG-12";
+T_ONIHM416AMMO = "Cargador de HM416";
+T_ONIHM416AMMOS = "Cargadores de HM416";
+T_ONIHM416BULLET = "Bala de 6.8 SPC";
+T_ONIHM416BULLETS = "Balas de 6.8 SPC";
+T_ONISALTSHELL = "Cartucho de Sal de 16ga";
+T_ONISALTSHELLS = "Cartuchos de Sal de 16ga";
+T_ONIMELISABULLET = "Bala de 7.62mmMT";
+T_ONIMELISABULLET = "Balas de 7.62mmMT";
+T_ONIEXPLODERROUND = "Bala de 20mm Mk.299 Tandem HEAT-MP";
+T_ONIEXPLODERROUNDS = "Balas de 20mm Mk.299 Tandem HEAT-MP";
+T_ONIPLASMAAMMO = "Célula de Plasma de 60mm";
+T_ONIPLASMAAMMO = "Células de Plasma de 60mm";
+T_ONIWARHEAD = "Cabeza nuclear \"Redentor\"";
+T_ONIWARHEADS = "Cabezas nucleares \"Redentor\"";
+T_ONICANISTER = "Frasco \"Perro Rabioso\"";
+T_ONICANISTERS = "Frascos \"Perro Rabioso\"";
+T_ONICASTER = "Carga de Plasma \"Conjurador\"";
+T_ONICASTERS = "Cargas de Plasma \"Conjurador\"";
+T_ONIBOARROUND = "Bala de 50mm Areka";
+T_ONIBOARROUNDS = "Balas de 50mm Areka";
+T_ONILISA = "Dispositivo Rompehabitaciones LiSA";
+T_ONILISAS = "Dispositivos Rompehabitaciones LiSA";
+T_ONIBEAGLEAMMO = "Cargador de Sabueso";
+T_ONIBEAGLEAMMOS = "Cargadores de Sabueso";
+T_ONIBEAGLEROUND = "Bala de .50 PE";
+T_ONIBEAGLEROUNDS = "Balas de .50 PE";
+T_ONISURVIVORROUND = "Bala de .50 OMG";
+T_ONISURVIVORROUNDS = "Balas de .50 OMG";
+T_ONIMM95AMMO = "Cargador de MM95";
+T_ONIMM95AMMOS = "Cargadores de MM95";
+T_ONIMM95ROUND = "Bala de 7.62mm";
+T_ONIMM95ROUNDS = "Balas de 7.62mm";
+T_ONIRITAAMMO = "Micro-Misil de 20mm";
+T_ONIRITAAMMOS = "Micro-Misiles de 20mm";
+T_ONISTORMAMMO = "Barra de Dysedum";
+T_ONISTORMAMMOS = "Barras de Dysedum";
+T_ONISMALLWATER = "Botella de Agua Pequeña";
+T_ONIMEDWATER = "Botella de Agua Mediana";
+T_ONILARGEWATER = "Botella de Agua Grande";
+T_ONISMALLOIL = "Botella de Aceite Pequeña";
+T_ONIMEDOIL = "Botella de Aceite Mediana";
+T_ONILARGEOIL = "Botella de Aceite Grande";
+T_ONISPIRIT = "Estimulante Espiritual";
+I_ONIVODKA = "Vodka Casero \"Ellen la Traviesa\"";
+T_ONIMILK = "Jarra de Leche";
+I_ONIMILK = "Jarra de Leche Oni Rojo";
+T_ONIVISOR = "Visor Luminoso";
+T_ONIFLIGHT = "Amuleto Aéreo";
+T_ONIRADIO = "Radio NIИ";
+T_ONIELLEN = "Ellen la Traviesa";
+// quit messages
+QUITMSG = "¿Ya te vas?\nTe estaré esperando, cariño...";
+QUITMSG1 = "Oh, no te preocupes, seguro que\npodremos divertirnos más luego.";
+QUITMSG2 = "Espero que vuelvas pronto.\nMe gusta jugar contigo.";
+QUITMSG3 = "Estoy segura de que volverás.\nYa lo has probado una vez.";
+QUITMSG4 = "Si me prometes que volverás,\nte daré un bonito regalo.";
+QUITMSG5 = "¿Te gusta matar demonios?\nMatemos más demonios la próxima vez.";
+QUITMSG6 = "Hasta luego, mi adorable jugadorcito...";
+QUITMSG7 = "¿Has conocido ya a Demo-chan?\nSus aventuras también son divertidas.";
+QUITMSG8 = "Ah, como me pesan las tetas...\n¿Me las podrías sujetar?";
+QUITMSG9 = "No olvides mantenerte hidratado.\nDefinitivamente lo vas a necesitar.";
+QUITMSG10 = "Supongo que necesitas un descanso.\nEs comprensible, por supuesto.";
+QUITMSG11 = "Oh, ¿te marchas ya?\nEs una pena...";
+// misc
+D_ONIVODKA = "Ya no estás borrach@[ao_esp] perdid@[ao_esp].";
+D_ONIMILK = "Los efectos de tu leche se han desvanecido.";
+D_ONIVISOR = "El Visor Luminoso se ha quedado sin batería.";
+D_ONIFLIGHT = "El Amuleto Aéreo ha perdido su potencia.";
+ONI_REFUSE = "No me hace falta.";
+ONI_GETWATER = "Gracias.";
+ONI_GETVODKA = "¡Chin chin!";
+ONI_GETMILK = "Jeje, gracias por el regalito.";
+ONI_REFUSE_DRUNK = "No lo quiero...";
+ONI_GETWATER_DRUNK = "¡Agua! ¡Agua!";
+ONI_GETVODKA_DRUNK = "¡Eyyyyyy más de lo bueno!";
+ONI_GETMILK_DRUNK = "¡Dáme tu leche Ibuki! Jiji...";
+ONI_FALLEN = "Ellen ha muerto.";
+ONI_REVIVE = "Ellen ha resucitado.";
+ONI_MODESHOT = "Perdigones";
+ONI_MODESEMI = "Semiautomático";
+ONI_MODEBURST = "Ráfaga";
+ONI_MODEFULL = "Automático";
+ONI_MODESINGLE = "Un disparo";
+ONI_MODEDUAL = "Dos disparos";
+ONI_MODEQUAD = "Cuatro disparos";
+ONI_TITLEPRESENTSB = "presenta";
+ONI_TITLEMODBYA = "un mod de";
+ONI_TITLEINTROA = "\"y dijo entonces a su gente: no hagáis el mal, si no deseais";
+ONI_TITLEINTROB = "que caiga sobre vosotros la furia inflexible del \crONI ROJO\c-\"";
+ONI_INTERDONE = "DOMINADO";
+ONI_INTERNEXT = "PRÓXIMA PARADA";
+ONI_INTERKILLS = "CAPULLOS MATADOS:";
+ONI_INTERITEMS = "JOYITAS BIRLADAS:";
+ONI_INTERSECRETS = "SECRETOS OJEADOS:";
+ONI_INTERTIME = "TU TIEMPO:";
+ONI_INTERPAR = "TIEMPO PAR:";
+ONI_INTERTOTAL = "TIEMPO TOTAL:";
+// weapon tooltips
+TT_ONIFIST =
+"\cf\"A veces hay que hacer las cosas a mano.\"\c-\n"
+"\n"
+"\cfFuego primario\c- para pegar, mantener para cargar.\n"
+"\cfFuego secundario\c- para bloquear, reduce daño.\n"
+"\cfTecla de utilidad\c- para soplar un beso mágico.";
+TT_ONIPISTOL =
+"\cf\"Hola mi dulce monja gatuna.\"\c-\n"
+"\n"
+"\cf9×19mm Parabellum\c-, 8+1 balas.\n"
+"Munición con \cfcarga eléctrica\c-.\n"
+"Pulsa la \cfTecla de utilidad\c- para voltear.";
+TT_ONIPISTOL2 =
+"\cf\"El doble de monja gatuna, para más diversión.\"\c-\n"
+"\n"
+"\cfFuego primario\c- para el arma a mano izquierda,\n"
+"\cfFuego secundario\c- para el arma a mano derecha.\n"
+"La \cfTecla de utilidad\c- voltea ambas.";
+TT_ONISHOTGUN =
+"\cf\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
+"\n"
+"\cfPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
+"\cfFRAG-12\c- disponible como munición alternativa.\n"
+"Pulsa la\cfTecla de utilidad\c- para alternar municiones,\n"
+"mantenla para besar el arma, es un arma buena.";
+TT_ONIRIFLE =
+"\cf\"416 ES TODO LO QUE NECESITAS.\"\c-\n"
+"\n"
+"\cf6.8×43mm Special\c-, 30+1 balas.\n"
+"Pulsa la \cfTecla de utilidad\c- para alternar modo de disparo,\n"
+"entre \cfSemiautomático\c- y \cfAutomático\c-.";
+TT_ONISSHOTGUN =
+"\cf\"Vamos a montarnos una buena fiesta.\"\c-\n"
+"\n"
+"\cfSal de Kinylum de calibre 16\c-, 4 cartuchos.\n"
+"Pulsa la \cfTecla de utilidad\c- para alternar entre\n"
+"modo de \cfUn disparo\c- y \cfCuatro disparos\c-.";
+TT_ONIMACHINEGUN =
+"\cf\"Cantemos una canción juntos.\"\c-\n"
+"\n"
+"\cf7.62×54mmMT\c-, 200 balas.\n"
+"Se sobrecalienta con el uso extendido, reduciendo la puntería\n"
+"y causando fallas de disparo. Se enfría mejor estando guardada.";
+TT_ONIEXPLODER =
+"\cf\"Ah, el solucionador de problemas definitivo.\"\c-\n"
+"\n"
+"\cf20mm Mk.299 Tandem HEAT-MP\c-, 4+1 balas.\n"
+"El perno tiene que ser accionado manualmente tras cada disparo.";
+TT_ONIPLASMARIFLE =
+"\cf\"Vaya reliquia tenemos aquí.\"\c-\n"
+"\n"
+"\cfCélula de Argón de 60x72mm\c-, 30 disparos.\n"
+"El uso de este arma es bastante sencillo.";
+TT_ONITANKGUN =
+"\cf\"Hmmmm, me gustan las armas grandes.\"\c-\n"
+"\n"
+"\cf120×935mm\c-, disparo único.\n"
+"La munición viene directamente de hammerspace,\n"
+"pero requiere la recarga manual del usuario.\n"
+"Pulsa la \cfTecla de utilidad\c- para alternar municiones.";
+TT_ONISLAYER =
+"\cf\"Tío, esta cosa folla...\"\c-\n"
+"\n"
+"\cf50×110mm Areka\c-, 5+1 balas.\n"
+"Gran tamaño y peso, retroceso inmenso,\n"
+"garantizado para causar una gran destrucción.";
+TT_ONIBATTER =
+"\cf\"Ahh, el pasatiempo Americano...\"\c-\n"
+"\n"
+"\cfFuego primario\c- para batear, mantén para cargar.\n"
+"\cfFuego secundario\c- para bloquear, desvía balas.\n"
+"Pulsa la\cfTecla de utilidad\c- para invocar una pelota,\n"
+"la cual puedes golpear luego con el primario.";
+TT_ONIBEAGLE =
+"\cf\"Oh, este perrito si que muerde.\"\c-\n"
+"\n"
+"\cf.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
+"Pulsa la \cfTecla de utilidad\c- para voltear.\n"
+"No se pueden llevar dos.";
+TT_ONIHRIFLE =
+"\cf\"HABÍA un caballero del infierno...\"\c-\n"
+"\n"
+"\cf.50 OMG (12.7×99mm)\c-, 2 balas.\n"
+"Mantén la \cfTecla de utilidad\c- para un modo de dos disparos.";
+TT_ONIBRIFLE =
+"\cf\"No es la típica arma de soldado.\"\c-\n"
+"\n"
+"\cf7.62×51mm\c-, 20+1 balas.\n"
+"Munición de \cfalta penetración\c-.\n"
+"Pulsa la \cfTecla de utilidad\c- para alternar modos de disparo,\n"
+"entre \cfSemiautomático\c-, \cfRáfaga\c- y \cfAutomático\c-.";
+TT_ONIROCKET =
+"\cf\"No es el tamaño lo que importa...\"\c-\n"
+"\n"
+"\cfMicro-Misiles de 20×30mm\c-, 24+8 misiles.\n"
+"La \cfTecla de utilidad\c- carga misiles adicionales,\n"
+"La \cfBúsqueda de Objetivos\c- está disponible mediante la mira.";
+TT_ONILIGHTNINT =
+"\cf\"Ahora sí que estamos jugando con poder.\"\c-\n"
+"\n"
+"Barra de Dysedum de 10×72mm\c-, 7+1 barras.\n"
+"Pulsa la \cfTecla de utilidad\c- para alternar el modo concentrado.";

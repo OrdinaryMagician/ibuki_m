@@ -1,0 +1,70 @@
+[default]
+// keybinds
+ONI_KEYS = "Teclas de RED ONI";
+ONI_PRIMARYFIRE = "Fuego Primario";
+ONI_SECONDARYFIRE = "Apuntar / Bloqueo de Melé";
+ONI_RELOADFIRE = "Recargar";
+ONI_ZOOMFIRE = "Utilidad";
+ONI_MELEE = "Patada Rápida";
+ONI_EXTRAFIRE = "Granada";
+// skills
+ONI_SKHARDCORECONFIRM="\cr¿Seguro que quieres hacer eso?\nPuede que te patéen el culo.\c-\n\n\cgMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
+ONI_SKLUNATICCONFIRM="\cmCiertamente deseas morir.\nElige esta dificultad si te atreves.\c-\n\n\cgTodos los cambios de 20x102mm\n+\nDoble velocidad de enemigos\nProyectiles enemigos duplicados\nPueden aparecer enemigos extra\nReflejos instantáneos de enemigo\nLos enemigos no se estremecen\nLos enemigos no pelean entre si\c-\n\n(Pulsa Y para morir al instante)";
+// mod menu
+ONI_MTITLE = "Opciones de RED ONI";
+ONI_MCREDS = "Créditos de RED ONI";
+// Help menu
+ONI_HELP_PAGE1 = "La Historia Hasta Ahora";
+ONI_HELP_PAGE1_TXT =
+"6 de Junio de 2148, el día en que la \crDemolicionista\c- fue desplegada en territorio de la \crUnión de Estados\c- para luchar contra la \crInvasión Demoníaca\c- que trajo consigo la \crUAC\c-, justo en el centro de todo. Ha pasado cierto tiempo desde que su misión comenzó, y muchos otros valientes héroes han entrado igualmente en acción por todo el mundo. Por supuesto, de vuelta en casa aquí en \crJapón\c-, no hay héroe más reconocido que el \crOni Rojo\c-.\n"
+"\n"
+"Ahora sí, no hay mucho que hacer por aquí, ya que la obscenamente poderosa \crFuerza de Defensa Terrestre\c- de la tierra del sol naciente, mostrando un poder armamentístico que haría sonrojar a cualquiera, hace un trabajo bastante decente evitando que los demonios se cuelen. Es así entonces, que decides hacer un pequeño viaje al extranjero. ¿Adonde? Eso es elección tuya, jugador.\n"
+"\n"
+"El \crOni Rojo\c- ha entrado al combate, y ningún demonio podrá contra esta fuerza imparable.\n"
+"\n"
+"\cr¡Haz que se tragen sus propias tripas!\c-";
+$ifgame(heretic) ONI_HELP_PAGE1_TXT =
+"10 de Abril de 2171, el \crProyecto Akari\c- va viento en popa, y un nuevo mundo ha sido descubierto, un mundo de fantasía, lleno de peligrosas criaturas y poderes arcanos. Ciertamente, el lugar ideal para tener aventuras, ¿verdad?\n"
+"\n"
+"Aunque la \crDemolicionista\c- fue asignada a esta misión, has decidido tomar parte por tu cuenta, para explorar un poco también, ¿por que no? Así es como se lo monta el \crOni Rojo\c-.\n"
+"\n"
+"Y así, la tierra de \crParthoris\c- será testigo del inmenso poder de esta imparable máquina de matar.\n"
+"\n"
+"\cr¡A por ellos!\c-";
+ONI_HELP_PAGE2 = "Quien Es El Oni Rojo";
+ONI_HELP_PAGE2_TXT =
+"Nacida el 9 de Septiembre de 2074, \crIbuki Miyamoto\c- es el resultado del bastante caro y desesperadamente planeado programa \crOni Rojo\c-. Creada como una potente super-soldado capaz de cambiar el rumbo de la \crTercera Guerra Mundial\c-, su despliegue desafortunadamente llegó demasiado tarde, ya que en Agosto de 2077, los \crEstados Unidos\c- fueron estratégicamente \"acristalados\" desde órbita. Desde entonces, durante muchos años, sobrevivió como una mercenaria ambulante en el yermo, hasta que fue recuperada en 2091.\n"
+"\n"
+"\crIbuki\c- ciertamente llama la atención, con sus 2.2 metros de altura, sus músculos marcados y los (de alguna forma naturales) tatuajes que cubren su cuerpo. Por supuesto, si hay un detalle que llama incluso más la atención, eso sería... Sus relucientes ojos rojos. Prueba de su pertenencia a la familia \crMiyamoto\c-, y de la descendencia real \crLunar\c- de su sangre. Es ciertamente fiera.\n"
+"\n"
+"Oh, y como poder olvidar, sus impresionantes... Virtudes. A \crIbuki\c- ciertamente le gusta coleccionar toda clase de armas de todos los tipos (más de ese tema luego), muchas de las cuales tienen cierta importancia histórica, mientras que otras simplemente están ahí porque le encantan.\n"
+"\n"
+"También tiene unas tetas enormes, unos melones inmensos, vamos, un buen par de mogambos, a ver... Menudas domingas que tiene, ubres gigantescas... Qué pechotes...";
+ONI_HELP_PAGE3 = "Arsenal del Oni Rojo (Parte 1: Armas)";
+ONI_HELP_PAGE3_TXT =
+"\cr*Ejem*\c- Como se mencionaba en la sección anterior, a \crIbuki\c- le encantan realmente sus armas. Ha coleccionado toda clase de armamento durante años desde su primerísima misión. Puede que la mayoría te parezcan algo mundanas... O tal vez no.\n"
+"\n"
+"La operación típica de cualquiera de estas armas es bastante simple. Pulsas \crFuego primario\c- para disparar, y puedes pulsar \crFuego secundario\c- para apuntar, así de simple. Ten en cuenta por supuesto que puedes \crRecargar\c- en cualquier momento, y que algunas armas pueden tener funciones adicionales por medio de la \crTecla de utilidad\c-.\n"
+"\n"
+"Y también está la melé, por supuesto. Cualquier cosa en la ranura 1 funcionará básicamente igual, donde el \crFuego primario\c- ataca, y el \crFuego secundario\c- bloquea. Y antes de que me olvide, en cualquiera de estas situaciones, puedes pulsar la tecla de \crPatada Rápida\c- para, bueno, dar patadas. Oh, y si llevas bombas encima, puedes soltarlas con una tecla dedicada de \crGranada\c-.";
+ONI_HELP_PAGE4 = "Arsenal del Oni Rojo (Parte 2: Ítems)";
+ONI_HELP_PAGE4_TXT =
+"Y qué más se podría tener por aquí para ayudar, que unos clásicos de salud y armadura, y otras pequeñas cositas por aquí y allá.\n"
+"\n"
+"La curación funcione a base de beber agua, ya que mantenerse hidratado es importante. No te preocupes por beber demasiado, esto es un videojuego, así que no necesitas un tiempo aparte para hacerte cargo de las consecuencias. Como armadura, tienes aceite. Sí, exactamente, aceite. Te untas de aceite para reforzar tus defensas físicas, funciona de maravilla. Solo mantén tu piel hidratada y todo irá de perlas. Si planeas darte un baño, ten en cuenta que el agua hará que se vaya el aceite poco a poco.\n"
+"\n"
+"A diferencia de nuestra amiga la \crDemolicionista\c-, aquí los ítems de salud y armadura no se usan automáticamente cuando hagan falta estando en el inventario, así que ten eso en cuenta.";
+ONI_HELP_PAGE5 = "Arsenal del Oni Rojo (Parte 3: Potenciadores)";
+ONI_HELP_PAGE5_TXT =
+"No puede ser un mod decente sin esos. Hay toda clase de chismes disponibles para ti, aunque debes saber una cosa: La invisibilidad es una mierda como potenciador, sinceramente, así que ha sido reemplazada por otra cosa. Ya verás.\n"
+"\n"
+"Los potenciadores se usan automáticamente al recoger... EXCEPTO cuando ya haya una copia activa. Los extras se guardarán para que no se gasten si los vas pillando todos de golpe, lo cual es útil. Esto también es verdad para las supersaludes que reemplazan la Esfera de Alma y Megaesfera, las cuales no serán usadas automáticamente si ya sobrepasas los 100 puntos de salud.\n"
+"\n"
+"Como siempre, los potenciadores activos muestran su duración restante en el lado izquierdo del HUD, así puedes saber si se van a acabar con mayor precisión que si tuvieras que esperar a que empiecen a \"parpadear\".";
+ONI_HELP_PAGE6 = "Consejos Adicionales";
+ONI_HELP_PAGE6_TXT =
+"¿Sabes que? Aun puedes activar botones y abrir puertas a base de puñetazos y patadas, o incluso embistiendo al correr. Sí, correr, ya de por si, te permite empujar enemigos fuera de tu camino, siempre y cuando vayas lo suficientemente rápido.\n"
+"\n"
+"Recuerda también que los ítems de este mod tienen colisiones más \"ajustadas\", por lo cual puedes pulsar usar para pillarlos desde lejos. \crIbuki\c- tiene un alcance más largo, por cierto.\n"
+"\n"
+"Por último, puedes respirar bajo el agua, gracias a un conveniente respirador conectado a un rebosante depósito de aire natural en \crHammerspace\c-. Oh ya, tampoco he hablado de esto aún, el \crHammerspace\c-. Se accede a través del escote de \crIbuki\c- (no, en serio), lo cual da forma a ciertamente curiosas imágenes mentales si intentas imaginar como funciona su mantenimiento de inventario.";

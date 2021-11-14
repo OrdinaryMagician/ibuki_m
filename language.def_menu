@@ -54,7 +54,7 @@ ONI_HELP_PAGE3 = "Red Oni's Arsenal (Part 1: Weapons)";
 ONI_HELP_PAGE3_TXT =
 "\cr*Ahem*\c- As mentioned in the previous section, \crIbuki\c- really loves her guns. She's collected all sorts of weaponry over the years since her very first mission. You may find that most of these are fairly mundane... Or maybe not.\n"
 "\n"
-"The general operation of any of these firearms is pretty straightforward. You press \crPrimary fire\c- to shoot, and you can hold \crSecondary fire\c- to aim down the sights, simple as that. Note of course that you can \crReload\c- at any time, and that some weapons may have additional functions attached to the \crUtility key\c-.\n"
+"The general operation of any of these firearms is pretty straightforward. You press \crPrimary fire\c- to shoot, and you can press \crSecondary fire\c- to aim down the sights, simple as that. Note of course that you can \crReload\c- at any time, and that some weapons may have additional functions attached to the \crUtility key\c-.\n"
 "\n"
 "And there's also the melee, of course. Anything in slot 1 will operate just about the same, where \crPrimary fire\c- attacks, and \crSecondary fire\c- blocks. And before I forget, in any of these situations, you can press the \crQuick Kick\c- key to, well, kick. Oh, and if you've got any bombs on ya, you can yeet them with a dedicated \crGrenade\c- key.";
 ONI_HELP_PAGE4 = "Red Oni's Arsenal (Part 2: Items)";
