@@ -1,3 +1,5 @@
+// Red Oni shaders
+
 extend Class SWWMHandler
 {
 	private ui void RenderShaders( RenderEvent e )
