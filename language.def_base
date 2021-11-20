@@ -148,36 +148,36 @@ ONI_INTERPAR = "PAR TIME:";
 ONI_INTERTOTAL = "TOTAL TIME:";
 // weapon tooltips
 TT_ONIFIST =
-"\cf\"Sometimes you gotta do things manually.\"\c-\n"
+"\cr\"Sometimes you gotta do things manually.\"\c-\n"
 "\n"
-"\cfPrimary fire\c- to punch, hold to charge.\n"
-"\cfSecondary fire\c- to block, reduces damage.\n"
-"\cfUtility key\c- to blow a magic kiss.";
+"\crPrimary fire\c- to punch, hold to charge.\n"
+"\crSecondary fire\c- to block, reduces damage.\n"
+"\crUtility key\c- to blow a magic kiss.";
 TT_ONIPISTOL =
-"\cf\"Hello my sweet cat nun.\"\c-\n"
+"\cr\"Hello my sweet cat nun.\"\c-\n"
 "\n"
-"\cf9×19mm Parabellum\c-, 8+1 rounds.\n"
-"\cfElectrically charged\c- ammunition.\n"
-"Press the \cfUtility key\c- to spin.";
+"\cr9×19mm Parabellum\c-, 8+1 rounds.\n"
+"\crElectrically charged\c- ammunition.\n"
+"Press the \crUtility key\c- to spin.";
 TT_ONIPISTOL2 =
-"\cf\"Twice the cat nun gun, for more fun.\"\c-\n"
+"\cr\"Twice the cat nun gun, for more fun.\"\c-\n"
 "\n"
-"\cfPrimary fire\c- for left hand gun,\n"
-"\cfSecondary fire\c- for right hand gun.\n"
-"The \cfUtility key\c- spins both.";
+"\crPrimary fire\c- for left hand gun,\n"
+"\crSecondary fire\c- for right hand gun.\n"
+"The \crUtility key\c- spins both.";
 TT_ONISHOTGUN =
-"\cf\"The perfect tool for solving problems in an advanced way.\"\c-\n"
+"\cr\"The perfect tool for solving problems in an advanced way.\"\c-\n"
 "\n"
-"\cf12-gauge #1 Buckshot\c-, 32 rounds.\n"
-"\cfFRAG-12\c- available as alternate ammunition.\n"
-"Tap the \cfUtility key\c- to alternate ammo types,\n"
+"\cr12-gauge #1 Buckshot\c-, 32 rounds.\n"
+"\crFRAG-12\c- available as alternate ammunition.\n"
+"Tap the \crUtility key\c- to alternate ammo types,\n"
 "hold it to kiss the gun, it's a good gun.";
 TT_ONIRIFLE =
-"\cf\"416 IS ALL YOU NEED.\"\c-\n"
+"\cr\"416 IS ALL YOU NEED.\"\c-\n"
 "\n"
-"\cf6.8×43mm Special\c-, 30+1 rounds.\n"
-"Tap the \cfUtility key\c- to toggle fire modes,\n"
-"between \cfSemi-auto\c- and \cfFull-auto\c-.";
+"\cr6.8×43mm Special\c-, 30+1 rounds.\n"
+"Tap the \crUtility key\c- to toggle fire modes,\n"
+"between \crSemi-auto\c- and \crFull-auto\c-.";
 TT_ONISSHOTGUN =
 "\cf\"We're going to have a nice party.\"\c-\n"
 "\n"
@@ -185,67 +185,67 @@ TT_ONISSHOTGUN =
 "Tap the \cfUtility key\c- to toggle between\n"
 "\cfSingle-shot\c- and \cfQuad-shot\c- modes.";
 TT_ONIMACHINEGUN =
-"\cf\"Let's play a song together.\"\c-\n"
+"\cr\"Let's play a song together.\"\c-\n"
 "\n"
-"\cf7.62×54mmMT\c-, 200 rounds.\n"
+"\cr7.62×54mmMT\c-, 200 rounds.\n"
 "Overheats on extended use, causing loss of accuracy\n"
 "and potential misfires. Cools down faster when stored.";
 TT_ONIEXPLODER =
-"\cf\"Ah, the ultimate problem solver.\"\c-\n"
+"\cr\"Ah, the ultimate problem solver.\"\c-\n"
 "\n"
-"\cf20mm Mk.299 Tandem HEAT-MP\c-, 4+1 rounds.\n"
+"\cr20mm Mk.299 Tandem HEAT-MP\c-, 4+1 rounds.\n"
 "Bolt has to be manually racked after each shot.";
 TT_ONIPLASMARIFLE =
-"\cf\"Quite the relic here.\"\c-\n"
+"\cr\"Quite the relic here.\"\c-\n"
 "\n"
-"\cf60x72mm Argon Cell\c-, 30 shots.\n"
+"\cr60x72mm Argon Cell\c-, 30 shots.\n"
 "This weapon's usage is very straightforward.";
 TT_ONITANKGUN =
-"\cf\"Hmmmm, I like me some big guns.\"\c-\n"
+"\cr\"Hmmmm, I like me some big guns.\"\c-\n"
 "\n"
-"\cf120×935mm\c-, single shot.\n"
+"\cr120×935mm\c-, single shot.\n"
 "Ammunition is fed directly from hammerspace,\n"
 "but requires manual user reloading.\n"
-"Tap the \cfUtility key\c- to cycle ammo type.";
+"Tap the \crUtility key\c- to cycle ammo type.";
 TT_ONISLAYER =
-"\cf\"Man, this thing fucks...\"\c-\n"
+"\cr\"Man, this thing fucks...\"\c-\n"
 "\n"
-"\cf50×110mm Areka\c-, 5+1 rounds.\n"
+"\cr50×110mm Areka\c-, 5+1 rounds.\n"
 "Large size and weight, immense recoil,\n"
 "guaranteed to cause great destruction.";
 TT_ONIBATTER =
-"\cf\"Ahh, the American pastime...\"\c-\n"
+"\cr\"Ahh, the American pastime...\"\c-\n"
 "\n"
-"\cfPrimary fire\c- to swing, hold to charge.\n"
-"\cfSecondary fire\c- to block, deflects bullets.\n"
-"Tap the \cfUtility key\c- to summon a baseball,\n"
+"\crPrimary fire\c- to swing, hold to charge.\n"
+"\crSecondary fire\c- to block, deflects bullets.\n"
+"Tap the \crUtility key\c- to summon a baseball,\n"
 "which you can then hit with primary.";
 TT_ONIBEAGLE =
-"\cf\"Oh, this doggy really does bite.\"\c-\n"
+"\cr\"Oh, this doggy really does bite.\"\c-\n"
 "\n"
-"\cf.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
-"Press the \cfUtility key\c- to spin.\n"
+"\cr.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
+"Press the \crUtility key\c- to spin.\n"
 "Cannot be dual-wielded.";
 TT_ONIHRIFLE =
-"\cf\"There WAS a hell knight...\"\c-\n"
+"\cr\"There WAS a hell knight...\"\c-\n"
 "\n"
-"\cf.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
-"Hold the \cfUtility key\c- for two-shot mode.";
+"\cr.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
+"Hold the \crUtility key\c- for two-shot mode.";
 TT_ONIBRIFLE =
-"\cf\"Not your typical soldier's gun.\"\c-\n"
+"\cr\"Not your typical soldier's gun.\"\c-\n"
 "\n"
-"\cf7.62×51mm\c-, 20+1 rounds.\n"
-"\cfHigh penetration\c- ammunition.\n"
-"Tap the \cfUtility key\c- to alternate fire modes,\n"
-"between \cfSemi-auto\c-, \cfBurst\c- and \cfFull-auto\c-.";
+"\cr7.62×51mm\c-, 20+1 rounds.\n"
+"\crHigh penetration\c- ammunition.\n"
+"Tap the \crUtility key\c- to alternate fire modes,\n"
+"between \crSemi-auto\c-, \crBurst\c- and \crFull-auto\c-.";
 TT_ONIROCKET =
-"\cf\"It's not the size that matters...\"\c-\n"
+"\cr\"It's not the size that matters...\"\c-\n"
 "\n"
-"\cf20×30mm Micro-Missile\c-, 24+8 rounds.\n"
-"\cfUtility key\c- loads additional rounds,\n"
-"\cfTarget Seeking\c- available through scope.";
+"\cr20×30mm Micro-Missile\c-, 24+8 rounds.\n"
+"\crUtility key\c- loads additional rounds,\n"
+"\crTarget Seeking\c- available through scope.";
 TT_ONILIGHTNINT =
-"\cf\"Now we're playing with power.\"\c-\n"
+"\cr\"Now we're playing with power.\"\c-\n"
 "\n"
-"10×72mm Dysedum Rod\c-, 7+1 rounds.\n"
-"Tap the \cfUtility key\c- to toggle focused mode.";
+"\cr10×72mm Dysedum Rod\c-, 7+1 rounds.\n"
+"Tap the \crUtility key\c- to toggle focused mode.";

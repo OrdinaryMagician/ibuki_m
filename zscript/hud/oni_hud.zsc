@@ -48,7 +48,6 @@ Class OniStatusBar : SWWMStatusBar
 		AmmoTex[0] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxTop.png",TexMan.Type_Any);
 		AmmoTex[1] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxLine.png",TexMan.Type_Any);
 		AmmoTex[2] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxBottom.png",TexMan.Type_Any);
-		InvTex = TexMan.CheckForTexture("graphics/HUD/InventoryBox.png",TexMan.Type_Any);
 		WeaponTex = TexMan.CheckForTexture("graphics/HUD/WeaponBox.png",TexMan.Type_Any);
 		HealthTex[0] = TexMan.CheckForTexture("graphics/HUD/HealthBar.png",TexMan.Type_Any);
 		HealthTex[1] = TexMan.CheckForTexture("graphics/HUD/HealthBarEx.png",TexMan.Type_Any);
