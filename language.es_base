@@ -134,104 +134,104 @@ ONI_INTERPAR = "TIEMPO PAR:";
 ONI_INTERTOTAL = "TIEMPO TOTAL:";
 // weapon tooltips
 TT_ONIFIST =
-"\cf\"A veces hay que hacer las cosas a mano.\"\c-\n"
+"\cr\"A veces hay que hacer las cosas a mano.\"\c-\n"
 "\n"
-"\cfFuego primario\c- para pegar, mantener para cargar.\n"
-"\cfFuego secundario\c- para bloquear, reduce daño.\n"
-"\cfTecla de utilidad\c- para soplar un beso mágico.";
+"\crFuego primario\c- para pegar, mantener para cargar.\n"
+"\crFuego secundario\c- para bloquear, reduce daño.\n"
+"\crTecla de utilidad\c- para soplar un beso mágico.";
 TT_ONIPISTOL =
-"\cf\"Hola mi dulce monja gatuna.\"\c-\n"
+"\cr\"Hola mi dulce monja gatuna.\"\c-\n"
 "\n"
-"\cf9×19mm Parabellum\c-, 8+1 balas.\n"
-"Munición con \cfcarga eléctrica\c-.\n"
-"Pulsa la \cfTecla de utilidad\c- para voltear.";
+"\cr9×19mm Parabellum\c-, 8+1 balas.\n"
+"Munición con \crcarga eléctrica\c-.\n"
+"Pulsa la \crTecla de utilidad\c- para voltear.";
 TT_ONIPISTOL2 =
-"\cf\"El doble de monja gatuna, para más diversión.\"\c-\n"
+"\cr\"El doble de monja gatuna, para más diversión.\"\c-\n"
 "\n"
-"\cfFuego primario\c- para el arma a mano izquierda,\n"
-"\cfFuego secundario\c- para el arma a mano derecha.\n"
-"La \cfTecla de utilidad\c- voltea ambas.";
+"\crFuego primario\c- para el arma a mano izquierda,\n"
+"\crFuego secundario\c- para el arma a mano derecha.\n"
+"La \crTecla de utilidad\c- voltea ambas.";
 TT_ONISHOTGUN =
-"\cf\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
+"\cr\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
 "\n"
-"\cfPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
-"\cfFRAG-12\c- disponible como munición alternativa.\n"
-"Pulsa la\cfTecla de utilidad\c- para alternar municiones,\n"
+"\crPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
+"\crFRAG-12\c- disponible como munición alternativa.\n"
+"Pulsa la\crTecla de utilidad\c- para alternar municiones,\n"
 "mantenla para besar el arma, es un arma buena.";
 TT_ONIRIFLE =
-"\cf\"416 ES TODO LO QUE NECESITAS.\"\c-\n"
+"\cr\"416 ES TODO LO QUE NECESITAS.\"\c-\n"
 "\n"
-"\cf6.8×43mm Special\c-, 30+1 balas.\n"
-"Pulsa la \cfTecla de utilidad\c- para alternar modo de disparo,\n"
-"entre \cfSemiautomático\c- y \cfAutomático\c-.";
+"\cr6.8×43mm Special\c-, 30+1 balas.\n"
+"Pulsa la \crTecla de utilidad\c- para alternar modo de disparo,\n"
+"entre \crSemiautomático\c- y \crAutomático\c-.";
 TT_ONISSHOTGUN =
-"\cf\"Vamos a montarnos una buena fiesta.\"\c-\n"
+"\cr\"Vamos a montarnos una buena fiesta.\"\c-\n"
 "\n"
-"\cfSal de Kinylum de calibre 16\c-, 4 cartuchos.\n"
-"Pulsa la \cfTecla de utilidad\c- para alternar entre\n"
-"modo de \cfUn disparo\c- y \cfCuatro disparos\c-.";
+"\crSal de Kinylum de calibre 16\c-, 4 cartuchos.\n"
+"Pulsa la \crTecla de utilidad\c- para alternar entre\n"
+"modo de \crUn disparo\c- y \crCuatro disparos\c-.";
 TT_ONIMACHINEGUN =
-"\cf\"Cantemos una canción juntos.\"\c-\n"
+"\cr\"Cantemos una canción juntos.\"\c-\n"
 "\n"
 "\cf7.62×54mmMT\c-, 200 balas.\n"
 "Se sobrecalienta con el uso extendido, reduciendo la puntería\n"
 "y causando fallas de disparo. Se enfría mejor estando guardada.";
 TT_ONIEXPLODER =
-"\cf\"Ah, el solucionador de problemas definitivo.\"\c-\n"
+"\cr\"Ah, el solucionador de problemas definitivo.\"\c-\n"
 "\n"
-"\cf20mm Mk.299 Tandem HEAT-MP\c-, 4+1 balas.\n"
+"\cr20mm Mk.299 Tandem HEAT-MP\c-, 4+1 balas.\n"
 "El perno tiene que ser accionado manualmente tras cada disparo.";
-TT_ONIPLASMARIFLE =
-"\cf\"Vaya reliquia tenemos aquí.\"\c-\n"
+TT_rNIPLASMARIFLE =
+"\cr\"Vaya reliquia tenemos aquí.\"\c-\n"
 "\n"
-"\cfCélula de Argón de 60x72mm\c-, 30 disparos.\n"
+"\crCélula de Argón de 60x72mm\c-, 30 disparos.\n"
 "El uso de este arma es bastante sencillo.";
 TT_ONITANKGUN =
-"\cf\"Hmmmm, me gustan las armas grandes.\"\c-\n"
+"\cr\"Hmmmm, me gustan las armas grandes.\"\c-\n"
 "\n"
-"\cf120×935mm\c-, disparo único.\n"
+"\cr120×935mm\c-, disparo único.\n"
 "La munición viene directamente de hammerspace,\n"
 "pero requiere la recarga manual del usuario.\n"
-"Pulsa la \cfTecla de utilidad\c- para alternar municiones.";
+"Pulsa la \crTecla de utilidad\c- para alternar municiones.";
 TT_ONISLAYER =
-"\cf\"Tío, esta cosa folla...\"\c-\n"
+"\cr\"Tío, esta cosa folla...\"\c-\n"
 "\n"
-"\cf50×110mm Areka\c-, 5+1 balas.\n"
+"\cr50×110mm Areka\c-, 5+1 balas.\n"
 "Gran tamaño y peso, retroceso inmenso,\n"
 "garantizado para causar una gran destrucción.";
 TT_ONIBATTER =
 "\cf\"Ahh, el pasatiempo Americano...\"\c-\n"
 "\n"
-"\cfFuego primario\c- para batear, mantén para cargar.\n"
-"\cfFuego secundario\c- para bloquear, desvía balas.\n"
-"Pulsa la\cfTecla de utilidad\c- para invocar una pelota,\n"
+"\crFuego primario\c- para batear, mantén para cargar.\n"
+"\crFuego secundario\c- para bloquear, desvía balas.\n"
+"Pulsa la\crTecla de utilidad\c- para invocar una pelota,\n"
 "la cual puedes golpear luego con el primario.";
 TT_ONIBEAGLE =
-"\cf\"Oh, este perrito si que muerde.\"\c-\n"
+"\cr\"Oh, este perrito si que muerde.\"\c-\n"
 "\n"
-"\cf.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
-"Pulsa la \cfTecla de utilidad\c- para voltear.\n"
+"\cr.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
+"Pulsa la \crTecla de utilidad\c- para voltear.\n"
 "No se pueden llevar dos.";
 TT_ONIHRIFLE =
-"\cf\"HABÍA un caballero del infierno...\"\c-\n"
+"\cr\"HABÍA un caballero del infierno...\"\c-\n"
 "\n"
-"\cf.50 OMG (12.7×99mm)\c-, 2 balas.\n"
+"\cr.50 OMG (12.7×99mm)\c-, 2 balas.\n"
 "Mantén la \cfTecla de utilidad\c- para un modo de dos disparos.";
 TT_ONIBRIFLE =
-"\cf\"No es la típica arma de soldado.\"\c-\n"
+"\cr\"No es la típica arma de soldado.\"\c-\n"
 "\n"
-"\cf7.62×51mm\c-, 20+1 balas.\n"
-"Munición de \cfalta penetración\c-.\n"
-"Pulsa la \cfTecla de utilidad\c- para alternar modos de disparo,\n"
-"entre \cfSemiautomático\c-, \cfRáfaga\c- y \cfAutomático\c-.";
+"\cr7.62×51mm\c-, 20+1 balas.\n"
+"Munición de \cralta penetración\c-.\n"
+"Pulsa la \crTecla de utilidad\c- para alternar modos de disparo,\n"
+"entre \crSemiautomático\c-, \crRáfaga\c- y \crAutomático\c-.";
 TT_ONIROCKET =
-"\cf\"No es el tamaño lo que importa...\"\c-\n"
+"\cr\"No es el tamaño lo que importa...\"\c-\n"
 "\n"
-"\cfMicro-Misiles de 20×30mm\c-, 24+8 misiles.\n"
-"La \cfTecla de utilidad\c- carga misiles adicionales,\n"
-"La \cfBúsqueda de Objetivos\c- está disponible mediante la mira.";
+"\crMicro-Misiles de 20×30mm\c-, 24+8 misiles.\n"
+"La \crTecla de utilidad\c- carga misiles adicionales,\n"
+"La \crBúsqueda de Objetivos\c- está disponible mediante la mira.";
 TT_ONILIGHTNINT =
-"\cf\"Ahora sí que estamos jugando con poder.\"\c-\n"
+"\cr\"Ahora sí que estamos jugando con poder.\"\c-\n"
 "\n"
-"Barra de Dysedum de 10×72mm\c-, 7+1 barras.\n"
-"Pulsa la \cfTecla de utilidad\c- para alternar el modo concentrado.";
+"\crBarra de Dysedum de 10×72mm\c-, 7+1 barras.\n"
+"Pulsa la \crTecla de utilidad\c- para alternar el modo concentrado.";
