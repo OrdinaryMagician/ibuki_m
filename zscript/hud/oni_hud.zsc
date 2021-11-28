@@ -2,7 +2,7 @@
 
 Class OniStatusBar : SWWMStatusBar
 {
-	TextureID StatusTex, AmmoTex[3], InvTex, WeaponTex, HealthTex[4], OilTex, GenTex[3];
+	TextureID StatusTex, AmmoTex[3], WeaponTex, HealthTex[4], OilTex, GenTex[3];
 	Array<String> AmmoClasses, AmmoNames;
 	Array<int> AmmoFlash;		// flash when new ammo is received
 	Array<int> AmmoOldAmounts;	// to detect when to flash

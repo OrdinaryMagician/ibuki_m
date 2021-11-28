@@ -59,12 +59,20 @@ HardwareShader Texture "graphics/OniLogoL.png"
 	Define "TEX_AR" = "1."
 	Texture "LogoTex" "graphics/OniLogoL_Layers.png"
 }
+HardwareShader Texture "graphics/OniLogoL_Glow.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
 HardwareShader Texture "graphics/OniLogoR.png"
 {
 	Shader "shaders/glsl/OniLogoAnimated.fp"
 	Define "TEX_SZ" = "vec2(1024.,1024.)"
 	Define "TEX_AR" = "1."
 	Texture "LogoTex" "graphics/OniLogoR_Layers.png"
+}
+HardwareShader Texture "graphics/OniLogoR_Glow.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
 }
 HardwareShader Texture "graphics/M_REDONI.png"
 {
