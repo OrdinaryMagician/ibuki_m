@@ -61,6 +61,7 @@ OptionMenu "OniOptionMenu"
 	ScaleSlider "$SWWM_MAXGIBS", "oni_maxgibs", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
 	ScaleSlider "$SWWM_MAXCASINGS", "oni_maxcasings", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
 	ScaleSlider "$SWWM_MAXDEBRIS", "oni_maxdebris", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
+	SafeCommand "$SWWM_CLEARFX", "netevent swwmcleareffects"
 	StaticText " "
 	StaticText "$SWWM_BTITLE", "DarkRed"
 	Option "$SWWM_PS_FULLRESET", "oni_ps_fullreset", "SWWMPistolStart"
@@ -73,9 +74,12 @@ OptionMenu "OniOptionMenu"
 	Option "$SWWM_SINGLEFIRST", "oni_singlefirst", "YesNo"
 	Option "$SWWM_WEAPONTOOLTIPS", "oni_weapontooltips", "YesNo"
 	SafeCommand "$SWWM_RESETTOOLTIPS", "event swwmresettooltips"
-	StaticText " "
-	StaticText "$SWWM_MCTITLE", "DarkRed"
-	Option "$SWWM_DRLASKILL", "oni_drlaskill", "SWWMDRLASkill"
+	IfGame(Doom)
+	{
+		StaticText " "
+		StaticText "$SWWM_MCTITLE", "DarkRed"
+		Option "$SWWM_DRLASKILL", "oni_drlaskill", "SWWMDRLASkill"
+	}
 	StaticText " "
 	StaticText " "
 
