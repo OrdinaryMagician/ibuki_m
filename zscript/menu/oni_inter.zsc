@@ -116,7 +116,7 @@ Class OniStatScreen : StatusScreen
 			Screen.Dim(Color(16,0,0),1.-clamp(GameSecs,.1,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
 		}
 		else Screen.Dim(Color(16,0,0),1.,0,0,Screen.GetWidth(),Screen.GetHeight());
-		double texscl = Screen.GetHeight()/2700.;
+		double texscl = Screen.GetHeight()/2200.;
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
 		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
 		RenderSmokeLayer(GameSecs,true,.5,0,true);
@@ -124,13 +124,13 @@ Class OniStatScreen : StatusScreen
 		if ( !ibukitex[1] ) ibukitex[1] = TexMan.CheckForTexture("graphics/title_ibuki_smoke.png",TexMan.Type_Any);
 		if ( !ibukitex[2] ) ibukitex[2] = TexMan.CheckForTexture("graphics/title_ibuki_eye.png",TexMan.Type_Any);
 		double ofs;
-		if ( sp_state >= 2 ) ofs = 800;
-		else ofs = 800*smerp(clamp(GameSecs,0.,1.));
-		Screen.DrawTexture(ibukitex[0],false,Screen.GetWidth()/2+ofs*texscl,Screen.GetHeight()+80*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
-		Screen.DrawTexture(ibukitex[1],false,Screen.GetWidth()/2+ofs*texscl,Screen.GetHeight()+80*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,.5);
-		Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*texscl,Screen.GetHeight()+80*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
+		if ( sp_state >= 2 ) ofs = 120;
+		else ofs = 120*smerp(clamp(GameSecs,0.,1.));
+		Screen.DrawTexture(ibukitex[0],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
+		Screen.DrawTexture(ibukitex[1],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,.5);
+		Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
 		double alf = clamp(glarestr/20.,0.,1.)**2;
-		if ( alf > 0. ) Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*texscl,Screen.GetHeight()+80*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
+		if ( alf > 0. ) Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
 		RenderSmokeLayer(GameSecs,false,1.,0,true);
 		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,64*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
 	}
@@ -142,23 +142,23 @@ Class OniStatScreen : StatusScreen
 	{
 		if ( sp_state < 1 ) return 0;
 		double GameSecs = (bcnt+FracTic)/GameTicRate;
-		int th = (smallfont.GetHeight()*20+32)*CleanYFac_1;	// height of the stats box + margin
-		int bh = ((authortexts[0]!="")?(smallfont.GetHeight()*3+bigfont.GetHeight()):(smallfont.GetHeight()*2+bigfont.GetHeight()))*CleanYFac_1;	// height of the "level finished" box
-		double xx = Screen.GetWidth()/2-400;
+		int th = (smallfont.GetHeight()*10+32)*CleanYFac_1; // height of the stats box + margin
+		int bh = ((authortexts[0]!="")?(smallfont2.GetHeight()+smallfont.GetHeight()*2+bigfont.GetHeight()):(smallfont.GetHeight()*2+bigfont.GetHeight()))*CleanYFac_1; // height of the "level finished" box
+		double xx = Screen.GetWidth()/2-120*CleanXFac_1;
 		double yy = (Screen.GetHeight()-th)/2;
 		yy -= bh;
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
-		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,256*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
-		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,256*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
-		Screen.DrawText(smallfont,Font.CR_WHITE,xx-smallfont.StringWidth(lnametexts[0])*CleanXFac_1,yy,lnametexts[0],DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,150*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
+		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,150*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
+		Screen.DrawText(smallfont,Font.CR_WHITE,xx-smallfont.StringWidth(lnametexts[0])*CleanXFac_1,yy,lnametexts[0],DTA_ScaleX,CleanXFac_1*2,DTA_ScaleY,CleanYFac_1*2);
 		yy += smallfont.GetHeight()*2*CleanYFac_1;
 		if ( authortexts[0] != "" )
 		{
-			Screen.DrawText(smallfont,Font.CR_DARKGRAY,xx-smallfont.StringWidth(authortexts[0])*CleanXFac_1/2,yy,authortexts[0],DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
-			yy += smallfont.GetHeight()*CleanYFac_1;
+			Screen.DrawText(smallfont2,Font.CR_DARKGRAY,xx-smallfont2.StringWidth(authortexts[0])*CleanXFac_1/2,yy,authortexts[0],DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+			yy += smallfont2.GetHeight()*CleanYFac_1;
 		}
 		String str = StringTable.Localize("$ONI_INTERDONE");
-		Screen.DrawText(bigfont,Font.CR_RED,xx-bigfont.StringWidth(str)*CleanXFac_1/2,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		Screen.DrawText(bigfont,Font.CR_DARKRED,xx-bigfont.StringWidth(str)*CleanXFac_1/2,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		if ( (glarestr > 0) && (sp_state < 2) )
 		{
 			double alf = clamp(glarestr/20.,0.,1.)**2;
@@ -168,25 +168,25 @@ Class OniStatScreen : StatusScreen
 	}
 	override void DrawEL()
 	{
-		int th = (smallfont.GetHeight()*20+32)*CleanYFac_1;	// height of the stats box + margin
-		int bh = ((authortexts[1]!="")?(smallfont.GetHeight()*3+bigfont.GetHeight()):(smallfont.GetHeight()*2+bigfont.GetHeight()))*CleanYFac_1;			// height of the "level finished" box
-		double xx = Screen.GetWidth()/2-400;
+		int th = (smallfont.GetHeight()*10+32)*CleanYFac_1; // height of the stats box + margin
+		int bh = ((authortexts[1]!="")?(smallfont2.GetHeight()+smallfont.GetHeight()*2+bigfont.GetHeight()):(smallfont.GetHeight()*2+bigfont.GetHeight()))*CleanYFac_1; // height of the "level finished" box
+		double xx = Screen.GetWidth()/2-120*CleanXFac_1;
 		double yy = (Screen.GetHeight()+th)/2;
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
-		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,256*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
-		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,256*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
+		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,150*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
+		Screen.DrawTexture(gradtex,false,xx,yy+bh/2,DTA_DestWidth,150*CleanXFac_1,DTA_DestHeight,bh+4*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
 		String str = StringTable.Localize("$ONI_INTERNEXT");
-		Screen.DrawText(bigfont,Font.CR_RED,xx-bigfont.StringWidth(str)*CleanXFac_1/2,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		Screen.DrawText(bigfont,Font.CR_DARKRED,xx-bigfont.StringWidth(str)*CleanXFac_1/2,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		if ( (glarestr > 0) && (sp_state >= 10) )
 		{
 			double alf = clamp(glarestr/20.,0.,1.)**2;
 			Screen.DrawText(bigfont,Font.FindFontColor('MiniFlash'),xx-bigfont.StringWidth(str)*CleanXFac_1/2,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
 		}
 		yy += bigfont.GetHeight()*CleanYFac_1;
-		Screen.DrawText(smallfont,Font.CR_WHITE,xx-smallfont.StringWidth(lnametexts[1])*CleanXFac_1,yy,lnametexts[1],DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,Font.CR_WHITE,xx-smallfont.StringWidth(lnametexts[1])*CleanXFac_1,yy,lnametexts[1],DTA_ScaleX,CleanXFac_1*2,DTA_ScaleY,CleanXFac_1*2);
 		yy += smallfont.GetHeight()*2*CleanYFac_1;
 		if ( authortexts[0] == "" ) return;
-		Screen.DrawText(smallfont,Font.CR_DARKGRAY,xx-smallfont.StringWidth(authortexts[1])*CleanXFac_1/2,yy,authortexts[1],DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		Screen.DrawText(smallfont2,Font.CR_DARKGRAY,xx-smallfont2.StringWidth(authortexts[1])*CleanXFac_1/2,yy,authortexts[1],DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 	}
 	private String StatCnt( int a, int b )
 	{
@@ -196,54 +196,55 @@ Class OniStatScreen : StatusScreen
 	override void drawStats( void )
 	{
 		if ( sp_state < 2 ) return;
-		int ne = (sp_state>=8)?20:(sp_state>=6)?12:(sp_state>=4)?8:4;
-		int th = (smallfont.GetHeight()*ne)*CleanYFac_1;	// height of the stats box
-		double xx = Screen.GetWidth()/2-400;
+		int ne = (sp_state>=8)?10:(sp_state>=6)?6:(sp_state>=4)?4:2;
+		int th = (smallfont.GetHeight()*ne)*CleanYFac_1; // height of the stats box
+		double xx = Screen.GetWidth()/2-120*CleanXFac_1;
 		double yy = (Screen.GetHeight()-th)/2;
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
-		Screen.DrawTexture(gradtex,false,xx,yy+th/2,DTA_DestWidth,256*CleanXFac_1,DTA_DestHeight,th+4*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
-		Screen.DrawTexture(gradtex,false,xx,yy+th/2,DTA_DestWidth,256*CleanXFac_1,DTA_DestHeight,th+4*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
+		Screen.DrawTexture(gradtex,false,xx,yy+th/2,DTA_DestWidth,150*CleanXFac_1,DTA_DestHeight,th+4*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
+		Screen.DrawTexture(gradtex,false,xx,yy+th/2,DTA_DestWidth,150*CleanXFac_1,DTA_DestHeight,th+4*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.5,DTA_TopOffset,256,DTA_LeftOffset,128);
 		String str = StringTable.Localize("$ONI_INTERKILLS");
-		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-320,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StatCnt(cnt_kills[0],wbs.maxkills);
-		Screen.DrawText(smallfont,((wbs.maxkills>0)&&(cnt_kills[0]>=wbs.maxkills))?Font.CR_WHITE:Font.CR_DARKGRAY,xx+320-smallfont.StringWidth(str)*2*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,((wbs.maxkills>0)&&(cnt_kills[0]>=wbs.maxkills))?Font.CR_WHITE:Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		if ( sp_state < 4 ) return;
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StringTable.Localize("$ONI_INTERITEMS");
-		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-320,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StatCnt(cnt_items[0],wbs.maxitems);
-		Screen.DrawText(smallfont,((wbs.maxitems>0)&&(cnt_items[0]>=wbs.maxitems))?Font.CR_WHITE:Font.CR_DARKGRAY,xx+320-smallfont.StringWidth(str)*2*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,((wbs.maxitems>0)&&(cnt_items[0]>=wbs.maxitems))?Font.CR_WHITE:Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		if ( sp_state < 6 ) return;
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StringTable.Localize("$ONI_INTERSECRETS");
-		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-320,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StatCnt(cnt_secret[0],wbs.maxsecret);
-		Screen.DrawText(smallfont,((wbs.maxsecret>0)&&(cnt_secret[0]>=wbs.maxsecret))?Font.CR_WHITE:Font.CR_DARKGRAY,xx+320-smallfont.StringWidth(str)*2*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,((wbs.maxsecret>0)&&(cnt_secret[0]>=wbs.maxsecret))?Font.CR_WHITE:Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		if ( sp_state < 8 ) return;
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = "┈┈┄┄╌╌────╌╌┄┄┈┈";
-		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-smallfont.StringWidth(str)*CleanXFac_1/2,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StringTable.Localize("$ONI_INTERTIME");
-		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-320,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		str = TimeStr(max(cnt_time,0));
-		Screen.DrawText(smallfont,(wbs.partime&&(cnt_time<=(wbs.partime/GameTicRate)))?Font.CR_WHITE:((wbs.sucktime>0)&&(cnt_time>(wbs.sucktime*3600)))?Font.CR_RED:Font.CR_DARKGRAY,xx+320-smallfont.StringWidth(str)*2*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		Screen.DrawText(smallfont,(wbs.partime&&(cnt_time<=(wbs.partime/GameTicRate)))?Font.CR_WHITE:((wbs.sucktime>0)&&(cnt_time>(wbs.sucktime*3600)))?Font.CR_RED:Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		if ( wbs.partime )
 		{
 			str = StringTable.Localize("$ONI_INTERPAR");
-			Screen.DrawText(smallfont,Font.CR_DARKRED,xx-320,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+			Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 			str = TimeStr(max(cnt_par,0));
-			Screen.DrawText(smallfont,Font.CR_DARKGRAY,xx+320-smallfont.StringWidth(str)*2*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+			Screen.DrawText(smallfont,Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		}
-		yy += smallfont.GetHeight()*2*CleanYFac_1;
+		if ( wbs.totaltime == Plrs[me].stime ) return;
+		yy += smallfont.GetHeight()*CleanYFac_1;
 		str = StringTable.Localize("$ONI_INTERTOTAL");
-		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-320,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		str = TimeStr(max(cnt_total_time,0));
-		Screen.DrawText(smallfont,Font.CR_DARKGRAY,xx+320-smallfont.StringWidth(str)*2*CleanXFac_1,yy,str,DTA_ScaleX,2*CleanXFac_1,DTA_ScaleY,2*CleanYFac_1);
+		Screen.DrawText(smallfont,Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 	}
 	override void Drawer( void )
 	{
