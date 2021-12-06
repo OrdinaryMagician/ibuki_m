@@ -192,21 +192,25 @@ Class OniTitleStuff : EventHandler
 		// 44 seconds in: fade from white to full title scene
 		else
 		{
-			if ( level.maptime > 46*GameTicRate )
-			{
-				if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/OniLogoL.png",TexMan.Type_Any);
-				if ( !logotex[2] ) logotex[2] = TexMan.CheckForTexture("graphics/OniLogoL_Glow.png",TexMan.Type_Any);
-				Screen.DrawTexture(logotex[0],false,Screen.GetWidth()/2-320*logoscl,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,580);
-				if ( level.maptime < 48*GameTicRate )
-					Screen.DrawTexture(logotex[2],false,Screen.GetWidth()/2-320*logoscl,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,580,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,1.-clamp(GameSecs-46,0.,1.));
-			}
 			if ( level.maptime > 47*GameTicRate )
 			{
-				if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/OniLogoR.png",TexMan.Type_Any);
+				if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/OniLogo.png",TexMan.Type_Any);
+				Screen.DrawTexture(logotex[1],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024);
+			}
+			else if ( level.maptime > 46*GameTicRate )
+			{
+				if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/OniLogoL.png",TexMan.Type_Any);
+				Screen.DrawTexture(logotex[0],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024);
+			}
+			if ( (level.maptime > 46*GameTicRate) && (level.maptime < 48*GameTicRate) )
+			{
+				if ( !logotex[2] ) logotex[2] = TexMan.CheckForTexture("graphics/OniLogoL_Glow.png",TexMan.Type_Any);
+				Screen.DrawTexture(logotex[2],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,1.-clamp(GameSecs-46,0.,1.));
+			}
+			if ( (level.maptime > 47*GameTicRate) && (level.maptime < 49*GameTicRate) )
+			{
 				if ( !logotex[3] ) logotex[3] = TexMan.CheckForTexture("graphics/OniLogoR_Glow.png",TexMan.Type_Any);
-				Screen.DrawTexture(logotex[1],false,Screen.GetWidth()/2+320*logoscl,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,540);
-				if ( level.maptime < 49*GameTicRate )
-					Screen.DrawTexture(logotex[3],false,Screen.GetWidth()/2+320*logoscl,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,540,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,1.-clamp(GameSecs-47,0.,1.));
+				Screen.DrawTexture(logotex[3],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,1.-clamp(GameSecs-47,0.,1.));
 			}
 			if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
 			Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);

@@ -55,20 +55,26 @@ HardwareShader Texture "graphics/title_smoke_7.png"
 HardwareShader Texture "graphics/OniLogoL.png"
 {
 	Shader "shaders/glsl/OniLogoAnimated.fp"
-	Define "TEX_SZ" = "vec2(1024.,1024.)"
-	Define "TEX_AR" = "1."
-	Texture "LogoTex" "graphics/OniLogoL_Layers.png"
+	// what no 2d arrays does to a mf
+	Texture "Layer1" "graphics/OniLogoL_Layer1.png"
+	Texture "Layer2" "graphics/OniLogo_Layer2.png"
+	Texture "Layer3" "graphics/OniLogoL_Layer3.png"
+	Texture "Layer4" "graphics/OniLogoL_Layer4.png"
+	Texture "Layer5" "graphics/OniLogoL_Layer5.png"
 }
 HardwareShader Texture "graphics/OniLogoL_Glow.png"
 {
 	Shader "shaders/glsl/Bilinear.fp"
 }
-HardwareShader Texture "graphics/OniLogoR.png"
+HardwareShader Texture "graphics/OniLogo.png"
 {
 	Shader "shaders/glsl/OniLogoAnimated.fp"
-	Define "TEX_SZ" = "vec2(1024.,1024.)"
-	Define "TEX_AR" = "1."
-	Texture "LogoTex" "graphics/OniLogoR_Layers.png"
+	// what no 2d arrays does to a mf
+	Texture "Layer1" "graphics/OniLogo_Layer1.png"
+	Texture "Layer2" "graphics/OniLogo_Layer2.png"
+	Texture "Layer3" "graphics/OniLogo_Layer3.png"
+	Texture "Layer4" "graphics/OniLogo_Layer4.png"
+	Texture "Layer5" "graphics/OniLogo_Layer5.png"
 }
 HardwareShader Texture "graphics/OniLogoR_Glow.png"
 {
@@ -77,10 +83,13 @@ HardwareShader Texture "graphics/OniLogoR_Glow.png"
 HardwareShader Texture "graphics/M_REDONI.png"
 {
 	Shader "shaders/glsl/OniLogoAnimated.fp"
-	Define "TEX_SZ" = "vec2(256.,128.)"
-	Define "TEX_AR" = "2."
+	// what no 2d arrays does to a mf
+	Texture "Layer1" "graphics/M_REDONI_Layer1.png"
+	Texture "Layer2" "graphics/M_REDONI_Layer2.png"
+	Texture "Layer3" "graphics/M_REDONI_Layer3.png"
+	Texture "Layer4" "graphics/M_REDONI_Layer4.png"
+	Texture "Layer5" "graphics/M_REDONI_Layer5.png"
 	Define "NO_BILINEAR"
-	Texture "LogoTex" "graphics/M_REDONI_Layers.png"
 }
 HardwareShader Texture "graphics/HUD/HealthBarInvul.png"
 {

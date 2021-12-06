@@ -39,11 +39,18 @@ GameInfo
 	PrecacheSounds = "aa12/titlecock", "aa12/titlefire", "title/thump"
 	// precache all intro textures, to avoid hiccups
 	PrecacheTextures = "graphics/OniLogoL.png",
+		"graphics/OniLogoL_Layer1.png",
+		"graphics/OniLogoL_Layer3.png",
+		"graphics/OniLogoL_Layer4.png",
+		"graphics/OniLogoL_Layer5.png",
+		"graphics/OniLogo.png",
+		"graphics/OniLogo_Layer1.png",
+		"graphics/OniLogo_Layer2.png",
+		"graphics/OniLogo_Layer3.png",
+		"graphics/OniLogo_Layer4.png",
+		"graphics/OniLogo_Layer5.png",
 		"graphics/OniLogoL_Glow.png",
-		"graphics/OniLogoL_Layers.png",
-		"graphics/OniLogoR.png",
 		"graphics/OniLogoR_Glow.png",
-		"graphics/OniLogoR_Layers.png",
 		"graphics/title_grad.png",
 		"graphics/title_ibuki.png",
 		"graphics/title_ibuki_dark.png",
@@ -58,7 +65,11 @@ GameInfo
 		"graphics/title_smoke_6.png",
 		"graphics/title_smoke_7.png",
 		"graphics/M_REDONI.png",
-		"graphics/M_REDONI_Layers.png"
+		"graphics/M_REDONI_Layer1.png",
+		"graphics/M_REDONI_Layer2.png",
+		"graphics/M_REDONI_Layer3.png",
+		"graphics/M_REDONI_Layer4.png",
+		"graphics/M_REDONI_Layer5.png"
 }
 
 ClearSkills
