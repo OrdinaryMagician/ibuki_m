@@ -31,6 +31,7 @@ Class IbukiPlayer : SWWMPlayer
 		+DONTMORPH;
 		+DONTDRAIN;
 		+DONTCORPSE;
+		SWWMPlayer.ResurrectType RT_REVIVE;
 	}
 
 	override void Tick()
