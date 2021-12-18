@@ -27,6 +27,11 @@ OptionValue "SWWMPistolStart"
 	1, "$SWWM_PISTOLSTART_MAP"
 	2, "$SWWM_PISTOLSTART_CLUSTER"
 }
+OptionValue "SWWMHUDScale"
+{
+	0, "$SWWM_TFITSCALE"
+	1, "$SWWM_LFITSCALE"
+}
 OptionMenu "OniOptionMenu"
 {
 	Class "SWWMOptionMenu"
@@ -45,6 +50,7 @@ OptionMenu "OniOptionMenu"
 	Option "$SWWM_MM_ENABLE", "oni_mm_enable", "YesNo"
 	Option "$SWWM_FORCESTATS", "oni_forcestats", "SWWMForceStats"
 	Slider "$SWWM_HUDMARGIN", "oni_hudmargin", 0, 40, 1, 0
+	Option "$SWWM_HUDSCALE", "oni_hudscale", "SWWMHudScale"
 	Slider "$SWWM_MAXMSG", "oni_maxshown", 1, 10, 1, 0
 	Slider "$SWWM_MAXMSGBIG", "oni_maxshownbig", 1, 20, 1, 0
 	Slider "$SWWM_MAXPICK", "oni_maxpickup", 1, 10, 1, 0
@@ -71,7 +77,6 @@ OptionMenu "OniOptionMenu"
 	Option "$SWWM_ENEMYDROPS", "oni_enemydrops", "SWWMEnemyDropType"
 	StaticText " "
 	StaticText "$SWWM_ITITLE", "DarkRed"
-	Option "$SWWM_SINGLEFIRST", "oni_singlefirst", "YesNo"
 	Option "$SWWM_WEAPONTOOLTIPS", "oni_weapontooltips", "YesNo"
 	SafeCommand "$SWWM_RESETTOOLTIPS", "event swwmresettooltips"
 	IfGame(Doom)
@@ -80,8 +85,6 @@ OptionMenu "OniOptionMenu"
 		StaticText "$SWWM_MCTITLE", "DarkRed"
 		Option "$SWWM_DRLASKILL", "oni_drlaskill", "SWWMDRLASkill"
 	}
-	StaticText " "
-	StaticText " "
 
 }
 AddOptionMenu "OptionsMenu"

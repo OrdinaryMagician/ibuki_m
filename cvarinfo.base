@@ -2,6 +2,7 @@
 nosave float oni_flashstrength = 1.0;
 user float oni_bumpstrength = 1.0;
 nosave int oni_hudmargin = 10;
+nosave bool oni_hudscale = false;
 nosave int oni_maxshown = 4;
 nosave int oni_maxshownbig = 10;
 nosave int oni_maxpickup = 5;
@@ -20,7 +21,6 @@ server bool oni_shadows = true;
 nosave int oni_shadowdist = 2000;
 nosave int oni_forcestats = 1;
 server int oni_drlaskill = 3;
-server bool oni_singlefirst = false;
 server int oni_ps_fullreset = 0;
 server int oni_ps_resetammo = 0;
 server int oni_ps_resetitems = 0;

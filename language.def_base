@@ -1,15 +1,12 @@
 [default]
 // tags, pickups
 T_ONIFIST = "Unarmed";
-T_ONIPISTOL = "ZC7";
-I_ONIPISTOL = "Shinigami \"Zica-Seven\" Semi-Auto Pistol";
-T_ONIPISTOL2 = "Dual ZC7s";
 T_ONISHOTGUN = "AA-12";
 I_ONISHOTGUN = "Ninnacht \"Auto Assault-12\" Shotgun";
-T_ONIRIFLE = "HM416";
-I_ONIRIFLE = "Heckler & Mok HM416 Assault Rifle";
-T_ONISSHOTGUN = "Deliverer";
-I_ONISSHOTGUN = "Siesta \"Deliverer\" Quad-Shotgun";
+T_ONIBEAGLE = "Brave Beagle";
+I_ONIBEAGLE = "Ninnacht \"Brave Beagle\" Semi-Auto Pistol";
+T_ONIHRIFLE = "Survivor";
+I_ONIHRIFLE = "Garrett MK.77 \"Survivor\" Hunting Rifle";
 T_ONIMACHINEGUN = "Melisa";
 I_ONIMACHINEGUN = "ANFES \"Melisa\" Light Machine Gun";
 T_ONIEXPLODER = "ST-20";
@@ -22,34 +19,16 @@ T_ONISLAYER = "Boar Slayer";
 I_ONISLAYER = "Areka \"Boar Slayer\" Pistol Rifle";
 T_ONIBATTER = "Purifier";
 I_ONIBATTER = "Unissix \"Purifier\" Almasteel Bat";
-T_ONIBEAGLE = "Brave Beagle";
-I_ONIBEAGLE = "Ninnacht \"Brave Beagle\" Semi-Auto Pistol";
-T_ONIHRIFLE = "Survivor";
-I_ONIHRIFLE = "Garrett MK.77 \"Survivor\" Hunting Rifle";
-T_ONIBRIFLE = "MM95";
-I_ONIBRIFLE = "Shinigami \"Masamune 95\" Battle Rifle";
-T_ONIROCKET = "Rita";
-I_ONIROCKET = "Itamex \"Rita\" Micro-Missile Launcher";
-T_ONILIGHTNING = "Stormbringer";
-I_ONILIGHTNING = "Cyrus \"Stormbringer\" Arc Lance";
-T_ONIZC7AMMO = "ZC7 Mag";
-T_ONIZC7AMMOS = "ZC7 Mags";
-T_ONIZC7BULLET = "9mm Round";
-T_ONIZC7BULLETS = "9mm Rounds";
 T_ONIAA12AMMO = "AA-12 Drum";
 T_ONIAA12AMMOS = "AA-12 Drum";
-T_ONIAA12ALTAMMO = "AA-12 Drum (FRAG-12)";
-T_ONIAA12ALTAMMOS = "AA-12 Drum (FRAG-12)";
 T_ONIAA12SHELL = "12ga Shell";
 T_ONIAA12SHELLS = "12ga Shells";
-T_ONIAA12ALTSHELL = "FRAG-12 Shell";
-T_ONIAA12ALTSHELLS = "FRAG-12 Shells";
-T_ONIHM416AMMO = "HM416 Mag";
-T_ONIHM416AMMOS = "HM416 Mags";
-T_ONIHM416BULLET = "6.8 SPC Round";
-T_ONIHM416BULLETS = "6.8 SPC Rounds";
-T_ONISALTSHELL = "16ga Saltshot Shell";
-T_ONISALTSHELLS = "16ga Saltshot Shells";
+T_ONIBEAGLEAMMO = "Beagle Mag";
+T_ONIBEAGLEAMMOS = "Beagle Mags";
+T_ONIBEAGLEROUND = ".50 PE Round";
+T_ONIBEAGLEROUNDS = ".50 PE Rounds";
+T_ONISURVIVORROUND = ".50 OMG Round";
+T_ONISURVIVORROUNDS = ".50 OMG Rounds";
 T_ONIMELISABULLET = "7.62mmMT Round";
 T_ONIMELISABULLET = "7.62mmMT Rounds";
 T_ONIEXPLODERROUND = "20mm Mk.299 Tandem HEAT-MP Round";
@@ -58,28 +37,10 @@ T_ONIPLASMAAMMO = "60mm Plasma Cell";
 T_ONIPLASMAAMMO = "60mm Plasma Cells";
 T_ONIWARHEAD = "\"Redeemer\" Warhead";
 T_ONIWARHEADS = "\"Redeemer\" Warheads";
-T_ONICANISTER = "\"Mad Dog\" Canister";
-T_ONICANISTERS = "\"Mad Dog\" Canisters";
-T_ONICASTER = "\"Caster\" Plasma Charge";
-T_ONICASTERS = "\"Caster\" Plasma Charges";
 T_ONIBOARROUND = "50mm Areka Round";
 T_ONIBOARROUNDS = "50mm Areka Rounds";
 T_ONILISA = "LiSA Room Tearing Device";
 T_ONILISAS = "LiSA Room Tearing Devices";
-T_ONIBEAGLEAMMO = "Beagle Mag";
-T_ONIBEAGLEAMMOS = "Beagle Mags";
-T_ONIBEAGLEROUND = ".50 PE Round";
-T_ONIBEAGLEROUNDS = ".50 PE Rounds";
-T_ONISURVIVORROUND = ".50 OMG Round";
-T_ONISURVIVORROUNDS = ".50 OMG Rounds";
-T_ONIMM95AMMO = "MM95 Mag";
-T_ONIMM95AMMOS = "MM95 Mags";
-T_ONIMM95ROUND = "7.62mm Round";
-T_ONIMM95ROUNDS = "7.62mm Rounds";
-T_ONIRITAAMMO = "20mm Micro-Missile";
-T_ONIRITAAMMOS = "20mm Micro-Missiles";
-T_ONISTORMAMMO = "Dysedum Rod";
-T_ONISTORMAMMOS = "Dysedum Rods";
 T_ONISMALLWATER = "Small Water Bottle";
 T_ONIMEDWATER = "Medium Water Bottle";
 T_ONILARGEWATER = "Large Water Bottle";
@@ -153,37 +114,23 @@ TT_ONIFIST =
 "\crPrimary fire\c- to punch, hold to charge.\n"
 "\crSecondary fire\c- to block, reduces damage.\n"
 "\crUtility key\c- to blow a magic kiss.";
-TT_ONIPISTOL =
-"\cr\"Hello my sweet cat nun.\"\c-\n"
-"\n"
-"\cr9×19mm Parabellum\c-, 8+1 rounds.\n"
-"\crElectrically charged\c- ammunition.\n"
-"Press the \crUtility key\c- to spin.";
-TT_ONIPISTOL2 =
-"\cr\"Twice the cat nun gun, for more fun.\"\c-\n"
-"\n"
-"\crPrimary fire\c- for left hand gun,\n"
-"\crSecondary fire\c- for right hand gun.\n"
-"The \crUtility key\c- spins both.";
 TT_ONISHOTGUN =
 "\cr\"The perfect tool for solving problems in an advanced way.\"\c-\n"
 "\n"
 "\cr12-gauge #1 Buckshot\c-, 32 rounds.\n"
 "\crFRAG-12\c- available as alternate ammunition.\n"
-"Tap the \crUtility key\c- to alternate ammo types,\n"
-"hold it to kiss the gun, it's a good gun.";
-TT_ONIRIFLE =
-"\cr\"416 IS ALL YOU NEED.\"\c-\n"
+"Tap the \crUtility key\c- to kiss the gun.\n"
+"It's a good gun, it deserves to be loved.";
+TT_ONIBEAGLE =
+"\cr\"Oh, this doggy really does bite.\"\c-\n"
 "\n"
-"\cr6.8×43mm Special\c-, 30+1 rounds.\n"
-"Tap the \crUtility key\c- to toggle fire modes,\n"
-"between \crSemi-auto\c- and \crFull-auto\c-.";
-TT_ONISSHOTGUN =
-"\cf\"We're going to have a nice party.\"\c-\n"
+"\cr.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
+"Press the \crUtility key\c- to spin.";
+TT_ONIHRIFLE =
+"\cr\"There WAS a hell knight...\"\c-\n"
 "\n"
-"\cf16-gauge Kinylum Saltshot\c-, 4 rounds.\n"
-"Tap the \cfUtility key\c- to toggle between\n"
-"\cfSingle-shot\c- and \cfQuad-shot\c- modes.";
+"\cr.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
+"Hold the \crUtility key\c- for two-shot mode.";
 TT_ONIMACHINEGUN =
 "\cr\"Let's play a song together.\"\c-\n"
 "\n"
@@ -205,8 +152,7 @@ TT_ONITANKGUN =
 "\n"
 "\cr120×935mm\c-, single shot.\n"
 "Ammunition is fed directly from hammerspace,\n"
-"but requires manual user reloading.\n"
-"Tap the \crUtility key\c- to cycle ammo type.";
+"but requires manual user reloading.";
 TT_ONISLAYER =
 "\cr\"Man, this thing fucks...\"\c-\n"
 "\n"
@@ -220,32 +166,3 @@ TT_ONIBATTER =
 "\crSecondary fire\c- to block, deflects bullets.\n"
 "Tap the \crUtility key\c- to summon a baseball,\n"
 "which you can then hit with primary.";
-TT_ONIBEAGLE =
-"\cr\"Oh, this doggy really does bite.\"\c-\n"
-"\n"
-"\cr.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
-"Press the \crUtility key\c- to spin.\n"
-"Cannot be dual-wielded.";
-TT_ONIHRIFLE =
-"\cr\"There WAS a hell knight...\"\c-\n"
-"\n"
-"\cr.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
-"Hold the \crUtility key\c- for two-shot mode.";
-TT_ONIBRIFLE =
-"\cr\"Not your typical soldier's gun.\"\c-\n"
-"\n"
-"\cr7.62×51mm\c-, 20+1 rounds.\n"
-"\crHigh penetration\c- ammunition.\n"
-"Tap the \crUtility key\c- to alternate fire modes,\n"
-"between \crSemi-auto\c-, \crBurst\c- and \crFull-auto\c-.";
-TT_ONIROCKET =
-"\cr\"It's not the size that matters...\"\c-\n"
-"\n"
-"\cr20×30mm Micro-Missile\c-, 24+8 rounds.\n"
-"\crUtility key\c- loads additional rounds,\n"
-"\crTarget Seeking\c- available through scope.";
-TT_ONILIGHTNINT =
-"\cr\"Now we're playing with power.\"\c-\n"
-"\n"
-"\cr10×72mm Dysedum Rod\c-, 7+1 rounds.\n"
-"Tap the \crUtility key\c- to toggle focused mode.";

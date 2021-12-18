@@ -1,19 +1,9 @@
 # this is used by the HUD to draw the ammo table, in the order they're defined
-OniPistolAmmo,PIST
 OniAA12Ammo,SHOT
-OniFRAGAmmo,FRAG
-Oni416Ammo,RIFL
-#OniBeagleAmmo,BPIS
-OniSaltAmmo,SALT
-#OniSlayerAmmo,SLAY
+OniBeagleAmmo,PIST
+OniSlayerAmmo,RIFL
 OniMachAmmo,MACH
-#OniMM95Ammo,BTTL
 OniExploAmmo,ROKT
-#OniRitaAmmo,MISL
 OniPlasmaAmmo,PLAS
-#OniStormAmmo,STRM
 OniWarheadAmmo,WARH
-OniCanisterAmmo,CANS
-OniChargeAmmo,PCHG
 OniBoarAmmo,BOAR
-OniLisaAmmo,LISA

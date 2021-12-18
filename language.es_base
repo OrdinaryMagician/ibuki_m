@@ -1,12 +1,11 @@
 [es]
 // tags, pickups
 T_ONIFIST = "Mano a Mano";
-I_ONIPISTOL = "Pistola Semiautomática Shinigami \"Zica-Seven\"";
-T_ONIPISTOL2 = "ZC7s duales";
 I_ONISHOTGUN = "Escopeta Ninnacht \"Auto Assault-12\"";
-I_ONIRIFLE = "Rifle de Asalto Heckler & Mok HM416";
-T_ONISSHOTGUN = "Libertadora";
-I_ONISSHOTGUN = "Escopeta Cuádruple Siesta \"Libertadora\"";
+T_ONIBEAGLE = "Sabueso Valiente";
+I_ONIBEAGLE = "Pistola Semiautomática Ninnacht \"Sabueso Valiente\"";
+T_ONIHRIFLE = "Superviviente";
+I_ONIHRIFLE = "Rifle de Caza Garrett MK.77 \"Superviviente\"";
 I_ONIMACHINEGUN = "Metralleta Ligera ANFES \"Melisa\"";
 I_ONIEXPLODER = "Lanzador de Proyectiles Autopropulsados Kemet ST-20";
 I_ONIPLASMARIFLE = "Carabina de Plasma Cryptik \"Psyker\"";
@@ -16,31 +15,16 @@ T_ONISLAYER = "Mata-Jabalíes";
 I_ONISLAYER = "Pistola Rifle Areka \"Mata-Jabalíes\"";
 T_ONIBATTER = "Purificador";
 I_ONIBATTER = "Bate de Almacero Unissix \"Purificador\"";
-T_ONIBEAGLE = "Sabueso Valiente";
-I_ONIBEAGLE = "Pistola Semiautomática Ninnacht \"Sabueso Valiente\"";
-T_ONIHRIFLE = "Superviviente";
-I_ONIHRIFLE = "Rifle de Caza Garrett MK.77 \"Superviviente\"";
-I_ONIBRIFLE = "Rifle de Combate Shinigami \"Masamune 95\"";
-I_ONIROCKET = "Lanzador de Micro-Misiles Itamex \"Rita\"";
-I_ONILIGHTNING = "Lanza de Arco Cyrus \"Stormbringer\"";
-T_ONIZC7AMMO = "Cargador de ZC7";
-T_ONIZC7AMMOS = "Cargadores de ZC7";
-T_ONIZC7BULLET = "Bala de 9mm";
-T_ONIZC7BULLETS = "Balas de 9mm";
 T_ONIAA12AMMO = "Tambor de AA-12";
 T_ONIAA12AMMOS = "Tambores de AA-12";
-T_ONIAA12ALTAMMO = "Tambor de AA-12 (FRAG-12)";
-T_ONIAA12ALTAMMOS = "Tambores AA-12 (FRAG-12)";
 T_ONIAA12SHELL = "Cartucho de 12ga";
 T_ONIAA12SHELLS = "Cartuchos de 12ga";
-T_ONIAA12ALTSHELL = "Cartucho FRAG-12";
-T_ONIAA12ALTSHELLS = "Cartuchos FRAG-12";
-T_ONIHM416AMMO = "Cargador de HM416";
-T_ONIHM416AMMOS = "Cargadores de HM416";
-T_ONIHM416BULLET = "Bala de 6.8 SPC";
-T_ONIHM416BULLETS = "Balas de 6.8 SPC";
-T_ONISALTSHELL = "Cartucho de Sal de 16ga";
-T_ONISALTSHELLS = "Cartuchos de Sal de 16ga";
+T_ONIBEAGLEAMMO = "Cargador de Sabueso";
+T_ONIBEAGLEAMMOS = "Cargadores de Sabueso";
+T_ONIBEAGLEROUND = "Bala de .50 PE";
+T_ONIBEAGLEROUNDS = "Balas de .50 PE";
+T_ONISURVIVORROUND = "Bala de .50 OMG";
+T_ONISURVIVORROUNDS = "Balas de .50 OMG";
 T_ONIMELISABULLET = "Bala de 7.62mmMT";
 T_ONIMELISABULLET = "Balas de 7.62mmMT";
 T_ONIEXPLODERROUND = "Bala de 20mm Mk.299 Tandem HEAT-MP";
@@ -49,28 +33,10 @@ T_ONIPLASMAAMMO = "Célula de Plasma de 60mm";
 T_ONIPLASMAAMMO = "Células de Plasma de 60mm";
 T_ONIWARHEAD = "Cabeza nuclear \"Redentor\"";
 T_ONIWARHEADS = "Cabezas nucleares \"Redentor\"";
-T_ONICANISTER = "Frasco \"Perro Rabioso\"";
-T_ONICANISTERS = "Frascos \"Perro Rabioso\"";
-T_ONICASTER = "Carga de Plasma \"Conjurador\"";
-T_ONICASTERS = "Cargas de Plasma \"Conjurador\"";
 T_ONIBOARROUND = "Bala de 50mm Areka";
 T_ONIBOARROUNDS = "Balas de 50mm Areka";
 T_ONILISA = "Dispositivo Rompehabitaciones LiSA";
 T_ONILISAS = "Dispositivos Rompehabitaciones LiSA";
-T_ONIBEAGLEAMMO = "Cargador de Sabueso";
-T_ONIBEAGLEAMMOS = "Cargadores de Sabueso";
-T_ONIBEAGLEROUND = "Bala de .50 PE";
-T_ONIBEAGLEROUNDS = "Balas de .50 PE";
-T_ONISURVIVORROUND = "Bala de .50 OMG";
-T_ONISURVIVORROUNDS = "Balas de .50 OMG";
-T_ONIMM95AMMO = "Cargador de MM95";
-T_ONIMM95AMMOS = "Cargadores de MM95";
-T_ONIMM95ROUND = "Bala de 7.62mm";
-T_ONIMM95ROUNDS = "Balas de 7.62mm";
-T_ONIRITAAMMO = "Micro-Misil de 20mm";
-T_ONIRITAAMMOS = "Micro-Misiles de 20mm";
-T_ONISTORMAMMO = "Barra de Dysedum";
-T_ONISTORMAMMOS = "Barras de Dysedum";
 T_ONISMALLWATER = "Botella de Agua Pequeña";
 T_ONIMEDWATER = "Botella de Agua Mediana";
 T_ONILARGEWATER = "Botella de Agua Grande";
@@ -139,37 +105,23 @@ TT_ONIFIST =
 "\crFuego primario\c- para pegar, mantener para cargar.\n"
 "\crFuego secundario\c- para bloquear, reduce daño.\n"
 "\crTecla de utilidad\c- para soplar un beso mágico.";
-TT_ONIPISTOL =
-"\cr\"Hola mi dulce monja gatuna.\"\c-\n"
-"\n"
-"\cr9×19mm Parabellum\c-, 8+1 balas.\n"
-"Munición con \crcarga eléctrica\c-.\n"
-"Pulsa la \crTecla de utilidad\c- para voltear.";
-TT_ONIPISTOL2 =
-"\cr\"El doble de monja gatuna, para más diversión.\"\c-\n"
-"\n"
-"\crFuego primario\c- para el arma a mano izquierda,\n"
-"\crFuego secundario\c- para el arma a mano derecha.\n"
-"La \crTecla de utilidad\c- voltea ambas.";
 TT_ONISHOTGUN =
 "\cr\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
 "\n"
 "\crPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
 "\crFRAG-12\c- disponible como munición alternativa.\n"
-"Pulsa la\crTecla de utilidad\c- para alternar municiones,\n"
-"mantenla para besar el arma, es un arma buena.";
-TT_ONIRIFLE =
-"\cr\"416 ES TODO LO QUE NECESITAS.\"\c-\n"
+"Pulsa la\crTecla de utilidad\c- para besar el arma.\n"
+"Es un arma buena, se merece todo el amor.";
+TT_ONIBEAGLE =
+"\cr\"Oh, este perrito si que muerde.\"\c-\n"
 "\n"
-"\cr6.8×43mm Special\c-, 30+1 balas.\n"
-"Pulsa la \crTecla de utilidad\c- para alternar modo de disparo,\n"
-"entre \crSemiautomático\c- y \crAutomático\c-.";
-TT_ONISSHOTGUN =
-"\cr\"Vamos a montarnos una buena fiesta.\"\c-\n"
+"\cr.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
+"Pulsa la \crTecla de utilidad\c- para voltear.";
+TT_ONIHRIFLE =
+"\cr\"HABÍA un caballero del infierno...\"\c-\n"
 "\n"
-"\crSal de Kinylum de calibre 16\c-, 4 cartuchos.\n"
-"Pulsa la \crTecla de utilidad\c- para alternar entre\n"
-"modo de \crUn disparo\c- y \crCuatro disparos\c-.";
+"\cr.50 OMG (12.7×99mm)\c-, 2 balas.\n"
+"Mantén la \cfTecla de utilidad\c- para un modo de dos disparos.";
 TT_ONIMACHINEGUN =
 "\cr\"Cantemos una canción juntos.\"\c-\n"
 "\n"
@@ -191,8 +143,7 @@ TT_ONITANKGUN =
 "\n"
 "\cr120×935mm\c-, disparo único.\n"
 "La munición viene directamente de hammerspace,\n"
-"pero requiere la recarga manual del usuario.\n"
-"Pulsa la \crTecla de utilidad\c- para alternar municiones.";
+"pero requiere la recarga manual del usuario.";
 TT_ONISLAYER =
 "\cr\"Tío, esta cosa folla...\"\c-\n"
 "\n"
@@ -206,32 +157,3 @@ TT_ONIBATTER =
 "\crFuego secundario\c- para bloquear, desvía balas.\n"
 "Pulsa la\crTecla de utilidad\c- para invocar una pelota,\n"
 "la cual puedes golpear luego con el primario.";
-TT_ONIBEAGLE =
-"\cr\"Oh, este perrito si que muerde.\"\c-\n"
-"\n"
-"\cr.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
-"Pulsa la \crTecla de utilidad\c- para voltear.\n"
-"No se pueden llevar dos.";
-TT_ONIHRIFLE =
-"\cr\"HABÍA un caballero del infierno...\"\c-\n"
-"\n"
-"\cr.50 OMG (12.7×99mm)\c-, 2 balas.\n"
-"Mantén la \cfTecla de utilidad\c- para un modo de dos disparos.";
-TT_ONIBRIFLE =
-"\cr\"No es la típica arma de soldado.\"\c-\n"
-"\n"
-"\cr7.62×51mm\c-, 20+1 balas.\n"
-"Munición de \cralta penetración\c-.\n"
-"Pulsa la \crTecla de utilidad\c- para alternar modos de disparo,\n"
-"entre \crSemiautomático\c-, \crRáfaga\c- y \crAutomático\c-.";
-TT_ONIROCKET =
-"\cr\"No es el tamaño lo que importa...\"\c-\n"
-"\n"
-"\crMicro-Misiles de 20×30mm\c-, 24+8 misiles.\n"
-"La \crTecla de utilidad\c- carga misiles adicionales,\n"
-"La \crBúsqueda de Objetivos\c- está disponible mediante la mira.";
-TT_ONILIGHTNINT =
-"\cr\"Ahora sí que estamos jugando con poder.\"\c-\n"
-"\n"
-"\crBarra de Dysedum de 10×72mm\c-, 7+1 barras.\n"
-"Pulsa la \crTecla de utilidad\c- para alternar el modo concentrado.";

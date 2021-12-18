@@ -43,39 +43,7 @@ Primary fire punches, hold to punch harder. Secondary fire blocks, increasing da
 
 You can press the utility key to blow a magic kiss at enemies. Do note that your kisses are much stronger than **Demo-chan**'s.
 
-### Slot 1 - The Purifier *[Chainsaw]*
-
-*"Ah, the American pastime..."*
-
-A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. **Saya** allegedly asked **Misa** to make this because it would allow you to *"exorcise evil spirits"* with it.
-
-Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
-
-Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
-
-Should be noted that this weapon also allows you to strike at enemy projectiles to send them back, too, if timed correctly.
-
-### Slot 2 - Shinigami ZC7 *[Pistol]*
-
-*"Hello my sweet cat nun."*
-
-The ***"Zica Seven"*** is a well-known *"edgy imitation"* of the **Heckler and Mok P7** handgun, made famous by the advertising material **Shinigami Inc.** distributed to promote the weapon, featuring a rather... *"lightly-dressed"* nun with cat ears.
-
-Like its more modest counterpart, it is chambered for **9mm Parabellum**. Some sort of mechanism in the gun appears to imbue the rounds with a potent electric charge. The nature of this process is unknown.
-
-Snugly held with both hands (very snugly, considering **Ibuki**'s size), this weapon has easily manageable recoil, making it quite useful in any situation.
-
-Tapping the utility key spins the gun, just for the sake of coolness.
-
-This weapon can be dual-wielded.
-
-#### 9mm Parabellum *[Bullets]*
-
-*"If you seek peace... Prepare for war..."*
-
-Generally found in full 8 round mags.
-
-### Slot 3 - Ninnacht AA12 *[Pistol]*
+### Slot 2 - Ninnacht AA12 *[Pistol]*
 
 *"The perfect tool for solving problems in an advanced way."*
 
@@ -83,47 +51,45 @@ Generally found in full 8 round mags.
 
 While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
 
-A tap of the utility key swaps between available ammo types. Hold the key to kiss the gun. It's a good gun.
+Press the utility to kiss the gun. It's a good gun.
 
-#### 12 Gauge *(#1 Buckshot / FRAG-12)* *[Clip, Shells]*
+#### 12 Gauge *(#1 Buckshot)* *[Clip, Shells]*
 
 *"Small, but powerful."*
 
-Shells are usually found in handfuls of 4, or in 12 round boxes. **FRAG-12** ammo is generally more rare.
+Shells are usually found in handfuls of 4, or in 12 round boxes.
 
-### Slot 4 - HM416 *[Shotgun]*
+### Slot 3 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
 
-***"416 IS ALL YOU NEED."***
+*"Oh, this doggy really does bite."*
 
-This specific model is chambered for 6.8 SPC, rather than the usual 5.56mm that one would expect. It is considered a *"priceless jewel"* by some, one they could never part with, or replace with anything else. Truly, it is all they could ever need.
+A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
-This specific model has been with Ibuki since the early days, and it's been customized to her liking. 16.5" barrel with compensator, collapsible stock, holographic sight and angled foregrip. **Ibuki** had once experimented with giving it an under-barrel grenade launcher but it allegedly *"felt awkward to use"*, and made the weapon too *"pimped up"*.
+It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
 
-Tap the utility key to switch between semi-auto and full-auto.
+Like your usual sidearm, you can also give it a spin with the utility key. However, it can't be dual-wielded.
 
-#### 6.8 SPC *[Shells]*
+#### .50 PE *[Shells]*
 
-*"Honestly, I don't know what's so special about these."*
+*"\*snicker\* Wait, it actually means THAT?"*
 
-Generally found in 30 round mags.
+Found in 7 round mags.
 
-### Slot 5 - Siesta Deliverer *[Super Shotgun]*
+### Slot 4 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
-*"RIP headphone users..."*
+*"There WAS a hell knight..."*
 
-Four barrels of blasting action. Loaded up with custom **16ga Kinylum saltshot** rounds for wonderful cyan-colored death dealing.
+Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG over-under hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
 
-Due to the employment of this ammunition, which for 16ga has to be packed quite dense, the receiver had to be replaced with a customized version specially ordered from **Blackmann Arms**. This was definitely worth it in the end. Do note however that this beast makes a hell of a lot of noise, giving away your position easily.
+Holding the utility key will switch to two-shot mode, for when you truly want something erased.
 
-Tap the utility key to switch between single-shot and four-shot modes.
+#### .50 Oh My God *[Shells]*
 
-#### 16 Gauge *(Saltshot)* *[Shells]*
+*"I don't think these really are that OMG-worthy, I've seen bigger."*
 
-*"You're all going to be so salty..."*
+Found as either spare rounds or 20 round packs.
 
-Saltshot can be found in the same distribution types as the other shells.
-
-### Slot 6 - ANFES "Melisa" Machine Gun *[Chaingun]*
+### Slot 5 - ANFES "Melisa" Machine Gun *[Chaingun]*
 
 *"I see we are kindred spirits, you and I."*
 
@@ -137,7 +103,7 @@ Note that the weapon has a tendency to get real hot from extended fire, so give 
 
 Very likely to be found in 100 and 200 round belts.
 
-### Slot 7 - Kemet ST20 *[Rocket Launcher]*
+### Slot 6 - Kemet ST20 *[Rocket Launcher]*
 
 *"Ah yes, the ultimate problem solver. Just shoot them with this, and watch all those problems fly away."*
 
@@ -151,7 +117,7 @@ The fact that this weapon still exists and ammunition for it is still manufactur
 
 Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
 
-### Slot 8 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
+### Slot 7 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
 
 *"Ah... Now this is a blast from the past."*
 
@@ -167,13 +133,11 @@ Unlike most other plasma weapons of modern times, the Psyker doesn't need to let
 
 Plasma ammunition is generally found in **NATO** standard 60x72mm compressed argon cells. Each of these allows for 30 shots of the **Psyker**. Note that your autoloader has support for consolidating plasma charges too, so partial reloads won't be as wasteful.
 
-### Slot 9 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
+### Slot 8 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
 
 *"This one's kinda hard to pull out of my cleavage, but it's worth it."*
 
 Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
-
-Tapping the utility key will cycle between available ammo types.
 
 #### 120mm "Redeemer" Warhead *[Cells]*
 
@@ -181,19 +145,7 @@ Tapping the utility key will cycle between available ammo types.
 
 They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
 
-#### 120mm "Mad Dog" Canister Shot *[Cells]*
-
-*"Now these are the kinds of balls I like to play with..."*
-
-These are also fairly rare, and offer much more chaotic results than the standard warheads, dispersing a barrage of cluster grenades everywhere.
-
-#### 120mm "Caster" Plasma Charge *[Cells]*
-
-*"Holy fucking shit..."*
-
-Surprisingly more common than the other two. These things laugh in the face of the **UAC**'s prized **Botis Field Glyph**, employing far more efficient **Nokorokinylum** *(banned in all **White Scar** signatory countries)*. Each shot ejects high-pressure jets of incandescent liquid **Nokorokinylum** fuel, which bursts into searing clouds of **Nokron** and **Kinylum** plasma on impact.
-
-### Slot 0 - Areka "Boar Slayer" 50mm *[Chainsaw]*
+### Slot 9 - Areka "Boar Slayer" 50mm *[Chainsaw]*
 
 *"Got this one as a gift from a nice Xekkian girl. Oh, I still remember that night..."*
 
@@ -206,6 +158,18 @@ Ammo for this *(very large)* puppy is quite rare, but that's compensated by how 
 *"... I wonder if... With that size..."*
 
 Available in 5 round packs or single rounds. These things are big.
+
+### Slot 0 - The Purifier *[Chainsaw]*
+
+*"Ah, the American pastime..."*
+
+A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. **Saya** allegedly asked **Misa** to make this because it would allow you to *"exorcise evil spirits"* with it.
+
+Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
+
+Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
+
+Should be noted that this weapon also allows you to strike at enemy projectiles to send them back, too, if timed correctly.
 
 ## Items
 
@@ -304,88 +268,6 @@ You can bring along an old friend to these adventures. The undying drunkard grem
 As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her. If she ever loses track of you somehow, she can easily employ the trusty magic skills of her **Yanikov** blood to warp to your position.
 
 You can share healing and powerups with her *(Yes, this includes the milk)*.
-
----
-
-## DLC
-
-Post-release I could attempt to add some extra weapons to expand this arsenal, perhaps some other personal favorites.
-
-### Slot 4 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
-
-*"Oh, this doggy really does bite."*
-
-A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
-
-It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
-
-Like your usual sidearm, you can also give it a spin with the utility key. However, it can't be dual-wielded.
-
-#### .50 PE *[Shells]*
-
-*"\*snicker\* Wait, it actually means THAT?"*
-
-Found in 7 round mags.
-
-### Slot 5 - Garrett MK.77 "Survivor" *[Super Shotgun]*
-
-*"There WAS a hell knight..."*
-
-Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG over-under hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
-
-Holding the utility key will switch to two-shot mode, for when you truly want something erased.
-
-#### .50 Oh My God *[Shells]*
-
-*"I don't think these really are that OMG-worthy, I've seen bigger."*
-
-Found as either spare rounds or 20 round packs.
-
-### Slot 6 - Shinigami MM95 *[Chaingun]*
-
-*"Well, I do like me some penetration once in a while."*
-
-The ***"Masamune 95"*** was the very first battle rifle devised by **Shinigami Inc.**, meant to compete with popular western battle rifles at the time, such as the **HM417**. As per usual convention it is chambered for 7.62×51mm, although conversion kits exist for lower AND higher calibers. It is additionally equipped with a holographic sight for improved sighted accuracy. Bullets are enchanted for extra penetration, allowing them to cleave cleanly through everything, including some walls.
-
-The utility key alternates between semi auto, three round burst and full auto.
-
-#### 7.62×51mm NATO *[Bullets]*
-
-*"Real... Fuckin'... NATO."*
-
-Very standard stuff. Found in 20-round mags.
-
-### Slot 7 - Itamex "Rita" Micro-Missile Launcher *[Rocket Launcher]*
-
-*"Good things come in small packages... LOTS of exploding small packages."*
-
-Nicknamed the ***"Eightball"*** by enthusiasts *(especially of the nerdy kind, who in addition don't realize what that name actually referred to)*, the **Rita** is a force to be reckoned with. Eight revolving barrels, for up to eight simultaneous micro-missile launches. Ammunition is fed from a 24-round internal magazine, allowing for the user to dispense three full barrages of projectiles before needing to reload.
-
-While aiming through the visor, you will mark whatever target you've got on your sights to lock on for homing missiles.
-
-The utility key loads the barrels, up to eight in total. All will be fired simultaneously in a tight wad upon pressing the fire button. Note that if you didn't preload and press the fire button, it will load just one missile beforehand.
-
-#### 20×30mm Micro-Missile *[Rockets]*
-
-*"It's not the size that matters..."*
-
-Found as either spare rounds or 8-round packs.
-
-### Slot 8 - Cyrus Stormbringer *[Plasma Rifle]*
-
-*"Electricity isn't scary... But it's gonna be for you."*
-
-The very power of lightning at your fingertips. Unleashing potent arcs of high voltage death, the **Stormbringer** can melt through anything you aim it at, and cook raw poultry in a matter of milliseconds *(delicious)*.
-
-Don't even think about using this underwater, although it is a very good strategy to aim for it as long as it's the enemy that's touching the stuff and not you.
-
-A tap of the utility key will toggle a focused mode which keeps the arcs from spreading too much, allowing them to focus entirely on one target at a time, for maximum cooking potential.
-
-#### Dysedum Rod *[Cells]*
-
-*"We trust the rod... Or whatever it was that Sayacchi said."*
-
-You'll find these either all alone or in small handfuls. The Stormbringer takes seven of them.
 
 ---
 

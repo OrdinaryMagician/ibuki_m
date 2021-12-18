@@ -2,7 +2,7 @@
 
 Class OniStatusBar : SWWMStatusBar
 {
-	TextureID StatusTex, AmmoTex[3], WeaponTex, HealthTex[4], OilTex, GenTex[3];
+	TextureID StatusTex, AmmoTex[3], InvExtraTex, WeaponTex, HealthTex[4], OilTex, GenTex[3];
 	Array<String> AmmoClasses, AmmoNames;
 	Array<int> AmmoFlash;		// flash when new ammo is received
 	Array<int> AmmoOldAmounts;	// to detect when to flash
@@ -48,6 +48,7 @@ Class OniStatusBar : SWWMStatusBar
 		AmmoTex[0] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxTop.png",TexMan.Type_Any);
 		AmmoTex[1] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxLine.png",TexMan.Type_Any);
 		AmmoTex[2] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxBottom.png",TexMan.Type_Any);
+		InvExtraTex = TexMan.CheckForTexture("graphics/HUD/GrenadeBox.png",TexMan.Type_Any);
 		WeaponTex = TexMan.CheckForTexture("graphics/HUD/WeaponBox.png",TexMan.Type_Any);
 		HealthTex[0] = TexMan.CheckForTexture("graphics/HUD/HealthBar.png",TexMan.Type_Any);
 		HealthTex[1] = TexMan.CheckForTexture("graphics/HUD/HealthBarEx.png",TexMan.Type_Any);
@@ -319,6 +320,20 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
+		// extra, draw additional stuff next to inventory box
+		/*bAlwaysAboveInv = false;
+		double xx = margin+28;
+		let gren = CPlayer.mo.FindInventory("OniLisaAmmo");
+		if ( gren && gren.Amount )
+		{
+			bAlwaysAboveInv = true;
+			bool sel = (CPlayer.ReadyWeapon is 'OniLisaWeapon');
+			double yy = ss.y-(margin+((ot>0)?46:36));
+			Screen.DrawTexture(InvExtraTex,false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			Screen.DrawTexture(gren.Icon,false,xx+2,yy+2,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			str = String.Format("%2d",clamp(gren.Amount,0,99));
+			Screen.DrawText(MiniHUDFont,mhudfontcol[sel?MCR_BRASS:MCR_WHITE],xx+10,yy+12,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		}*/
 		return (ot>0)?46:36;
 	}
 }
