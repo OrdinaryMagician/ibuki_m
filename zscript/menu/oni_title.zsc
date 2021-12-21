@@ -114,6 +114,7 @@ Class OniTitleStuff : EventHandler
 		int base = zoomout?(back?450:750):(back?500:300);
 		for ( int i=imin; i<imax; i++ )
 		{
+			if ( !smk[i].maxage ) continue;
 			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
 			smk_tform.Clear();
 			// base transforms
