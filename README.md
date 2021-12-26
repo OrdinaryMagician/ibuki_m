@@ -13,7 +13,7 @@ So, while **Demo-chan** was out there blastin' away in the US, **Ibuki** too had
 
 **Ibuki** is pretty goddamn hardcore. For starters, most things are very likely to not even deal any damage unless they hit REALLY hard. Bullets and melee will simply tickle you most of the time, and various other damages will also be reduced. Also, due to the fact you can't bleed, you're immune to poison, unless it's breathed in.
 
-If your health drops to zero, you will be incapacitated. In this state, you've got two choices: Either wait until you can revive again, or restart from the last save. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless.
+If your health drops to zero, you will be incapacitated. In this state, you're effectively dead as far as the game is concerned, but you can still get back up. Reviving comes at a price, however. A temporary debuff that makes you more sensitive to damage. The more times you fall, the harder it'll get, so try not to be reckless, or you'll find yourself reaching for the *"quickload"* button.
 
 Your increased bone and muscle density make you unable to float in water. You will sink to the bottom unless you actively keep pushing yourself up *(luckily you can breathe underwater)*. Your bulk and strength allow you to easily shove enemies out of the way as you move, unless they're just too heavy. You can also press a dedicated "push" button to do so on the spot which, unlike the "quick kick", can be used even while firing or reloading weapons. Do note that you need to be standing on a solid surface to use it, as it involves stomping on the floor with all your strength.
 
@@ -51,7 +51,7 @@ You can press the utility key to blow a magic kiss at enemies. Do note that your
 
 While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
 
-Press the utility to kiss the gun. It's a good gun.
+Press the utility key to kiss the gun. It's a good gun.
 
 #### 12 Gauge *(#1 Buckshot)* *[Clip, Shells]*
 
@@ -73,7 +73,7 @@ Like your usual sidearm, you can also give it a spin with the utility key. Howev
 
 *"\*snicker\* Wait, it actually means THAT?"*
 
-Found in 7 round mags.
+Found in 7 round mags. Spare rounds may sometimes spawn too.
 
 ### Slot 4 - Garrett MK.77 "Survivor" *[Super Shotgun]*
 
@@ -249,25 +249,11 @@ Allows you to make a quick escape back to the start of the map when activated. A
 
 ---
 
-## Bonus Features
-
-Some extras that are entirely optional, but add to the experience.
-
-### NIN Radio
+## NIN Radio
 
 *"I could listen to these all day."*
 
-A playlist of several instrumental **Nine Inch Nails** tracks, ready to be popped into your trusty music player. Tracks are automatically shuffled and will play one after another, rather than looping per-map.
-
-### Mischievous Ellen
-
-*"That's my gal pal right there."*
-
-You can bring along an old friend to these adventures. The undying drunkard gremlin that married **Saya**'s brother right by your side. Share some of your vodka with her to make her get even more pumped up for combat. She carries two weapons, which she'll alternate between as needed. A beefy .50 PE **Beagle** sidearm and her mainstay 4mm **Hyperion** gauss rifle, loaded with shock charge tipped bolts for extra knockback.
-
-As expected of an **Anarukon**, she will get back up after a while when she gets killed, so you don't have to worry about losing her. If she ever loses track of you somehow, she can easily employ the trusty magic skills of her **Yanikov** blood to warp to your position.
-
-You can share healing and powerups with her *(Yes, this includes the milk)*.
+A playlist of several instrumental **Nine Inch Nails** tracks, ready to be popped into your trusty music player. Tracks are automatically shuffled and will play one after another, rather than looping per-map. This will be distributed as a separate add-on to save on size for the main package.
 
 ---
 

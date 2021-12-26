@@ -7,6 +7,7 @@ ONI_RELOADFIRE = "Reload";
 ONI_ZOOMFIRE = "Utility";
 ONI_MELEE = "Quick Kick";
 ONI_EXTRAFIRE = "Grenade";
+ONI_STOMP = "Stomp";
 // skills
 ONI_SKCHILL="\cv5.56x45mm\c-";
 ONI_SKEASY="\cd7.62x51mm\c-";
