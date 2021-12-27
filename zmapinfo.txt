@@ -1,6 +1,6 @@
 GameInfo
 {
-	AddEventHandlers = "SWWMStaticHandler", "SWWMHandler"
+	AddEventHandlers = "SWWMStaticHandler", "SWWMHandler", "SWWMBrutalHandler"
 	PlayerClasses = "IbukiPlayer"
 	StatusBarClass = "OniStatusBar"
 	StatScreen_Single = "OniStatScreen"

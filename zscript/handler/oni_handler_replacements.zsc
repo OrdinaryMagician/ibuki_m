@@ -4,7 +4,11 @@ extend Class SWWMHandler
 {
 	private bool ModReplacement( ReplaceEvent e )
 	{
-		// nothing here yet
-		return false;
+		if ( (e.Replacee is 'Backpack') || (e.Replacee is 'BagOfHolding') ) e.Replacement = 'HammerspaceEmbiggener';
+		else if ( e.Replacee is 'Radsuit' ) e.Replacement = 'EBarrier';
+		else if ( (e.Replacee is 'AllMap') || (e.Replacee is 'SuperMap') ) e.Replacement = 'Omnisight';
+		else if ( e.Replacee is 'ArtiTeleport' ) e.Replacement = 'SafetyTether';
+		else return false;
+		return true;
 	}
 }

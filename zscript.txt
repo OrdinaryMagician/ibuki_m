@@ -45,6 +45,7 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 #include "zscript/menu/swwm_credits.zsc"
 // compat code
 #include "zscript/compat/swwm_compat.zsc"
+#include "zscript/compat/swwm_shame.zsc"
 // hud
 #include "zscript/hud/swwm_hud.zsc"
 #include "zscript/hud/swwm_hudextra.zsc"

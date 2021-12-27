@@ -167,3 +167,4 @@ ListMenu "SkillMenu"
 	SWWMStaticTextM 0, 0, "$MNU_CHOOSESKILL", "DarkRed"
 	Position 0, 0
 }
+
