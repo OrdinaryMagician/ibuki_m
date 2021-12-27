@@ -1,7 +1,7 @@
 # this is used by the HUD to draw the ammo table, in the order they're defined
 OniAA12Ammo,SHOT
 OniBeagleAmmo,PIST
-OniSlayerAmmo,RIFL
+OniSledgeAmmo,RIFL
 OniMachAmmo,MACH
 OniExploAmmo,ROKT
 OniPlasmaAmmo,PLAS

@@ -1,0 +1,5 @@
+// Door faceslam simulator
+
+Class OniUnarmed : SWWMWeapon
+{
+}

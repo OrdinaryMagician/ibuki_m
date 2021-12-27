@@ -12,6 +12,9 @@ Class IbukiPlayer : SWWMPlayer
 		PainChance 255;
 		Health 100;
 		Player.DisplayName "$T_ONIIBUKI";
+		Player.StartItem "OniAA12";
+		Player.StartItem "OniAA12Ammo", 1;
+		Player.StartItem "OniUnarmed";
 		Player.StartItem "OniInternalArmor";
 		Player.StartItem "OniLuckyCollar";
 		Player.JumpZ 12;

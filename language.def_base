@@ -31,6 +31,8 @@ T_ONISURVIVORROUND = ".50 OMG Round";
 T_ONISURVIVORROUNDS = ".50 OMG Rounds";
 T_ONIMELISABULLET = "7.62mmMT Round";
 T_ONIMELISABULLET = "7.62mmMT Rounds";
+T_ONIEXPLODERAMMO = "ST-20 Clip";
+T_ONIEXPLODERAMMOS = "ST-20 Clips";
 T_ONIEXPLODERROUND = "20mm Mk.299 Tandem HEAT-MP Round";
 T_ONIEXPLODERROUNDS = "20mm Mk.299 Tandem HEAT-MP Rounds";
 T_ONIPLASMAAMMO = "60mm Plasma Cell";
@@ -98,7 +100,6 @@ TT_ONISHOTGUN =
 "\cr\"The perfect tool for solving problems in an advanced way.\"\c-\n"
 "\n"
 "\cr12-gauge #1 Buckshot\c-, 32 rounds.\n"
-"\crFRAG-12\c- available as alternate ammunition.\n"
 "Tap the \crUtility key\c- to kiss the gun.\n"
 "It's a good gun, it deserves to be loved.";
 TT_ONIBEAGLE =

@@ -27,6 +27,8 @@ T_ONISURVIVORROUND = "Bala de .50 OMG";
 T_ONISURVIVORROUNDS = "Balas de .50 OMG";
 T_ONIMELISABULLET = "Bala de 7.62mmMT";
 T_ONIMELISABULLET = "Balas de 7.62mmMT";
+T_ONIEXPLODERAMMO = "Clip de ST-20";
+T_ONIEXPLODERAMMOS = "Clips de ST-20";
 T_ONIEXPLODERROUND = "Bala de 20mm Mk.299 Tandem HEAT-MP";
 T_ONIEXPLODERROUNDS = "Balas de 20mm Mk.299 Tandem HEAT-MP";
 T_ONIPLASMAAMMO = "Célula de Plasma de 60mm";
@@ -90,7 +92,6 @@ TT_ONISHOTGUN =
 "\cr\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
 "\n"
 "\crPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
-"\crFRAG-12\c- disponible como munición alternativa.\n"
 "Pulsa la\crTecla de utilidad\c- para besar el arma.\n"
 "Es un arma buena, se merece todo el amor.";
 TT_ONIBEAGLE =

@@ -1,0 +1,247 @@
+// ammo for Ibuki mod
+
+Class OniAA12Ammo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIAA12AMMO";
+		SWWMAmmo.PickupTag "ONIAA12AMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 3;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 4;
+		SWWMAmmo.EmbiggenMaxAmount2 5;
+		SWWMAmmo.EmbiggenMaxAmount3 7;
+		SWWMAmmo.EmbiggenMaxAmount4 9;
+		SWWMAmmo.EmbiggenMaxAmount5 11;
+		SWWMAmmo.EmbiggenMaxAmount6 14;
+		SWWMAmmo.EmbiggenMaxAmount7 15;
+		SWWMAmmo.EmbiggenMaxAmount8 19;
+		SWWMAmmo.MagAmmoType "OniAA12Shell";
+		Ammo.DropAmount 1;
+	}
+}
+Class OniAA12Shell : MagAmmo
+{
+	Default
+	{
+		Tag "$T_ONIAA12SHELL";
+		MagAmmo.PickupTag "ONIAA12SSHELL";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 32;
+		MagAmmo.ParentAmmo "OniAA12Ammo";
+		MagAmmo.ClipSize 32;
+		MagAmmo.BackpackAmount 8;
+	}
+}
+
+Class OniBeagleAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIBEAGLEAMMO";
+		SWWMAmmo.PickupTag "ONIBEAGLEAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 4;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 7;
+		SWWMAmmo.EmbiggenMaxAmount2 8;
+		SWWMAmmo.EmbiggenMaxAmount3 10;
+		SWWMAmmo.EmbiggenMaxAmount4 13;
+		SWWMAmmo.EmbiggenMaxAmount5 15;
+		SWWMAmmo.EmbiggenMaxAmount6 18;
+		SWWMAmmo.EmbiggenMaxAmount7 21;
+		SWWMAmmo.EmbiggenMaxAmount8 24;
+		SWWMAmmo.MagAmmoType "OniBeagleRound";
+		Ammo.DropAmount 1;
+	}
+}
+Class OniBeagleRound : MagAmmo
+{
+	Default
+	{
+		Tag "$T_ONIBEAGLEROUND";
+		MagAmmo.PickupTag "ONIBEAGLEROUND";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 7;
+		MagAmmo.ParentAmmo "OniBeagleAmmo";
+		MagAmmo.ClipSize 7;
+		MagAmmo.BackpackAmount 4;
+	}
+}
+
+Class OniSledgeAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONISURVIVORROUND";
+		SWWMAmmo.PickupTag "ONISURVIVORROUND";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 20;
+		Ammo.BackpackAmount 4;
+		SWWMAmmo.EmbiggenMaxAmount1 25;
+		SWWMAmmo.EmbiggenMaxAmount2 30;
+		SWWMAmmo.EmbiggenMaxAmount3 35;
+		SWWMAmmo.EmbiggenMaxAmount4 40;
+		SWWMAmmo.EmbiggenMaxAmount5 45;
+		SWWMAmmo.EmbiggenMaxAmount6 50;
+		SWWMAmmo.EmbiggenMaxAmount7 55;
+		SWWMAmmo.EmbiggenMaxAmount8 60;
+		Ammo.DropAmount 2;
+	}
+}
+
+Class OniMachAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIMELISABULLET";
+		SWWMAmmo.PickupTag "ONIMELISABULLET";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 300;
+		Ammo.BackpackAmount 50;
+		SWWMAmmo.EmbiggenMaxAmount1 400;
+		SWWMAmmo.EmbiggenMaxAmount2 500;
+		SWWMAmmo.EmbiggenMaxAmount3 500;
+		SWWMAmmo.EmbiggenMaxAmount4 600;
+		SWWMAmmo.EmbiggenMaxAmount5 600;
+		SWWMAmmo.EmbiggenMaxAmount6 700;
+		SWWMAmmo.EmbiggenMaxAmount7 700;
+		SWWMAmmo.EmbiggenMaxAmount8 800;
+		Ammo.DropAmount 20;
+	}
+}
+
+Class OniExploAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIEXPLODERAMMO";
+		SWWMAmmo.PickupTag "ONIEXPLODERAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 2;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 3;
+		SWWMAmmo.EmbiggenMaxAmount2 4;
+		SWWMAmmo.EmbiggenMaxAmount3 5;
+		SWWMAmmo.EmbiggenMaxAmount4 7;
+		SWWMAmmo.EmbiggenMaxAmount5 9;
+		SWWMAmmo.EmbiggenMaxAmount6 11;
+		SWWMAmmo.EmbiggenMaxAmount7 14;
+		SWWMAmmo.EmbiggenMaxAmount8 19;
+		SWWMAmmo.MagAmmoType "OniExploRound";
+		Ammo.DropAmount 1;
+	}
+}
+Class OniExploRound : MagAmmo
+{
+	Default
+	{
+		Tag "$T_ONIEXPLODERROUND";
+		MagAmmo.PickupTag "ONIEXPLODERROUND";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 4;
+		MagAmmo.ParentAmmo "OniExploAmmo";
+		MagAmmo.ClipSize 4;
+		MagAmmo.BackpackAmount 1;
+	}
+}
+
+Class OniPlasmaAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIPLASMAAMMO";
+		SWWMAmmo.PickupTag "ONIPLASMAAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 4;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 5;
+		SWWMAmmo.EmbiggenMaxAmount2 7;
+		SWWMAmmo.EmbiggenMaxAmount3 9;
+		SWWMAmmo.EmbiggenMaxAmount4 11;
+		SWWMAmmo.EmbiggenMaxAmount5 13;
+		SWWMAmmo.EmbiggenMaxAmount6 14;
+		SWWMAmmo.EmbiggenMaxAmount7 15;
+		SWWMAmmo.EmbiggenMaxAmount8 19;
+		SWWMAmmo.MagAmmoType "OniPlasmaRound";
+		Ammo.DropAmount 1;
+	}
+}
+Class OniPlasmaRound : MagAmmo
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 30;
+		MagAmmo.ParentAmmo "OniPlasmaAmmo";
+		MagAmmo.ClipSize 30;
+		MagAmmo.BackpackAmount 10;
+		+INVENTORY.UNDROPPABLE;
+		+INVENTORY.UNTOSSABLE;
+		+INVENTORY.QUIET;
+	}
+}
+
+Class OniWarheadAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIWARHEAD";
+		SWWMAmmo.PickupTag "ONIWARHEAD";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 3;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 4;
+		SWWMAmmo.EmbiggenMaxAmount2 5;
+		SWWMAmmo.EmbiggenMaxAmount3 6;
+		SWWMAmmo.EmbiggenMaxAmount4 8;
+		SWWMAmmo.EmbiggenMaxAmount5 10;
+		SWWMAmmo.EmbiggenMaxAmount6 12;
+		SWWMAmmo.EmbiggenMaxAmount7 15;
+		SWWMAmmo.EmbiggenMaxAmount8 20;
+		Ammo.DropAmount 1;
+	}
+}
+
+Class OniBoarAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONIBOARROUND";
+		SWWMAmmo.PickupTag "ONIBOARROUND";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 5;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 10;
+		SWWMAmmo.EmbiggenMaxAmount2 10;
+		SWWMAmmo.EmbiggenMaxAmount3 10;
+		SWWMAmmo.EmbiggenMaxAmount4 15;
+		SWWMAmmo.EmbiggenMaxAmount5 15;
+		SWWMAmmo.EmbiggenMaxAmount6 20;
+		SWWMAmmo.EmbiggenMaxAmount7 20;
+		SWWMAmmo.EmbiggenMaxAmount8 25;
+		Ammo.DropAmount 1;
+	}
+}
+
+Class OniLisaAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_ONILISA";
+		SWWMAmmo.PickupTag "ONILISA";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 5;
+		Ammo.BackpackAmount 0;
+		SWWMAmmo.EmbiggenMaxAmount1 6;
+		SWWMAmmo.EmbiggenMaxAmount2 8;
+		SWWMAmmo.EmbiggenMaxAmount3 10;
+		SWWMAmmo.EmbiggenMaxAmount4 12;
+		SWWMAmmo.EmbiggenMaxAmount5 15;
+		SWWMAmmo.EmbiggenMaxAmount6 20;
+		SWWMAmmo.EmbiggenMaxAmount7 25;
+		SWWMAmmo.EmbiggenMaxAmount8 30;
+		Ammo.DropAmount 1;
+	}
+}
