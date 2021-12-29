@@ -155,7 +155,7 @@ Class OniStatusBar : SWWMStatusBar
 		double xx = ss.x-(margin+78), yy = ss.y-(margin+8);
 		for ( int i=1; i<=10; i++,xx+=8 )
 		{
-			if ( !CPlayer.HasWeaponsInSlot(i%10) ) continue;
+			if ( (i>1) && !CPlayer.HasWeaponsInSlot(i%10) ) continue;
 			int ncolor = mhudfontcol[MCR_WHITE];
 			bool selected = false;
 			bool dummy;
@@ -173,7 +173,7 @@ Class OniStatusBar : SWWMStatusBar
 			if ( selected ) ncolor = mhudfontcol[MCR_BRASS];
 			else
 			{
-				bool hasammo = false;
+				bool hasammo = (i==1);
 				for ( Inventory inv=CPlayer.mo.Inv; inv; inv=inv.Inv )
 				{
 					if ( inv is 'Weapon' ) [dummy, slot] = CPlayer.weapons.LocateWeapon(Weapon(inv).GetClass());

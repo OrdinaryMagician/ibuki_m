@@ -1,0 +1,34 @@
+// all the healing for Ibuki mod
+
+Class OniSmallHeal : Health
+{
+	Default
+	{
+		Inventory.Amount 5;
+		Inventory.MaxAmount 100;
+	}
+}
+Class OniMediumHeal : Health
+{
+	Default
+	{
+		Inventory.Amount 20;
+		Inventory.MaxAmount 100;
+	}
+}
+Class OniBigHeal : Health
+{
+	Default
+	{
+		Inventory.Amount 50;
+		Inventory.MaxAmount 100;
+	}
+}
+Class OniSpiritHeal : Health
+{
+	Default
+	{
+		Inventory.Amount 100;
+		Inventory.MaxAmount int.max;
+	}
+}

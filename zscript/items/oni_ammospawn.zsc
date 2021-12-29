@@ -1,0 +1,187 @@
+// ammo spawners for Ibuki mod
+
+// TODO just fallbacks for now
+
+// Doom
+Class OniBulletAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'Clip';
+	}
+}
+Class OniBulletAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Actor> PickAmmo()
+	{
+		return 'ClipBox';
+	}
+}
+Class OniShellAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'Shell';
+	}
+}
+Class OniShellAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Actor> PickAmmo()
+	{
+		return 'ShellBox';
+	}
+}
+Class OniRocketAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'RocketAmmo';
+	}
+}
+Class OniRocketAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Actor> PickAmmo()
+	{
+		return 'RocketBox';
+	}
+}
+Class OniCellAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'Cell';
+	}
+}
+Class OniCellAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Actor> PickAmmo()
+	{
+		return 'CellPack';
+	}
+}
+
+// Heretic
+Class OniWandAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'GoldWandAmmo';
+	}
+}
+Class OniWandAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'GoldWandHefty';
+	}
+}
+Class OniCrossbowAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'CrossbowAmmo';
+	}
+}
+Class OniCrossbowAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'CrossbowHefty';
+	}
+}
+Class OniBlasterAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'BlasterAmmo';
+	}
+}
+Class OniBlasterAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'BlasterHefty';
+	}
+}
+Class OniPhoenixAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'PhoenixRodAmmo';
+	}
+}
+Class OniPhoenixAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'PhoenixRodHefty';
+	}
+}
+Class OniSkullAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'SkullRodAmmo';
+	}
+}
+Class OniSkullAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'SkullRodHefty';
+	}
+}
+Class OniMaceAmmoSmall : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'MaceAmmo';
+	}
+}
+Class OniMaceAmmoBig : SWWMAmmoSpawner
+{
+	Mixin SWWMOndemandAmmoSpawner;
+
+	static Class<Ammo> PickAmmo()
+	{
+		return 'MaceHefty';
+	}
+}

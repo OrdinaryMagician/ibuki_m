@@ -86,6 +86,7 @@ const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
 #include "zscript/items/oni_ammospawn.zsc"
 #include "zscript/items/oni_armor.zsc"
 #include "zscript/items/oni_health.zsc"
+#include "zscript/items/oni_items.zsc"
 #include "zscript/items/oni_powerups.zsc"
 // weapons
 #include "zscript/weapons/oni_ponch.zsc"

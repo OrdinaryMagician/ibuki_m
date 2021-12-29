@@ -34,6 +34,27 @@ Class OniAA12Shell : MagAmmo
 		MagAmmo.BackpackAmount 8;
 	}
 }
+Class OniAA12Shell_2 : OniAA12Shell
+{
+	Default
+	{
+		Inventory.Amount 2;
+	}
+}
+Class OniAA12Shell_4 : OniAA12Shell
+{
+	Default
+	{
+		Inventory.Amount 4;
+	}
+}
+Class OniAA12Shell_12 : OniAA12Shell
+{
+	Default
+	{
+		Inventory.Amount 12;
+	}
+}
 
 Class OniBeagleAmmo : SWWMAmmo
 {
@@ -56,6 +77,13 @@ Class OniBeagleAmmo : SWWMAmmo
 		Ammo.DropAmount 1;
 	}
 }
+Class OniBeagleAmmo_2 : OniBeagleAmmo
+{
+	Default
+	{
+		Inventory.Amount 2;
+	}
+}
 Class OniBeagleRound : MagAmmo
 {
 	Default
@@ -67,6 +95,20 @@ Class OniBeagleRound : MagAmmo
 		MagAmmo.ParentAmmo "OniBeagleAmmo";
 		MagAmmo.ClipSize 7;
 		MagAmmo.BackpackAmount 4;
+	}
+}
+Class OniBeagleRound_2 : OniBeagleRound
+{
+	Default
+	{
+		Inventory.Amount 2;
+	}
+}
+Class OniBeagleRound_3 : OniBeagleRound
+{
+	Default
+	{
+		Inventory.Amount 3;
 	}
 }
 
@@ -90,6 +132,27 @@ Class OniSledgeAmmo : SWWMAmmo
 		Ammo.DropAmount 2;
 	}
 }
+Class OniSledgeAmmo_2 : OniSledgeAmmo
+{
+	Default
+	{
+		Inventory.Amount 2;
+	}
+}
+Class OniSledgeAmmo_5 : OniSledgeAmmo
+{
+	Default
+	{
+		Inventory.Amount 5;
+	}
+}
+Class OniSledgeAmmo_10 : OniSledgeAmmo
+{
+	Default
+	{
+		Inventory.Amount 10;
+	}
+}
 
 Class OniMachAmmo : SWWMAmmo
 {
@@ -109,6 +172,41 @@ Class OniMachAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount7 700;
 		SWWMAmmo.EmbiggenMaxAmount8 800;
 		Ammo.DropAmount 20;
+	}
+}
+Class OniMachAmmo_10 : OniMachAmmo
+{
+	Default
+	{
+		Inventory.Amount 10;
+	}
+}
+Class OniMachAmmo_20 : OniMachAmmo
+{
+	Default
+	{
+		Inventory.Amount 20;
+	}
+}
+Class OniMachAmmo_50 : OniMachAmmo
+{
+	Default
+	{
+		Inventory.Amount 50;
+	}
+}
+Class OniMachAmmo_100 : OniMachAmmo
+{
+	Default
+	{
+		Inventory.Amount 100;
+	}
+}
+Class OniMachAmmo_200 : OniMachAmmo
+{
+	Default
+	{
+		Inventory.Amount 200;
 	}
 }
 
@@ -144,6 +242,13 @@ Class OniExploRound : MagAmmo
 		MagAmmo.ParentAmmo "OniExploAmmo";
 		MagAmmo.ClipSize 4;
 		MagAmmo.BackpackAmount 1;
+	}
+}
+Class OniExploRound_5 : OniExploRound
+{
+	Default
+	{
+		Inventory.Amount 5;
 	}
 }
 
@@ -222,6 +327,13 @@ Class OniBoarAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount7 20;
 		SWWMAmmo.EmbiggenMaxAmount8 25;
 		Ammo.DropAmount 1;
+	}
+}
+Class OniBoarAmmo_5 : OniBoarAmmo
+{
+	Default
+	{
+		Inventory.Amount 5;
 	}
 }
 
