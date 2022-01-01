@@ -1,0 +1,33 @@
+// non-powerup items for Ibuki mod (just one, really)
+
+Class OniVisor : SWWMChargeItem
+{
+	int act_time;	// for shader effects
+
+	Default
+	{
+		Tag "$T_ONIVISOR";
+		Inventory.PickupMessage "$T_ONIVISOR";
+		SWWMChargeItem.Charge 60;
+	}
+
+	override void Activate( Actor activator )
+	{
+		Super.Activate(activator);
+		act_time = gametic;
+		// TODO
+	}
+
+	override void Deactivate( Actor activator )
+	{
+		Super.Deactivate(activator);
+		// TODO
+	}
+
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

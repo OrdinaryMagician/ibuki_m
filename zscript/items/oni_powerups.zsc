@@ -1,0 +1,161 @@
+// powerups for Ibuki mod
+
+Class OniMilkSnd : Actor
+{
+	Default
+	{
+		+NOBLOCKMAP;
+		+NOGRAVITY;
+		+NOINTERACTION;
+	}
+	override void Tick()
+	{
+		if ( !target || !master )
+		{
+			Destroy();
+			return;
+		}
+		SetOrigin(target.pos,true);
+		if ( players[consoleplayer].Camera == target )
+		{
+			A_SoundVolume(CHAN_VOICE,0.);
+			A_SoundVolume(CHAN_7,.8);
+		}
+		else
+		{
+			A_SoundVolume(CHAN_VOICE,.4);
+			A_SoundVolume(CHAN_7,0.);
+		}
+	}
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		A_StartSound("powerup/milkact",CHAN_VOICE,CHANF_LOOP,.4,1.5);
+		A_StartSound("powerup/milkact",CHAN_7,CHANF_LOOP,.8,ATTN_NONE);
+	}
+	override void OnDestroy()
+	{
+		Super.OnDestroy();
+		A_StopSound(CHAN_VOICE);
+		A_StopSound(CHAN_7);
+	}
+}
+
+Class OniMilkPower : Powerup
+{
+	Mixin SWWMShadedPowerup;
+
+	Actor snd;
+	int lasteffect;
+	transient int lastpulse;
+
+	Default
+	{
+		Powerup.Duration -30;
+		Powerup.Color "FF F8 F0", 0.1;
+		+INVENTORY.ADDITIVETIME;
+	}
+
+	override void InitEffect()
+	{
+		Super.InitEffect();
+		if ( !Owner ) return;
+		Owner.bNOBLOOD = true;
+		lasteffect = int.min;
+		lastpulse = max(lastpulse,gametic+35);
+		SWWMHandler.DoFlash(Owner,Color(64,255,240,224),20);
+		if ( Owner is 'SWWMPlayer' )
+			SWWMPlayer(Owner).lastbump *= 1.1;
+	}
+	override void DoEffect()
+	{
+		Super.DoEffect();
+		if ( !Owner ) return;
+		if ( !snd ) snd = Spawn("OniMilkSnd",Owner.pos);
+		snd.target = Owner;
+		snd.master = self;
+		int numpt = Random[ExploS](-2,2);
+		for ( int i=0; i<numpt; i++ )
+		{
+			double ang = FRandom[ExploS](0,360);
+			double pt = FRandom[ExploS](-90,90);
+			double dst = FRandom[ExploS](.25,.75)*Owner.height;
+			Vector3 dir = (cos(ang)*cos(pt),sin(ang)*cos(pt),-sin(pt));
+			Vector3 ppos = Owner.Vec3offset(0,0,Owner.height/2)+dir*dst;
+			A_SpawnParticle(Color(255,240,224),0,30,2.,0,ppos.x,ppos.y,ppos.z,dir.x*.2,dir.y*.2,dir.z*.2,0,0,.05,1.,-1,-2./30.);
+		}
+	}
+	override void EndEffect()
+	{
+		Super.EndEffect();
+		if ( !Owner ) return;
+		Owner.bNOBLOOD = Owner.default.bNOBLOOD;
+		Owner.A_StartSound("powerup/milkend",CHAN_ITEMEXTRA,CHANF_OVERLAP);
+		SWWMHandler.DoFlash(Owner,Color(64,255,240,224),20);
+		if ( Owner is 'SWWMPlayer' )
+			SWWMPlayer(Owner).lastbump *= 1.05;
+		if ( (EffectTics <= 0) && Owner && Owner.CheckLocalView() ) Console.Printf(StringTable.Localize("$D_ONIMILK"));
+	}
+	override void ModifyDamage( int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags )
+	{
+		if ( !passive || (damage <= 0) || (damageType == 'EndLevel') ) return;
+		newdamage = 0;
+		if ( level.maptime > lasteffect+5 )
+		{
+			SWWMHandler.DoFlash(Owner,Color(48,255,240,224),15);
+			Owner.A_StartSound("powerup/milkhit",CHAN_POWERUP,CHANF_OVERLAP);
+			lasteffect = level.maptime;
+			lastpulse = max(lastpulse,gametic+20);
+			if ( Owner is 'SWWMPlayer' )
+				SWWMPlayer(Owner).lastbump *= 1.05;
+		}
+	}
+}
+
+Class OniMilkJug : Inventory
+{
+	Mixin SWWMOverlapPickupSound;
+	Mixin SWWMUseToPickup;
+	Mixin SWWMRespawn;
+	Mixin SWWMPickupGlow;
+	Mixin SWWMCountNoPickup;
+
+	override bool Use( bool pickup )
+	{
+		let r = OniMilkPower(Owner.FindInventory("OniMilkPower"));
+		if ( r )
+		{
+			r.EffectTics += r.default.EffectTics;
+			r.lastpulse = max(r.lastpulse,gametic+35);
+			SWWMHandler.DoFlash(Owner,Color(64,255,240,224),30);
+			if ( Owner is 'SWWMPlayer' )
+				SWWMPlayer(Owner).lastbump *= 1.1;
+		}
+		else Owner.GiveInventory("OniMilkPower",1);
+		return true;
+	}
+
+	Default
+	{
+		Tag "$T_ONIMILK";
+		Inventory.Icon "graphics/HUD/Icons/I_Milk.png";
+		Inventory.PickupSound "misc/p_pkup_vip";
+		Inventory.UseSound "powerup/milkuse";
+		Inventory.PickupMessage "$I_ONIMILK";
+		Inventory.MaxAmount 3;
+		Inventory.InterHubAmount 3;
+		Inventory.PickupFlash "SWWMPurplePickupFlash";
+		+INVENTORY.INVBAR;
+		+COUNTITEM;
+		+INVENTORY.BIGPOWERUP;
+		+FLOATBOB;
+		FloatBobStrength 0.25;
+	}
+
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

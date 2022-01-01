@@ -52,6 +52,7 @@ Class OniAA12Shell_12 : OniAA12Shell
 {
 	Default
 	{
+		Inventory.PickupSound "misc/ammo_pkup";	// packaged
 		Inventory.Amount 12;
 	}
 }
@@ -118,6 +119,7 @@ Class OniSledgeAmmo : SWWMAmmo
 	{
 		Tag "$T_ONISURVIVORROUND";
 		SWWMAmmo.PickupTag "ONISURVIVORROUND";
+		Inventory.PickupSound "misc/bullet_pkup";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 20;
 		Ammo.BackpackAmount 4;
@@ -150,6 +152,7 @@ Class OniSledgeAmmo_10 : OniSledgeAmmo
 {
 	Default
 	{
+		Inventory.PickupSound "misc/ammo_pkup";	// packaged
 		Inventory.Amount 10;
 	}
 }
@@ -160,6 +163,7 @@ Class OniMachAmmo : SWWMAmmo
 	{
 		Tag "$T_ONIMELISABULLET";
 		SWWMAmmo.PickupTag "ONIMELISABULLET";
+		Inventory.PickupSound "misc/bullet_pkup";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 300;
 		Ammo.BackpackAmount 50;
@@ -200,6 +204,7 @@ Class OniMachAmmo_100 : OniMachAmmo
 	Default
 	{
 		Inventory.Amount 100;
+		Inventory.PickupSound "misc/ammo_pkup";	// packaged
 	}
 }
 Class OniMachAmmo_200 : OniMachAmmo
@@ -207,6 +212,7 @@ Class OniMachAmmo_200 : OniMachAmmo
 	Default
 	{
 		Inventory.Amount 200;
+		Inventory.PickupSound "misc/ammo_pkup";	// packaged
 	}
 }
 
@@ -238,17 +244,10 @@ Class OniExploRound : MagAmmo
 		Tag "$T_ONIEXPLODERROUND";
 		MagAmmo.PickupTag "ONIEXPLODERROUND";
 		Inventory.Amount 1;
-		Inventory.MaxAmount 4;
+		Inventory.MaxAmount 5;
 		MagAmmo.ParentAmmo "OniExploAmmo";
-		MagAmmo.ClipSize 4;
+		MagAmmo.ClipSize 5;
 		MagAmmo.BackpackAmount 1;
-	}
-}
-Class OniExploRound_5 : OniExploRound
-{
-	Default
-	{
-		Inventory.Amount 5;
 	}
 }
 
@@ -294,6 +293,7 @@ Class OniWarheadAmmo : SWWMAmmo
 	{
 		Tag "$T_ONIWARHEAD";
 		SWWMAmmo.PickupTag "ONIWARHEAD";
+		Inventory.PickupSound "misc/ammo_pkup_vip";	// too large to be considered a "bullet"
 		Inventory.Amount 1;
 		Inventory.MaxAmount 3;
 		Ammo.BackpackAmount 0;
@@ -315,6 +315,7 @@ Class OniBoarAmmo : SWWMAmmo
 	{
 		Tag "$T_ONIBOARROUND";
 		SWWMAmmo.PickupTag "ONIBOARROUND";
+		Inventory.PickupSound "misc/bullet_pkup_vip";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 5;
 		Ammo.BackpackAmount 0;
@@ -329,11 +330,18 @@ Class OniBoarAmmo : SWWMAmmo
 		Ammo.DropAmount 1;
 	}
 }
-Class OniBoarAmmo_5 : OniBoarAmmo
+Class OniBoarAmmo_2 : OniBoarAmmo
 {
 	Default
 	{
-		Inventory.Amount 5;
+		Inventory.Amount 2;
+	}
+}
+Class OniBoarAmmo_3 : OniBoarAmmo
+{
+	Default
+	{
+		Inventory.Amount 3;
 	}
 }
 

@@ -59,7 +59,7 @@ ONI_HELP_PAGE5 = "Arsenal del Oni Rojo (Parte 3: Potenciadores)";
 ONI_HELP_PAGE5_TXT =
 "No puede ser un mod decente sin esos. Hay toda clase de chismes disponibles para ti, aunque debes saber una cosa: La invisibilidad es una mierda como potenciador, sinceramente, así que ha sido reemplazada por otra cosa. Ya verás.\n"
 "\n"
-"Los potenciadores se usan automáticamente al recoger... EXCEPTO cuando ya haya una copia activa. Los extras se guardarán para que no se gasten si los vas pillando todos de golpe, lo cual es útil. Esto también es verdad para las supersaludes que reemplazan la Esfera de Alma y Megaesfera, las cuales no serán usadas automáticamente si ya sobrepasas los 100 puntos de salud.\n"
+"Ten en cuenta que los potenciadores no se usan automáticamente al recoger. En su lugar, se guardarán para que puedas usarlos en el momento EXACTO en el que los necesites, y además no los malgastarás recogiendo varias copias a la vez, lo cual es muy útil. Oh, y tampoco está presente el concepto de \"recoger siempre\". Si un potenciador está en su capacidad máxima, no se recogerán más, pero aun así seguirá puntuando encontrar el ítem. La excepción a esto son las supersaludes que reemplazan la Esfera de Alma y Megaesfera, las cuales serán siempre usadas automáticamente, se acoplan indefinidamente, y no pueden ser guardadas en el inventario.\n"
 "\n"
 "Como siempre, los potenciadores activos muestran su duración restante en el lado izquierdo del HUD, así puedes saber si se van a acabar con mayor precisión que si tuvieras que esperar a que empiecen a \"parpadear\".";
 ONI_HELP_PAGE6 = "Consejos Adicionales";

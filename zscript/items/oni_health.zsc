@@ -1,26 +1,10 @@
 // all the healing for Ibuki mod
 
-Class OniSmallHeal : Health
+Class OniBasicHeal : Health
 {
 	Default
 	{
-		Inventory.Amount 5;
-		Inventory.MaxAmount 100;
-	}
-}
-Class OniMediumHeal : Health
-{
-	Default
-	{
-		Inventory.Amount 20;
-		Inventory.MaxAmount 100;
-	}
-}
-Class OniBigHeal : Health
-{
-	Default
-	{
-		Inventory.Amount 50;
+		Inventory.Amount 1;
 		Inventory.MaxAmount 100;
 	}
 }
@@ -28,7 +12,108 @@ Class OniSpiritHeal : Health
 {
 	Default
 	{
-		Inventory.Amount 100;
+		Inventory.Amount 1;
 		Inventory.MaxAmount int.max;
+	}
+}
+
+Class OniSmallWater : SWWMHealth
+{
+	Default
+	{
+		Tag "$T_ONISMALLWATER";
+		Inventory.PickupMessage "$T_ONISMALLWATER";
+		Inventory.MaxAmount 15;
+		Inventory.InterHubAmount 15;
+		SWWMHealth.GiveHealth "OniBasicHeal";
+		SWWMHealth.GiveAmount 5;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniMedWater : SWWMHealth
+{
+	Default
+	{
+		Tag "$T_ONIMEDWATER";
+		Inventory.PickupMessage "$T_ONIMEDWATER";
+		Inventory.MaxAmount 10;
+		Inventory.InterHubAmount 10;
+		SWWMHealth.GiveHealth "OniBasicHeal";
+		SWWMHealth.GiveAmount 20;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniBigWater : SWWMHealth
+{
+	Default
+	{
+		Tag "$T_ONIBIGWATER";
+		Inventory.PickupMessage "$T_ONIBIGWATER";
+		Inventory.MaxAmount 5;
+		Inventory.InterHubAmount 5;
+		SWWMHealth.GiveHealth "OniBasicHeal";
+		SWWMHealth.GiveAmount 50;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniSpiritualStimulant : SWWMHealth
+{
+	Default
+	{
+		Tag "$T_ONISPIRIT";
+		Inventory.PickupSound "misc/p_pkup";
+		Inventory.PickupMessage "$T_ONISPIRIT";
+		Inventory.MaxAmount 0;
+		Inventory.InterHubAmount 0;
+		Inventory.UseSound "powerup/spiritstim";
+		SWWMHealth.GiveHealth "OniSpiritHeal";
+		SWWMHealth.GiveAmount 100;
+		+COUNTITEM;
+		+INVENTORY.ALWAYSPICKUP;
+		+INVENTORY.BIGPOWERUP;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniSpiritualStimulant2 : SWWMHealth
+{
+	Default
+	{
+		Tag "$T_ONISPIRIT2";
+		Inventory.PickupSound "misc/p_pkup";
+		Inventory.PickupMessage "$T_ONISPIRIT2";
+		Inventory.MaxAmount 0;
+		Inventory.InterHubAmount 0;
+		Inventory.UseSound "powerup/spiritstim";
+		SWWMHealth.GiveHealth "OniSpiritHeal";
+		SWWMHealth.GiveAmount 200;
+		+COUNTITEM;
+		+INVENTORY.ALWAYSPICKUP;
+		+INVENTORY.BIGPOWERUP;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }

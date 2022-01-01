@@ -6,8 +6,8 @@ Class OniOilArmor : SWWMArmor
 	Default
 	{
 		Inventory.Amount 1;
-		Inventory.MaxAmount int.max;
-		Inventory.InterHubAmount int.max;
+		Inventory.MaxAmount 1000;
+		Inventory.InterHubAmount 1000;
 		SWWMArmor.ArmorPriority 3;
 		+SWWMARMOR.NOHITFLASH;
 		+SWWMARMOR.NOHITSOUND;
@@ -17,14 +17,11 @@ Class OniOilArmor : SWWMArmor
 	{
 		Super.DoEffect();
 		// wear off while in contact with liquids, unless having a coating active
-		if ( !Owner.FindInventory("BarrierPower") )
-		{
-			if ( !(level.maptime&3) && (Owner.waterlevel > 2) && (Amount > 0) ) Amount--;
-			if ( !(level.maptime&7) && (Owner.waterlevel > 1) && (Amount > 250) ) Amount--;
-			if ( !(level.maptime&15) && (Owner.waterlevel > 0) && (Amount > 500) ) Amount--;
-			if ( !(level.maptime&31) && ((Owner.pos.z <= floorz) && Owner.GetFloorTerrain().IsLiquid) && (Amount > 750)) Amount--;
-		}
-		if ( !(level.maptime%clamp(10-Amount/1000,1,10)) && (Amount > 1000) ) Amount -= int(ceil((Amount-1000)/10.));
+		if ( Owner.FindInventory("BarrierPower") ) return;
+		if ( (Amount > 0) && (Owner.waterlevel > 2) && !(level.maptime&3) ) Amount--;
+		if ( (Amount > 250) && (Owner.waterlevel > 1) && !(level.maptime&7) ) Amount--;
+		if ( (Amount > 500) && (Owner.waterlevel > 0) && !(level.maptime&15) ) Amount--;
+		if ( (Amount > 750) && (Owner.pos.z <= floorz) && Owner.GetFloorTerrain().IsLiquid && !(level.maptime&31) ) Amount--;
 	}
 
 	override int HandleDamage( int damage, Name damageType, int flags )
@@ -34,6 +31,61 @@ Class OniOilArmor : SWWMArmor
 		// damage threshold
 		int dt = min(amount/50,20);
 		return clamp(int(damage*dr)+dt,0,damage);
+	}
+}
+
+Class OniSmallOil : SWWMSpareArmor
+{
+	Default
+	{
+		Tag "$T_ONISMALLOIL";
+		Inventory.PickupMessage "$T_ONISMALLOIL";
+		Inventory.MaxAmount 15;
+		Inventory.InterHubAmount 15;
+		SWWMSpareArmor.GiveArmor "OniOilArmor";
+		SWWMSpareArmor.GiveAmount 50;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniMedOil : SWWMSpareArmor
+{
+	Default
+	{
+		Tag "$T_ONIMEDOIL";
+		Inventory.PickupMessage "$T_ONIMEDOIL";
+		Inventory.MaxAmount 10;
+		Inventory.InterHubAmount 10;
+		SWWMSpareArmor.GiveArmor "OniOilArmor";
+		SWWMSpareArmor.GiveAmount 200;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniBigOil : SWWMSpareArmor
+{
+	Default
+	{
+		Tag "$T_ONIBIGOIL";
+		Inventory.PickupMessage "$T_ONIBIGOIL";
+		Inventory.MaxAmount 5;
+		Inventory.InterHubAmount 5;
+		SWWMSpareArmor.GiveArmor "OniOilArmor";
+		SWWMSpareArmor.GiveAmount 500;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 

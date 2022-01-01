@@ -69,7 +69,7 @@ ONI_HELP_PAGE5 = "Red Oni's Arsenal (Part 3: Powerups)";
 ONI_HELP_PAGE5_TXT =
 "Can't be a proper mod without those. There's a whole lot of stuff available for ya, although you gotta keep in mind one thing: Invisibility sucks as a powerup, honestly, so it's been replaced by something else. You'll see.\n"
 "\n"
-"Powerups will be used automatically on pickup... EXCEPT when a copy of them is still active. Extras will be stashed away so you don't waste 'em running over multiple powerups at once, which is handy. This is also true for the superheals that replace the Soulsphere and Megasphere, which will not be auto-used if you're already above 100 HP.\n"
+"Keep in mind powerups are not used automatically on pickup. Rather, they will be stashed away so you can use them EXACTLY when you need, and also so don't waste 'em running over multiple copies at once, which is handy. Oh, and here there is no concept anymore of \"always pickup\". If a powerup's at max capacity, it won't get nabbed, but you still get scored for finding it nevertheless. The only exception to this rule are the superheals that replace the Soulsphere and Megasphere, which are always auto-used regardless, stack indefinitely, and can't be actually held in your inventory.\n"
 "\n"
 "As always, active powerups show their remaining duration on the left side of the HUD, so you know when they're about to run out more precisely than waiting for them to start \"blinking\".";
 ONI_HELP_PAGE6 = "Additional Tips";

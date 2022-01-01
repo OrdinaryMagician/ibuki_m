@@ -50,6 +50,7 @@ T_ONISMALLOIL = "Small Oil Bottle";
 T_ONIMEDOIL = "Medium Oil Bottle";
 T_ONILARGEOIL = "Large Oil Bottle";
 T_ONISPIRIT = "Spiritual Stimulant";
+T_ONISPIRIT2 = "Dual Spiritual Stimulant";
 T_ONIVODKA = "Vodka";
 I_ONIVODKA = "Bootleg \"Mischievous Ellen\" Vodka";
 T_ONIMILK = "Milk Jug";
@@ -121,7 +122,7 @@ TT_ONIMACHINEGUN =
 TT_ONIEXPLODER =
 "\cr\"Ah, the ultimate problem solver.\"\c-\n"
 "\n"
-"\cr20mm Mk.299 Tandem HEAT-MP\c-, 4+1 rounds.\n"
+"\cr20mm Mk.299 Tandem HEAT-MP\c-, 5 rounds.\n"
 "Bolt has to be manually racked after each shot.";
 TT_ONIPLASMARIFLE =
 "\cr\"Quite the relic here.\"\c-\n"

@@ -61,13 +61,13 @@ Shells are usually found in handfuls of 4, or in 12 round boxes.
 
 ### Slot 3 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
 
-*"Oh, this doggy really does bite."*
+*"Oh, this puppy really does bite."*
 
 A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
 It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
 
-Like your usual sidearm, you can also give it a spin with the utility key. However, it can't be dual-wielded.
+You can give it a spin with the utility key. You'd think this could be dual-wielded, but **Ibuki** doesn't see a need for that, one puppy is enough.
 
 #### .50 PE *[Shells]*
 
@@ -157,7 +157,7 @@ Ammo for this *(very large)* puppy is quite rare, but that's compensated by how 
 
 *"... I wonder if... With that size..."*
 
-Available in 5 round packs or single rounds. These things are big.
+Available as either single rounds or bunches of 2 and 3. These things are absolute chonkers.
 
 ### Slot 0 - The Purifier *[Chainsaw]*
 
@@ -233,13 +233,13 @@ Cheap and easy night vision goggles. Can be toggled if you wanna save that batte
 
 *"Sometimes you gotta wear protection..."*
 
-The usual solution for getting into dangerous terrain. Just pop it and go for a dive.
+The usual solution for getting into dangerous terrain. Just pop it and go for a dive. Note that while it's active, your oil will not wear off in contact with water.
 
 ### Aerial Amulet *[Wings of Wrath]*
 
 *"It's surprising that this thing can even lift me off the ground."*
 
-A convenient little magic artifact that allows you to float in mid-air. Far more comfortable than the **Gravity Suppressor**, but unlike that one, this has a weight limit *(poor **Demo-chan**, their shiny metal butt is just too damn heavy)*. Its effects can be conveniently toggled at will, allowing you to save up energy when needed.
+A convenient little magic artifact that allows you to float in mid-air. Far more comfortable than the **Gravity Suppressor**, but unlike that one, this has a weight limit *(poor **Demo-chan**, their shiny metal butt is just too damn heavy)*. Its effects can be conveniently toggled at will, allowing you to save up energy when needed *(don't forget to bind the "Toggle Flight" key)*.
 
 ### Safety Tether *[Chaos Device]*
 

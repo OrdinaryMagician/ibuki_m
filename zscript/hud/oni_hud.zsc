@@ -58,13 +58,13 @@ Class OniStatusBar : SWWMStatusBar
 		GenTex[0] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxL.png",TexMan.Type_Any);
 		GenTex[1] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxM.png",TexMan.Type_Any);
 		GenTex[2] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxR.png",TexMan.Type_Any);
-		tclabel = Font.CR_DARKRED;
-		tcvalue = Font.CR_DARKGRAY;
-		tcextra = Font.CR_BLACK;
-		tccompl = Font.CR_WHITE;
-		tcsucks = Font.CR_RED;
-		tclabel_s = "r";
-		tcextra_s = "m";
+		tclabel = Font.CR_RED;
+		tcvalue = Font.CR_WHITE;
+		tcextra = Font.CR_DARKGRAY;
+		tccompl = Font.CR_GOLD;
+		tcsucks = Font.CR_DARKRED;
+		tclabel_s = "g";
+		tcextra_s = "u";
 		LastOil = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("OniOilArmor"):0;
 		LastHealth = CPlayer?CPlayer.health:100;
 		HealthInter = DynamicValueInterpolator.Create(0,.1,1,100);
@@ -256,13 +256,19 @@ Class OniStatusBar : SWWMStatusBar
 				}
 			}
 			int ncolor = (amt>0)?mhudfontcol[MCR_WHITE]:mhudfontcol[MCR_RED];
-			String cols = selected?"\c[MiniBrass]":"\c[MiniWhite]";
+			int scol = mhudfontcol[selected?MCR_BRASS:MCR_WHITE];
 			int dcnt1 = 2-int(Log10(clamp(amt,1,999)));
 			int dcnt2 = 2-int(Log10(clamp(amax,1,999)));
 			for ( int i=0; i<dcnt1; i++ ) Screen.DrawChar(MiniHUDFont,ncolor,xx+22+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
 			for ( int i=0; i<dcnt2; i++ ) Screen.DrawChar(MiniHUDFont,mhudfontcol[selected?MCR_BRASS:MCR_WHITE],xx+40+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
-			str = String.Format("%s%-4s \c-%3d%s/%3d\c-",cols,AmmoNames[i],clamp(amt,0,999),cols,clamp(amax,0,999));
-			Screen.DrawText(MiniHUDFont,ncolor,xx+2,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			str = AmmoNames[i];
+			Screen.DrawText(MiniHUDFont,scol,xx+2,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			str = "/";
+			Screen.DrawText(MiniHUDFont,scol,xx+34,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(80,0,0,0));
+			str = String.Format("%3d",clamp(amt,0,999));
+			Screen.DrawText(MiniHUDFont,ncolor,xx+22,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			str = String.Format("%3d",clamp(amax,0,999));
+			Screen.DrawText(MiniHUDFont,scol,xx+40,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			if ( (AmmoOldAmounts[i] != int.min) && (amt > AmmoOldAmounts[i]) ) AmmoFlash[i] = gametic+25;
 			AmmoOldAmounts[i] = amt;
 			let f = AmmoFlash[i];

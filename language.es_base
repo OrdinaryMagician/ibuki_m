@@ -46,6 +46,7 @@ T_ONISMALLOIL = "Botella de Aceite Pequeña";
 T_ONIMEDOIL = "Botella de Aceite Mediana";
 T_ONILARGEOIL = "Botella de Aceite Grande";
 T_ONISPIRIT = "Estimulante Espiritual";
+T_ONISPIRIT2 = "Doble Estimulante Espiritual";
 I_ONIVODKA = "Vodka Casero \"Ellen la Traviesa\"";
 T_ONIMILK = "Jarra de Leche";
 I_ONIMILK = "Jarra de Leche Oni Rojo";
@@ -113,7 +114,7 @@ TT_ONIMACHINEGUN =
 TT_ONIEXPLODER =
 "\cr\"Ah, el solucionador de problemas definitivo.\"\c-\n"
 "\n"
-"\cr20mm Mk.299 Tandem HEAT-MP\c-, 4+1 balas.\n"
+"\cr20mm Mk.299 Tandem HEAT-MP\c-, 5 disparos.\n"
 "El perno tiene que ser accionado manualmente tras cada disparo.";
 TT_rNIPLASMARIFLE =
 "\cr\"Vaya reliquia tenemos aquí.\"\c-\n"
