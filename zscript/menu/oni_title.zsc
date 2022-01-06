@@ -20,6 +20,8 @@ Class OniTitleStuff : EventHandler
 	ui TextureID gradtex;
 	ui int quakestr;
 	ui int rss;
+	int titletimer;
+	bool bFadeFromBlack;
 
 	private ui int GetUIRandom()
 	{
@@ -59,23 +61,42 @@ Class OniTitleStuff : EventHandler
 		}
 	}
 
+	override void WorldTick()
+	{
+		titletimer++;
+	}
+
+	override void WorldLoaded( WorldEvent e )
+	{
+		titletimer = 0;
+		let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
+		if ( !shnd ) return;
+		if ( shnd.titlefirst )
+		{
+			titletimer = GameTicRate*44+1;	// skip to logo (also skip the fire sound)
+			bFadeFromBlack = true;	// fade from black instead of white
+			S_ChangeMusic("music/ibuki_pretitlemus_skip.ogg",looping:false);
+		}
+		shnd.titlefirst = true;
+	}
+
 	override void UiTick()
 	{
 		quakestr = max(quakestr-1,0);
-		if ( level.maptime == 1 ) S_ChangeMusic("music/ibuki_pretitlemus.ogg",looping:false);
-		else if ( level.maptime == (43*GameTicRate) ) S_StartSound("aa12/titlecock",CHAN_WEAPON,CHANF_OVERLAP|CHANF_UI,1.,0.);
-		else if ( level.maptime == (44*GameTicRate) ) S_StartSound("aa12/titlefire",CHAN_WEAPON,CHANF_OVERLAP|CHANF_UI,1.,0.);
-		else if ( level.maptime == (46*GameTicRate) )
+		if ( titletimer == 1 ) S_ChangeMusic("music/ibuki_pretitlemus.ogg",looping:false);
+		else if ( titletimer == (43*GameTicRate) ) S_StartSound("aa12/titlecock",CHAN_WEAPON,CHANF_OVERLAP|CHANF_UI,1.,0.);
+		else if ( titletimer == (44*GameTicRate) ) S_StartSound("aa12/titlefire",CHAN_WEAPON,CHANF_OVERLAP|CHANF_UI,1.,0.);
+		else if ( titletimer == (46*GameTicRate) )
 		{
 			quakestr += 30;
 			S_StartSound("title/thump",CHAN_BODY,CHANF_OVERLAP|CHANF_UI,1.,0.,1.);
 		}
-		else if ( level.maptime == (47*GameTicRate) )
+		else if ( titletimer == (47*GameTicRate) )
 		{
 			quakestr += 30;
 			S_StartSound("title/thump",CHAN_BODY,CHANF_OVERLAP|CHANF_UI,1.,0.,.8);
 		}
-		else if ( level.maptime == (50*GameTicRate) ) S_ChangeMusic("music/ibuki_titlemus.ogg");
+		else if ( titletimer == (50*GameTicRate) ) S_ChangeMusic("music/ibuki_titlemus.ogg");
 		TickSmokeLayers();
 		if ( gamestate != GS_LEVEL ) return;
 		// you're not supposed to be here
@@ -134,7 +155,16 @@ Class OniTitleStuff : EventHandler
 
 	override void RenderUnderlay( RenderEvent e )
 	{
-		double GameSecs = (level.maptime+e.FracTic)/GameTicRate;
+		if ( !ibukitex[0] ) ibukitex[0] = TexMan.CheckForTexture("graphics/title_ibuki_dark.png",TexMan.Type_Any);
+		if ( !ibukitex[1] ) ibukitex[1] = TexMan.CheckForTexture("graphics/title_ibuki_eye.png",TexMan.Type_Any);
+		if ( !ibukitex[2] ) ibukitex[2] = TexMan.CheckForTexture("graphics/title_ibuki.png",TexMan.Type_Any);
+		if ( !ibukitex[3] ) ibukitex[3] = TexMan.CheckForTexture("graphics/title_ibuki_smoke.png",TexMan.Type_Any);
+		if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/OniLogoL.png",TexMan.Type_Any);
+		if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/OniLogo.png",TexMan.Type_Any);
+		if ( !logotex[2] ) logotex[2] = TexMan.CheckForTexture("graphics/OniLogoL_Glow.png",TexMan.Type_Any);
+		if ( !logotex[3] ) logotex[3] = TexMan.CheckForTexture("graphics/OniLogoR_Glow.png",TexMan.Type_Any);
+		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
+		double GameSecs = (titletimer+e.FracTic)/GameTicRate;
 		if ( oni_fuzz )
 		{
 			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
@@ -151,9 +181,9 @@ Class OniTitleStuff : EventHandler
 		double texscl = Screen.GetHeight()/2700.;
 		double logoscl = Screen.GetHeight()/1024.;
 		// intro texts
-		if ( level.maptime < (42*GameTicRate) )
+		if ( titletimer < (42*GameTicRate) )
 		{
-			if ( !ibukitex[0] ) ibukitex[0] = TexMan.CheckForTexture("graphics/title_ibuki_dark.png",TexMan.Type_Any);
+
 			alf = clamp(GameSecs/40.,.2,1.);
 			double disp = smerp(clamp((GameSecs-16)/25.,0,1));
 			RenderSmokeLayer(e,GameSecs,true,clamp(alf*2.,.2,1.),200.*disp);
@@ -179,12 +209,11 @@ Class OniTitleStuff : EventHandler
 			Screen.DrawText(smallfont,Font.CR_BLACK,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 		}
 		// 42 seconds in: eye glow
-		else if ( level.maptime < (44*GameTicRate) )
+		else if ( titletimer < (44*GameTicRate) )
 		{
 			RenderSmokeLayer(e,GameSecs,true,1.,200.);
 			Screen.DrawTexture(ibukitex[0],false,Screen.GetWidth()/2+zoomscl*50,Screen.GetHeight()+zoomscl*1700,DTA_ScaleX,zoomscl,DTA_ScaleY,zoomscl);
 			RenderSmokeLayer(e,GameSecs,false,.5,400.);
-			if ( !ibukitex[1] ) ibukitex[1] = TexMan.CheckForTexture("graphics/title_ibuki_eye.png",TexMan.Type_Any);
 			alf = clamp((GameSecs-43)*4.,0.,1.);
 			Screen.DrawTexture(ibukitex[1],false,Screen.GetWidth()/2+zoomscl*50,Screen.GetHeight()+zoomscl*1700,DTA_ScaleX,zoomscl,DTA_ScaleY,zoomscl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_Add);
 			alf *= 1.-clamp((GameSecs-43),0.,1.);
@@ -193,31 +222,16 @@ Class OniTitleStuff : EventHandler
 		// 44 seconds in: fade from white to full title scene
 		else
 		{
-			if ( level.maptime > 47*GameTicRate )
-			{
-				if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/OniLogo.png",TexMan.Type_Any);
+			if ( titletimer > 47*GameTicRate )
 				Screen.DrawTexture(logotex[1],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024);
-			}
-			else if ( level.maptime > 46*GameTicRate )
-			{
-				if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/OniLogoL.png",TexMan.Type_Any);
+			else if ( titletimer > 46*GameTicRate )
 				Screen.DrawTexture(logotex[0],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024);
-			}
-			if ( (level.maptime > 46*GameTicRate) && (level.maptime < 48*GameTicRate) )
-			{
-				if ( !logotex[2] ) logotex[2] = TexMan.CheckForTexture("graphics/OniLogoL_Glow.png",TexMan.Type_Any);
+			if ( (titletimer > 46*GameTicRate) && (titletimer < 48*GameTicRate) )
 				Screen.DrawTexture(logotex[2],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,1.-clamp(GameSecs-46,0.,1.));
-			}
-			if ( (level.maptime > 47*GameTicRate) && (level.maptime < 49*GameTicRate) )
-			{
-				if ( !logotex[3] ) logotex[3] = TexMan.CheckForTexture("graphics/OniLogoR_Glow.png",TexMan.Type_Any);
+			if ( (titletimer > 47*GameTicRate) && (titletimer < 49*GameTicRate) )
 				Screen.DrawTexture(logotex[3],false,Screen.GetWidth()/2,-80*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LeftOffset,1024,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,1.-clamp(GameSecs-47,0.,1.));
-			}
-			if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
 			Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
 			RenderSmokeLayer(e,GameSecs,true,.5,0,true);
-			if ( !ibukitex[2] ) ibukitex[2] = TexMan.CheckForTexture("graphics/title_ibuki.png",TexMan.Type_Any);
-			if ( !ibukitex[3] ) ibukitex[3] = TexMan.CheckForTexture("graphics/title_ibuki_smoke.png",TexMan.Type_Any);
 			alf = clamp((GameSecs-44.5)*1.5,0.,1.);
 			rss = int(MSTime()/GameTicRate);
 			Vector2 ofs = (RandomShiver(),RandomShiver())*quakestr*texscl;
@@ -232,10 +246,10 @@ Class OniTitleStuff : EventHandler
 			Screen.DrawTexture(ibukitex[1],false,Screen.GetWidth()/2+60*texscl+ofs.x,Screen.GetHeight()+80*texscl+ofs.y,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
 			RenderSmokeLayer(e,GameSecs,false,1.,0,true);
 			Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,64*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
-			if ( level.maptime < (45*GameTicRate) )
+			if ( titletimer < (45*GameTicRate) )
 			{
 				alf = 1.-clamp((GameSecs-44),0.,1.);
-				Screen.Dim("White",alf,0,0,Screen.GetWidth(),Screen.GetHeight());
+				Screen.Dim(bFadeFromBlack?"Black":"White",alf,0,0,Screen.GetWidth(),Screen.GetHeight());
 			}
 			if ( quakestr > 0. )
 			{
@@ -244,7 +258,7 @@ Class OniTitleStuff : EventHandler
 			}
 		}
 		// global fade in from back
-		if ( level.maptime < (1*GameTicRate) )
+		if ( titletimer < (1*GameTicRate) )
 			Screen.Dim("Black",1.-clamp(GameSecs,0.,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
 	}
 }
