@@ -13,8 +13,6 @@ Class OniTitleStuff : EventHandler
 	ui TextureID bgtex;
 	ui TextureID ibukitex[4];
 	ui TitleSmoke smk[128];
-	ui Shape2D smk_shape;
-	ui Shape2DTransform smk_tform;
 	ui TextureID smk_tex[8];
 	ui TextureID logotex[4];
 	ui TextureID gradtex;
@@ -49,7 +47,7 @@ Class OniTitleStuff : EventHandler
 				smk[i].vel = (FRandom[UIStuff](-1.,3.),FRandom[UIStuff](-2.,-6.));
 				smk[i].ang = FRandom[UIStuff](0.,360.);
 				smk[i].angvel = FRandom[UIStuff](1.,4.)*RandomPick[UIStuff](-1,1);
-				smk[i].scale = FRandom[UIStuff](256.,512.);
+				smk[i].scale = FRandom[UIStuff](2.,4.);
 			}
 			for ( int j=0; j<=presim; j++ )
 			{
@@ -114,21 +112,6 @@ Class OniTitleStuff : EventHandler
 
 	private ui void RenderSmokeLayer( RenderEvent e, double GameSecs, bool back, double alpha = 1., double disp = 0., bool zoomout = false )
 	{
-		if ( !smk_shape )
-		{
-			smk_shape = new("Shape2D");
-			smk_shape.PushVertex((-1,-1));
-			smk_shape.PushVertex((1,-1));
-			smk_shape.PushVertex((-1,1));
-			smk_shape.PushVertex((1,1));
-			smk_shape.PushCoord((0,0));
-			smk_shape.PushCoord((1,0));
-			smk_shape.PushCoord((0,1));
-			smk_shape.PushCoord((1,1));
-			smk_shape.PushTriangle(0,3,1);
-			smk_shape.PushTriangle(0,2,3);
-		}
-		if ( !smk_tform ) smk_tform = new("Shape2DTransform");
 		double zoomscl = Screen.GetHeight()/(zoomout?600:400.);
 		int imin = back?64:0;
 		int imax = back?128:64;
@@ -137,19 +120,12 @@ Class OniTitleStuff : EventHandler
 		{
 			if ( !smk[i].maxage ) continue;
 			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
-			smk_tform.Clear();
-			// base transforms
-			smk_tform.Scale((1,1)*smk[i].scale);
-			smk_tform.Rotate(smk[i].ang+smk[i].angvel*e.FracTic);
-			smk_tform.Translate(smk[i].pos+smk[i].vel*e.FracTic);
-			// screen transforms
-			smk_tform.Translate((0,base+disp));
-			smk_tform.Scale((1,1)*zoomscl);
-			smk_tform.Translate((Screen.GetWidth()/2,0));
-			smk_shape.SetTransform(smk_tform);
+			Vector2 pos = (smk[i].pos+smk[i].vel*e.FracTic+(0,base+disp))*zoomscl+(Screen.GetWidth()/2,0);
+			double scl = smk[i].scale*zoomscl;
+			double ang = smk[i].ang+smk[i].angvel*e.FracTic;
 			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
 			alf *= clamp(smk[i].age/10.,0,1);
-			Screen.DrawShape(smk_tex[i%8],false,smk_shape,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(4,16,48));
+			Screen.DrawTexture(smk_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(48,16,4));
 		}
 	}
 
