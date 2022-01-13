@@ -4,6 +4,10 @@ HardwareShader Texture "graphics/tempbg.png"
 	Texture "noisetex" "textures/graynoise.png"
 	Define "ONICOLORS"
 }
+HardwareShader Texture "graphics/IbukiIcon.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
 HardwareShader Texture "graphics/title_ibuki.png"
 {
 	Shader "shaders/glsl/Bilinear.fp"
