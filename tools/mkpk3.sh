@@ -3,7 +3,7 @@ WORKDIR=$(dirname $(dirname $(readlink -f ${0}))) # this is ugly as all fuck but
 LIBDIR=${WORKDIR}/../swwmgzlib_m
 MODNAME=$(basename $WORKDIR | sed 's/_m$//')
 if [ ! -d $LIBDIR ]; then
-  echo "SWWM GZ Common Library not found, cannot proceed."
+  echo "Demolitionist Common Library not found, cannot proceed."
   exit 1
 fi
 DESTFILE=${WORKDIR}/../${MODNAME}${1}_m.pk3

@@ -1,4 +1,3 @@
-# SWWM GZ Side Story ~ RED ONI
 ![](docimg/OniLogo.png)
 
 ## Teh Intro
@@ -259,7 +258,7 @@ A playlist of several instrumental **Nine Inch Nails** tracks, ready to be poppe
 
 ## Compatibility
 
-**Doom** is pretty much the baseline here. **Heretic** support will be added later on but it won't be a high priority. In regards to **Hexen** I don't think it'd fit much both gameplay and story-wise. It's very likely that it'll remain solely **Doom** and **Heretic** compatible and nothing more. As there's not much id-specific here like there was with **SWWM GZ**, it could also work with **Freedoom**, I suppose.
+**Doom** is pretty much the baseline here. **Heretic** support will be added later on but it won't be a high priority. In regards to **Hexen** I don't think it'd fit much both gameplay and story-wise. It's very likely that it'll remain solely **Doom** and **Heretic** compatible and nothing more. As there's not much id-specific here like there was with the **Demolitionist** mod, it could also work with **Freedoom**, I suppose.
 
 Note: Playing through vanilla maps with this would be considered a storyline discrepancy, but I'm not gonna stop you.
 
