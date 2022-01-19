@@ -64,7 +64,7 @@ Shells are usually found in handfuls of 4, or in 12 round boxes.
 
 A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
-It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that, unlike her smaller companion. Has a propensity to turn squishy targets into meatloaf.
+It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that. Has a propensity to turn squishy targets into meatloaf.
 
 You can give it a spin with the utility key. You'd think this could be dual-wielded, but **Ibuki** doesn't see a need for that, one puppy is enough.
 
@@ -94,7 +94,7 @@ Found as either spare rounds or 20 round packs.
 
 A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big Tits)*. It's designed to handle **7.62mmMT** rounds, specifically, also of **ANFES** manufacture. **MT** ammunition is well-known for *"setting the air on fire"* as it travels, despite not containing any incendiary material.
 
-Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll start to fire on its own. Putting it in hammerspace will make it cool down faster.
+Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll quickly become an inaccurate mess. Putting it in hammerspace will make it cool down faster.
 
 #### 7.62×54mmMT *[Bullets]*
 

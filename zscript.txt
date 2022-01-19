@@ -17,6 +17,7 @@ const SWWMLOGONAME = "M_REDONI";
 const SWWMCREDITSCOL0 = Font.CR_DARKRED;
 const SWWMCREDITSCOL1 = Font.CR_RED;
 const SWWMCREDITSCOL2 = Font.CR_DARKGRAY;
+const SWWMMAXAMOUNT = 5;
 // Gutamatics
 #include "zscript/swwm_Gutamatics/Include.zsc"
 // utility code
