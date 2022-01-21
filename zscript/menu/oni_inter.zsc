@@ -4,8 +4,6 @@ Class OniStatScreen : StatusScreen
 	TextureID bgtex;
 	TextureID ibukitex[3];
 	TitleSmoke smk[128];
-	Shape2D smk_shape;
-	Shape2DTransform smk_tform;
 	TextureID smk_tex[8];
 	TextureID gradtex;
 	int glarestr;
@@ -48,7 +46,7 @@ Class OniStatScreen : StatusScreen
 				smk[i].vel = (FRandom[UIStuff](-1.,3.),FRandom[UIStuff](-2.,-6.));
 				smk[i].ang = FRandom[UIStuff](0.,360.);
 				smk[i].angvel = FRandom[UIStuff](1.,4.)*RandomPick[UIStuff](-1,1);
-				smk[i].scale = FRandom[UIStuff](256.,512.);
+				smk[i].scale = FRandom[UIStuff](2.,4.);
 			}
 			for ( int j=0; j<=presim; j++ )
 			{
@@ -61,21 +59,6 @@ Class OniStatScreen : StatusScreen
 	}
 	private void RenderSmokeLayer( double GameSecs, bool back, double alpha = 1., double disp = 0., bool zoomout = false )
 	{
-		if ( !smk_shape )
-		{
-			smk_shape = new("Shape2D");
-			smk_shape.PushVertex((-1,-1));
-			smk_shape.PushVertex((1,-1));
-			smk_shape.PushVertex((-1,1));
-			smk_shape.PushVertex((1,1));
-			smk_shape.PushCoord((0,0));
-			smk_shape.PushCoord((1,0));
-			smk_shape.PushCoord((0,1));
-			smk_shape.PushCoord((1,1));
-			smk_shape.PushTriangle(0,3,1);
-			smk_shape.PushTriangle(0,2,3);
-		}
-		if ( !smk_tform ) smk_tform = new("Shape2DTransform");
 		double zoomscl = Screen.GetHeight()/(zoomout?600:400.);
 		int imin = back?64:0;
 		int imax = back?128:64;
@@ -83,19 +66,12 @@ Class OniStatScreen : StatusScreen
 		for ( int i=imin; i<imax; i++ )
 		{
 			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
-			smk_tform.Clear();
-			// base transforms
-			smk_tform.Scale((1,1)*smk[i].scale);
-			smk_tform.Rotate(smk[i].ang+smk[i].angvel*FracTic);
-			smk_tform.Translate(smk[i].pos+smk[i].vel*FracTic);
-			// screen transforms
-			smk_tform.Translate((0,base+disp));
-			smk_tform.Scale((1,1)*zoomscl);
-			smk_tform.Translate((Screen.GetWidth()/2,0));
-			smk_shape.SetTransform(smk_tform);
+			Vector2 pos = (smk[i].pos+smk[i].vel*FracTic+(0,base+disp))*zoomscl+(Screen.GetWidth()/2,0);
+			double scl = smk[i].scale*zoomscl;
+			double ang = smk[i].ang+smk[i].angvel*FracTic;
 			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
 			alf *= clamp(smk[i].age/10.,0,1);
-			Screen.DrawShape(smk_tex[i%8],false,smk_shape,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(4,16,48));
+			Screen.DrawTexture(smk_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(48,16,4));
 		}
 	}
 	// heh
@@ -142,7 +118,7 @@ Class OniStatScreen : StatusScreen
 	{
 		if ( sp_state < 1 ) return 0;
 		double GameSecs = (bcnt+FracTic)/GameTicRate;
-		int th = (smallfont.GetHeight()*10+32)*CleanYFac_1; // height of the stats box + margin
+		int th = (smallfont.GetHeight()*(8+(!!wbs.partime)+(wbs.totaltime!=Plrs[me].stime))+32)*CleanYFac_1; // height of the stats box + margin
 		int bh = ((authortexts[0]!="")?(smallfont2.GetHeight()+smallfont.GetHeight()*2+bigfont.GetHeight()):(smallfont.GetHeight()*2+bigfont.GetHeight()))*CleanYFac_1; // height of the "level finished" box
 		double xx = Screen.GetWidth()/2-120*CleanXFac_1;
 		double yy = (Screen.GetHeight()-th)/2;
@@ -168,7 +144,7 @@ Class OniStatScreen : StatusScreen
 	}
 	override void DrawEL()
 	{
-		int th = (smallfont.GetHeight()*10+32)*CleanYFac_1; // height of the stats box + margin
+		int th = (smallfont.GetHeight()*(8+(!!wbs.partime)+(wbs.totaltime!=Plrs[me].stime))+32)*CleanYFac_1; // height of the stats box + margin
 		int bh = ((authortexts[1]!="")?(smallfont2.GetHeight()+smallfont.GetHeight()*2+bigfont.GetHeight()):(smallfont.GetHeight()*2+bigfont.GetHeight()))*CleanYFac_1; // height of the "level finished" box
 		double xx = Screen.GetWidth()/2-120*CleanXFac_1;
 		double yy = (Screen.GetHeight()+th)/2;
@@ -196,7 +172,7 @@ Class OniStatScreen : StatusScreen
 	override void drawStats( void )
 	{
 		if ( sp_state < 2 ) return;
-		int ne = (sp_state>=8)?10:(sp_state>=6)?6:(sp_state>=4)?4:2;
+		int ne = (sp_state>=8)?(8+(!!wbs.partime)+(wbs.totaltime!=Plrs[me].stime)):(sp_state>=6)?6:(sp_state>=4)?4:2;
 		int th = (smallfont.GetHeight()*ne)*CleanYFac_1; // height of the stats box
 		double xx = Screen.GetWidth()/2-120*CleanXFac_1;
 		double yy = (Screen.GetHeight()-th)/2;
@@ -231,9 +207,9 @@ Class OniStatScreen : StatusScreen
 		Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 		str = TimeStr(max(cnt_time,0));
 		Screen.DrawText(smallfont,(wbs.partime&&(cnt_time<=(wbs.partime/GameTicRate)))?Font.CR_WHITE:((wbs.sucktime>0)&&(cnt_time>(wbs.sucktime*3600)))?Font.CR_RED:Font.CR_DARKGRAY,xx+80*CleanXFac_1-smallfont.StringWidth(str)*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
-		yy += smallfont.GetHeight()*CleanYFac_1;
 		if ( wbs.partime )
 		{
+			yy += smallfont.GetHeight()*CleanYFac_1;
 			str = StringTable.Localize("$ONI_INTERPAR");
 			Screen.DrawText(smallfont,Font.CR_DARKRED,xx-80*CleanXFac_1,yy,str,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1);
 			str = TimeStr(max(cnt_par,0));
