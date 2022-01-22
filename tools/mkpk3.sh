@@ -7,10 +7,10 @@ if [ ! -d $LIBDIR ]; then
   exit 1
 fi
 DESTFILE=${WORKDIR}/../${MODNAME}${1}_m.pk3
-mkdir -p /tmp/tempwork
-pushd /tmp/tempwork
+TEMPDIR=$(mktemp -d)
+pushd ${TEMPDIR}
 cp -ar ${LIBDIR}/* .
 cp -ar ${WORKDIR}/* .
 7z a -tzip -mx=9 -x@tools/excl.lst -up0q0r2x2y2z1w2 ${DESTFILE} '*'
 popd
-rm -rf /tmp/tempwork
+rm -rf ${TEMPDIR}
