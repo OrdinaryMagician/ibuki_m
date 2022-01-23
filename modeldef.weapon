@@ -1,0 +1,127 @@
+// Weapon pickup models
+
+Model "OniBatter"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.04 0.04 0.04
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniAA12"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.04 0.04 0.04
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniBeagle"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.03 0.03 0.03
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniHRifle"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.04 0.04 0.04
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniMachinegun"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniExploder"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.06 0.06 0.06
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniPlasmaRifle"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniTankGun"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.07 0.07 0.07
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniSlayer"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILR"
+	Scale 0.06 0.06 0.06
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}

@@ -2,11 +2,57 @@
 
 extend Class SWWMHandler
 {
+	bool bonflip;	// h/a bonus flip-flop spawn counter
+
 	private bool ModReplacement( ReplaceEvent e )
 	{
-		if ( (e.Replacee is 'Backpack') || (e.Replacee is 'BagOfHolding') ) e.Replacement = 'HammerspaceEmbiggener';
+		if ( (e.Replacee is 'Chainsaw') || (e.Replacee is 'Gauntlets') ) e.Replacement = SWWMUtility.PickDoomSlot1();
+		else if ( (e.Replacee is 'Fist') || (e.Replacee is 'Staff') ) e.Replacement = 'OniUnarmed';
+		else if ( (e.Replacee is 'Pistol') || (e.Replacee is 'GoldWand') ) e.Replacement = 'OniAA12';
+		else if ( e.Replacee is 'Shotgun' ) e.Replacement = SWWMUtility.IsDoomOne()?SWWMUtility.PickDoomSlot3():(Class<Weapon>)('OniBeagle');	// ZScript pls
+		else if ( e.Replacee is 'SuperShotgun' ) e.Replacement = 'OniHRifle';
+		else if ( e.Replacee is 'Crossbow' ) e.Replacement = SWWMUtility.PickDoomSlot3();
+		else if ( (e.Replacee is 'Chaingun') || (e.Replacee is 'Blaster') ) e.Replacement = 'OniMachinegun';
+		else if ( (e.Replacee is 'RocketLauncher') || (e.Replacee is 'PhoenixRod') ) e.Replacement = 'OniExploder';
+		else if ( (e.Replacee is 'PlasmaRifle') || (e.Replacee is 'SkullRod') ) e.Replacement = 'OniPlasmaRifle';
+		else if ( (e.Replacee is 'BFG9000') || (e.Replacee is 'Mace') ) e.Replacement = 'OniTankGun';
+		else if ( e.Replacee is 'ClipBox' ) e.Replacement = 'OniBulletAmmoBig';
+		else if ( e.Replacee is 'Clip' ) e.Replacement = 'OniBulletAmmoSmall';
+		else if ( e.Replacee is 'ShellBox' ) e.Replacement = 'OniShellAmmoBig';
+		else if ( e.Replacee is 'Shell' ) e.Replacement = 'OniShellAmmoSmall';
+		else if ( e.Replacee is 'RocketBox' ) e.Replacement = 'OniRocketAmmoBig';
+		else if ( e.Replacee is 'RocketAmmo' ) e.Replacement = 'OniRocketAmmoSmall';
+		else if ( e.Replacee is 'CellPack' ) e.Replacement = 'OniCellAmmoBig';
+		else if ( e.Replacee is 'Cell' ) e.Replacement = 'OniCellAmmoSmall';
+		else if ( e.Replacee is 'GoldWandHefty' ) e.Replacement = 'OniWandAmmoBig';
+		else if ( e.Replacee is 'GoldWandAmmo' ) e.Replacement = 'OniWandAmmoSmall';
+		else if ( e.Replacee is 'CrossbowHefty' ) e.Replacement = 'OniCrossbowAmmoBig';
+		else if ( e.Replacee is 'CrossbowAmmo' ) e.Replacement = 'OniCrossbowAmmoSmall';
+		else if ( e.Replacee is 'BlasterHefty' ) e.Replacement = 'OniBlasterAmmoBig';
+		else if ( e.Replacee is 'BlasterAmmo' ) e.Replacement = 'OniBlasterAmmoSmall';
+		else if ( e.Replacee is 'PhoenixRodHefty' ) e.Replacement = 'OniPhoenixAmmoBig';
+		else if ( e.Replacee is 'PhoenixRodAmmo' ) e.Replacement = 'OniPhoenixAmmoSmall';
+		else if ( e.Replacee is 'SkullRodHefty' ) e.Replacement = 'OniSkullAmmoBig';
+		else if ( e.Replacee is 'SkullRodAmmo' ) e.Replacement = 'OniSkullAmmoSmall';
+		else if ( e.Replacee is 'MaceHefty' ) e.Replacement = 'OniMaceAmmoBig';
+		else if ( e.Replacee is 'MaceAmmo' ) e.Replacement = 'OniMaceAmmoSmall';
+		else if ( (e.Replacee is 'Backpack') || (e.Replacee is 'BagOfHolding') ) e.Replacement = 'HammerspaceEmbiggener';
+		else if ( e.Replacee is 'ArmorBonus' ) e.Replacement = 'OniSmallOil';
+		else if ( e.Replacee is 'HealthBonus' ) e.Replacement = 'OniSmallWater';
+		else if ( e.Replacee is 'ArtiTimeBomb' ) e.Replacement = (bonflip=!bonflip)?'OniSmallWater':'OniSmallOil';
+		else if ( (e.Replacee is 'Stimpack') || (e.Replacee is 'CrystalVial') ) e.Replacement = 'OniMedWater';
+		else if ( (e.Replacee is 'Medikit') || (e.Replacee is 'ArtiHealth') ) e.Replacement = 'OniLargeWater';
+		else if ( (e.Replacee is 'Soulsphere') || (e.Replacee is 'ArtiSuperHealth') ) e.Replacement = 'OniSpiritualStimulant';
+		else if ( (e.Replacee is 'Megasphere') || (e.Replacee is 'ArtiEgg') ) e.Replacement = 'OniSpiritualStimulant2';
+		else if ( (e.Replacee is 'Blursphere') || (e.Replacee is 'ArtiInvisibility') ) e.Replacement = 'OniLisaAmmo';
 		else if ( e.Replacee is 'Radsuit' ) e.Replacement = 'EBarrier';
+		else if ( (e.Replacee is 'ArtiFly') ) e.Replacement = 'OniAerialAmulet';
+		else if ( (e.Replacee is 'InvulnerabilitySphere') || (e.Replacee is 'ArtiInvulnerability') ) e.Replacement = 'OniMilkJug';
+		else if ( (e.Replacee is 'Berserk') || (e.Replacee == 'ArtiTomeOfPower') ) e.Replacement = 'OniVodka';
 		else if ( (e.Replacee is 'AllMap') || (e.Replacee is 'SuperMap') ) e.Replacement = 'Omnisight';
+		else if ( (e.Replacee is 'Infrared') || (e.Replacee is 'ArtiTorch') ) e.Replacement = 'OniVisor';
+		else if ( (e.Replacee is 'GreenArmor') || (e.Replacee is 'SilverShield') ) e.Replacement = 'OniMedOil';
+		else if ( (e.Replacee is 'BlueArmor') || (e.Replacee is 'EnchantedShield') ) e.Replacement = 'OniLargeOil';
 		else if ( e.Replacee is 'ArtiTeleport' ) e.Replacement = 'SafetyTether';
 		else return false;
 		return true;

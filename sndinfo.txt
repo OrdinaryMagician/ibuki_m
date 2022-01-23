@@ -11,4 +11,6 @@ aa12/boltforward	sounds/aa12/aa12_boltforward.ogg
 aa12/titlecock		sounds/aa12/aa12_titlecock.ogg
 aa12/titlefire		sounds/aa12/aa12_titlefire.ogg
 
+powerup/spiritstim	sounds/items/spiritstim.ogg
+
 title/thump	sounds/titlethump.ogg

@@ -1,0 +1,163 @@
+// Item pickup models
+
+Model "OniSmallOil"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILG"
+	Scale 0.02 0.02 0.02
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+Model "OniMedOil"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILG"
+	Scale 0.03 0.03 0.03
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+Model "OniLargeOil"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILG"
+	Scale 0.04 0.04 0.04
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniSmallWater"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILB"
+	Scale 0.02 0.02 0.02
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+Model "OniMedWater"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILB"
+	Scale 0.03 0.03 0.03
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+Model "OniLargeWater"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILB"
+	Scale 0.04 0.04 0.04
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+Model "OniSpiritualStimulant"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILB"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+Model "OniSpiritualStimulant2"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILB"
+	Scale 0.06 0.06 0.06
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniVisor"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILC"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniMilkJug"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILM"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniVodka"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILM"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}
+
+Model "OniAerialAmulet"
+{
+	Path "models/extra"
+
+	Model 0 "BaseCube_d.3d"
+	Skin 0 "CHIPTILM"
+	Scale 0.05 0.05 0.05
+	ZOffset 16
+	PitchOffset 30
+	ROTATING
+
+	FrameIndex XZW1 A 0 0
+}

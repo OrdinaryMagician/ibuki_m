@@ -10,5 +10,28 @@ extend Class SWWMUtility
 		return false;
 	}
 
-	// TODO slot replacers
+	// melee weapon first, then boar slayer
+	static Class<Weapon> PickDoomSlot1()
+	{
+		if ( CheckNeedsItem('OniBatter') ) return 'OniBatter';
+		return 'OniSlayer';
+	}
+	// either shotgun spawn (also used for Heretic)
+	static Class<Weapon> PickDoomSlot3()
+	{
+		// always slot 3 after map start, prevents shotgun guys from dropping super shotguns, which is weird af
+		if ( level.maptime ) return 'OniBeagle';
+		bool hasslot3 = !CheckNeedsItem('OniBeagle');
+		bool hasslot4 = !CheckNeedsItem('OniHRifle');
+		// if the player already has a slot 3 weapon...
+		if ( hasslot3 )
+		{
+			// ... and also has a slot 4 weapon, 33% chance of a slot 4 spawn
+			// otherwise, guaranteed slot 4 spawn
+			if ( hasslot4 && Random[Replacements](0,2) ) return 'OniBeagle';
+			return 'OniHRifle';
+		}
+		// otherwise, always spawn a slot 3 weapon first
+		return 'OniBeagle';
+	}
 }

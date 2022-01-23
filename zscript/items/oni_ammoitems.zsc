@@ -20,18 +20,30 @@ Class OniAA12Ammo : SWWMAmmo
 		SWWMAmmo.MagAmmoType "OniAA12Shell";
 		Ammo.DropAmount 1;
 	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
 }
 Class OniAA12Shell : MagAmmo
 {
 	Default
 	{
 		Tag "$T_ONIAA12SHELL";
-		MagAmmo.PickupTag "ONIAA12SSHELL";
+		MagAmmo.PickupTag "ONIAA12SHELL";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 32;
 		MagAmmo.ParentAmmo "OniAA12Ammo";
 		MagAmmo.ClipSize 32;
 		MagAmmo.BackpackAmount 8;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 Class OniAA12Shell_2 : OniAA12Shell
@@ -77,6 +89,12 @@ Class OniBeagleAmmo : SWWMAmmo
 		SWWMAmmo.MagAmmoType "OniBeagleRound";
 		Ammo.DropAmount 1;
 	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
 }
 Class OniBeagleAmmo_2 : OniBeagleAmmo
 {
@@ -96,6 +114,12 @@ Class OniBeagleRound : MagAmmo
 		MagAmmo.ParentAmmo "OniBeagleAmmo";
 		MagAmmo.ClipSize 7;
 		MagAmmo.BackpackAmount 4;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 Class OniBeagleRound_2 : OniBeagleRound
@@ -132,6 +156,12 @@ Class OniSledgeAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount7 55;
 		SWWMAmmo.EmbiggenMaxAmount8 60;
 		Ammo.DropAmount 2;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 Class OniSledgeAmmo_2 : OniSledgeAmmo
@@ -176,6 +206,12 @@ Class OniMachAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount7 700;
 		SWWMAmmo.EmbiggenMaxAmount8 800;
 		Ammo.DropAmount 20;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 Class OniMachAmmo_10 : OniMachAmmo
@@ -236,6 +272,12 @@ Class OniExploAmmo : SWWMAmmo
 		SWWMAmmo.MagAmmoType "OniExploRound";
 		Ammo.DropAmount 1;
 	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
 }
 Class OniExploRound : MagAmmo
 {
@@ -248,6 +290,12 @@ Class OniExploRound : MagAmmo
 		MagAmmo.ParentAmmo "OniExploAmmo";
 		MagAmmo.ClipSize 5;
 		MagAmmo.BackpackAmount 1;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 
@@ -270,6 +318,19 @@ Class OniPlasmaAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount8 19;
 		SWWMAmmo.MagAmmoType "OniPlasmaRound";
 		Ammo.DropAmount 1;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+Class OniPlasmaAmmo_2 : OniPlasmaAmmo
+{
+	Default
+	{
+		Inventory.Amount 2;
 	}
 }
 Class OniPlasmaRound : MagAmmo
@@ -307,6 +368,12 @@ Class OniWarheadAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount8 20;
 		Ammo.DropAmount 1;
 	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
 }
 
 Class OniBoarAmmo : SWWMAmmo
@@ -328,6 +395,12 @@ Class OniBoarAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount7 20;
 		SWWMAmmo.EmbiggenMaxAmount8 25;
 		Ammo.DropAmount 1;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }
 Class OniBoarAmmo_2 : OniBoarAmmo
@@ -351,6 +424,7 @@ Class OniLisaAmmo : SWWMAmmo
 	{
 		Tag "$T_ONILISA";
 		SWWMAmmo.PickupTag "ONILISA";
+		Inventory.Icon "graphics/HUD/Icons/A_OniLisaAmmo.png";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 5;
 		Ammo.BackpackAmount 0;
@@ -363,5 +437,11 @@ Class OniLisaAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount7 25;
 		SWWMAmmo.EmbiggenMaxAmount8 30;
 		Ammo.DropAmount 1;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
 	}
 }

@@ -1,0 +1,21 @@
+// purification in progress
+Class OniBatter : SWWMWeapon
+{
+	Default
+	{
+		Tag "$T_ONIBATTER";
+		Inventory.PickupMessage "$I_ONIBATTER";
+		SWWMWeapon.Tooltip "$TT_ONIBATTER";
+		Inventory.Icon "graphics/HUD/Icons/W_OniBatter.png";
+		Weapon.SlotNumber 0;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 1000;
+		+WEAPON.MELEEWEAPON;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

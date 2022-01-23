@@ -1,0 +1,29 @@
+// HAHA DAB
+Class OniHRifle : SWWMWeapon
+{
+	int clipcount;
+
+	Property ClipCount : clipcount;
+
+	Default
+	{
+		Tag "$T_ONIHRIFLE";
+		Inventory.PickupMessage "$I_ONIHRIFLE";
+		SWWMWeapon.Tooltip "$TT_ONIHRIFLE";
+		Inventory.Icon "graphics/HUD/Icons/W_OniHRifle.png";
+		Weapon.SlotNumber 4;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniSledgeAmmo";
+		Weapon.AmmoGive1 2;
+		SWWMWeapon.DropAmmoType "ShellBox";
+		OniHRifle.ClipCount 2;
+		+SWWMWEAPON.NOFIRSTGIVE;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

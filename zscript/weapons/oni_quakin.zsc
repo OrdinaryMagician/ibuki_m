@@ -1,0 +1,28 @@
+// Quake In Fear
+Class OniTankGun : SWWMWeapon
+{
+	bool chambered;
+
+	Default
+	{
+		Tag "$T_ONITANKGUN";
+		Inventory.PickupMessage "$I_ONITANKGUN";
+		SWWMWeapon.Tooltip "$TT_ONITANKGUN";
+		Inventory.Icon "graphics/HUD/Icons/W_OniTankGun.png";
+		Weapon.SlotNumber 8;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniWarheadAmmo";
+		Weapon.AmmoGive1 1;
+		SWWMWeapon.DropAmmoType "CellPack";
+		+SWWMWEAPON.NOFIRSTGIVE;
+		+WEAPON.EXPLOSIVE;
+		+WEAPON.BFG;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

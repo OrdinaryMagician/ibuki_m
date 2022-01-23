@@ -1,5 +1,22 @@
 // Door faceslam simulator
-
 Class OniUnarmed : SWWMWeapon
 {
+	Default
+	{
+		Tag "$T_ONIUNARMED";
+		Inventory.PickupMessage "$T_ONIUNARMED";
+		SWWMWeapon.Tooltip "$TT_ONIUNARMED";
+		Inventory.Icon "graphics/HUD/Icons/W_OniUnarmed.png";
+		Weapon.SlotNumber 1;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 1000;
+		+WEAPON.MELEEWEAPON;
+		+WEAPON.WIMPY_WEAPON;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
 }

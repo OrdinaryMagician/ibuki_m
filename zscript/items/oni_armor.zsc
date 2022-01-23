@@ -39,6 +39,7 @@ Class OniSmallOil : SWWMSpareArmor
 	Default
 	{
 		Tag "$T_ONISMALLOIL";
+		Inventory.Icon "graphics/HUD/Icons/I_OniSmallOil.png";
 		Inventory.PickupMessage "$T_ONISMALLOIL";
 		Inventory.MaxAmount 15;
 		Inventory.InterHubAmount 15;
@@ -57,6 +58,7 @@ Class OniMedOil : SWWMSpareArmor
 	Default
 	{
 		Tag "$T_ONIMEDOIL";
+		Inventory.Icon "graphics/HUD/Icons/I_OniMedOil.png";
 		Inventory.PickupMessage "$T_ONIMEDOIL";
 		Inventory.MaxAmount 10;
 		Inventory.InterHubAmount 10;
@@ -70,12 +72,13 @@ Class OniMedOil : SWWMSpareArmor
 		Stop;
 	}
 }
-Class OniBigOil : SWWMSpareArmor
+Class OniLargeOil : SWWMSpareArmor
 {
 	Default
 	{
-		Tag "$T_ONIBIGOIL";
-		Inventory.PickupMessage "$T_ONIBIGOIL";
+		Tag "$T_ONILARGEOIL";
+		Inventory.Icon "graphics/HUD/Icons/I_OniLargeOil.png";
+		Inventory.PickupMessage "$T_ONILARGEOIL";
 		Inventory.MaxAmount 5;
 		Inventory.InterHubAmount 5;
 		SWWMSpareArmor.GiveArmor "OniOilArmor";

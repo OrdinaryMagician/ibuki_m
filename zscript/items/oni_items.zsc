@@ -7,8 +7,14 @@ Class OniVisor : SWWMChargeItem
 	Default
 	{
 		Tag "$T_ONIVISOR";
+		Inventory.Icon "graphics/HUD/Icons/I_OniVisor.png";
 		Inventory.PickupMessage "$T_ONIVISOR";
 		SWWMChargeItem.Charge 60;
+	}
+
+	override String GetOnIcon()
+	{
+		return "graphics/HUD/Icons/I_OniVisorOn.png";
 	}
 
 	override void Activate( Actor activator )

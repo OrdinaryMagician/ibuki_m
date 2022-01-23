@@ -138,10 +138,78 @@ Class OniMilkJug : Inventory
 	Default
 	{
 		Tag "$T_ONIMILK";
-		Inventory.Icon "graphics/HUD/Icons/I_Milk.png";
+		Inventory.Icon "graphics/HUD/Icons/I_OniMilk.png";
 		Inventory.PickupSound "misc/p_pkup_vip";
 		Inventory.UseSound "powerup/milkuse";
 		Inventory.PickupMessage "$I_ONIMILK";
+		Inventory.MaxAmount 3;
+		Inventory.InterHubAmount 3;
+		Inventory.PickupFlash "SWWMPurplePickupFlash";
+		+INVENTORY.INVBAR;
+		+COUNTITEM;
+		+INVENTORY.BIGPOWERUP;
+		+FLOATBOB;
+		FloatBobStrength 0.25;
+	}
+
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+
+// TODO
+
+Class OniVodka : Inventory
+{
+	Mixin SWWMOverlapPickupSound;
+	Mixin SWWMUseToPickup;
+	Mixin SWWMRespawn;
+	Mixin SWWMPickupGlow;
+	Mixin SWWMCountNoPickup;
+
+	Default
+	{
+		Tag "$T_ONIVODKA";
+		Inventory.Icon "graphics/HUD/Icons/I_OniVodka.png";
+		Inventory.PickupSound "misc/p_pkup_vip";
+		Inventory.UseSound "powerup/vodkause";
+		Inventory.PickupMessage "$I_ONIVODKA";
+		Inventory.MaxAmount 3;
+		Inventory.InterHubAmount 3;
+		Inventory.PickupFlash "SWWMPurplePickupFlash";
+		+INVENTORY.INVBAR;
+		+COUNTITEM;
+		+INVENTORY.BIGPOWERUP;
+		+FLOATBOB;
+		FloatBobStrength 0.25;
+	}
+
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
+
+Class OniAerialAmulet : Inventory
+{
+	Mixin SWWMOverlapPickupSound;
+	Mixin SWWMUseToPickup;
+	Mixin SWWMRespawn;
+	Mixin SWWMPickupGlow;
+	Mixin SWWMCountNoPickup;
+
+	Default
+	{
+		Tag "$T_ONIFLIGHT";
+		Inventory.Icon "graphics/HUD/Icons/I_OniFlight.png";
+		Inventory.PickupSound "misc/p_pkup_vip";
+		Inventory.UseSound "powerup/flightuse";
+		Inventory.PickupMessage "$I_ONIFLIGHT";
 		Inventory.MaxAmount 3;
 		Inventory.InterHubAmount 3;
 		Inventory.PickupFlash "SWWMPurplePickupFlash";

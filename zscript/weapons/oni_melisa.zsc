@@ -1,0 +1,30 @@
+// Melones
+Class OniMachinegun : SWWMWeapon
+{
+	int clipcount;
+
+	Property ClipCount : clipcount;
+
+	Default
+	{
+		Tag "$T_ONIMACHINEGUN";
+		Inventory.PickupMessage "$I_ONIMACHINEGUN";
+		SWWMWeapon.Tooltip "$TT_ONIMACHINEGUN";
+		Inventory.Icon "graphics/HUD/Icons/W_OniMachinegun.png";
+		Weapon.SlotNumber 5;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniMachAmmo";
+		Weapon.AmmoGive1 200;
+		SWWMWeapon.DropAmmoType "ClipBox";
+		OniMachinegun.ClipCount 200;
+		+SWWMWEAPON.NOFIRSTGIVE;
+		+WEAPON.EXPLOSIVE;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

@@ -1,4 +1,29 @@
 // The sweets addict
 Class OniAA12 : SWWMWeapon
 {
+	int clipcount;
+
+	Property ClipCount : clipcount;
+
+	Default
+	{
+		Tag "$T_ONISHOTGUN";
+		Inventory.PickupMessage "$I_ONISHOTGUN";
+		SWWMWeapon.Tooltip "$TT_ONISHOTGUN";
+		Inventory.Icon "graphics/HUD/Icons/W_OniShotgun.png";
+		Weapon.SlotNumber 2;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniAA12Ammo";
+		Weapon.AmmoGive1 1;
+		SWWMWeapon.DropAmmoType "Clip";
+		OniAA12.ClipCount 32;
+		+SWWMWEAPON.NOFIRSTGIVE;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
 }

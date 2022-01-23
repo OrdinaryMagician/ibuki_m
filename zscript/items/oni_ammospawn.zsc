@@ -1,15 +1,15 @@
 // ammo spawners for Ibuki mod
 
-// TODO just fallbacks for now
-
 // Doom
 Class OniBulletAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'Clip';
+		if ( !Random[Replacements](0,2) && SWWMUtility.ItemExists('OniMachinegun') )
+			return Random[Replacements](0,2)?'OniMachAmmo_10':'OniMachAmmo_20';
+		return Random[Replacements](0,2)?'OniAA12Shell':'OniAA12Shell_2';
 	}
 }
 Class OniBulletAmmoBig : SWWMAmmoSpawner
@@ -18,16 +18,22 @@ Class OniBulletAmmoBig : SWWMAmmoSpawner
 
 	static Class<Actor> PickAmmo()
 	{
-		return 'ClipBox';
+		if ( SWWMUtility.ItemExists('OniMachinegun') )
+			return Random[Replacements](0,2)?'OniMachAmmo_100':'OniMachAmmo_200';
+		return 'OniAA12Shell_12';
 	}
 }
 Class OniShellAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'Shell';
+		if ( Random[Replacements](0,1) && SWWMUtility.ItemExists('OniHRifle') )
+			return Random[Replacements](0,2)?'OniSledgeAmmo':'OniSledgeAmmo_2';
+		if ( Random[Replacements](0,1) && SWWMUtility.ItemExists('OniBeagle') )
+			return Random[Replacements](0,2)?'OniBeagleRound_2':'OniBeagleRound_3';
+		return 'OniAA12Shell_4';
 	}
 }
 Class OniShellAmmoBig : SWWMAmmoSpawner
@@ -36,16 +42,22 @@ Class OniShellAmmoBig : SWWMAmmoSpawner
 
 	static Class<Actor> PickAmmo()
 	{
-		return 'ShellBox';
+		if ( Random[Replacements](0,1) && SWWMUtility.ItemExists('OniHRifle') )
+			return 'OniSledgeAmmo_10';
+		if ( Random[Replacements](0,1) && SWWMUtility.ItemExists('OniBeagle') )
+			return Random[Replacements](0,2)?'OniBeagleAmmo':'OniBeagleAmmo_2';
+		return 'OniAA12Shell_12';
 	}
 }
 Class OniRocketAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'RocketAmmo';
+		if ( !Random[Replacements](0,2) && SWWMUtility.ItemExists('OniSlayer') )
+			return 'OniBoarAmmo';
+		return 'OniExploRound';
 	}
 }
 Class OniRocketAmmoBig : SWWMAmmoSpawner
@@ -54,16 +66,20 @@ Class OniRocketAmmoBig : SWWMAmmoSpawner
 
 	static Class<Actor> PickAmmo()
 	{
-		return 'RocketBox';
+		if ( !Random[Replacements](0,2) && SWWMUtility.ItemExists('OniSlayer') )
+			return Random[Replacements](0,2)?'OniBoarAmmo_2':'OniBoarAmmo_3';
+		return 'OniExploAmmo';
 	}
 }
 Class OniCellAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'Cell';
+		if ( !Random[Replacements](0,7) && SWWMUtility.ItemExists('OniTankGun') )
+			return 'OniWarheadAmmo';
+		return 'OniPlasmaAmmo';
 	}
 }
 Class OniCellAmmoBig : SWWMAmmoSpawner
@@ -72,7 +88,9 @@ Class OniCellAmmoBig : SWWMAmmoSpawner
 
 	static Class<Actor> PickAmmo()
 	{
-		return 'CellPack';
+		if ( !Random[Replacements](0,2) && SWWMUtility.ItemExists('OniTankGun') )
+			return 'OniWarheadAmmo';
+		return 'OniPlasmaAmmo_2';
 	}
 }
 
@@ -81,107 +99,115 @@ Class OniWandAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'GoldWandAmmo';
+		return Random[Replacements](0,2)?'OniAA12Shell_2':'OniAA12Shell_4';
 	}
 }
 Class OniWandAmmoBig : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'GoldWandHefty';
+		return 'OniAA12Shell_12';
 	}
 }
 Class OniCrossbowAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'CrossbowAmmo';
+		if ( Random[Replacements](0,1) && SWWMUtility.ItemExists('OniHRifle') )
+			return Random[Replacements](0,2)?'OniSledgeAmmo':'OniSledgeAmmo_2';
+		return Random[Replacements](0,2)?'OniBeagleRound_2':'OniBeagleRound_3';
 	}
 }
 Class OniCrossbowAmmoBig : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'CrossbowHefty';
+		if ( Random[Replacements](0,1) && SWWMUtility.ItemExists('OniHRifle') )
+			return 'OniSledgeAmmo_10';
+		return Random[Replacements](0,2)?'OniBeagleAmmo':'OniBeagleAmmo_2';
 	}
 }
 Class OniBlasterAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'BlasterAmmo';
+		return Random[Replacements](0,2)?'OniMachAmmo10':'OniMachAmmo20';
 	}
 }
 Class OniBlasterAmmoBig : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'BlasterHefty';
+		return Random[Replacements](0,2)?'OniMachAmmo100':'OniMachAmmo200';
 	}
 }
 Class OniPhoenixAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'PhoenixRodAmmo';
+		if ( !Random[Replacements](0,2) && SWWMUtility.ItemExists('OniSlayer') )
+			return 'OniBoarAmmo';
+		return 'OniExploRound';
 	}
 }
 Class OniPhoenixAmmoBig : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'PhoenixRodHefty';
+		if ( !Random[Replacements](0,2) && SWWMUtility.ItemExists('OniSlayer') )
+			return Random[Replacements](0,2)?'OniBoarAmmo_2':'OniBoarAmmo_3';
+		return 'OniExploAmmo';
 	}
 }
 Class OniSkullAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'SkullRodAmmo';
+		return 'OniPlasmaAmmo';
 	}
 }
 Class OniSkullAmmoBig : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'SkullRodHefty';
+		return 'OniPlasmaAmmo_2';
 	}
 }
 Class OniMaceAmmoSmall : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'MaceAmmo';
+		return 'OniWarheadAmmo';
 	}
 }
 Class OniMaceAmmoBig : SWWMAmmoSpawner
 {
 	Mixin SWWMOndemandAmmoSpawner;
 
-	static Class<Ammo> PickAmmo()
+	static Class<Actor> PickAmmo()
 	{
-		return 'MaceHefty';
+		return 'OniWarheadAmmo';
 	}
 }

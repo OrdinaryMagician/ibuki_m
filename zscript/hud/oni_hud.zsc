@@ -331,7 +331,7 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
 		// extra, draw additional stuff next to inventory box
-		/*bAlwaysAboveInv = false;
+		bAlwaysAboveInv = false;
 		double xx = margin+28;
 		let gren = CPlayer.mo.FindInventory("OniLisaAmmo");
 		if ( gren && gren.Amount )
@@ -343,7 +343,7 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawTexture(gren.Icon,false,xx+2,yy+2,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			str = String.Format("%2d",clamp(gren.Amount,0,99));
 			Screen.DrawText(MiniHUDFont,mhudfontcol[sel?MCR_BRASS:MCR_WHITE],xx+10,yy+12,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
-		}*/
+		}
 		return (ot>0)?46:36;
 	}
 }

@@ -86,7 +86,7 @@ Holding the utility key will switch to two-shot mode, for when you truly want so
 
 *"I don't think these really are that OMG-worthy, I've seen bigger."*
 
-Found as either spare rounds or 20 round packs.
+Found as either spare rounds or 10 round packs.
 
 ### Slot 5 - ANFES "Melisa" Machine Gun *[Chaingun]*
 

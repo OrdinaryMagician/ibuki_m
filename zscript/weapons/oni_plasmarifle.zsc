@@ -1,0 +1,30 @@
+// Get Psyked
+Class OniPlasmaRifle : SWWMWeapon
+{
+	int clipcount;
+
+	Property ClipCount : clipcount;
+
+	Default
+	{
+		Tag "$T_ONIPLASMARIFLE";
+		Inventory.PickupMessage "$I_ONIPLASMARIFLE";
+		SWWMWeapon.Tooltip "$TT_ONIPLASMARIFLE";
+		Inventory.Icon "graphics/HUD/Icons/W_OniPlasmaRifle.png";
+		Weapon.SlotNumber 7;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniPlasmaAmmo";
+		Weapon.AmmoGive1 1;
+		SWWMWeapon.DropAmmoType "Cell";
+		OniPlasmaRifle.ClipCount 30;
+		+SWWMWEAPON.NOFIRSTGIVE;
+		+WEAPON.EXPLOSIVE;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

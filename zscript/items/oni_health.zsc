@@ -22,6 +22,7 @@ Class OniSmallWater : SWWMHealth
 	Default
 	{
 		Tag "$T_ONISMALLWATER";
+		Inventory.Icon "graphics/HUD/Icons/I_OniSmallWater.png";
 		Inventory.PickupMessage "$T_ONISMALLWATER";
 		Inventory.MaxAmount 15;
 		Inventory.InterHubAmount 15;
@@ -40,6 +41,7 @@ Class OniMedWater : SWWMHealth
 	Default
 	{
 		Tag "$T_ONIMEDWATER";
+		Inventory.Icon "graphics/HUD/Icons/I_OniMedWater.png";
 		Inventory.PickupMessage "$T_ONIMEDWATER";
 		Inventory.MaxAmount 10;
 		Inventory.InterHubAmount 10;
@@ -53,12 +55,13 @@ Class OniMedWater : SWWMHealth
 		Stop;
 	}
 }
-Class OniBigWater : SWWMHealth
+Class OniLargeWater : SWWMHealth
 {
 	Default
 	{
-		Tag "$T_ONIBIGWATER";
-		Inventory.PickupMessage "$T_ONIBIGWATER";
+		Tag "$T_ONILARGEWATER";
+		Inventory.Icon "graphics/HUD/Icons/I_OniLargeWater.png";
+		Inventory.PickupMessage "$T_ONILARGEWATER";
 		Inventory.MaxAmount 5;
 		Inventory.InterHubAmount 5;
 		SWWMHealth.GiveHealth "OniBasicHeal";
@@ -86,6 +89,7 @@ Class OniSpiritualStimulant : SWWMHealth
 		+COUNTITEM;
 		+INVENTORY.ALWAYSPICKUP;
 		+INVENTORY.BIGPOWERUP;
+		-INVENTORY.INVBAR;
 	}
 	States
 	{
@@ -109,6 +113,7 @@ Class OniSpiritualStimulant2 : SWWMHealth
 		+COUNTITEM;
 		+INVENTORY.ALWAYSPICKUP;
 		+INVENTORY.BIGPOWERUP;
+		-INVENTORY.INVBAR;
 	}
 	States
 	{

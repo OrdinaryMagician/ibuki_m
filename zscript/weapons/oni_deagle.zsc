@@ -1,0 +1,30 @@
+// The 🅱rave 🅱eagle
+Class OniBeagle : SWWMWeapon
+{
+	int clipcount;
+	bool chambered;
+
+	Property ClipCount : clipcount;
+
+	Default
+	{
+		Tag "$T_ONIBEAGLE";
+		Inventory.PickupMessage "$I_ONIBEAGLE";
+		SWWMWeapon.Tooltip "$TT_ONIBEAGLE";
+		Inventory.Icon "graphics/HUD/Icons/W_OniBeagle.png";
+		Weapon.SlotNumber 3;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniBeagleAmmo";
+		Weapon.AmmoGive1 1;
+		SWWMWeapon.DropAmmoType "Shell";
+		OniBeagle.ClipCount 7;
+		+SWWMWEAPON.NOFIRSTGIVE;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}

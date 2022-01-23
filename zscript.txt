@@ -56,6 +56,7 @@ const SWWMMAXAMOUNT = 5;
 #include "zscript/items/swwm_basehealth.zsc"
 #include "zscript/items/swwm_basearmor.zsc"
 #include "zscript/items/swwm_baseammo.zsc"
+#include "zscript/items/swwm_keys.zsc"
 #include "zscript/items/swwm_ammoextra.zsc"
 #include "zscript/items/swwm_ebarrier.zsc"
 #include "zscript/items/swwm_omnisight.zsc"
@@ -110,3 +111,5 @@ const SWWMMAXAMOUNT = 5;
 #include "zscript/weapons/oni_biggun_fx.zsc"
 #include "zscript/weapons/oni_batter.zsc"
 #include "zscript/weapons/oni_batter_fx.zsc"
+#include "zscript/weapons/oni_lisa.zsc"
+#include "zscript/weapons/oni_lisa_fx.zsc"

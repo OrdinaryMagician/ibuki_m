@@ -1,0 +1,30 @@
+// The Ultimate Problem Solver
+Class OniExploder : SWWMWeapon
+{
+	int clipcount;
+
+	Property ClipCount : clipcount;
+
+	Default
+	{
+		Tag "$T_ONIEXPLODER";
+		Inventory.PickupMessage "$I_ONIEXPLODER";
+		SWWMWeapon.Tooltip "$TT_ONIEXPLODER";
+		Inventory.Icon "graphics/HUD/Icons/W_OniExploder.png";
+		Weapon.SlotNumber 6;
+		Weapon.SlotPriority 1.;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoType1 "OniExploAmmo";
+		Weapon.AmmoGive1 1;
+		SWWMWeapon.DropAmmoType "RocketAmmo";
+		OniExploder.ClipCount 5;
+		+SWWMWEAPON.NOFIRSTGIVE;
+		+WEAPON.EXPLOSIVE;
+	}
+	States
+	{
+	Spawn:
+		XZW1 A -1;
+		Stop;
+	}
+}
