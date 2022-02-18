@@ -7,16 +7,16 @@ Class OniAA12Ammo : SWWMAmmo
 		Tag "$T_ONIAA12AMMO";
 		SWWMAmmo.PickupTag "ONIAA12AMMO";
 		Inventory.Amount 1;
-		Inventory.MaxAmount 3;
+		Inventory.MaxAmount 4;
 		Ammo.BackpackAmount 0;
-		SWWMAmmo.EmbiggenMaxAmount1 4;
-		SWWMAmmo.EmbiggenMaxAmount2 5;
-		SWWMAmmo.EmbiggenMaxAmount3 7;
-		SWWMAmmo.EmbiggenMaxAmount4 9;
-		SWWMAmmo.EmbiggenMaxAmount5 11;
-		SWWMAmmo.EmbiggenMaxAmount6 14;
-		SWWMAmmo.EmbiggenMaxAmount7 15;
-		SWWMAmmo.EmbiggenMaxAmount8 19;
+		SWWMAmmo.EmbiggenMaxAmount1 5;
+		SWWMAmmo.EmbiggenMaxAmount2 7;
+		SWWMAmmo.EmbiggenMaxAmount3 9;
+		SWWMAmmo.EmbiggenMaxAmount4 11;
+		SWWMAmmo.EmbiggenMaxAmount5 14;
+		SWWMAmmo.EmbiggenMaxAmount6 15;
+		SWWMAmmo.EmbiggenMaxAmount7 19;
+		SWWMAmmo.EmbiggenMaxAmount8 23;
 		SWWMAmmo.MagAmmoType "OniAA12Shell";
 		Ammo.DropAmount 1;
 	}
@@ -76,16 +76,16 @@ Class OniBeagleAmmo : SWWMAmmo
 		Tag "$T_ONIBEAGLEAMMO";
 		SWWMAmmo.PickupTag "ONIBEAGLEAMMO";
 		Inventory.Amount 1;
-		Inventory.MaxAmount 4;
+		Inventory.MaxAmount 7;
 		Ammo.BackpackAmount 0;
-		SWWMAmmo.EmbiggenMaxAmount1 7;
-		SWWMAmmo.EmbiggenMaxAmount2 8;
-		SWWMAmmo.EmbiggenMaxAmount3 10;
-		SWWMAmmo.EmbiggenMaxAmount4 13;
-		SWWMAmmo.EmbiggenMaxAmount5 15;
-		SWWMAmmo.EmbiggenMaxAmount6 18;
-		SWWMAmmo.EmbiggenMaxAmount7 21;
-		SWWMAmmo.EmbiggenMaxAmount8 24;
+		SWWMAmmo.EmbiggenMaxAmount1 8;
+		SWWMAmmo.EmbiggenMaxAmount2 10;
+		SWWMAmmo.EmbiggenMaxAmount3 13;
+		SWWMAmmo.EmbiggenMaxAmount4 15;
+		SWWMAmmo.EmbiggenMaxAmount5 18;
+		SWWMAmmo.EmbiggenMaxAmount6 21;
+		SWWMAmmo.EmbiggenMaxAmount7 24;
+		SWWMAmmo.EmbiggenMaxAmount8 27;
 		SWWMAmmo.MagAmmoType "OniBeagleRound";
 		Ammo.DropAmount 1;
 	}
@@ -145,16 +145,16 @@ Class OniSledgeAmmo : SWWMAmmo
 		SWWMAmmo.PickupTag "ONISURVIVORROUND";
 		Inventory.PickupSound "misc/bullet_pkup";
 		Inventory.Amount 1;
-		Inventory.MaxAmount 20;
+		Inventory.MaxAmount 40;
 		Ammo.BackpackAmount 4;
-		SWWMAmmo.EmbiggenMaxAmount1 25;
-		SWWMAmmo.EmbiggenMaxAmount2 30;
-		SWWMAmmo.EmbiggenMaxAmount3 35;
-		SWWMAmmo.EmbiggenMaxAmount4 40;
-		SWWMAmmo.EmbiggenMaxAmount5 45;
-		SWWMAmmo.EmbiggenMaxAmount6 50;
-		SWWMAmmo.EmbiggenMaxAmount7 55;
-		SWWMAmmo.EmbiggenMaxAmount8 60;
+		SWWMAmmo.EmbiggenMaxAmount1 45;
+		SWWMAmmo.EmbiggenMaxAmount2 50;
+		SWWMAmmo.EmbiggenMaxAmount3 55;
+		SWWMAmmo.EmbiggenMaxAmount4 60;
+		SWWMAmmo.EmbiggenMaxAmount5 70;
+		SWWMAmmo.EmbiggenMaxAmount6 80;
+		SWWMAmmo.EmbiggenMaxAmount7 90;
+		SWWMAmmo.EmbiggenMaxAmount8 100;
 		Ammo.DropAmount 2;
 	}
 	States
@@ -201,10 +201,10 @@ Class OniMachAmmo : SWWMAmmo
 		SWWMAmmo.EmbiggenMaxAmount2 500;
 		SWWMAmmo.EmbiggenMaxAmount3 500;
 		SWWMAmmo.EmbiggenMaxAmount4 600;
-		SWWMAmmo.EmbiggenMaxAmount5 600;
-		SWWMAmmo.EmbiggenMaxAmount6 700;
-		SWWMAmmo.EmbiggenMaxAmount7 700;
-		SWWMAmmo.EmbiggenMaxAmount8 800;
+		SWWMAmmo.EmbiggenMaxAmount5 700;
+		SWWMAmmo.EmbiggenMaxAmount6 800;
+		SWWMAmmo.EmbiggenMaxAmount7 800;
+		SWWMAmmo.EmbiggenMaxAmount8 900;
 		Ammo.DropAmount 20;
 	}
 	States
@@ -251,16 +251,16 @@ Class OniExploAmmo : SWWMAmmo
 		Tag "$T_ONIEXPLODERAMMO";
 		SWWMAmmo.PickupTag "ONIEXPLODERAMMO";
 		Inventory.Amount 1;
-		Inventory.MaxAmount 2;
+		Inventory.MaxAmount 3;
 		Ammo.BackpackAmount 0;
-		SWWMAmmo.EmbiggenMaxAmount1 3;
-		SWWMAmmo.EmbiggenMaxAmount2 4;
-		SWWMAmmo.EmbiggenMaxAmount3 5;
-		SWWMAmmo.EmbiggenMaxAmount4 7;
-		SWWMAmmo.EmbiggenMaxAmount5 9;
-		SWWMAmmo.EmbiggenMaxAmount6 11;
-		SWWMAmmo.EmbiggenMaxAmount7 14;
-		SWWMAmmo.EmbiggenMaxAmount8 19;
+		SWWMAmmo.EmbiggenMaxAmount1 4;
+		SWWMAmmo.EmbiggenMaxAmount2 5;
+		SWWMAmmo.EmbiggenMaxAmount3 7;
+		SWWMAmmo.EmbiggenMaxAmount4 9;
+		SWWMAmmo.EmbiggenMaxAmount5 11;
+		SWWMAmmo.EmbiggenMaxAmount6 14;
+		SWWMAmmo.EmbiggenMaxAmount7 19;
+		SWWMAmmo.EmbiggenMaxAmount8 23;
 		SWWMAmmo.MagAmmoType "OniExploRound";
 		Ammo.DropAmount 1;
 	}
