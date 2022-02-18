@@ -19,7 +19,7 @@ Class OniBulletAmmoBig : SWWMAmmoSpawner
 	static Class<Actor> PickAmmo()
 	{
 		if ( SWWMUtility.ItemExists('OniMachinegun') )
-			return Random[Replacements](0,2)?'OniMachAmmo_100':'OniMachAmmo_200';
+			return Random[Replacements](0,2)?'OniMachAmmo_50':'OniMachAmmo_100';
 		return 'OniAA12Shell_12';
 	}
 }
@@ -150,7 +150,7 @@ Class OniBlasterAmmoBig : SWWMAmmoSpawner
 
 	static Class<Actor> PickAmmo()
 	{
-		return Random[Replacements](0,2)?'OniMachAmmo100':'OniMachAmmo200';
+		return Random[Replacements](0,2)?'OniMachAmmo50':'OniMachAmmo100';
 	}
 }
 Class OniPhoenixAmmoSmall : SWWMAmmoSpawner

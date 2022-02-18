@@ -243,14 +243,6 @@ Class OniMachAmmo_100 : OniMachAmmo
 		Inventory.PickupSound "misc/ammo_pkup";	// packaged
 	}
 }
-Class OniMachAmmo_200 : OniMachAmmo
-{
-	Default
-	{
-		Inventory.Amount 200;
-		Inventory.PickupSound "misc/ammo_pkup";	// packaged
-	}
-}
 
 Class OniExploAmmo : SWWMAmmo
 {

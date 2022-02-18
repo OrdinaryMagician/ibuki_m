@@ -74,6 +74,7 @@ ONI_TITLEPRESENTSB = "presenta";
 ONI_TITLEMODBYA = "un mod de";
 ONI_TITLEINTROA = "\"y dijo entonces a su gente: no hagáis el mal, si no deseais";
 ONI_TITLEINTROB = "que caiga sobre vosotros la furia inflexible del \crONI ROJO\c-\"";
+// TODO title scrolls
 ONI_INTERDONE = "DOMINADO";
 ONI_INTERNEXT = "PRÓXIMA PARADA";
 ONI_INTERKILLS = "CAPULLOS MATADOS:";
@@ -140,3 +141,35 @@ TT_ONIBATTER =
 "\crFuego secundario\c- para bloquear, desvía balas.\n"
 "Pulsa la\crTecla de utilidad\c- para invocar una pelota,\n"
 "la cual puedes golpear luego con el primario.";
+// intermission tips
+ONI_INTERTIP = "Consejo #%d:";
+ONI_INTERTIP1 = "Mantenerse hidratado es muy importante.";
+ONI_INTERTIP2 = "El Vodka de Ellen te permite dar puñetazos muy fuertes.";
+ONI_INTERTIP3 = "Disparar demasiado rápido reduce tu puntería.";
+ONI_INTERTIP4 = "Apunta a los pies del enemigo con el ST-20 para hacerlo volar.";
+ONI_INTERTIP5 = "Ten cuidado, el aceite se quita en contacto con el agua.";
+ONI_INTERTIP6 = "Beber leche te da fuerza.";
+ONI_INTERTIP7 = "El Mata-Jabalíes es muy útil para eliminar jefes rápidamente.";
+ONI_INTERTIP8 = "El Purificador puede usarse para batear proyectiles enemigos.";
+ONI_INTERTIP9 = "Las cabezas nucleares del Quaker son muy destructivas, intenta mantener la distancia.";
+ONI_INTERTIP10 = "Puedes pisotear en el suelo para empujar enemigos cercanos mediante una tecla dedicada.";
+ONI_INTERTIP11 = "Ibuki se hunde rápidamente, pero por suerte puede respirar bajo el agua.";
+ONI_INTERTIP12 = "Tener piel a prueba de balas te protege contra ataques venenosos.";
+ONI_INTERTIP13 = "Puedes empujar enemigos menores al correr contra ellos.";
+ONI_INTERTIP14 = "Todo tu inventario está metido en tu escote. Es magia.";
+ONI_INTERTIP15 = "A Ibuki le encanta la morcilla Gallega. Con piñones, pero sin pasas.";
+ONI_INTERTIP16 = "La AA-12 es la herramienta perfecta para resolver problemas de una forma avanzada.";
+ONI_INTERTIP17 = "El Sabueso Valiente toma su nombre en honor a un perro famoso llamado Pipo.";
+ONI_INTERTIP18 = "Nadie sabe que significan las letras \"ST\" del ST-20.";
+ONI_INTERTIP19 = "El Superviviente es muy bueno para matar Nobles del Infierno.";
+ONI_INTERTIP20 = "No te preocupes si bebes demasiada agua. Ese problema se arregla entre niveles.";
+ONI_INTERTIP21 = "Los dispositivos LiSA se acoplan contra todo lo que los lances, incluyendo enemigos.";
+ONI_INTERTIP22 = "Este mod desafortunadamente no posee Tecnología Rompe Paredes™.";
+ONI_INTERTIP23 = "Hay un esqueleto dentro de ti.";
+ONI_INTERTIP24 = "El collar de Ibuki provee de protección extra contra daño en salud baja.";
+ONI_INTERTIP25 = "Si un enemigo te noquea, puedes volver a levantarte y zurrarle la badana.";
+ONI_INTERTIP26 = "Ibuki puede ser una persona muy amable y cariñosa.";
+ONI_INTERTIP27 = "Puedes aplastar enemigos al caerles encima.";
+ONI_INTERTIP28 = "Besa tu AA-12 de vez en cuando. Es una buena arma.";
+ONI_INTERTIP29 = "Ibuki produce dos litros de leche materna por semana.";
+ONI_INTERTIP30 = "Ibuki es nudista (aunque probablemente ya lo sabías).";

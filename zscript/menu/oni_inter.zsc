@@ -1,4 +1,10 @@
 // intermission stat screen
+Class OniStatScreenData : Thinker
+{
+	// to prevent repetition
+	Array<int> lasttip;
+}
+
 Class OniStatScreen : StatusScreen
 {
 	TextureID bgtex;
@@ -9,6 +15,9 @@ Class OniStatScreen : StatusScreen
 	int glarestr;
 	double FracTic;
 	int sndcnt;
+	int whichtip;
+	int tipalphastate;
+	double tipalpha;
 
 	override void Start( wbstartstruct wbstartstruct )
 	{
@@ -26,6 +35,7 @@ Class OniStatScreen : StatusScreen
 			authortexts[1] = lnametexts[1].Mid(iof+7);
 			lnametexts[1].Truncate(iof);
 		}
+		tipalpha = -1.;
 	}
 	override void StartMusic()
 	{
@@ -112,6 +122,55 @@ Class OniStatScreen : StatusScreen
 	}
 	private void drawSWWMFg()
 	{
+		let pdata = OniStatScreenData(ThinkerIterator.Create("OniStatScreenData",Thinker.STAT_STATIC).Next());
+		if ( !pdata )
+		{
+			pdata = new("OniStatScreenData");
+			pdata.ChangeStatNum(Thinker.STAT_STATIC);
+		}
+		// intermission tips at the bottom
+		if ( !whichtip )
+		{
+			int maxtip = StringTable.Localize("$ONI_NINTERTIP").ToInt();
+			Array<Int> ents;
+			ents.Clear();
+			for ( int i=1; i<=maxtip; i++ ) ents.Push(i);
+			if ( pdata.lasttip.Size() >= maxtip )
+			{
+				// exclude last one, start over
+				int excludeme = pdata.lasttip[pdata.lasttip.Size()-1];
+				ents.Delete(excludeme-1);
+				pdata.lasttip.Clear();
+			}
+			else
+			{
+				for ( int i=0; i<pdata.lasttip.Size(); i++ )
+				{
+					int f = ents.Find(pdata.lasttip[i]);
+					if ( f != ents.Size() )
+						ents.Delete(f);
+				}
+			}
+			whichtip = ents[Random[InterArt](0,ents.Size()-1)];
+			pdata.lasttip.Push(whichtip);
+		}
+		if ( tipalpha > 0. )
+		{
+			double alf = clamp(tipalpha+(FracTic/GameTicRate)*tipalphastate,0.,1.);
+			String stra = String.Format(StringTable.Localize("$ONI_INTERTIP"),whichtip);
+			String strb = StringTable.Localize("$ONI_INTERTIP"..whichtip);
+			int wb = smallfont.StringWidth(strb);
+			int tw = max(smallfont.StringWidth(stra),16+wb);
+			double xx = (Screen.GetWidth()-tw*CleanXFac_1)/2;
+			double yy = Screen.GetHeight()-60*CleanYFac_1;
+			if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
+			Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,yy+smallfont.GetHeight()*CleanYFac_1,DTA_DestWidth,400*CleanXFac_1,DTA_DestHeight,(smallfont.GetHeight()*2+8)*CleanYFac_1,DTA_Rotate,90,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.8*alf,DTA_TopOffset,256,DTA_LeftOffset,128);
+			Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,yy+smallfont.GetHeight()*CleanYFac_1,DTA_DestWidth,400*CleanXFac_1,DTA_DestHeight,(smallfont.GetHeight()*2+8)*CleanYFac_1,DTA_Rotate,270,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,.8*alf,DTA_TopOffset,256,DTA_LeftOffset,128);
+			Screen.DrawText(smallfont,Font.CR_RED,xx,yy,stra,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1,DTA_Alpha,alf);
+			yy += smallfont.GetHeight()*CleanYFac_1;
+			xx += (tw-wb)*CleanXFac_1;
+			Screen.DrawText(smallfont,Font.CR_WHITE,xx,yy,strb,DTA_ScaleX,CleanXFac_1,DTA_ScaleY,CleanYFac_1,DTA_Alpha,alf);
+		}
 		if ( glarestr > 0 ) Screen.Dim("Red",(clamp(glarestr/20.,0.,1.)**2)*.3,0,0,Screen.GetWidth(),Screen.GetHeight());
 	}
 	override int DrawLF()
@@ -254,15 +313,19 @@ Class OniStatScreen : StatusScreen
 		TickSmokeLayers();
 		glarestr = max(glarestr-1,0);
 		checkForAccelerate();
+		tipalpha = min(tipalpha+tipalphastate/double(GameTicRate),2.);
 		switch (CurState)
 		{
 		case StatCount:
+			tipalphastate = 1;
 			updateStats();
 			break;
 		case ShowNextLoc:
+			tipalphastate = -1;
 			updateShowNextLoc();
 			break;
 		case NoState:
+			tipalpha = 0.;
 			updateNoState();
 			break;
 		case LeavingIntermission:

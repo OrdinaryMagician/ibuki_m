@@ -100,7 +100,7 @@ Note that the weapon has a tendency to get real hot from extended fire, so give 
 
 *"Wait, you're telling me these aren't tracer rounds?"*
 
-Very likely to be found in 100 and 200 round belts.
+Very likely to be found in 100 round belts or lesser.
 
 ### Slot 6 - Kemet ST20 *[Rocket Launcher]*
 
