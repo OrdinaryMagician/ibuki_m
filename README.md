@@ -32,7 +32,7 @@ Most weapons have the usual obvious controls of primary fire to shoot, secondary
 
 Mag management is entirely hassle-free, as ammunition is autoloaded on-demand within Hammerspace.
 
-### Slot 1 - Unarmed *[Fist]*
+### Slot 1 - Unarmed *[Fist, Staff]*
 
 *"Sometimes you gotta do things manually."*
 
@@ -42,7 +42,7 @@ Primary fire punches, hold to punch harder. Secondary fire blocks, increasing da
 
 You can press the utility key to blow a magic kiss at enemies. Do note that your kisses are much stronger than **Demo-chan**'s.
 
-### Slot 2 - Ninnacht AA12 *[Pistol]*
+### Slot 2 - Ninnacht AA12 *[Pistol, Elven Wand]*
 
 *"The perfect tool for solving problems in an advanced way."*
 
@@ -52,13 +52,13 @@ While you'd usually just hold the trigger and let 'er unload, you can also use q
 
 Press the utility key to kiss the gun. It's a good gun.
 
-#### 12 Gauge *(#1 Buckshot)* *[Clip, Shells]*
+#### 12 Gauge *(#1 Buckshot)* *[Clip, Shells, Wand Crystals]*
 
 *"Small, but powerful."*
 
 Shells are usually found in handfuls of 4, or in 12 round boxes.
 
-### Slot 3 - Ninnacht .50 PE Brave Beagle *[Shotgun]*
+### Slot 3 - Ninnacht .50 PE Brave Beagle *[Shotgun, Ethereal Crossbow]*
 
 *"Oh, this puppy really does bite."*
 
@@ -68,13 +68,13 @@ It would seemingly kick like a mule, but Ibuki doesn't have much trouble with th
 
 You can give it a spin with the utility key. You'd think this could be dual-wielded, but **Ibuki** doesn't see a need for that, one puppy is enough.
 
-#### .50 PE *[Shells]*
+#### .50 PE *[Shells, Ethereal Arrows]*
 
 *"\*snicker\* Wait, it actually means THAT?"*
 
 Found in 7 round mags. Spare rounds may sometimes spawn too.
 
-### Slot 4 - Garrett MK.77 "Survivor" *[Super Shotgun]*
+### Slot 4 - Garrett MK.77 "Survivor" *[Super Shotgun, Ethereal Crossbow]*
 
 *"There WAS a hell knight..."*
 
@@ -82,13 +82,13 @@ Having miraculously come out unscathed from the **White Scar**, the **Garrett Gu
 
 Holding the utility key will switch to two-shot mode, for when you truly want something erased.
 
-#### .50 Oh My God *[Shells]*
+#### .50 Oh My God *[Shells, Ethereal Arrows]*
 
 *"I don't think these really are that OMG-worthy, I've seen bigger."*
 
 Found as either spare rounds or 10 round packs.
 
-### Slot 5 - ANFES "Melisa" Machine Gun *[Chaingun]*
+### Slot 5 - ANFES "Melisa" Machine Gun *[Chaingun, Dragon Claw]*
 
 *"I see we are kindred spirits, you and I."*
 
@@ -96,13 +96,13 @@ A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big
 
 Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll quickly become an inaccurate mess. Putting it in hammerspace will make it cool down faster.
 
-#### 7.62×54mmMT *[Bullets]*
+#### 7.62×54mmMT *[Bullets, Claw Orbs]*
 
 *"Wait, you're telling me these aren't tracer rounds?"*
 
 Very likely to be found in 100 round belts or lesser.
 
-### Slot 6 - Kemet ST20 *[Rocket Launcher]*
+### Slot 6 - Kemet ST20 *[Rocket Launcher, Phoenix Rod]*
 
 *"Ah yes, the ultimate problem solver. Just shoot them with this, and watch all those problems fly away."*
 
@@ -110,13 +110,13 @@ A man once thought about somehow custom-crafting **20mm tandem HEAT-MP** rounds,
 
 The fact that this weapon still exists and ammunition for it is still manufactured shows that there is **SOMEHOW** demand for something like this. The world is a strange place indeed.
 
-#### 20mm Mk.299 Tandem HEAT-MP *[Rockets]*
+#### 20mm Mk.299 Tandem HEAT-MP *[Rockets, Flame Orbs]*
 
 *"This... This is literally a tiny thermonuclear bomb squeezed into 20 millimeters... How?"*
 
 Usually found as single rounds or in 5 round packs. You're lucky that **Cyrus** knows a guy who knows another guy who can supply you with these on the field.
 
-### Slot 7 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle]*
+### Slot 7 - Cryptik "Psyker" Plasma Carbine *[Plasma Rifle, Hellstaff]*
 
 *"Ah... Now this is a blast from the past."*
 
@@ -126,25 +126,25 @@ Look, **Ibuki** just loves guns that have *"aged like a fine wine"*, and this is
 
 Unlike most other plasma weapons of modern times, the Psyker doesn't need to let others know it's a plasma weapon by constantly emitting light.
 
-#### Plasma Cell *[Cells]*
+#### Plasma Cell *[Cells, Runes]*
 
 *"Nice and simple, how things used to be before they started putting all those random fancy lights on them."*
 
 Plasma ammunition is generally found in **NATO** standard 60x72mm compressed argon cells. Each of these allows for 30 shots of the **Psyker**. Note that your autoloader has support for consolidating plasma charges too, so partial reloads won't be as wasteful.
 
-### Slot 8 - Cyrus "Quaker" Portable Cannon *[BFG 9000]*
+### Slot 8 - Cyrus "Quaker" Portable Cannon *[BFG 9000, Firemace]*
 
 *"This one's kinda hard to pull out of my cleavage, but it's worth it."*
 
 Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
 
-#### 120mm "Redeemer" Warhead *[Cells]*
+#### 120mm "Redeemer" Warhead *[Cells, Mace Spheres]*
 
 *"Adios, motherfucker..."*
 
 They're fairly hefty and stick out like a sore thumb. Still, they're somewhat rare to find. Redeemers have a fairly wide blast radius, cooking everything within range in less than a second.
 
-### Slot 9 - Areka "Boar Slayer" 50mm *[Chainsaw]*
+### Slot 9 - Areka "Boar Slayer" 50mm *[Chainsaw, Gauntlets of the Necromancer]*
 
 *"Got this one as a gift from a nice Xekkian girl. Oh, I still remember that night..."*
 
@@ -152,13 +152,13 @@ The **Boar Slayer** is clearly not meant for human use, but that's definitely no
 
 Ammo for this *(very large)* puppy is quite rare, but that's compensated by how devastating even a single shot can be. Takes 5 bullets in the mag plus one in the chamber, though usually just one bullet is enough to absolutely destroy several targets.
 
-#### 50mm Areka *[Rockets]*
+#### 50mm Areka *[Rockets, Flame Orbs]*
 
 *"... I wonder if... With that size..."*
 
 Available as either single rounds or bunches of 2 and 3. These things are absolute chonkers.
 
-### Slot 0 - The Purifier *[Chainsaw]*
+### Slot 0 - The Purifier *[Chainsaw, Gauntlets of the Necromancer]*
 
 *"Ah, the American pastime..."*
 
@@ -174,55 +174,55 @@ Should be noted that this weapon also allows you to strike at enemy projectiles 
 
 Gotta have some of these too to help in your adventure. **Ibuki** will happily hoard what she doesn't need to use right away. Items that are at max capacity will not be picked up, but nevertheless they will still be tallied and have their script specials activate when touched.
 
-### Water Bottle *[Health Bonus, Stimpack, Medikit]*
+### Water Bottle *[Health Bonus, Stimpack, Medikit, Crystal Vial, Quartz Flask]*
 
 *"I know a sizable number of people who should drink more of this, because they sure are thirsty..."*
 
 Staying hydrated is important. Available in three sizes, recovering 5 HP, 20 HP and 50 HP each.
 
-### Spiritual Stimulant *[Soulsphere, Megasphere]*
+### Spiritual Stimulant *[Soulsphere, Megasphere, Mystic Urn]*
 
 *"Ohhhhh... That feels good..."*
 
 A potent overheal of 100 HP with no upper cap whatsoever. Note that any healing above 100 will wear off over time, faster the higher it's at. Megaspheres are replaced by two of them, for a 200 HP boost.
 
-### Oil Bottle *[Armor Bonus, Green Armor, Blue Armor]*
+### Oil Bottle *[Armor Bonus, Green Armor, Blue Armor, Silver Shield, Enchanted Shield]*
 
 *"Time to oil up..."*
 
 Increases your damage resistance, somehow *(something about **Ibuki**'s skin)*. The more you rub on, the better. Note that going for a swim will cause you to rapidly lose this protection.
 
-### Hammerspace Embiggener *[Backpack]*
+### Hammerspace Embiggener *[Backpack, Bag of Holding]*
 
 *"Heh... Nerd..."*
 
 Lets you carry more ammo. Your plan allows for up to 8 expansions. In addition, each redeemed card comes with a free delivery of ammo for most of your weapons.
 
-### LiSA Room Tearing Device *[Blursphere]*
+### LiSA Room Tearing Device *[Blursphere, Shadowsphere, Morph Ovum]*
 
 *"Saya keeps laughing at the name of this thing. I don't really get it."*
 
 A very potent timed explosive. Make sure to take cover, because it hits hard. Used through a dedicated keybind, rather than the inventory bar.
 
-### Bootleg "Mischievous Ellen" Vodka *[Berserk]*
+### Bootleg "Mischievous Ellen" Vodka *[Berserk, Tome of Power]*
 
 *"Bottoms up!"*
 
 This will bring you back to full health and give you a fairly decent strength boost *(Enough to tear enemies apart with your bare hands)*. Do note however that **Ibuki**'s body metabolizes the drunkedness away quickly. Part of **Ellen**'s seemingly unending stash.
 
-### Omnisight *[Computer Map]*
+### Omnisight *[Computer Map, Map Scroll]*
 
 *"Good thing I brought along my tablet, or I'd get lost in this dump."*
 
 Fills out the data for your automap, basically.
 
-### Red Oni Milk Jug *[Invulnerability]*
+### Red Oni Milk Jug *[Invulnerability, Ring of Invincibility]*
 
 *"I taste so delicious~"*
 
 This thing can get you so pumped up you pretty much become unstoppable after chugging it. Talk about getting high off your own supply...
 
-### Glow Visor *[Lite-Amp]*
+### Glow Visor *[Lite-Amp, Torch]*
 
 *"Pretty sure this is the same model Ellen-san uses."*
 
