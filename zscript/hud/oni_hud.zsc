@@ -2,10 +2,13 @@
 
 Class OniStatusBar : SWWMStatusBar
 {
-	TextureID StatusTex, AmmoTex[3], InvExtraTex, WeaponTex, HealthTex[5], OilTex, GenTex[3];
-	Array<String> AmmoClasses, AmmoNames;
-	Array<int> AmmoFlash;		// flash when new ammo is received
-	Array<int> AmmoOldAmounts;	// to detect when to flash
+	TextureID StatusTex, AmmoTex, InvExtraTex, WeaponTex, HealthTex[5], OilTex, GenTex[3];
+	int AmmoFlash[9];		// flash when new ammo is received
+	int AmmoOldAmounts[9];		// to detect when to flash
+	int AmmoMaxFlash[8];		// flash when ammo max amount changes (bombs excluded)
+	int AmmoOldMaxAmounts[8];	// to detect when to flash
+	Class<SWWMAmmo> AmmoSlots[9];	// ammo type on each slot
+	String AmmoNames[8];		// ammo 4-letter names (9th isn't named)
 	int HealthFlash, OilFlash;	// flash when healing or gaining armor
 	int LastHealth, LastOil;	// to detect when to flash
 	int PulsePhase;	// for health pulsing
@@ -31,6 +34,42 @@ Class OniStatusBar : SWWMStatusBar
 		if ( oil > LastOil ) OilFlash = gametic+25;
 		LastHealth = hp;
 		LastOil = oil;
+		for ( int i=0; i<9; i++ )
+		{
+			let a = SWWMAmmo(CPlayer.mo.FindInventory(AmmoSlots[i]));
+			int amt = 0;
+			int maxamt = 0;
+			if ( a )
+			{
+				amt = a.Amount;
+				maxamt = a.MaxAmount;
+				if ( a.MagAmmoType )
+				{
+					let m = MagAmmo(CPlayer.mo.FindInventory(a.MagAmmoType));
+					if ( m )
+					{
+						amt *= m.ClipSize;
+						amt += m.Amount;
+						maxamt *= m.ClipSize;
+					}
+				}
+			}
+			else
+			{
+				let a = GetDefaultByType(AmmoSlots[i]);
+				maxamt = a.MaxAmount;
+				if ( a.MagAmmoType )
+				{
+					let m = GetDefaultByType(a.MagAmmoType);
+					maxamt *= m.ClipSize;
+				}
+			}
+			if ( amt > AmmoOldAmounts[i] ) AmmoFlash[i] = gametic+25;
+			AmmoOldAmounts[i] = amt;
+			if ( i >= 8 ) break;
+			if ( maxamt > AmmoOldMaxAmounts[i] ) AmmoMaxFlash[i] = gametic+25;
+			AmmoOldMaxAmounts[i] = maxamt;
+		}
 		if ( hp <= 0 )
 		{
 			PulsePhase = 0;
@@ -56,9 +95,7 @@ Class OniStatusBar : SWWMStatusBar
 	{
 		Super.Init();
 		StatusTex = TexMan.CheckForTexture("graphics/HUD/StatusBox.png",TexMan.Type_Any);
-		AmmoTex[0] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxTop.png",TexMan.Type_Any);
-		AmmoTex[1] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxLine.png",TexMan.Type_Any);
-		AmmoTex[2] = TexMan.CheckForTexture("graphics/HUD/AmmoBoxBottom.png",TexMan.Type_Any);
+		AmmoTex = TexMan.CheckForTexture("graphics/HUD/AmmoBox.png",TexMan.Type_Any);
 		InvExtraTex = TexMan.CheckForTexture("graphics/HUD/GrenadeBox.png",TexMan.Type_Any);
 		WeaponTex = TexMan.CheckForTexture("graphics/HUD/WeaponBox.png",TexMan.Type_Any);
 		HealthTex[0] = TexMan.CheckForTexture("graphics/HUD/HealthBar.png",TexMan.Type_Any);
@@ -81,26 +118,30 @@ Class OniStatusBar : SWWMStatusBar
 		LastHealth = CPlayer?CPlayer.health:100;
 		HealthInter = DynamicValueInterpolator.Create(0,.1,1,100);
 		OilInter = DynamicValueInterpolator.Create(0,.1,1,100);
-		AmmoClasses.Clear();
-		AmmoNames.Clear();
-		int lmp = Wads.CheckNumForFullName("ammotable.lst");
-		if ( lmp == -1 ) ThrowAbortException("'ammotable.lst' not found!");
-		String dat = Wads.ReadLump(lmp);
-		Array<String> list;
-		// fucking Windows
-		dat.Replace("\r","");
-		list.Clear();
-		dat.Split(list,"\n");
-		for ( int i=0; i<list.Size(); i++ )
+		AmmoSlots[0] = "OniAA12Ammo";
+		AmmoSlots[1] = "OniBeagleAmmo";
+		AmmoSlots[2] = "OniSledgeAmmo";
+		AmmoSlots[3] = "OniMachAmmo";
+		AmmoSlots[4] = "OniExploAmmo";
+		AmmoSlots[5] = "OniPlasmaAmmo";
+		AmmoSlots[6] = "OniWarheadAmmo";
+		AmmoSlots[7] = "OniBoarAmmo";
+		AmmoSlots[8] = "OniLisaAmmo";
+		AmmoNames[0] = "SHOT";
+		AmmoNames[1] = "PIST";
+		AmmoNames[2] = "RIFL";
+		AmmoNames[3] = "MACH";
+		AmmoNames[4] = "ROKT";
+		AmmoNames[5] = "PLAS";
+		AmmoNames[6] = "WARH";
+		AmmoNames[7] = "BOAR";
+		for ( int i=0; i<9; i++ )
 		{
-			if ( (list[i].Length() == 0) || (list[i].Left(1) == "#") || (list[i].Left(1) == "") )
-				continue;
-			int comma = list[i].IndexOf(",");
-			AmmoClasses.Push(list[i].Left(comma));
-			AmmoNames.Push(list[i].Mid(comma+1));
-			let a = (Class<Ammo>)(list[i].Left(comma));
-			AmmoFlash.Push(0);
-			AmmoOldAmounts.Push(int.min);
+			AmmoFlash[i] = 0;
+			AmmoOldAmounts[i] = int.min;
+			if ( i >= 8 ) break;
+			AmmoMaxFlash[i] = 0;
+			AmmoOldMaxAmounts[i] = int.min;
 		}
 	}
 
@@ -209,89 +250,83 @@ Class OniStatusBar : SWWMStatusBar
 			}
 		}
 		xx = ss.x-(margin+54);
-		yy = ss.y-(margin+18+AmmoClasses.Size()*6);
-		Screen.DrawTexture(AmmoTex[0],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		yy = ss.y-(margin+66);
+		Screen.DrawTexture(AmmoTex,false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		xx += 2;
 		yy += 2;
 		String str;
-		for ( int i=0; i<AmmoClasses.Size(); i++, yy+=6 )
+		for ( int i=0; i<8; i++, yy+=6 )
 		{
-			Screen.DrawTexture(AmmoTex[1],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			int amt, amax;
 			bool selected = false;
-			Class<Ammo> a = AmmoClasses[i];
-			if ( !a )
+			let a = AmmoSlots[i];
+			let cur = Ammo(CPlayer.mo.FindInventory(a));
+			if ( !cur )
 			{
-				// fallback for undefined ammo
 				amt = 0;
-				amax = 0;
-				selected = false;
+				amax = GetDefaultByType(a).MaxAmount;
+				if ( a is 'SWWMAmmo' )
+				{
+					let def = GetDefaultByType((Class<SWWMAmmo>)(a));
+					if ( def.MagAmmoType ) amax *= GetDefaultByType(def.MagAmmoType).ClipSize;
+				}
 			}
 			else
 			{
-				let cur = Ammo(CPlayer.mo.FindInventory(a));
-				if ( !cur )
+				amt = cur.Amount;
+				amax = cur.MaxAmount;
+				if ( (cur is 'SWWMAmmo') && SWWMAmmo(cur).MagAmmoType )
 				{
-					amt = 0;
-					amax = GetDefaultByType(a).MaxAmount;
-					if ( a is 'SWWMAmmo' )
+					let mag = MagAmmo(CPlayer.mo.FindInventory(SWWMAmmo(cur).MagAmmoType));
+					// theoretically this should never be null, but nevertheless...
+					if ( mag )
 					{
-						let def = GetDefaultByType((Class<SWWMAmmo>)(a));
-						if ( def.MagAmmoType ) amax *= GetDefaultByType(def.MagAmmoType).ClipSize;
+						amt = amt*mag.ClipSize+mag.Amount;
+						amax = amax*mag.ClipSize+mag.MaxAmount;
+					}
+					else
+					{
+						let def = GetDefaultByType(SWWMAmmo(cur).MagAmmoType);
+						amt = amt*def.ClipSize;
+						amax = amax*def.ClipSize+def.MaxAmount;
 					}
 				}
-				else
+				if ( CPlayer.ReadyWeapon )
 				{
-					amt = cur.Amount;
-					amax = cur.MaxAmount;
-					if ( (cur is 'SWWMAmmo') && SWWMAmmo(cur).MagAmmoType )
-					{
-						let mag = MagAmmo(CPlayer.mo.FindInventory(SWWMAmmo(cur).MagAmmoType));
-						// theoretically this should never be null, but nevertheless...
-						if ( mag )
-						{
-							amt = amt*mag.ClipSize+mag.Amount;
-							amax = amax*mag.ClipSize+mag.MaxAmount;
-						}
-						else
-						{
-							let def = GetDefaultByType(SWWMAmmo(cur).MagAmmoType);
-							amt = amt*def.ClipSize;
-							amax = amax*def.ClipSize+def.MaxAmount;
-						}
-					}
-					if ( CPlayer.ReadyWeapon )
-					{
-						if ( CPlayer.ReadyWeapon is 'SWWMWeapon' )
-							selected = SWWMWeapon(CPlayer.ReadyWeapon).IsCurrentAmmo(cur);
-						else selected = (CPlayer.ReadyWeapon.Ammo1 == cur)||(CPlayer.ReadyWeapon.Ammo2 == cur);
-					}
+					if ( CPlayer.ReadyWeapon is 'SWWMWeapon' )
+						selected = SWWMWeapon(CPlayer.ReadyWeapon).IsCurrentAmmo(cur);
+					else selected = (CPlayer.ReadyWeapon.Ammo1 == cur)||(CPlayer.ReadyWeapon.Ammo2 == cur);
 				}
 			}
 			int ncolor = (amt>0)?mhudfontcol[MCR_WHITE]:mhudfontcol[MCR_RED];
 			int scol = mhudfontcol[selected?MCR_BRASS:MCR_WHITE];
 			int dcnt1 = 2-int(Log10(clamp(amt,1,999)));
 			int dcnt2 = 2-int(Log10(clamp(amax,1,999)));
-			for ( int i=0; i<dcnt1; i++ ) Screen.DrawChar(MiniHUDFont,ncolor,xx+22+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
-			for ( int i=0; i<dcnt2; i++ ) Screen.DrawChar(MiniHUDFont,mhudfontcol[selected?MCR_BRASS:MCR_WHITE],xx+40+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
+			for ( int i=0; i<dcnt1; i++ ) Screen.DrawChar(MiniHUDFont,ncolor,xx+20+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
+			for ( int i=0; i<dcnt2; i++ ) Screen.DrawChar(MiniHUDFont,mhudfontcol[selected?MCR_BRASS:MCR_WHITE],xx+38+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
 			str = AmmoNames[i];
-			Screen.DrawText(MiniHUDFont,scol,xx+2,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			Screen.DrawText(MiniHUDFont,scol,xx,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			str = "/";
-			Screen.DrawText(MiniHUDFont,scol,xx+34,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(80,0,0,0));
+			Screen.DrawText(MiniHUDFont,scol,xx+32,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(80,0,0,0));
 			str = String.Format("%3d",clamp(amt,0,999));
-			Screen.DrawText(MiniHUDFont,ncolor,xx+22,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			Screen.DrawText(MiniHUDFont,ncolor,xx+20,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			str = String.Format("%3d",clamp(amax,0,999));
-			Screen.DrawText(MiniHUDFont,scol,xx+40,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
-			if ( (AmmoOldAmounts[i] != int.min) && (amt > AmmoOldAmounts[i]) ) AmmoFlash[i] = gametic+25;
-			AmmoOldAmounts[i] = amt;
+			Screen.DrawText(MiniHUDFont,scol,xx+38,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			let f = AmmoFlash[i];
 			if ( f && (gametic < f) )
 			{
 				double alph = ((f-(gametic+FracTic))/25.)**1.5;
 				str = String.Format("%3d",clamp(amt,0,999));
-				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+22,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+20,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+			}
+			f = AmmoMaxFlash[i];
+			if ( f && (gametic < f) )
+			{
+				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				str = String.Format("%3d",clamp(amax,0,999));
+				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+38,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 		}
-		Screen.DrawTexture(AmmoTex[2],false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 	}
 
 	override int DrawStatus()
@@ -351,7 +386,8 @@ Class OniStatusBar : SWWMStatusBar
 		// extra, draw additional stuff next to inventory box
 		bAlwaysAboveInv = false;
 		double xx = margin+28;
-		let gren = CPlayer.mo.FindInventory("OniLisaAmmo");
+		if ( !CPlayer.mo.InvSel || isInventoryBarVisible() ) xx -= 28;
+		let gren = CPlayer.mo.FindInventory(AmmoSlots[8]);
 		if ( gren && gren.Amount )
 		{
 			bAlwaysAboveInv = true;
@@ -361,6 +397,12 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawTexture(gren.Icon,false,xx+2,yy+2,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			str = String.Format("%2d",clamp(gren.Amount,0,99));
 			Screen.DrawText(MiniHUDFont,mhudfontcol[sel?MCR_BRASS:MCR_WHITE],xx+10,yy+12,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			let f = AmmoFlash[8];
+			if ( f && (gametic < f) )
+			{
+				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+10,yy+12,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+			}
 		}
 		return (ot>0)?46:36;
 	}
