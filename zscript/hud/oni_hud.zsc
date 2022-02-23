@@ -70,7 +70,7 @@ Class OniStatusBar : SWWMStatusBar
 			if ( maxamt > AmmoOldMaxAmounts[i] ) AmmoMaxFlash[i] = gametic+25;
 			AmmoOldMaxAmounts[i] = maxamt;
 		}
-		if ( hp <= 0 )
+		if ( (hp <= 0) || (hp > 25) )
 		{
 			PulsePhase = 0;
 			return;
