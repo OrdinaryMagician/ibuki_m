@@ -44,6 +44,7 @@ const SWWMMAXAMOUNT = 5;
 #include "zscript/menu/swwm_help.zsc"
 #include "zscript/menu/swwm_menus.zsc"
 #include "zscript/menu/swwm_credits.zsc"
+#include "zscript/menu/swwm_inter.zsc"
 // compat code
 #include "zscript/compat/swwm_compat.zsc"
 #include "zscript/compat/swwm_shame.zsc"
