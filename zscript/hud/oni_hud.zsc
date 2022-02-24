@@ -11,7 +11,6 @@ Class OniStatusBar : SWWMStatusBar
 	String AmmoNames[8];		// ammo 4-letter names (9th isn't named)
 	int HealthFlash, OilFlash;	// flash when healing or gaining armor
 	int LastHealth, LastOil;	// to detect when to flash
-	int PulsePhase;	// for health pulsing
 
 	DynamicValueInterpolator HealthInter, OilInter;
 
@@ -70,16 +69,6 @@ Class OniStatusBar : SWWMStatusBar
 			if ( maxamt > AmmoOldMaxAmounts[i] ) AmmoMaxFlash[i] = gametic+25;
 			AmmoOldMaxAmounts[i] = maxamt;
 		}
-		if ( (hp <= 0) || (hp > 25) )
-		{
-			PulsePhase = 0;
-			return;
-		}
-		if ( PulsePhase == 15 )
-			S_StartSound("misc/heartbeat",CHAN_BODY,CHANF_UI|CHANF_OVERLAP,(30-hp)/50.);
-		PulsePhase--;
-		if ( (PulsePhase < 0) || (PulsePhase > hp*2+25) )
-			PulsePhase = hp*2+25;
 	}
 
 	// hello??? why is this function clearscope???
@@ -369,7 +358,7 @@ Class OniStatusBar : SWWMStatusBar
 				Screen.DrawTexture(HealthTex[1],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph);
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_BLUE],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 			}
-			else if ( (ht > 0) && (ht <= 25) && (PulsePhase <= 15) )
+			if ( (CPlayer.health > 0) && (CPlayer.health <= 25) && (PulsePhase <= 15) )
 			{
 				double alph = clamp(sin((PulsePhase-FracTic)*12.),0.,1.);
 				Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph);
