@@ -74,7 +74,6 @@ ONI_TITLEPRESENTSB = "presenta";
 ONI_TITLEMODBYA = "un mod de";
 ONI_TITLEINTROA = "\"y dijo entonces a su gente: no hagáis el mal, si no deseais";
 ONI_TITLEINTROB = "que caiga sobre vosotros la furia inflexible del \crONI ROJO\c-\"";
-// TODO title scrolls
 ONI_INTERDONE = "DOMINADO";
 ONI_INTERNEXT = "PRÓXIMA PARADA";
 ONI_INTERKILLS = "CAPULLOS MATADOS:";

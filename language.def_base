@@ -82,7 +82,6 @@ ONI_TITLEMODBYA = "a mod by";
 ONI_TITLEMODBYB = "Marisa Kirisame";
 ONI_TITLEINTROA = "\"and he thus said to his people: do no evil, lest you wish";
 ONI_TITLEINTROB = "to bring upon yourself the unyielding fury of the \crRED ONI\c-\"";
-// TODO title scrolls
 ONI_INTERDONE = "DOMINATED";
 ONI_INTERNEXT = "NEXT STOP";
 ONI_INTERKILLS = "SUCKERS SLAIN:";
