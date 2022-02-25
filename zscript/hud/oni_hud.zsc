@@ -234,7 +234,7 @@ Class OniStatusBar : SWWMStatusBar
 			int f = hnd.WeaponFlash[i%10];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx,yy,String.Format("%d",(i%10)),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 		}
@@ -304,14 +304,14 @@ Class OniStatusBar : SWWMStatusBar
 			let f = AmmoFlash[i];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				str = String.Format("%3d",clamp(amt,0,999));
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+20,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 			f = AmmoMaxFlash[i];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				str = String.Format("%3d",clamp(amax,0,999));
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+38,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
@@ -333,7 +333,7 @@ Class OniStatusBar : SWWMStatusBar
 			int f = OilFlash;
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			}
@@ -354,7 +354,7 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_RED],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			if ( ht > 100 )
 			{
-				double alph = ((ht-100)/900.)**.5;
+				double alph = max((ht-100)/900.,0.)**.5;
 				Screen.DrawTexture(HealthTex[1],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph);
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_BLUE],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 			}
@@ -368,7 +368,7 @@ Class OniStatusBar : SWWMStatusBar
 		int f = HealthFlash;
 		if ( f && (gametic < f) )
 		{
-			double alph = ((f-(gametic+FracTic))/25.)**1.5;
+			double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 			Screen.DrawTexture(HealthTex[4],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
@@ -389,7 +389,7 @@ Class OniStatusBar : SWWMStatusBar
 			let f = AmmoFlash[8];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+10,yy+12,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 		}
