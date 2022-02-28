@@ -5,36 +5,30 @@ Class IbukiPlayer : SWWMPlayer
 	Default
 	{
 		Tag "$T_ONIIBUKI";
-		Speed 1;
-		Radius 16;
 		Height 70;
 		Mass 150;
-		PainChance 255;
-		Health 100;
 		Player.DisplayName "$T_ONIIBUKI";
 		Player.StartItem "OniAA12";
 		Player.StartItem "OniAA12Ammo", 1;
 		Player.StartItem "OniUnarmed";
 		Player.StartItem "OniInternalArmor";
 		Player.StartItem "OniLuckyCollar";
-		Player.JumpZ 12;
+		Player.JumpZ 11;
 		Player.UseRange 80;
 		Player.AttackZOffset 20;
 		Player.ViewHeight 65;
-		Player.AirCapacity 0;
-		Player.GruntSpeed 20;
-		Player.ForwardMove 1., 1.;
-		Player.SideMove 1., 1.;
+		Player.GruntSpeed 35;
 		Player.SoundClass "ibuki";
-		DamageFactor "Drowning", 0.;
+		Player.ViewBob 1.1;
 		DamageFactor "Falling", 0.;
-		+NOBLOOD;
-		+DONTGIB;
-		+NOICEDEATH;
-		+DONTMORPH;
-		+DONTDRAIN;
-		+DONTCORPSE;
+		SWWMPlayer.MoveSpeed .6, 1.35;
+		SWWMPlayer.DodgeSpeed 15;
+		SWWMPlayer.MinCrouch .4;	// ensure same crouching height as a 56 unit tall player
 		SWWMPlayer.ResurrectType RT_REVIVE;
+		+NOBLOOD;
+		+DONTDRAIN;
+		+SWWMPLAYER.CANDODGE;
+		+SWWMPLAYER.CANLONGJUMP;
 	}
 
 	override void Tick()
@@ -54,12 +48,4 @@ Class IbukiPlayer : SWWMPlayer
 			else if ( !(level.maptime&31) && (Health > 100) ) player.Health = Health -= 1;
 		}
 	}
-
-	// DEBUG
-	/*override int DamageMobj( Actor inflictor, Actor source, int damage, Name mod, int flags, double angle )
-	{
-		int dmg = Super.DamageMobj(inflictor,source,damage,mod,flags,angle);
-		Console.Printf("reduced %d %s damage to %d",damage,mod,dmg);
-		return dmg;
-	}*/
 }
