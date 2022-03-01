@@ -1,100 +1,11 @@
-OptionValue "SWWMEnemyDropType"
-{
-	-1, "$SWWM_DROPS_NONE"
-	0, "$SWWM_DROPS_AMMO"
-	1, "$SWWM_DROPS_WEAPONS"
-}
-OptionValue "SWWMForceStats"
-{
-	0, "$SWWM_STATS_DISABLED"
-	1, "$SWWM_STATS_ALWAYS"
-	2, "$SWWM_STATS_MAPNAME"
-}
-OptionValue "SWWMDRLASkill"
-{
-	0, "$SWWM_DRLASKILL_BABY"
-	1, "$SWWM_DRLASKILL_EASY"
-	2, "$SWWM_DRLASKILL_NORMAL"
-	3, "$SWWM_DRLASKILL_HARD"
-	4, "$SWWM_DRLASKILL_NIGHTMARE"
-	5, "$SWWM_DRLASKILL_TECHNOPHOBIA"
-	6, "$SWWM_DRLASKILL_ARMAGEDDON"
-	7, "$SWWM_DRLASKILL_ADAPTIVE"
-}
-OptionValue "SWWMPistolStart"
-{
-	0, "$TXT_NO"
-	1, "$SWWM_PISTOLSTART_MAP"
-	2, "$SWWM_PISTOLSTART_CLUSTER"
-}
-OptionValue "SWWMHUDScale"
-{
-	0, "$SWWM_TFITSCALE"
-	1, "$SWWM_LFITSCALE"
-}
-OptionMenu "OniOptionMenu"
-{
-	Class "SWWMOptionMenu"
-	Title "$ONI_MTITLE"
-
-	SafeCommand "$SWWM_CRESET", "event swwmresetcvars"
-	StaticText " "
-
-	StaticText "$SWWM_PTITLE", "DarkRed"
-	SWWMPlayTime "$SWWM_PLAYTIME", "oni_playtime"
-	StaticText " "
-	StaticText "$SWWM_OTITLE", "DarkRed"
-	Option "$SWWM_SHADERS", "oni_shaders", "YesNo"
-	Slider "$SWWM_FLASH", "oni_flashstrength", 0.0, 1.0, 0.1, 1
-	Slider "$SWWM_BUMP", "oni_bumpstrength", 0.0, 1.0, 0.1, 1
-	Option "$SWWM_MM_ENABLE", "oni_mm_enable", "YesNo"
-	Option "$SWWM_FORCESTATS", "oni_forcestats", "SWWMForceStats"
-	Slider "$SWWM_HUDMARGIN", "oni_hudmargin", 0, 40, 1, 0
-	Option "$SWWM_HUDSCALE", "oni_hudscale", "SWWMHudScale"
-	Slider "$SWWM_MAXMSG", "oni_maxshown", 1, 10, 1, 0
-	Slider "$SWWM_MAXMSGBIG", "oni_maxshownbig", 1, 20, 1, 0
-	Slider "$SWWM_MAXPICK", "oni_maxpickup", 1, 10, 1, 0
-	Slider "$SWWM_CHATLEN", "oni_chatduration", 1, 30, 1, 0
-	Slider "$SWWM_MSGLEN", "oni_msgduration", 1, 30, 1, 0
-	Slider "$SWWM_PICKLEN", "oni_pickduration", 1, 30, 1, 0
-	Option "$SWWM_FUZZ", "oni_fuzz", "YesNo"
-	StaticText " "
-	StaticText "$SWWM_ETITLE", "DarkRed"
-	Option "$SWWM_SHADOWS", "oni_shadows", "YesNo"
-	ScaleSlider "$SWWM_SHADOWDIST", "oni_shadowdist", -1, 4000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	Option "$SWWM_BLOOD", "oni_blood", "YesNo"
-	ScaleSlider "$SWWM_MAXBLOOD", "oni_maxblood", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	ScaleSlider "$SWWM_MAXGIBS", "oni_maxgibs", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	ScaleSlider "$SWWM_MAXCASINGS", "oni_maxcasings", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	ScaleSlider "$SWWM_MAXDEBRIS", "oni_maxdebris", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	SafeCommand "$SWWM_CLEARFX", "netevent swwmcleareffects"
-	StaticText " "
-	StaticText "$SWWM_BTITLE", "DarkRed"
-	Option "$SWWM_PS_FULLRESET", "oni_ps_fullreset", "SWWMPistolStart"
-	Option "$SWWM_PS_RESETAMMO", "oni_ps_resetammo", "SWWMPistolStart"
-	Option "$SWWM_PS_RESETITEMS", "oni_ps_resetitems", "SWWMPistolStart"
-	Option "$SWWM_PS_RESETHEALTH", "oni_ps_resethealth", "SWWMPistolStart"
-	Option "$SWWM_ENEMYDROPS", "oni_enemydrops", "SWWMEnemyDropType"
-	StaticText " "
-	StaticText "$SWWM_ITITLE", "DarkRed"
-	Option "$SWWM_WEAPONTOOLTIPS", "oni_weapontooltips", "YesNo"
-	SafeCommand "$SWWM_RESETTOOLTIPS", "event swwmresettooltips"
-	IfGame(Doom)
-	{
-		StaticText " "
-		StaticText "$SWWM_MCTITLE", "DarkRed"
-		Option "$SWWM_DRLASKILL", "oni_drlaskill", "SWWMDRLASkill"
-	}
-
-}
 AddOptionMenu "OptionsMenu"
 {
-	Submenu "$ONI_MTITLE", "OniOptionMenu"
+	Submenu "$ONI_MTITLE", "SWWMOptionMenu"
 	Submenu "$ONI_MCREDS", "OniCreditsMenu"
 }
 AddOptionMenu "OptionsMenuSimple"
 {
-	Submenu "$ONI_MTITLE", "OniOptionMenu"
+	Submenu "$ONI_MTITLE", "SWWMOptionMenu"
 	Submenu "$ONI_MCREDS", "OniCreditsMenu"
 }
 ListMenu "MainMenu"

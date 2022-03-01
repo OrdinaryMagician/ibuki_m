@@ -141,7 +141,7 @@ Class OniTitleStuff : EventHandler
 		if ( !logotex[3] ) logotex[3] = TexMan.CheckForTexture("graphics/OniLogoR_Glow.png",TexMan.Type_Any);
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
 		double GameSecs = (titletimer+e.FracTic)/GameTicRate;
-		if ( oni_fuzz )
+		if ( swwm_fuzz )
 		{
 			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
 			Vector2 tsize = TexMan.GetScaledSize(bgtex);

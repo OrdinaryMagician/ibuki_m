@@ -99,7 +99,7 @@ Class OniStatScreen : SWWMStatScreen
 	override void drawSWWMBg()
 	{
 		double GameSecs = (bcnt+FracTic)/GameTicRate;
-		if ( oni_fuzz )
+		if ( swwm_fuzz )
 		{
 			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
 			Vector2 tsize = TexMan.GetScaledSize(bgtex);

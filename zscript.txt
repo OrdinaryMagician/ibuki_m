@@ -38,6 +38,7 @@ const SWWMMAXAMOUNT = 5;
 #include "zscript/handler/swwm_handler_process.zsc"
 #include "zscript/handler/swwm_handler_queues.zsc"
 #include "zscript/handler/swwm_handler_replacements.zsc"
+#include "zscript/handler/swwm_handler_shaders.zsc"
 #include "zscript/handler/swwm_handler_worldload.zsc"
 #include "zscript/handler/swwm_handler_worldthings.zsc"
 // menu code
