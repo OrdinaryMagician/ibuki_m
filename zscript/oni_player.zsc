@@ -29,6 +29,7 @@ Class IbukiPlayer : SWWMPlayer
 		+DONTDRAIN;
 		+SWWMPLAYER.CANDODGE;
 		+SWWMPLAYER.CANLONGJUMP;
+		+SWWMPLAYER.CANWALLCLIMB;
 	}
 
 	override void Tick()
