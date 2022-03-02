@@ -17,7 +17,6 @@ Class IbukiPlayer : SWWMPlayer
 		Player.UseRange 80;
 		Player.AttackZOffset 20;
 		Player.ViewHeight 65;
-		Player.GruntSpeed 35;
 		Player.SoundClass "ibuki";
 		Player.ViewBob 1.1;
 		DamageFactor "Falling", 0.;
@@ -25,6 +24,7 @@ Class IbukiPlayer : SWWMPlayer
 		SWWMPlayer.DodgeSpeed 15;
 		SWWMPlayer.MinCrouch .4;	// ensure same crouching height as a 56 unit tall player
 		SWWMPlayer.ResurrectType RT_REVIVE;
+		SWWMPlayer.PainThresholds 0, 30, 60, 90;
 		+NOBLOOD;
 		+DONTDRAIN;
 		+SWWMPLAYER.CANDODGE;

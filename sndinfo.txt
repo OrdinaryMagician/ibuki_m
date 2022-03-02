@@ -1,5 +1,85 @@
 $pitchshiftrange 0
 
+ibuki/wdeath1	sounds/ibuki/ibuki_wdeath1.ogg
+ibuki/wdeath2	sounds/ibuki/ibuki_wdeath2.ogg
+ibuki/death1	sounds/ibuki/ibuki_death1.ogg
+ibuki/death2	sounds/ibuki/ibuki_death2.ogg
+ibuki/xdeath	sounds/ibuki/ibuki_xdeath.ogg
+ibuki/jump1	sounds/ibuki/ibuki_jump1.ogg
+ibuki/jump2	sounds/ibuki/ibuki_jump2.ogg
+ibuki/grunt1	sounds/ibuki/ibuki_grunt1.ogg
+ibuki/grunt2	sounds/ibuki/ibuki_grunt2.ogg
+ibuki/lopain1	sounds/ibuki/ibuki_lopain1.ogg
+ibuki/lopain2	sounds/ibuki/ibuki_lopain2.ogg
+ibuki/pain1	sounds/ibuki/ibuki_pain1.ogg
+ibuki/pain2	sounds/ibuki/ibuki_pain2.ogg
+ibuki/hipain1	sounds/ibuki/ibuki_hipain1.ogg
+ibuki/hipain2	sounds/ibuki/ibuki_hipain2.ogg
+ibuki/xpain1	sounds/ibuki/ibuki_xpain1.ogg
+ibuki/xpain2	sounds/ibuki/ibuki_xpain2.ogg
+ibuki/nouse1	sounds/ibuki/ibuki_nouse1.ogg
+ibuki/nouse2	sounds/ibuki/ibuki_nouse2.ogg
+ibuki/revive1	sounds/ibuki/ibuki_revive1.ogg
+ibuki/revive2	sounds/ibuki/ibuki_revive2.ogg
+ibuki/land1	sounds/ibuki/ibuki_land1.ogg
+ibuki/land2	sounds/ibuki/ibuki_land2.ogg
+ibuki/land3	sounds/ibuki/ibuki_land3.ogg
+ibuki/run1	sounds/ibuki/ibuki_run1.ogg
+ibuki/run2	sounds/ibuki/ibuki_run2.ogg
+ibuki/run3	sounds/ibuki/ibuki_run3.ogg
+ibuki/run4	sounds/ibuki/ibuki_run4.ogg
+ibuki/run5	sounds/ibuki/ibuki_run5.ogg
+ibuki/run6	sounds/ibuki/ibuki_run6.ogg
+ibuki/walk1	sounds/ibuki/ibuki_walk1.ogg
+ibuki/walk2	sounds/ibuki/ibuki_walk2.ogg
+ibuki/walk3	sounds/ibuki/ibuki_walk3.ogg
+ibuki/walk4	sounds/ibuki/ibuki_walk4.ogg
+ibuki/walk5	sounds/ibuki/ibuki_walk5.ogg
+ibuki/walk6	sounds/ibuki/ibuki_walk6.ogg
+$random ibuki/wdeath { ibuki/wdeath1 ibuki/wdeath2 }
+$random ibuki/death { ibuki/death1 ibuki/death2 }
+$random ibuki/jump { ibuki/jump1 ibuki/jump2 }
+$random ibuki/grunt { ibuki/grunt1 ibuki/grunt2 }
+$random ibuki/lopain { ibuki/lopain1 ibuki/lopain2 }
+$random ibuki/pain { ibuki/pain1 ibuki/pain2 }
+$random ibuki/hipain { ibuki/hipain1 ibuki/hipain2 }
+$random ibuki/xpain { ibuki/xpain1 ibuki/xpain2 }
+$random ibuki/stomp { ibuki/stomp1 ibuki/stomp2 ibuki/stomp3 }
+$random ibuki/nouse { ibuki/nouse1 ibuki/nouse2 }
+$random ibuki/revive { ibuki/revive1 ibuki/revive2 }
+$random ibuki/land { ibuki/land1 ibuki/land2 ibuki/land3 }
+$random ibuki/run { ibuki/run1 ibuki/run2 ibuki/run3 ibuki/run4 ibuki/run5 ibuki/run6 }
+$random ibuki/walk { ibuki/walk1 ibuki/walk2 ibuki/walk3 ibuki/walk4 ibuki/walk5 ibuki/walk6 }
+
+$playeralias ibuki neutral *death	ibuki/death
+$playeralias ibuki neutral *xdeath	ibuki/xdeath
+$playeralias ibuki neutral *wimpydeath	ibuki/wdeath
+$playeralias ibuki neutral *crazydeath	ibuki/xdeath
+$playeralias ibuki neutral *burndeath	ibuki/death
+$playeralias ibuki neutral *gibbed	ibuki/xdeath
+$playeralias ibuki neutral *splat	ibuki/xdeath
+$playeralias ibuki neutral *pain100	ibuki/lopain
+$playeralias ibuki neutral *pain75	ibuki/pain
+$playeralias ibuki neutral *pain50	ibuki/hipain
+$playeralias ibuki neutral *pain25	ibuki/xpain
+$playeralias ibuki neutral *grunt	ibuki/grunt
+$playeralias ibuki neutral *land	ibuki/land
+$playersound ibuki neutral *falling	DSEMPTY
+$playeralias ibuki neutral *jump	ibuki/jump
+$playersound ibuki neutral *fist	DSEMPTY
+$playersound ibuki neutral *fistgrunt	DSEMPTY
+$playeralias ibuki neutral *usefail	ibuki/nouse
+$playersound ibuki neutral *evillaugh	DSEMPTY
+$playersound ibuki neutral *weaponlaugh	DSEMPTY
+$playersound ibuki neutral *puzzfail	DSEMPTY
+$playersound ibuki neutral *poison	DSEMPTY
+$playersound ibuki neutral *dive	DSEMPTY
+$playersound ibuki neutral *surface	DSEMPTY
+$playersound ibuki neutral *gasp	DSEMPTY
+$playersound ibuki neutral *taunt	DSEMPTY
+$playersound ibuki neutral *regenerate	DSEMPTY
+$playersound ibuki neutral *drainhealth	DSEMPTY
+
 aa12/fire1		sounds/aa12/aa12_fire1.ogg
 aa12/fire2		sounds/aa12/aa12_fire2.ogg
 aa12/fire3		sounds/aa12/aa12_fire3.ogg
