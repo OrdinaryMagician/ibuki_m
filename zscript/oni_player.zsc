@@ -24,7 +24,7 @@ Class IbukiPlayer : SWWMPlayer
 		SWWMPlayer.DodgeSpeed 15;
 		SWWMPlayer.MinCrouch .4;	// ensure same crouching height as a 56 unit tall player
 		SWWMPlayer.ResurrectType RT_REVIVE;
-		SWWMPlayer.PainThresholds 0, 30, 60, 90;
+		SWWMPlayer.PainThresholds 0, 20, 40, 60;
 		+NOBLOOD;
 		+DONTDRAIN;
 		+SWWMPLAYER.CANDODGE;
