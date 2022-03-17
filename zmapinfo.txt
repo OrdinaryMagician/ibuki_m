@@ -73,16 +73,6 @@ GameInfo
 
 ClearSkills
 
-Skill chill
-{
-	AutoUseHealth
-	DamageFactor = 0.5
-	EasyBossBrain
-	SlowMonsters
-	SpawnFilter = baby
-	ACSReturn = 0
-	Name = "$ONI_SKCHILL"
-}
 Skill easy
 {
 	DamageFactor = 0.75
@@ -133,8 +123,7 @@ Skill lunatic
 	MustConfirm = "$ONI_SKLUNATICCONFIRM"
 }
 
-
-Map TITLEMAP "RED ONI Title Map"
+Map TITLEMAP "Title Map"
 {
 	Music = ""
 	EventHandlers = "OniTitleStuff"

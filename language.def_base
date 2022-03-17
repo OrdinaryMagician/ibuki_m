@@ -71,6 +71,19 @@ QUITMSG8 = "Ah, my tits feel heavy...\nWill you hold them for me?";
 QUITMSG9 = "Don't forget to stay hydrated.\nYou'll definitely need it.";
 QUITMSG10 = "I suppose you need a break.\nThat's understandable, of course.";
 QUITMSG11 = "Aw, leaving already?\nThat's a shame...";
+// startup (don't localize)
+STARTUP1 =
+"\n"
+" \cgOh girl, your time has come,\c-\n"
+" \cgoh yes, bring out your gun.\c-\n"
+"\n"
+" \cgOh girl, it's time for fun,\c-\n"
+" \cgoh yes, show 'em how it's done.\c-\n"
+"\n";
+STARTUP2 = "";
+STARTUP3 = "";
+STARTUP4 = "";
+STARTUP5 = "";
 // misc
 D_ONIVODKA = "You are no longer drunk as all fuck.";
 D_ONIMILK = "The effects of your milk have worn off.";
@@ -149,28 +162,28 @@ TT_ONIBATTER =
 "Tap the \crUtility key\c- to summon a baseball,\n"
 "which you can then hit with primary.";
 // intermission tips
-ONI_NINTERTIP = "30";
+ONI_NINTERTIP = "33";
 ONI_INTERTIP = "Tip #%d:";
 ONI_INTERTIP1 = "Staying hydrated is half the battle.";
-ONI_INTERTIP2 = "Ellen's Vodka allows you to punch very hard.";
+ONI_INTERTIP2 = "Ellen's Vodka allows you to punch very hard. Feel free to crack open some evil ones.";
 ONI_INTERTIP3 = "Firing too quickly will reduce your accuracy.";
-ONI_INTERTIP4 = "Aim for the enemy's feet with the ST-20 to make them fly.";
+ONI_INTERTIP4 = "Aim for the enemy's feet with the ST-20 to send them flying.";
 ONI_INTERTIP5 = "Be careful, oil washes off in contact with water.";
-ONI_INTERTIP6 = "Drinking milk makes you strong.";
+ONI_INTERTIP6 = "Drinking milk makes you strong. Literally, you pretty much become unstoppable.";
 ONI_INTERTIP7 = "The Boar Slayer is best used to quickly dispose of boss monsters.";
 ONI_INTERTIP8 = "The Purifier can be used to swat away enemy projectiles.";
 ONI_INTERTIP9 = "The Quaker's warheads are very destructive, try to keep your distance.";
 ONI_INTERTIP10 = "You can stomp the ground to push away nearby foes through a dedicated keybind.";
 ONI_INTERTIP11 = "Ibuki sinks quickly, but she can thankfully breathe underwater.";
-ONI_INTERTIP12 = "Having bulletproof skin renders you impervious to poison attacks.";
+ONI_INTERTIP12 = "Having bulletproof skin renders you impervious to poison attacks (Unless it's breathed in).";
 ONI_INTERTIP13 = "You can push away smaller enemies by sprinting into them.";
 ONI_INTERTIP14 = "Your entire inventory is stored inside your cleavage. It's magic.";
 ONI_INTERTIP15 = "Ibuki loves Galician blood sausage. With pine nuts, but no raisins.";
 ONI_INTERTIP16 = "The AA-12 is the perfect tool for solving problems in an advanced way.";
 ONI_INTERTIP17 = "The Brave Beagle is named in honor of a famous dog called Bucket.";
 ONI_INTERTIP18 = "No one knows what the \"ST\" letters in ST-20 mean.";
-ONI_INTERTIP19 = "The Survivor is very good at killing Hell Nobles.";
-ONI_INTERTIP20 = "Don't worry about drinking too much water. That problem's fixed between levels.";
+ONI_INTERTIP19 = "The Survivor is very good at killing Hell Nobles. It truly is an efficient goat remover.";
+ONI_INTERTIP20 = "Don't worry about drinking too much water. That problem gets fixed between levels.";
 ONI_INTERTIP21 = "LiSA devices attach to anything they're thrown at, even enemies.";
 ONI_INTERTIP22 = "This mod unfortunately does not feature Wall Busting Technology™.";
 ONI_INTERTIP23 = "There is a skeleton inside you.";
@@ -179,5 +192,8 @@ ONI_INTERTIP25 = "If an enemy knocks you out, you can get back up and pwn them."
 ONI_INTERTIP26 = "Ibuki can be a very kind and caring person.";
 ONI_INTERTIP27 = "You can crush enemies by falling on them.";
 ONI_INTERTIP28 = "Kiss your AA-12 every once in a while. It's a good gun.";
-ONI_INTERTIP29 = "Ibuki produces two liters of breast milk per week.";
+ONI_INTERTIP29 = "Ibuki produces two liters of breast milk per week. Some people pay a decent amount for it.";
 ONI_INTERTIP30 = "Ibuki is a nudist (but you probably knew already).";
+ONI_INTERTIP31 = "Every time someone goes \"oof ouch her poor back\", Ibuki gets stronger.";
+ONI_INTERTIP32 = "Saya has been accidentally sucked into Ibuki's hammerspace at least once.";
+ONI_INTERTIP33 = "Ibuki is a big fan of Nine Inch Nails. She's been listening to them since the day she was born.";

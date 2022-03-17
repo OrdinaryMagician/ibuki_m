@@ -10,7 +10,7 @@ ONI_EXTRAFIRE = "Granada";
 ONI_STOMP = "Pisoteo";
 // skills
 ONI_SKHARDCORECONFIRM="\cr¿Seguro que quieres hacer eso?\nPuede que te pateen el culo.\c-\n\n\cgMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
-ONI_SKLUNATICCONFIRM="\cmCiertamente deseas morir.\nElige esta dificultad si te atreves.\c-\n\n\cgTodos los cambios de 20x102mm\n+\nDoble velocidad de enemigos\nProyectiles enemigos duplicados\nPueden aparecer enemigos extra\nReflejos instantáneos de enemigo\nLos enemigos no se estremecen\nLos enemigos no pelean entre si\c-\n\n(Pulsa Y para morir al instante)";
+ONI_SKLUNATICCONFIRM="\cmCiertamente deseas morir.\nElige esta dificultad si te atreves.\c-\n\n\cgTodos los cambios de \cr20x102mm\cg\n+\nDoble velocidad de enemigos\nProyectiles enemigos duplicados\nPueden aparecer enemigos extra\nReflejos instantáneos de enemigo\nLos enemigos no se estremecen\nLos enemigos no pelean entre si\c-\n\n(Pulsa Y para morir al instante)";
 // mod menu
 ONI_MTITLE = "Opciones de RED ONI";
 ONI_MCREDS = "Créditos de RED ONI";
