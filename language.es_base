@@ -1,6 +1,6 @@
 [es]
 // tags, pickups
-T_ONIFIST = "Mano a Mano";
+T_ONIUNARMED = "Mano a Mano";
 I_ONISHOTGUN = "Escopeta Ninnacht \"Auto Assault-12\"";
 T_ONIBEAGLE = "Sabueso Valiente";
 I_ONIBEAGLE = "Pistola Semiautomática Ninnacht \"Sabueso Valiente\"";
@@ -83,62 +83,62 @@ ONI_INTERTIME = "TU TIEMPO:";
 ONI_INTERPAR = "TIEMPO PAR:";
 ONI_INTERTOTAL = "TIEMPO TOTAL:";
 // weapon tooltips
-TT_ONIFIST =
-"\cr\"A veces hay que hacer las cosas a mano.\"\c-\n"
+TT_ONIUNARMED =
+"\cg\"A veces hay que hacer las cosas a mano.\"\c-\n"
 "\n"
-"\crFuego primario\c- para pegar, mantener para cargar.\n"
-"\crFuego secundario\c- para bloquear, reduce daño.\n"
-"\crTecla de utilidad\c- para soplar un beso mágico.";
+"\cgFuego primario\c- para pegar, mantener para cargar.\n"
+"\cgFuego secundario\c- para bloquear, reduce daño.\n"
+"\cgTecla de utilidad\c- para soplar un beso mágico.";
 TT_ONISHOTGUN =
-"\cr\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
+"\cg\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
 "\n"
-"\crPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
-"Pulsa la\crTecla de utilidad\c- para besar el arma.\n"
+"\cgPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
+"Pulsa la\cgTecla de utilidad\c- para besar el arma.\n"
 "Es un arma buena, se merece todo el amor.";
 TT_ONIBEAGLE =
-"\cr\"Oh, este perrito si que muerde.\"\c-\n"
+"\cg\"Oh, este perrito si que muerde.\"\c-\n"
 "\n"
-"\cr.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
-"Pulsa la \crTecla de utilidad\c- para voltear.";
+"\cg.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
+"Pulsa \cgTecla de utilidad\c- para voltear.";
 TT_ONIHRIFLE =
-"\cr\"HABÍA un caballero del infierno...\"\c-\n"
+"\cg\"HABÍA un caballero del infierno...\"\c-\n"
 "\n"
-"\cr.50 OMG (12.7×99mm)\c-, 2 balas.\n"
-"Mantén la \cfTecla de utilidad\c- para un modo de dos disparos.";
+"\cg.50 OMG (12.7×99mm)\c-, 2 balas.\n"
+"Mantén \cfTecla de utilidad\c- para modo de dos disparos.";
 TT_ONIMACHINEGUN =
-"\cr\"Cantemos una canción juntos.\"\c-\n"
+"\cg\"Cantemos una canción juntos.\"\c-\n"
 "\n"
-"\cf7.62×54mmMT\c-, 200 balas.\n"
-"Se sobrecalienta con el uso extendido, reduciendo la puntería\n"
-"y causando fallas de disparo. Se enfría mejor estando guardada.";
+"\cf7.62×54mmMT\c-, alimentado por hammerspace.\n"
+"Se sobrecalienta con el uso, reduciendo la puntería.\n"
+"Se enfría mejor estando guardada.";
 TT_ONIEXPLODER =
-"\cr\"Ah, el solucionador de problemas definitivo.\"\c-\n"
+"\cg\"Ah, el solucionador de problemas definitivo.\"\c-\n"
 "\n"
-"\cr20mm Mk.299 Tandem HEAT-MP\c-, 5 disparos.\n"
+"\cg20mm Mk.299 Tandem HEAT-MP\c-, 5 disparos.\n"
 "El perno tiene que ser accionado manualmente tras cada disparo.";
 TT_rNIPLASMARIFLE =
-"\cr\"Vaya reliquia tenemos aquí.\"\c-\n"
+"\cg\"Vaya reliquia tenemos aquí.\"\c-\n"
 "\n"
-"\crCélula de Argón de 60x72mm\c-, 30 disparos.\n"
+"\cgCélula de Argón de 60x72mm\c-, 30 disparos.\n"
 "El uso de este arma es bastante sencillo.";
 TT_ONITANKGUN =
-"\cr\"Hmmmm, me gustan las armas grandes.\"\c-\n"
+"\cg\"Hmmmm, me gustan las armas grandes.\"\c-\n"
 "\n"
-"\cr120×935mm\c-, disparo único.\n"
+"\cg120×935mm\c-, disparo único.\n"
 "La munición viene directamente de hammerspace,\n"
 "pero requiere la recarga manual del usuario.";
 TT_ONISLAYER =
-"\cr\"Tío, esta cosa folla...\"\c-\n"
+"\cg\"Tío, esta cosa folla...\"\c-\n"
 "\n"
-"\cr50×110mm Areka\c-, 5+1 balas.\n"
+"\cg50×110mm Areka\c-, 5+1 balas.\n"
 "Gran tamaño y peso, retroceso inmenso,\n"
 "garantizado para causar una gran destrucción.";
 TT_ONIBATTER =
 "\cf\"Ahh, el pasatiempo Americano...\"\c-\n"
 "\n"
-"\crFuego primario\c- para batear, mantén para cargar.\n"
-"\crFuego secundario\c- para bloquear, desvía balas.\n"
-"Pulsa la\crTecla de utilidad\c- para invocar una pelota,\n"
+"\cgFuego primario\c- para batear, mantén para cargar.\n"
+"\cgFuego secundario\c- para bloquear, desvía balas.\n"
+"Pulsa la\cgTecla de utilidad\c- para invocar una pelota,\n"
 "la cual puedes golpear luego con el primario.";
 // intermission tips
 ONI_INTERTIP = "Consejo #%d:";

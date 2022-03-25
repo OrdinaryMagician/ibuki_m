@@ -1,6 +1,6 @@
 [default]
 // tags, pickups
-T_ONIFIST = "Unarmed";
+T_ONIUNARMED = "Unarmed";
 T_ONISHOTGUN = "AA-12";
 I_ONISHOTGUN = "Ninnacht \"Auto Assault-12\" Shotgun";
 T_ONIBEAGLE = "Brave Beagle";
@@ -104,62 +104,62 @@ ONI_INTERTIME = "YOUR TIME:";
 ONI_INTERPAR = "PAR TIME:";
 ONI_INTERTOTAL = "TOTAL TIME:";
 // weapon tooltips
-TT_ONIFIST =
-"\cr\"Sometimes you gotta do things manually.\"\c-\n"
+TT_ONIUNARMED =
+"\cg\"Sometimes you gotta do things manually.\"\c-\n"
 "\n"
-"\crPrimary fire\c- to punch, hold to charge.\n"
-"\crSecondary fire\c- to block, reduces damage.\n"
-"\crUtility key\c- to blow a magic kiss.";
+"\cgPrimary fire\c- to punch, hold to charge.\n"
+"\cgSecondary fire\c- to block, reduces damage.\n"
+"\cgUtility key\c- to blow a magic kiss.";
 TT_ONISHOTGUN =
-"\cr\"The perfect tool for solving problems in an advanced way.\"\c-\n"
+"\cg\"The perfect tool for solving problems in an advanced way.\"\c-\n"
 "\n"
-"\cr12-gauge #1 Buckshot\c-, 32 rounds.\n"
-"Tap the \crUtility key\c- to kiss the gun.\n"
+"\cg12-gauge #1 Buckshot\c-, 32 rounds.\n"
+"Tap the \cgUtility key\c- to kiss the gun.\n"
 "It's a good gun, it deserves to be loved.";
 TT_ONIBEAGLE =
-"\cr\"Oh, this doggy really does bite.\"\c-\n"
+"\cg\"Oh, this doggy really does bite.\"\c-\n"
 "\n"
-"\cr.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
-"Press the \crUtility key\c- to spin.";
+"\cg.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
+"Press the \cgUtility key\c- to spin.";
 TT_ONIHRIFLE =
-"\cr\"There WAS a hell knight...\"\c-\n"
+"\cg\"There WAS a hell knight...\"\c-\n"
 "\n"
-"\cr.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
-"Hold the \crUtility key\c- for two-shot mode.";
+"\cg.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
+"Hold \cgUtility key\c- for two-shot mode.";
 TT_ONIMACHINEGUN =
-"\cr\"Let's play a song together.\"\c-\n"
+"\cg\"Let's play a song together.\"\c-\n"
 "\n"
-"\cr7.62×54mmMT\c-, 200 rounds.\n"
-"Overheats on extended use, causing loss of accuracy\n"
-"and potential misfires. Cools down faster when stored.";
+"\cg7.62×54mmMT\c-, hammerspace-fed.\n"
+"Overheats with use, impacting accuracy.\n"
+"Cools down faster when stored.";
 TT_ONIEXPLODER =
-"\cr\"Ah, the ultimate problem solver.\"\c-\n"
+"\cg\"Ah, the ultimate problem solver.\"\c-\n"
 "\n"
-"\cr20mm Mk.299 Tandem HEAT-MP\c-, 5 rounds.\n"
+"\cg20mm Mk.299 Tandem HEAT-MP\c-, 5 rounds.\n"
 "Bolt has to be manually racked after each shot.";
 TT_ONIPLASMARIFLE =
-"\cr\"Quite the relic here.\"\c-\n"
+"\cg\"Quite the relic here.\"\c-\n"
 "\n"
-"\cr60x72mm Argon Cell\c-, 30 shots.\n"
+"\cg60x72mm Argon Cell\c-, 30 shots.\n"
 "This weapon's usage is very straightforward.";
 TT_ONITANKGUN =
-"\cr\"Hmmmm, I like me some big guns.\"\c-\n"
+"\cg\"Hmmmm, I like me some big guns.\"\c-\n"
 "\n"
-"\cr120×935mm\c-, single shot.\n"
-"Ammunition is fed directly from hammerspace,\n"
+"\cg120×935mm\c-, single shot.\n"
+"Ammunition fed directly from hammerspace,\n"
 "but requires manual user reloading.";
 TT_ONISLAYER =
-"\cr\"Man, this thing fucks...\"\c-\n"
+"\cg\"Man, this thing fucks...\"\c-\n"
 "\n"
-"\cr50×110mm Areka\c-, 5+1 rounds.\n"
+"\cg50×110mm Areka\c-, 5+1 rounds.\n"
 "Large size and weight, immense recoil,\n"
 "guaranteed to cause great destruction.";
 TT_ONIBATTER =
-"\cr\"Ahh, the American pastime...\"\c-\n"
+"\cg\"Ahh, the American pastime...\"\c-\n"
 "\n"
-"\crPrimary fire\c- to swing, hold to charge.\n"
-"\crSecondary fire\c- to block, deflects bullets.\n"
-"Tap the \crUtility key\c- to summon a baseball,\n"
+"\cgPrimary fire\c- to swing, hold to charge.\n"
+"\cgSecondary fire\c- to block, deflects bullets.\n"
+"Tap the \cgUtility key\c- to summon a baseball,\n"
 "which you can then hit with primary.";
 // intermission tips
 ONI_NINTERTIP = "33";

@@ -1,10 +1,6 @@
 // Melones
 Class OniMachinegun : SWWMWeapon
 {
-	int clipcount;
-
-	Property ClipCount : clipcount;
-
 	Default
 	{
 		Tag "$T_ONIMACHINEGUN";
@@ -15,11 +11,9 @@ Class OniMachinegun : SWWMWeapon
 		Weapon.SlotPriority 1.;
 		Weapon.SelectionOrder 100;
 		Weapon.AmmoType1 "OniMachAmmo";
-		Weapon.AmmoGive1 200;
+		Weapon.AmmoGive1 100;
 		SWWMWeapon.DropAmmoType "ClipBox";
-		OniMachinegun.ClipCount 200;
 		+SWWMWEAPON.NOFIRSTGIVE;
-		+WEAPON.EXPLOSIVE;
 	}
 	States
 	{

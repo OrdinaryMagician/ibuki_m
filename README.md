@@ -96,6 +96,8 @@ A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big
 
 Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll quickly become an inaccurate mess. Putting it in hammerspace will make it cool down faster.
 
+It should be noted that this was one of the very first commercial firearms to feed ammunition directly from hammerspace, removing the need to carry bulky ammo belts around. Simply being linked to an external ammo box or an autoloader within storage will allow it to fire uninterrupted regardless of its physical distance from the source of ammunition.
+
 #### 7.62×54mmMT *[Bullets, Claw Orbs]*
 
 *"Wait, you're telling me these aren't tracer rounds?"*

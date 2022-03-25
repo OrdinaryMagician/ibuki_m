@@ -13,10 +13,4 @@ Class OniUnarmed : SWWMWeapon
 		+WEAPON.MELEEWEAPON;
 		+WEAPON.WIMPY_WEAPON;
 	}
-	States
-	{
-	Spawn:
-		XZW1 A -1;
-		Stop;
-	}
 }
