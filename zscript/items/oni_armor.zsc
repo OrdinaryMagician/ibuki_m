@@ -3,6 +3,8 @@
 // oil that enhances built-in resistances
 Class OniOilArmor : SWWMArmor
 {
+	int decaytimer;
+
 	Default
 	{
 		Inventory.Amount 1;
@@ -17,11 +19,31 @@ Class OniOilArmor : SWWMArmor
 	{
 		Super.DoEffect();
 		// wear off while in contact with liquids, unless having a coating active
+		// TODO make it decay based on water depth, not level
 		if ( Owner.FindInventory("BarrierPower") ) return;
-		if ( (Amount > 0) && (Owner.waterlevel > 2) && !(level.maptime&3) ) Amount--;
-		if ( (Amount > 250) && (Owner.waterlevel > 1) && !(level.maptime&7) ) Amount--;
-		if ( (Amount > 500) && (Owner.waterlevel > 0) && !(level.maptime&15) ) Amount--;
-		if ( (Amount > 750) && (Owner.pos.z <= floorz) && Owner.GetFloorTerrain().IsLiquid && !(level.maptime&31) ) Amount--;
+		if ( (Amount > 0) && (Owner.waterlevel > 2) )
+		{
+			decaytimer = 0;
+			Amount--;
+		}
+		else if ( (Amount > 250) && (Owner.waterlevel > 1) )
+		{
+			if ( decaytimer > 1 )
+			{
+				decaytimer = 0;
+				Amount--;
+			}
+			else decaytimer++;
+		}
+		else if ( (Amount > 500) && (Owner.waterlevel > 0) )
+		{
+			if ( decaytimer > 3 )
+			{
+				decaytimer = 0;
+				Amount--;
+			}
+			else decaytimer++;
+		}
 	}
 
 	override int HandleDamage( int damage, Name damageType, int flags )
