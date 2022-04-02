@@ -35,6 +35,7 @@ const SWWMMAXAMOUNT = 5;
 #include "zscript/handler/swwm_handler_damage.zsc"
 #include "zscript/handler/swwm_handler_flash.zsc"
 #include "zscript/handler/swwm_handler_iwantdie.zsc"
+#include "zscript/handler/swwm_handler_playerevents.zsc"
 #include "zscript/handler/swwm_handler_process.zsc"
 #include "zscript/handler/swwm_handler_queues.zsc"
 #include "zscript/handler/swwm_handler_replacements.zsc"
