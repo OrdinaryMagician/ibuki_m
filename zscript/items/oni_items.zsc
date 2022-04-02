@@ -9,12 +9,13 @@ Class OniVisor : SWWMChargeItem
 		Tag "$T_ONIVISOR";
 		Inventory.Icon "graphics/HUD/Icons/I_OniVisor.png";
 		Inventory.PickupMessage "$T_ONIVISOR";
-		SWWMChargeItem.Charge 60;
+		SWWMChargeItem.Charge (60*TICRATE);
+		SWWMChargeItem.DepleteMessage "$D_ONIVISOR";
 	}
 
-	override String GetOnIcon()
+	override TextureID GetOnIcon()
 	{
-		return "graphics/HUD/Icons/I_OniVisorOn.png";
+		return TexMan.CheckForTexture("graphics/HUD/Icons/I_OniVisorOn.png",TexMan.Type_Any);
 	}
 
 	override void Activate( Actor activator )

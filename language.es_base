@@ -124,7 +124,7 @@ TT_rNIPLASMARIFLE =
 TT_ONITANKGUN =
 "\cg\"Hmmmm, me gustan las armas grandes.\"\c-\n"
 "\n"
-"\cg120×935mm\c-, disparo único.\n"
+"\cg120×935mm HEAT-MP-T\c-, disparo único.\n"
 "La munición viene directamente de hammerspace,\n"
 "pero requiere la recarga manual del usuario.";
 TT_ONISLAYER =
