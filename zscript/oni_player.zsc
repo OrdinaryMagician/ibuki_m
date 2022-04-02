@@ -25,28 +25,11 @@ Class IbukiPlayer : SWWMPlayer
 		SWWMPlayer.MinCrouch .4;	// ensure same crouching height as a 56 unit tall player
 		SWWMPlayer.ResurrectType RT_REVIVE;
 		SWWMPlayer.PainThresholds 0, 20, 40, 60;
+		SWWMPlayer.HealthDecay 100;
 		+NOBLOOD;
 		+DONTDRAIN;
 		+SWWMPLAYER.CANDODGE;
 		+SWWMPLAYER.CANLONGJUMP;
 		+SWWMPLAYER.CANWALLCLIMB;
-	}
-
-	override void Tick()
-	{
-		Super.Tick();
-		if ( player && (player.mo == self) )
-		{
-			if ( Health > 1000 ) player.Health = Health -= 8;
-			else if ( Health > 900 ) player.Health = Health -= 4;
-			else if ( Health > 800 ) player.Health = Health -= 2;
-			else if ( Health > 700 ) player.Health = Health -= 1;
-			else if ( !(level.maptime&1) && (Health > 600) ) player.Health = Health -= 1;
-			else if ( !(level.maptime&3) && (Health > 500) ) player.Health = Health -= 1;
-			else if ( !(level.maptime&5) && (Health > 400) ) player.Health = Health -= 1;
-			else if ( !(level.maptime&7) && (Health > 300) ) player.Health = Health -= 1;
-			else if ( !(level.maptime&15) && (Health > 200) ) player.Health = Health -= 1;
-			else if ( !(level.maptime&31) && (Health > 100) ) player.Health = Health -= 1;
-		}
 	}
 }
