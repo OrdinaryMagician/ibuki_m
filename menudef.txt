@@ -14,7 +14,7 @@ ListMenu "MainMenu"
 	Size Clean
 	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
-	LineSpacing 36
+	LineSpacing 32
 	SWWMLogo
 	Position 0, 56
 	SWWMTextItemM "$MNU_NEWGAME", "n", "PlayerclassMenu"
@@ -29,7 +29,7 @@ ListMenu "MainMenuTextOnly"
 	Size Clean
 	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
-	LineSpacing 36
+	LineSpacing 32
 	SWWMLogo
 	Position 0, 56
 	SWWMTextItemM "$MNU_NEWGAME", "n", "PlayerclassMenu"
@@ -44,7 +44,7 @@ ListMenu "GameFilesMenu"
 	Size Clean
 	Font "BigFont", "DarkGray", "Red"
 	Selector "graphics/IbukiIcon.png", -24, 0
-	LineSpacing 36
+	LineSpacing 32
 	Position 0, 88
 	SWWMTextItemM "$MNU_LOADGAME", "l", "LoadGameMenu"
 	SWWMTextItemM "$MNU_SAVEGAME", "s", "SaveGameMenu"
