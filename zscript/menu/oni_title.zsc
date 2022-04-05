@@ -20,6 +20,7 @@ Class OniTitleStuff : EventHandler
 	ui int rss;
 	int titletimer;
 	bool bFadeFromBlack;
+	ui Font mSmallFont;
 
 	private ui int GetUIRandom()
 	{
@@ -140,6 +141,7 @@ Class OniTitleStuff : EventHandler
 		if ( !logotex[2] ) logotex[2] = TexMan.CheckForTexture("graphics/OniLogoL_Glow.png",TexMan.Type_Any);
 		if ( !logotex[3] ) logotex[3] = TexMan.CheckForTexture("graphics/OniLogoR_Glow.png",TexMan.Type_Any);
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
+		if ( !mSmallFont ) mSmallFont = Font.GetFont('TewiFont');
 		double GameSecs = (titletimer+e.FracTic)/GameTicRate;
 		if ( swwm_fuzz )
 		{
@@ -159,7 +161,6 @@ Class OniTitleStuff : EventHandler
 		// intro texts
 		if ( titletimer < (42*GameTicRate) )
 		{
-
 			alf = clamp(GameSecs/40.,.2,1.);
 			double disp = smerp(clamp((GameSecs-16)/25.,0,1));
 			RenderSmokeLayer(e,GameSecs,true,clamp(alf*2.,.2,1.),200.*disp);
@@ -168,21 +169,21 @@ Class OniTitleStuff : EventHandler
 			alf = clamp(GameSecs-1,0.,1.);
 			alf *= 1.-clamp(GameSecs-6,0.,1.);
 			String str = StringTable.Localize("$ONI_TITLEPRESENTSA");
-			Screen.DrawText(smallfont,Font.CR_DARKRED,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			Screen.DrawText(mSmallFont,Font.CR_DARKRED,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(mSmallFont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			str = StringTable.Localize("$ONI_TITLEPRESENTSB");
-			Screen.DrawText(smallfont,Font.CR_BLACK,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			Screen.DrawText(mSmallFont,Font.CR_BLACK,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			alf = clamp(GameSecs-8,0.,1.);
 			alf *= 1.-clamp(GameSecs-13,0.,1.);
 			str = StringTable.Localize("$ONI_TITLEMODBYA");
-			Screen.DrawText(smallfont,Font.CR_BLACK,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			Screen.DrawText(mSmallFont,Font.CR_BLACK,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(mSmallFont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			str = StringTable.Localize("$ONI_TITLEMODBYB");
-			Screen.DrawText(smallfont,Font.CR_DARKRED,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			Screen.DrawText(mSmallFont,Font.CR_DARKRED,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			alf = clamp(GameSecs-20,0.,1.);
 			alf *= 1.-clamp(GameSecs-35,0.,1.);
 			str = StringTable.Localize("$ONI_TITLEINTROA");
-			Screen.DrawText(smallfont,Font.CR_BLACK,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			Screen.DrawText(mSmallFont,Font.CR_BLACK,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(mSmallFont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			str = StringTable.Localize("$ONI_TITLEINTROB");
-			Screen.DrawText(smallfont,Font.CR_BLACK,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			Screen.DrawText(mSmallFont,Font.CR_BLACK,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 		}
 		// 42 seconds in: eye glow
 		else if ( titletimer < (44*GameTicRate) )
