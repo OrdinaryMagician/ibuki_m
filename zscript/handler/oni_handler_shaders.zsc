@@ -2,20 +2,20 @@
 
 extend Class SWWMHandler
 {
-	private ui bool RenderModShaders( RenderEvent e, PlayerInfo p, PlayerPawn mo )
+	private ui bool RenderModShaders( RenderEvent e, PlayerPawn mo )
 	{
 		let coat = BarrierPower(mo.FindInventory("BarrierPower"));
 		if ( coat )
 		{
-			Shader.SetEnabled(p,"BarrierShader",true);
-			Shader.SetUniform1f(p,"BarrierShader","timer",(gametic+e.FracTic)/GameTicRate);
+			PPShader.SetEnabled("BarrierShader",true);
+			PPShader.SetUniform1f("BarrierShader","timer",(gametic+e.FracTic)/GameTicRate);
 		}
-		else Shader.SetEnabled(p,"BarrierShader",false);
+		else PPShader.SetEnabled("BarrierShader",false);
 		return !!coat;
 	}
 
-	static clearscope void ClearAllModShaders( PlayerInfo p, bool noscope )
+	static clearscope void ClearAllModShaders( bool noscope )
 	{
-		Shader.SetEnabled(p,"BarrierShader",false);
+		PPShader.SetEnabled("BarrierShader",false);
 	}
 }
