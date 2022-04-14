@@ -89,18 +89,21 @@ Skill normal
 }
 Skill hard
 {
+	MonsterHealth = 1.25
 	DamageFactor = 1.25
+	Aggressiveness = 0.25
 	SpawnFilter = hard
 	ACSReturn = 3
 	Name = "$ONI_SKHARD"
+	MustConfirm = "$ONI_SKHARDCONFIRM"
 }
 Skill hardcore
 {
 	DisableCheats
 	FastMonsters
-	HealthFactor = 1.5
+	MonsterHealth = 1.5
 	DamageFactor = 1.5
-	Aggressiveness = 0.25
+	Aggressiveness = 0.5
 	SpawnFilter = nightmare
 	SpawnMulti
 	ACSReturn = 4
@@ -110,7 +113,7 @@ Skill hardcore
 Skill lunatic
 {
 	DisableCheats
-	HealthFactor = 2.0
+	MonsterHealth = 2.0
 	DamageFactor = 2.0
 	Aggressiveness = 1.0
 	SpawnFilter = nightmare

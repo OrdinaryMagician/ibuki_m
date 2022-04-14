@@ -12,8 +12,9 @@ ONI_STOMP = "Stomp";
 ONI_SKEASY="\cd7.62x51mm\c-";
 ONI_SKNORMAL="\ci12.7x99mm\c-";
 ONI_SKHARD="\cg14.5x114mm\c-";
+ONI_SKHARDCONFIRM="\cgThis is the hard skill, you know.\nThings will get tougher.\c-\n\n\cg1.25x monster health & damage\n25% extra aggressiveness\c-\n\n(Press Y to go fight)";
 ONI_SKHARDCORE="\cr20x102mm\c-";
-ONI_SKHARDCORECONFIRM="\crAre you sure you want to do that?\nYou might get your ass kicked.\c-\n\n\cgFast monsters\n1.5x monster health & damage\n25% extra aggressiveness\nCheats are disabled\nCoop monsters will spawn\c-\n\n(Press Y for a challenge)";
+ONI_SKHARDCORECONFIRM="\crAre you sure you want to do that?\nYou might get your ass kicked.\c-\n\n\cgFast monsters\n1.5x monster health & damage\n50% extra aggressiveness\nCheats are disabled\nCoop monsters will spawn\c-\n\n(Press Y for a challenge)";
 ONI_SKLUNATIC="\cm30x173mm\c-";
 ONI_SKLUNATICCONFIRM="\cmYou've clearly got a death wish.\nChoose this skill if you dare.\c-\n\n\cgAll changes from \cr20x102mm\cg\n+\n2x speedup for all enemy actions\nEnemy projectiles will multiply\nAdditional enemies may spawn\nEnemies react instantly\nEnemies don't flinch\nInfighting is disabled\c-\n\n(Press Y to die instantly)";
 // mod menu
