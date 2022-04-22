@@ -2,7 +2,7 @@
 
 Class OniStatusBar : SWWMStatusBar
 {
-	TextureID StatusTex, AmmoTex, InvExtraTex, WeaponTex, HealthTex[5], OilTex, GenTex[3];
+	TextureID StatusTex, AmmoTex, InvExtraTex, WeaponTex, HealthTex[5], OilTex, GenTex[3], LagTex;
 	int AmmoFlash[9];		// flash when new ammo is received
 	int AmmoOldAmounts[9];		// to detect when to flash
 	int AmmoMaxFlash[8];		// flash when ammo max amount changes (bombs excluded)
@@ -11,16 +11,28 @@ Class OniStatusBar : SWWMStatusBar
 	String AmmoNames[8];		// ammo 4-letter names (9th isn't named)
 	int HealthFlash, OilFlash;	// flash when healing or gaining armor
 	int LastHealth, LastOil;	// to detect when to flash
+	int LagHealth[10], LagOil[10];	// for delayed decay bar
+	int OilFadeIn, OilFadeOut;	// fades the oil bar smoothly
 
-	DynamicValueInterpolator HealthInter, OilInter;
+	DynamicValueInterpolator HealthInter, OilInter, LagHealthInter, LagOilInter;
 
 	override void FlushNotify()
 	{
 		Super.FlushNotify();
 		// flush interpolators (useful since this virtual gets called
 		// when loading saves, too)
-		HealthInter.Reset(CPlayer.Health);
-		OilInter.Reset(CPlayer.mo.CountInv("OniOilArmor"));
+		int hp = CPlayer.Health;
+		int oil = CPlayer.mo.CountInv("OniOilArmor");
+		HealthInter.Reset(hp);
+		OilInter.Reset(oil);
+		for ( int i=9; i>0; i-- )
+			LagHealth[i] = hp;
+		for ( int i=9; i>0; i-- )
+			LagOil[i] = oil;
+		LagHealthInter.Reset(hp);
+		LagOilInter.Reset(oil);
+		if ( oil > 0 ) OilFadeIn = gametic;
+		else OilFadeOut = gametic;
 	}
 	override void UpdateInterpolators()
 	{
@@ -31,8 +43,26 @@ Class OniStatusBar : SWWMStatusBar
 		// flash 'em
 		if ( hp > LastHealth ) HealthFlash = gametic+25;
 		if ( oil > LastOil ) OilFlash = gametic+25;
-		LastHealth = hp;
-		LastOil = oil;
+		// lag
+		if ( hp > LastHealth )
+		{
+			for ( int i=9; i>0; i-- )
+				LagHealth[i] = hp;
+		}
+		if ( oil > LastOil )
+		{
+			for ( int i=9; i>0; i-- )
+				LagOil[i] = oil;
+		}
+		LagHealth[0] = LastHealth = hp;
+		LagHealthInter.Update(LagHealth[9]);
+		for ( int i=9; i>0; i-- )
+			LagHealth[i] = LagHealth[i-1];
+		LagOil[0] = LastOil = oil;
+		LagOilInter.Update(LagOil[9]);
+		for ( int i=9; i>0; i-- )
+			LagOil[i] = LagOil[i-1];
+		// ammo updates
 		for ( int i=0; i<9; i++ )
 		{
 			let a = SWWMAmmo(CPlayer.mo.FindInventory(AmmoSlots[i]));
@@ -96,6 +126,7 @@ Class OniStatusBar : SWWMStatusBar
 		GenTex[0] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxL.png",TexMan.Type_Any);
 		GenTex[1] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxM.png",TexMan.Type_Any);
 		GenTex[2] = TexMan.CheckForTexture("graphics/HUD/GenericAmmoBoxR.png",TexMan.Type_Any);
+		LagTex = TexMan.CheckForTexture("graphics/HUD/LagBar.png",TexMan.Type_Any);
 		tclabel = Font.CR_RED;
 		tcvalue = Font.CR_WHITE;
 		tcextra = Font.CR_DARKGRAY;
@@ -105,8 +136,17 @@ Class OniStatusBar : SWWMStatusBar
 		tcextra_s = "u";
 		LastOil = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("OniOilArmor"):0;
 		LastHealth = CPlayer?CPlayer.health:100;
-		HealthInter = DynamicValueInterpolator.Create(0,.1,1,100);
-		OilInter = DynamicValueInterpolator.Create(0,.1,1,100);
+		HealthInter = DynamicValueInterpolator.Create(0,.5,1,100);
+		OilInter = DynamicValueInterpolator.Create(0,.5,1,100);
+		LagHealthInter = DynamicValueInterpolator.Create(0,.1,1,5);
+		LagOilInter = DynamicValueInterpolator.Create(0,.1,10,50);
+		if ( LastOil > 0 ) OilFadeIn = gametic;
+		else OilFadeOut = gametic;
+		for ( int i=0; i<10; i++ )
+		{
+			LagHealth[i] = LastHealth;
+			LagOil[i] = LastOil;
+		}
 		AmmoSlots[0] = "OniAA12Ammo";
 		AmmoSlots[1] = "OniBeagleAmmo";
 		AmmoSlots[2] = "OniSledgeAmmo";
@@ -322,20 +362,34 @@ Class OniStatusBar : SWWMStatusBar
 	{
 		String str;
 		double ot = clamp(OilInter.GetValue(),0,1000);
-		if ( ot > 0 )
+		double oot = clamp(LagOilInter.GetValue(),0,1000);
+		if ( (ot > 0) || (oot > 0) )
 		{
-			Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			OilFadeOut = gametic+15;
+			double alph = (gametic < OilFadeIn)?(min(1.-(OilFadeIn-(gametic+FracTic))/15.,1.)**.75):1.;
+			Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 			str = String.Format("%3d",clamp(ot,0,999));
 			double ow = min(ot/10.,100);
-			Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0));
-			Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow);
-			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_BRASS],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+			Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0),DTA_Alpha,alph);
+			Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_Alpha,alph);
+			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_BRASS],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 			int f = OilFlash;
 			if ( f && (gametic < f) )
 			{
-				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
-				Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
-				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
+				double alph2 = max((f-(gametic+FracTic))/25.,0.)**1.5;
+				Screen.DrawTexture(HealthTex[3],false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph*alph2);
+				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph*alph2);
+			}
+			double owl = min(oot/10.,100);
+			if ( owl > ow ) Screen.DrawTexture(LagTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowLeftF,ow,DTA_WindowRightF,owl,DTA_Alpha,alph);
+		}
+		else
+		{
+			OilFadeIn = gametic+15;
+			if ( gametic < OilFadeOut )
+			{
+				double alph = max((OilFadeOut-(gametic+FracTic))/15.,0.)**1.5;
+				Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 			}
 		}
 		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+10),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
@@ -372,6 +426,13 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawTexture(HealthTex[4],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
+		ht = clamp(LagHealthInter.GetValue(),0,1000);
+		double hwl = min(ht,100);
+		if ( hwl > hw )
+		{
+			Screen.DrawTexture(LagTex,false,margin+3,ss.y-(margin+7),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowLeftF,hw,DTA_WindowRightF,hwl,DTA_ColorOverlay,Color(255,0,0,0));
+			Screen.DrawTexture(LagTex,false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowLeftF,hw,DTA_WindowRightF,hwl);
+		}
 		// extra, draw additional stuff next to inventory box
 		bAlwaysAboveInv = false;
 		double xx = margin+28;
@@ -393,6 +454,6 @@ Class OniStatusBar : SWWMStatusBar
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+10,yy+12,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 		}
-		return (ot>0)?46:36;
+		return ((ot>0)||(oot>0))?(gametic<OilFadeIn)?(36+int(10.*(min(1.-(OilFadeIn-(gametic+FracTic))/15.,1.)**.75))):46:(gametic<OilFadeOut)?(36+int(10.*(max((OilFadeOut-(gametic+FracTic))/15.,0.)**1.5))):36;
 	}
 }
