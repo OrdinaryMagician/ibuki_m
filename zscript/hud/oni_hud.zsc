@@ -14,7 +14,8 @@ Class OniStatusBar : SWWMStatusBar
 	int LagHealth[10], LagOil[10];	// for delayed decay bar
 	int OilFadeIn, OilFadeOut;	// fades the oil bar smoothly
 
-	DynamicValueInterpolator HealthInter, OilInter, LagHealthInter, LagOilInter;
+	SmoothDynamicValueInterpolator HealthInter, OilInter;
+	SmoothLinearValueInterpolator LagHealthInter, LagOilInter;
 
 	override void FlushNotify()
 	{
@@ -134,12 +135,12 @@ Class OniStatusBar : SWWMStatusBar
 		tcsucks = Font.CR_DARKRED;
 		tclabel_s = "g";
 		tcextra_s = "u";
-		LastOil = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("OniOilArmor"):0;
 		LastHealth = CPlayer?CPlayer.health:100;
-		HealthInter = DynamicValueInterpolator.Create(0,.5,1,100);
-		OilInter = DynamicValueInterpolator.Create(0,.5,1,100);
-		LagHealthInter = DynamicValueInterpolator.Create(0,.1,1,5);
-		LagOilInter = DynamicValueInterpolator.Create(0,.1,10,50);
+		LastOil = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("OniOilArmor"):0;
+		HealthInter = SmoothDynamicValueInterpolator.Create(LastHealth,.5,1,100);
+		OilInter = SmoothDynamicValueInterpolator.Create(LastOil,.5,10,1000);
+		LagHealthInter = SmoothLinearValueInterpolator.Create(LastHealth,2);
+		LagOilInter = SmoothLinearValueInterpolator.Create(LastOil,20);
 		if ( LastOil > 0 ) OilFadeIn = gametic;
 		else OilFadeOut = gametic;
 		for ( int i=0; i<10; i++ )
@@ -361,14 +362,14 @@ Class OniStatusBar : SWWMStatusBar
 	override int DrawStatus()
 	{
 		String str;
-		double ot = clamp(OilInter.GetValue(),0,1000);
-		double oot = clamp(LagOilInter.GetValue(),0,1000);
+		double ot = clamp(OilInter.GetValue(fractic),0,1000);
+		double oot = clamp(LagOilInter.GetValue(fractic),0,1000);
 		if ( (ot > 0) || (oot > 0) )
 		{
 			OilFadeOut = gametic+15;
 			double alph = (gametic < OilFadeIn)?(min(1.-(OilFadeIn-(gametic+FracTic))/15.,1.)**.75):1.;
 			Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
-			str = String.Format("%3d",clamp(ot,0,999));
+			str = String.Format("%3d",clamp(round(ot),0,999));
 			double ow = min(ot/10.,100);
 			Screen.DrawTexture(OilTex,false,margin+3,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_ColorOverlay,Color(255,0,0,0),DTA_Alpha,alph);
 			Screen.DrawTexture(OilTex,false,margin+2,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,ow,DTA_Alpha,alph);
@@ -393,8 +394,8 @@ Class OniStatusBar : SWWMStatusBar
 			}
 		}
 		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+10),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
-		double ht = clamp(HealthInter.GetValue(),0,1000);
-		str = String.Format("%3d",clamp(ht,0,999));
+		double ht = clamp(HealthInter.GetValue(fractic),0,1000);
+		str = String.Format("%3d",clamp(round(ht),0,999));
 		double hw = min(ht,100);
 		Screen.DrawTexture(HealthTex[0],false,margin+3,ss.y-(margin+7),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_ColorOverlay,Color(255,0,0,0));
 		if ( isInvulnerable() || CPlayer.mo.FindInventory("OniMilkPower") )
@@ -426,7 +427,7 @@ Class OniStatusBar : SWWMStatusBar
 			Screen.DrawTexture(HealthTex[4],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+107,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
-		ht = clamp(LagHealthInter.GetValue(),0,1000);
+		ht = clamp(LagHealthInter.GetValue(fractic),0,1000);
 		double hwl = min(ht,100);
 		if ( hwl > hw )
 		{
