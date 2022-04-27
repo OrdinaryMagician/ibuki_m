@@ -83,9 +83,9 @@ Class OniStatScreen : SWWMStatScreen
 		for ( int i=imin; i<imax; i++ )
 		{
 			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
-			Vector2 pos = (smk[i].pos+smk[i].vel+(0,base+disp))*zoomscl+(Screen.GetWidth()/2,0);
+			Vector2 pos = (smk[i].pos+smk[i].vel*fractic+(0,base+disp))*zoomscl+(Screen.GetWidth()/2,0);
 			double scl = smk[i].scale*zoomscl;
-			double ang = smk[i].ang+smk[i].angvel;
+			double ang = smk[i].ang+smk[i].angvel*fractic;
 			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
 			alf *= clamp(smk[i].age/10.,0,1);
 			Screen.DrawTexture(smk_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(48,16,4));
@@ -98,7 +98,7 @@ Class OniStatScreen : SWWMStatScreen
 	}
 	override void drawSWWMBg()
 	{
-		double GameSecs = bcnt/double(GameTicRate);
+		double GameSecs = (bcnt+fractic)/double(GameTicRate);
 		if ( swwm_fuzz )
 		{
 			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
@@ -122,7 +122,7 @@ Class OniStatScreen : SWWMStatScreen
 		Screen.DrawTexture(ibukitex[0],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
 		Screen.DrawTexture(ibukitex[1],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,.5);
 		Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
-		double alf = clamp(glarestr/20.,0.,1.)**2;
+		double alf = clamp((glarestr-fractic)/20.,0.,1.)**2;
 		if ( alf > 0. ) Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
 		RenderSmokeLayer(GameSecs,false,1.,0,true);
 		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,64*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
