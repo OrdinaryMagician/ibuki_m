@@ -210,7 +210,7 @@ Class OniTitleStuff : EventHandler
 			Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
 			RenderSmokeLayer(e,GameSecs,true,.5,0,true);
 			alf = clamp((GameSecs-44.5)*1.5,0.,1.);
-			rss = int(MSTime()/GameTicRate);
+			rss = int(MSTimeF()/GameTicRate);
 			Vector2 ofs = (RandomShiver(),RandomShiver())*quakestr*texscl;
 			if ( alf < 1. )
 			{
