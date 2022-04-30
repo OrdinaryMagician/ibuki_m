@@ -233,9 +233,11 @@ Class OniInternalArmor : SWWMArmor
 		// 75% general splash reduction
 		if ( flags&DMG_EXPLOSION )
 			dr = (3.+dr)/4.;
+		int newdamage = int(ceil(max(damage-dt,0)*(1.-dr)));
 		// extra tolerance to high damage
-		if ( (damage*dr) > 10 )
-			dt += min(int((damage/20)**1.5),damage/2);
-		return clamp(int(damage*dr)+dt,0,damage);
+		if ( newdamage > 10 )
+			dt = min(int((newdamage/3)**1.5),max(damage-10,0));
+		newdamage = int(ceil(max(damage-dt,0)*(1.-dr)));
+		return damage-newdamage;
 	}
 }
