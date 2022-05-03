@@ -164,7 +164,7 @@ Available as either single rounds or bunches of 2 and 3. These things are absolu
 
 *"Ah, the American pastime..."*
 
-A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. **Saya** allegedly asked **Misa** to make this because it would allow you to *"exorcise evil spirits"* with it.
+A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. A rather drunk **Ashley Knox** asked **Misa** to make this as a birthday gift because it would allow you to *"exorcise evil spirits or some shit"*. **Saya** is very aware of the reference.
 
 Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
 
