@@ -11,6 +11,7 @@ Struct TitleSmoke
 Class OniTitleStuff : EventHandler
 {
 	ui TextureID bgtex;
+	ui TextureID bdtex;
 	ui TextureID ibukitex[4];
 	ui TitleSmoke smk[128];
 	ui TextureID smk_tex[8];
@@ -20,7 +21,7 @@ Class OniTitleStuff : EventHandler
 	ui int rss;
 	int titletimer;
 	bool bFadeFromBlack;
-	ui Font mSmallFont;
+	ui Font mSmallFont, mBigFont;
 
 	private ui int GetUIRandom()
 	{
@@ -79,6 +80,18 @@ Class OniTitleStuff : EventHandler
 		shnd.titlefirst = true;
 	}
 
+	// GROSS HACK, GROSS HACK
+	static ui bool IsBirthday()
+	{
+		return (SystemTime.Format("%d%m",SystemTime.Now()) == "0909");
+	}
+	static play void SetBirthday()
+	{
+		let hnd = OniTitleStuff(EventHandler.Find("OniTitleStuff"));
+		if ( !hnd.bFadeFromBlack )
+			hnd.titletimer = -200;
+	}
+
 	override void UiTick()
 	{
 		quakestr = max(quakestr-1,0);
@@ -132,6 +145,29 @@ Class OniTitleStuff : EventHandler
 
 	override void RenderUnderlay( RenderEvent e )
 	{
+		if ( titletimer < 0 )
+		{
+			Screen.Dim("Black",1.,0,0,Screen.GetWidth(),Screen.GetHeight());
+			if ( !bdtex ) bdtex = TexMan.CheckForTexture("graphics/IbukiIcon.png",TexMan.Type_Any);
+			if ( !mBigFont ) mBigFont = Font.GetFont('TewiFontOutline');
+			double GameSecs = (titletimer+200+e.FracTic)/GameTicRate;
+			double alf;
+			if ( GameSecs < 1.5 ) alf = clamp((GameSecs-1.)*2.,0.,1.);
+			else if ( GameSecs > 5. ) alf = clamp(1.-(GameSecs-5.)*2.,0.,1.);
+			else alf = 1.;
+			double xx, yy;
+			Screen.Dim(Color(16,0,0),alf,0,0,Screen.GetWidth(),Screen.GetHeight());
+			Screen.DrawTexture(bdtex,false,Screen.GetWidth()/2,Screen.GetHeight()/2,DTA_CleanNoMove_1,true,DTA_Alpha,alf);
+			String str = "2072-09-09";
+			xx = int(Screen.GetWidth()-mBigFont.StringWidth(str)*CleanXFac_1*3.)/2;
+			yy = Screen.GetHeight()/2-(72.+mBigFont.GetHeight()*3.)*CleanYFac_1;
+			Screen.DrawText(mBigFont,Font.CR_BLACK,xx,yy,str,DTA_Alpha,alf,DTA_ScaleX,CleanXFac_1*3.,DTA_ScaleY,CleanYFac_1*3.);
+			str = "Happy Birthday, \crIbuki\c-!";
+			xx = int(Screen.GetWidth()-mBigFont.StringWidth(str)*CleanXFac_1*2.)/2;
+			yy = Screen.GetHeight()/2+72.*CleanYFac_1;
+			Screen.DrawText(mBigFont,Font.CR_BLACK,xx,yy,str,DTA_Alpha,alf,DTA_ScaleX,CleanXFac_1*2.,DTA_ScaleY,CleanYFac_1*2.);
+			return;
+		}
 		if ( !ibukitex[0] ) ibukitex[0] = TexMan.CheckForTexture("graphics/title_ibuki_dark.png",TexMan.Type_Any);
 		if ( !ibukitex[1] ) ibukitex[1] = TexMan.CheckForTexture("graphics/title_ibuki_eye.png",TexMan.Type_Any);
 		if ( !ibukitex[2] ) ibukitex[2] = TexMan.CheckForTexture("graphics/title_ibuki.png",TexMan.Type_Any);
