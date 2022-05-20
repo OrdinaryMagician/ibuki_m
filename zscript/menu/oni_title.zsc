@@ -10,6 +10,7 @@ Struct TitleSmoke
 
 Class OniTitleStuff : EventHandler
 {
+	ui bool bInitialized;
 	ui TextureID bgtex;
 	ui TextureID bdtex;
 	ui TextureID ibukitex[4];
@@ -19,8 +20,8 @@ Class OniTitleStuff : EventHandler
 	ui TextureID gradtex;
 	ui int quakestr;
 	ui int rss;
-	int titletimer;
-	bool bFadeFromBlack;
+	ui int titletimer;
+	ui bool bFadeFromBlack;
 	ui Font mSmallFont, mBigFont;
 
 	private ui int GetUIRandom()
@@ -61,39 +62,30 @@ Class OniTitleStuff : EventHandler
 		}
 	}
 
-	override void WorldTick()
-	{
-		titletimer++;
-	}
-
-	override void WorldLoaded( WorldEvent e )
-	{
-		titletimer = 0;
-		let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
-		if ( !shnd ) return;
-		if ( shnd.titlefirst )
-		{
-			titletimer = GameTicRate*44+1;	// skip to logo (also skip the fire sound)
-			bFadeFromBlack = true;	// fade from black instead of white
-			S_ChangeMusic("music/ibuki_pretitlemus_skip.ogg",looping:false);
-		}
-		shnd.titlefirst = true;
-	}
-
-	// GROSS HACK, GROSS HACK
-	static ui bool IsBirthday()
-	{
-		return (SystemTime.Format("%d%m",SystemTime.Now()) == "0909");
-	}
-	static play void SetBirthday()
-	{
-		let hnd = OniTitleStuff(EventHandler.Find("OniTitleStuff"));
-		if ( !hnd.bFadeFromBlack )
-			hnd.titletimer = -200;
-	}
-
 	override void UiTick()
 	{
+		// you're not supposed to be here
+		if ( gamestate == GS_LEVEL )
+			ThrowAbortException("Attempted to warp into TITLEMAP");
+		if ( !bInitialized )
+		{
+			bInitialized = true;
+			titletimer = 0;
+			// birthday event
+			if ( SystemTime.Format("%d%m",SystemTime.Now()) == "0909" )
+				titletimer = -200;
+			let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
+			if ( shnd )
+			{
+				if ( shnd.titlefirst )
+				{
+					titletimer = GameTicRate*44+1;	// skip to logo (also skip the fire sound)
+					bFadeFromBlack = true;	// fade from black instead of white
+					S_ChangeMusic("music/ibuki_pretitlemus_skip.ogg",looping:false);
+				}
+				shnd.titlefirst = true;
+			}
+		}
 		quakestr = max(quakestr-1,0);
 		if ( titletimer == 1 ) S_ChangeMusic("music/ibuki_pretitlemus.ogg",looping:false);
 		else if ( titletimer == (43*GameTicRate) ) S_StartSound("aa12/titlecock",CHAN_WEAPON,CHANF_OVERLAP|CHANF_UI,1.,0.);
@@ -110,12 +102,7 @@ Class OniTitleStuff : EventHandler
 		}
 		else if ( titletimer == (50*GameTicRate) ) S_ChangeMusic("music/ibuki_titlemus.ogg");
 		TickSmokeLayers();
-		if ( gamestate != GS_LEVEL ) return;
-		// you're not supposed to be here
-		Menu.SetMenu('EndGameMenu');
-		let m = MessageBoxMenu(Menu.GetCurrentMenu());
-		if ( m ) m.HandleResult(true);
-		// special thanks to marrub for this absolute crime
+		titletimer++;
 	}
 
 	// heh
