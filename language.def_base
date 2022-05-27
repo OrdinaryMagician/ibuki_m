@@ -107,31 +107,30 @@ ONI_INTERTOTAL = "TOTAL TIME:";
 TT_ONIUNARMED =
 "\cg\"Sometimes you gotta do things manually.\"\c-\n"
 "\n"
-"\cgPrimary fire\c- to punch, hold to charge.\n"
-"\cgSecondary fire\c- to block, reduces damage.\n"
-"\cgUtility key\c- to blow a magic kiss.";
+"Beat the crap out of your enemies.\n"
+"Press \cgReload\c- to blow a magic kiss.";
 TT_ONISHOTGUN =
 "\cg\"The perfect tool for solving problems in an advanced way.\"\c-\n"
 "\n"
 "\cg12-gauge #1 Buckshot\c-, 32 rounds.\n"
-"Tap the \cgUtility key\c- to kiss the gun.\n"
-"It's a good gun, it deserves to be loved.";
+"Fully automatic, but short trigger pulls\n"
+"can act as a form of semi-auto fire.";
 TT_ONIBEAGLE =
 "\cg\"Oh, this doggy really does bite.\"\c-\n"
 "\n"
 "\cg.50 PE (12.7×33mmRB)\c-, 7+1 rounds.\n"
-"Press the \cgUtility key\c- to spin.";
+"Try to pace your shots adequately,\n"
+"or you'll quickly throw off your aim.";
 TT_ONIHRIFLE =
 "\cg\"There WAS a hell knight...\"\c-\n"
 "\n"
 "\cg.50 OMG (12.7×99mm)\c-, 2 rounds.\n"
-"Hold \cgUtility key\c- for two-shot mode.";
+"Double-tap to quickly shoot both rounds.";
 TT_ONIMACHINEGUN =
 "\cg\"Let's play a song together.\"\c-\n"
 "\n"
 "\cg7.62×54mmMT\c-, hammerspace-fed.\n"
-"Overheats with use, impacting accuracy.\n"
-"Cools down faster when stored.";
+"Doesn't need to reload, ever.";
 TT_ONIEXPLODER =
 "\cg\"Ah, the ultimate problem solver.\"\c-\n"
 "\n"
@@ -146,8 +145,7 @@ TT_ONITANKGUN =
 "\cg\"Hmmmm, I like me some big guns.\"\c-\n"
 "\n"
 "\cg120×935mm HEAT-MP-T\c-, single shot.\n"
-"Ammunition fed directly from hammerspace,\n"
-"but requires manual user reloading.";
+"Reload must be initiated manually.";
 TT_ONISLAYER =
 "\cg\"Man, this thing fucks...\"\c-\n"
 "\n"
@@ -157,10 +155,9 @@ TT_ONISLAYER =
 TT_ONIBATTER =
 "\cg\"Ahh, the American pastime...\"\c-\n"
 "\n"
-"\cgPrimary fire\c- to swing, hold to charge.\n"
-"\cgSecondary fire\c- to block, deflects bullets.\n"
-"Tap the \cgUtility key\c- to summon a baseball,\n"
-"which you can then hit with primary.";
+"Can deflect projectiles with adequate timing.\n"
+"Tap \cgReload\c- to summon a baseball,\n"
+"which you can hit for massive damage.";
 // intermission tips
 ONI_NINTERTIP = "33";
 ONI_INTERTIP = "Tip #%d:";
@@ -191,7 +188,7 @@ ONI_INTERTIP24 = "Ibuki's collar provides extra damage reduction at low health."
 ONI_INTERTIP25 = "If an enemy knocks you out, you can get back up and pwn them.";
 ONI_INTERTIP26 = "Ibuki can be a very kind and caring person.";
 ONI_INTERTIP27 = "You can crush enemies by falling on them.";
-ONI_INTERTIP28 = "Kiss your AA-12 every once in a while. It's a good gun.";
+ONI_INTERTIP28 = "Ibuki's love for the AA-12 was enhanced by the existence of a certain mobile game character.";
 ONI_INTERTIP29 = "Ibuki produces two liters of breast milk per week. Some people pay a decent amount for it.";
 ONI_INTERTIP30 = "Ibuki is a nudist (but you probably knew already).";
 ONI_INTERTIP31 = "Every time someone goes \"oof ouch her poor back\", Ibuki gets stronger.";

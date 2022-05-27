@@ -28,7 +28,7 @@ Note: **Ibuki** is 2.2m tall *(7'3" for 'mericans)*, which would generally make 
 
 **Ibuki**'s arsenal is a very personal one, composed of some of her favorites of all time (some of which are a bit too old, maybe, but still "gold").
 
-Most weapons have the usual obvious controls of primary fire to shoot, secondary fire to aim down the sights, and reload to... reload. Any extra actions, performed with the *"utility key"* *(Zoom)* will be mentioned in the weapon entry.
+Most weapons have the usual obvious controls of fire to shoot and reload to... reload.
 
 Mag management is entirely hassle-free, as ammunition is autoloaded on-demand within Hammerspace.
 
@@ -38,9 +38,7 @@ Mag management is entirely hassle-free, as ammunition is autoloaded on-demand wi
 
 Guns of your own making, two of them. Bash in some skulls.
 
-Primary fire punches, hold to punch harder. Secondary fire blocks, increasing damage resistance to frontal attacks.
-
-You can press the utility key to blow a magic kiss at enemies. Do note that your kisses are much stronger than **Demo-chan**'s.
+You can press reload to blow a magic kiss at enemies. Do note that your kisses are much stronger than **Demo-chan**'s.
 
 ### Slot 2 - Ninnacht AA12 *[Pistol, Elven Wand]*
 
@@ -49,8 +47,6 @@ You can press the utility key to blow a magic kiss at enemies. Do note that your
 **Ibuki**'s most prized possession. She would never go out into the field without it. 12 Gauge, 300 RPM, 32-round drum mag, truly a beauty.
 
 While you'd usually just hold the trigger and let 'er unload, you can also use quick taps to do single shots. Do note that thanks to its cleverly designed gas-operated firing mechanisms, recoil is almost nonexistent, so unload away without fear, you won't miss the target.
-
-Press the utility key to kiss the gun. It's a good gun.
 
 #### 12 Gauge *(#1 Buckshot)* *[Clip, Shells, Wand Crystals]*
 
@@ -66,7 +62,7 @@ A beefy handcannon of the olden days, made quite popular thanks to it being feat
 
 It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that. Has a propensity to turn squishy targets into meatloaf.
 
-You can give it a spin with the utility key. You'd think this could be dual-wielded, but **Ibuki** doesn't see a need for that, one puppy is enough.
+You'd think this could be dual-wielded, but **Ibuki** doesn't see a need for that, one puppy is enough.
 
 #### .50 PE *[Shells, Ethereal Arrows]*
 
@@ -80,8 +76,6 @@ Found in 7 round mags. Spare rounds may sometimes spawn too.
 
 Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG over-under hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
 
-Holding the utility key will switch to two-shot mode, for when you truly want something erased.
-
 #### .50 Oh My God *[Shells, Ethereal Arrows]*
 
 *"I don't think these really are that OMG-worthy, I've seen bigger."*
@@ -93,8 +87,6 @@ Found as either spare rounds or 10 round packs.
 *"I see we are kindred spirits, you and I."*
 
 A true Spanish beauty, popularly known as ***"La Tetuda"** (The One With The Big Tits)*. It's designed to handle **7.62mmMT** rounds, specifically, also of **ANFES** manufacture. **MT** ammunition is well-known for *"setting the air on fire"* as it travels, despite not containing any incendiary material.
-
-Note that the weapon has a tendency to get real hot from extended fire, so give it some time to rest every once in a while, or it'll quickly become an inaccurate mess. Putting it in hammerspace will make it cool down faster.
 
 It should be noted that this was one of the very first commercial firearms to feed ammunition directly from hammerspace, removing the need to carry bulky ammo belts around. Simply being linked to an external ammo box or an autoloader within storage will allow it to fire uninterrupted regardless of its physical distance from the source of ammunition.
 
@@ -166,11 +158,9 @@ Available as either single rounds or bunches of 2 and 3. These things are absolu
 
 A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. A rather drunk **Ashley Knox** asked **Misa** to make this as a birthday gift because it would allow you to *"exorcise evil spirits or some shit"*. **Saya** is very aware of the reference.
 
-Primary fire swings in front of you, can be held to charge up a wider swing. Secondary fire blocks, it's generally very effective due to the materials used *(can even deflect bullets if you hold it just right)*.
+Pressing reload throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
 
-Pressing the utility key throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
-
-Should be noted that this weapon also allows you to strike at enemy projectiles to send them back, too, if timed correctly.
+Should be noted that this weapon allows you to strike at enemy projectiles to send them back, if timed correctly. In some cases, you can even stop bullets as well.
 
 ## Items
 

@@ -86,31 +86,30 @@ ONI_INTERTOTAL = "TIEMPO TOTAL:";
 TT_ONIUNARMED =
 "\cg\"A veces hay que hacer las cosas a mano.\"\c-\n"
 "\n"
-"\cgFuego primario\c- para pegar, mantener para cargar.\n"
-"\cgFuego secundario\c- para bloquear, reduce daño.\n"
-"\cgTecla de utilidad\c- para soplar un beso mágico.";
+"Reparte hostias a mansalva entre tus enemigos.\n"
+"Pulsa \cgRecarga\c- para soplar un beso mágico.";
 TT_ONISHOTGUN =
 "\cg\"La herramienta perfecta para resolver problemas de forma avanzada.\"\c-\n"
 "\n"
 "\cgPerdigones #1 de calibre 12\c-, 32 cartuchos.\n"
-"Pulsa la\cgTecla de utilidad\c- para besar el arma.\n"
-"Es un arma buena, se merece todo el amor.";
+"Automática, pero con acciones cortas del gatillo\n"
+"se pude simular el fuego semiautomático.";
 TT_ONIBEAGLE =
 "\cg\"Oh, este perrito si que muerde.\"\c-\n"
 "\n"
 "\cg.50 PE (12.7×33mmRB)\c-, 7+1 balas.\n"
-"Pulsa \cgTecla de utilidad\c- para voltear.";
+"Intenta mantener un ritmo de disparo adecuado,\n"
+"o desviarás rápidamente tu puntería.";
 TT_ONIHRIFLE =
 "\cg\"HABÍA un caballero del infierno...\"\c-\n"
 "\n"
 "\cg.50 OMG (12.7×99mm)\c-, 2 balas.\n"
-"Mantén \cfTecla de utilidad\c- para modo de dos disparos.";
+"Un pulsado doble permite disparar ambas balas con rapidez.";
 TT_ONIMACHINEGUN =
 "\cg\"Cantemos una canción juntos.\"\c-\n"
 "\n"
 "\cf7.62×54mmMT\c-, alimentado por hammerspace.\n"
-"Se sobrecalienta con el uso, reduciendo la puntería.\n"
-"Se enfría mejor estando guardada.";
+"No necesita recargarse, nunca.";
 TT_ONIEXPLODER =
 "\cg\"Ah, el solucionador de problemas definitivo.\"\c-\n"
 "\n"
@@ -125,8 +124,7 @@ TT_ONITANKGUN =
 "\cg\"Hmmmm, me gustan las armas grandes.\"\c-\n"
 "\n"
 "\cg120×935mm HEAT-MP-T\c-, disparo único.\n"
-"La munición viene directamente de hammerspace,\n"
-"pero requiere la recarga manual del usuario.";
+"La recarga debe iniciarse manualmente.";
 TT_ONISLAYER =
 "\cg\"Tío, esta cosa folla...\"\c-\n"
 "\n"
@@ -136,10 +134,9 @@ TT_ONISLAYER =
 TT_ONIBATTER =
 "\cf\"Ahh, el pasatiempo Americano...\"\c-\n"
 "\n"
-"\cgFuego primario\c- para batear, mantén para cargar.\n"
-"\cgFuego secundario\c- para bloquear, desvía balas.\n"
-"Pulsa la\cgTecla de utilidad\c- para invocar una pelota,\n"
-"la cual puedes golpear luego con el primario.";
+"Puede desviar proyectiles con el ritmo adecuado.\n"
+"Pulsa \cgRecarga\c- para invocar una pelota,\n"
+"la cual puedes golpear para un daño masivo.";
 // intermission tips
 ONI_INTERTIP = "Consejo #%d:";
 ONI_INTERTIP1 = "Mantenerse hidratado es muy importante.";
@@ -169,7 +166,7 @@ ONI_INTERTIP24 = "El collar de Ibuki provee de protección extra contra daño en
 ONI_INTERTIP25 = "Si un enemigo te noquea, puedes volver a levantarte y zurrarle la badana.";
 ONI_INTERTIP26 = "Ibuki puede ser una persona muy amable y cariñosa.";
 ONI_INTERTIP27 = "Puedes aplastar enemigos al caerles encima.";
-ONI_INTERTIP28 = "Besa tu AA-12 de vez en cuando. Es una buena arma.";
+ONI_INTERTIP28 = "El amor de Ibuki por la AA-12 fue intensificado por la existencia de cierto personaje de juego de móvil.";
 ONI_INTERTIP29 = "Ibuki produce dos litros de leche materna por semana. Hay gente que paga mucho por ella.";
 ONI_INTERTIP30 = "Ibuki es nudista (aunque probablemente ya lo sabías).";
 ONI_INTERTIP31 = "Cada vez que alguien dice \"uy pobre que dolor de espalda\", Ibuki se hace más fuerte.";
