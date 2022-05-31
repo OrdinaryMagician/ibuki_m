@@ -21,12 +21,13 @@ Class IbukiPlayer : SWWMPlayer
 		Player.ViewBob 1.1;
 		DamageFactor "Falling", 0.;
 		SWWMPlayer.MoveSpeed .6, 1.35;
-		SWWMPlayer.DodgeSpeed 15;
+		SWWMPlayer.DodgeSpeed 13;
 		SWWMPlayer.MinCrouch .4;	// ensure same crouching height as a 56 unit tall player
 		SWWMPlayer.ResurrectType RT_REVIVE;
 		SWWMPlayer.PainThresholds 0, 20, 40, 60;
 		SWWMPlayer.HealthDecay 100;
 		SWWMPlayer.Buoyancy .6;
+		SWWMPlayer.DodgeDelay 25;
 		+NOBLOOD;
 		+DONTDRAIN;
 		+SWWMPLAYER.CANDODGE;
