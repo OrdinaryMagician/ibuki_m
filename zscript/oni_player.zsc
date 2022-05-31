@@ -26,6 +26,7 @@ Class IbukiPlayer : SWWMPlayer
 		SWWMPlayer.ResurrectType RT_REVIVE;
 		SWWMPlayer.PainThresholds 0, 20, 40, 60;
 		SWWMPlayer.HealthDecay 100;
+		SWWMPlayer.Buoyancy .6;
 		+NOBLOOD;
 		+DONTDRAIN;
 		+SWWMPLAYER.CANDODGE;
