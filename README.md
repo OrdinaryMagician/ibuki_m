@@ -60,9 +60,9 @@ Shells are usually found in handfuls of 4, or in 12 round boxes.
 
 A beefy handcannon of the olden days, made quite popular thanks to it being featured in practically every action movie and shooter game. It has resisted the test of time, and even some **UAC** marines are known to carry them. The official full naming of the caliber, devised by **Blackmann Arms**, cannot be disclosed without prompting chuckles from **Saya**.
 
-It would seemingly kick like a mule, but Ibuki doesn't have much trouble with that. Has a propensity to turn squishy targets into meatloaf.
+It would seemingly kick like a mule, but **Ibuki** doesn't have much trouble with that. Has a propensity to turn squishy targets into meatloaf.
 
-You'd think this could be dual-wielded, but **Ibuki** doesn't see a need for that, one puppy is enough.
+You'd think this could be dual-wielded, but nope, one puppy is more than enough.
 
 #### .50 PE *[Shells, Ethereal Arrows]*
 
@@ -75,6 +75,8 @@ Found in 7 round mags. Spare rounds may sometimes spawn too.
 *"There WAS a hell knight..."*
 
 Having miraculously come out unscathed from the **White Scar**, the **Garrett Gunners Group** celebrated with the creation of this .50 OMG over-under hunting rifle, popular among wastelanders at the time, and more popular nowadays among survivors of the demonic invasion of 2148, for its ability to *"erase"* beastly Hell nobles.
+
+A quick double-tap can shoot both barrels almost simultaneously.
 
 #### .50 Oh My God *[Shells, Ethereal Arrows]*
 
@@ -130,7 +132,7 @@ Plasma ammunition is generally found in **NATO** standard 60x72mm compressed arg
 
 *"This one's kinda hard to pull out of my cleavage, but it's worth it."*
 
-Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits, they'll get auto-loaded as needed.
+Portable **120mm** artillery? It's all possible thanks to **Cyrus Enterprises**. Just be sure to have enough room in your **Hammerspace** to store up plenty of rounds to blast 'em all to bits. Do note that you need to manually eject fired rounds in order for the auto-loader to feed another.
 
 #### 120mm "Redeemer" Warhead *[Cells, Mace Spheres]*
 
@@ -156,11 +158,11 @@ Available as either single rounds or bunches of 2 and 3. These things are absolu
 
 *"Ah, the American pastime..."*
 
-A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. A rather drunk **Ashley Knox** asked **Misa** to make this as a birthday gift because it would allow you to *"exorcise evil spirits or some shit"*. **Saya** is very aware of the reference.
+A slab of pure almasteel molded into the shape of a simple baseball bat. It's said that this thing is capable of *"literally beating the soul out of people"*. A rather drunk **Ashley Knox** asked **Misa** to make this as a birthday gift because it would allow you to *"exorcise evil spirits or some shit"*. **Saya** is very aware of the reference she was trying to make.
 
 Pressing reload throws a ball in front of you, which can be struck with the bat for ranged attacks. An endless supply of balls is provided through Hammerspace. This action can still be performed while holding primary fire.
 
-Should be noted that this weapon allows you to strike at enemy projectiles to send them back, if timed correctly. In some cases, you can even stop bullets as well.
+Should be noted that this weapon allows you to strike at enemy projectiles to send them back, if timed correctly.
 
 ## Items
 
