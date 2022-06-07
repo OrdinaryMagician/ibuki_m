@@ -283,9 +283,9 @@ Class OniStatusBar : SWWMStatusBar
 		yy = ss.y-(margin+66);
 		Screen.DrawTexture(AmmoTex,false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		xx += 2;
-		yy += 2;
+		yy += 44;
 		String str;
-		for ( int i=0; i<8; i++, yy+=6 )
+		for ( int i=0; i<8; i++, yy-=6 )
 		{
 			int amt, amax;
 			bool selected = false;
@@ -328,12 +328,12 @@ Class OniStatusBar : SWWMStatusBar
 					else selected = (CPlayer.ReadyWeapon.Ammo1 == cur)||(CPlayer.ReadyWeapon.Ammo2 == cur);
 				}
 			}
-			int ncolor = (amt>0)?mhudfontcol[MCR_WHITE]:mhudfontcol[MCR_RED];
 			int scol = mhudfontcol[selected?MCR_BRASS:MCR_WHITE];
+			int ncolor = (amt>0)?scol:mhudfontcol[MCR_RED];
 			int dcnt1 = 2-int(Log10(clamp(amt,1,999)));
 			int dcnt2 = 2-int(Log10(clamp(amax,1,999)));
 			for ( int i=0; i<dcnt1; i++ ) Screen.DrawChar(MiniHUDFont,ncolor,xx+20+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
-			for ( int i=0; i<dcnt2; i++ ) Screen.DrawChar(MiniHUDFont,mhudfontcol[selected?MCR_BRASS:MCR_WHITE],xx+38+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
+			for ( int i=0; i<dcnt2; i++ ) Screen.DrawChar(MiniHUDFont,scol,xx+38+i*4,yy,0x30,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(160,0,0,0));
 			str = AmmoNames[i];
 			Screen.DrawText(MiniHUDFont,scol,xx,yy,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 			str = "/";
