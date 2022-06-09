@@ -283,9 +283,9 @@ Class OniStatusBar : SWWMStatusBar
 		yy = ss.y-(margin+66);
 		Screen.DrawTexture(AmmoTex,false,xx,yy,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		xx += 2;
-		yy += 44;
+		yy += 2;
 		String str;
-		for ( int i=0; i<8; i++, yy-=6 )
+		for ( int i=0; i<8; i++, yy+=6 )
 		{
 			int amt, amax;
 			bool selected = false;
