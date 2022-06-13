@@ -94,10 +94,10 @@ Class OniStatusBar : SWWMStatusBar
 					maxamt *= m.ClipSize;
 				}
 			}
-			if ( amt > AmmoOldAmounts[i] ) AmmoFlash[i] = gametic+25;
+			if ( (amt > AmmoOldAmounts[i]) && (AmmoOldAmounts[i] != int.min) ) AmmoFlash[i] = gametic+25;
 			AmmoOldAmounts[i] = amt;
 			if ( i >= 8 ) break;
-			if ( maxamt > AmmoOldMaxAmounts[i] ) AmmoMaxFlash[i] = gametic+25;
+			if ( (maxamt > AmmoOldMaxAmounts[i]) && (AmmoOldMaxAmounts[i] != int.min) ) AmmoMaxFlash[i] = gametic+25;
 			AmmoOldMaxAmounts[i] = maxamt;
 		}
 	}
@@ -290,24 +290,21 @@ Class OniStatusBar : SWWMStatusBar
 			int amt, amax;
 			bool selected = false;
 			let a = AmmoSlots[i];
-			let cur = Ammo(CPlayer.mo.FindInventory(a));
+			let cur = SWWMAmmo(CPlayer.mo.FindInventory(a));
 			if ( !cur )
 			{
 				amt = 0;
 				amax = GetDefaultByType(a).MaxAmount;
-				if ( a is 'SWWMAmmo' )
-				{
-					let def = GetDefaultByType((Class<SWWMAmmo>)(a));
-					if ( def.MagAmmoType ) amax *= GetDefaultByType(def.MagAmmoType).ClipSize;
-				}
+				let def = GetDefaultByType(a);
+				if ( def.MagAmmoType ) amax *= GetDefaultByType(def.MagAmmoType).ClipSize;
 			}
 			else
 			{
 				amt = cur.Amount;
 				amax = cur.MaxAmount;
-				if ( (cur is 'SWWMAmmo') && SWWMAmmo(cur).MagAmmoType )
+				if ( cur.MagAmmoType )
 				{
-					let mag = MagAmmo(CPlayer.mo.FindInventory(SWWMAmmo(cur).MagAmmoType));
+					let mag = MagAmmo(CPlayer.mo.FindInventory(cur.MagAmmoType));
 					// theoretically this should never be null, but nevertheless...
 					if ( mag )
 					{
@@ -316,7 +313,7 @@ Class OniStatusBar : SWWMStatusBar
 					}
 					else
 					{
-						let def = GetDefaultByType(SWWMAmmo(cur).MagAmmoType);
+						let def = GetDefaultByType(cur.MagAmmoType);
 						amt = amt*def.ClipSize;
 						amax = amax*def.ClipSize+def.MaxAmount;
 					}
