@@ -1,4 +1,4 @@
 STARTUPCOLORS = "A0 00 00", "80 00 00"
 STARTUPTITLE = "RED ONI"
 STARTUPTYPE = "Hexen"
-STARTUPSONG = "music/ibuki_intermus.ogg"
+STARTUPSONG = ""
