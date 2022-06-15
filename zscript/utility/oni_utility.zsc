@@ -10,17 +10,58 @@ extend Class SWWMUtility
 		return false;
 	}
 
+	static Class<Inventory> PickOniSlot2()
+	{
+		if ( !ItemExists('OniAA12') ) return 'OniAA12';
+		return 'OniAA12Ammo';
+	}
+	static Class<Inventory> PickOniSlot3()
+	{
+		if ( !ItemExists('OniBeagle') ) return 'OniBeagle';
+		return 'OniBeagleAmmo';
+	}
+	static Class<Inventory> PickOniSlot4()
+	{
+		if ( !ItemExists('OniHRifle') ) return 'OniHRifle';
+		return 'OniSledgeAmmo_2';
+	}
+	static Class<Inventory> PickOniSlot5()
+	{
+		if ( !ItemExists('OniMachinegun') ) return 'OniMachinegun';
+		return 'OniMachAmmo_50';
+	}
+	static Class<Inventory> PickOniSlot6()
+	{
+		if ( !ItemExists('OniExploder') ) return 'OniExploder';
+		return 'OniExploAmmo';
+	}
+	static Class<Inventory> PickOniSlot7()
+	{
+		if ( !ItemExists('OniPlasmaRifle') ) return 'OniPlasmaRifle';
+		return 'OniPlasmaAmmo';
+	}
+	static Class<Inventory> PickOniSlot8()
+	{
+		if ( !ItemExists('OniTankGun') ) return 'OniTankGun';
+		return 'OniWarheadAmmo';
+	}
+	static Class<Inventory> PickOniSlot9()
+	{
+		if ( !ItemExists('OniSlayer') ) return 'OniSlayer';
+		return 'OniBoarAmmo_3';
+	}
+
 	// melee weapon first, then boar slayer
-	static Class<Weapon> PickDoomSlot1()
+	static Class<Inventory> PickDoomSlot1()
 	{
 		if ( CheckNeedsItem('OniBatter') ) return 'OniBatter';
-		return 'OniSlayer';
+		return PickOniSlot9();
 	}
 	// either shotgun spawn (also used for Heretic)
-	static Class<Weapon> PickDoomSlot3()
+	static Class<Inventory> PickDoomSlot3()
 	{
 		// always slot 3 after map start, prevents shotgun guys from dropping super shotguns, which is weird af
-		if ( level.maptime ) return 'OniBeagle';
+		if ( level.maptime ) return PickOniSlot3();
 		bool hasslot3 = !CheckNeedsItem('OniBeagle');
 		bool hasslot4 = !CheckNeedsItem('OniHRifle');
 		// if the player already has a slot 3 weapon...
@@ -28,10 +69,10 @@ extend Class SWWMUtility
 		{
 			// ... and also has a slot 4 weapon, 33% chance of a slot 4 spawn
 			// otherwise, guaranteed slot 4 spawn
-			if ( hasslot4 && Random[Replacements](0,2) ) return 'OniBeagle';
-			return 'OniHRifle';
+			if ( hasslot4 && Random[Replacements](0,2) ) return PickOniSlot3();
+			return PickOniSlot4();
 		}
 		// otherwise, always spawn a slot 3 weapon first
-		return 'OniBeagle';
+		return PickOniSlot3();
 	}
 }

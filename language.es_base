@@ -39,10 +39,15 @@ T_ONIBOARROUND = "Bala de 50mm Areka";
 T_ONIBOARROUNDS = "Balas de 50mm Areka";
 T_ONILISA = "Dispositivo Rompehabitaciones LiSA";
 T_ONILISAS = "Dispositivos Rompehabitaciones LiSA";
-T_ONISMALLWATER = "Botella de Agua Pequeña";
+T_ONICANDY = "Caramelo";
+T_ONICANDY0 = "Caramelo de Manzana";
+T_ONICANDY1 = "Caramelo de Fresa";
+T_ONICANDY2 = "Caramelo de Limón";
+T_ONICANDY3 = "Caramelo de Naranja";
+T_ONICANDY4 = "Caramelo de Mora";
+T_ONICANDY5 = "Caramelo de Cola";
 T_ONIMEDWATER = "Botella de Agua Mediana";
 T_ONILARGEWATER = "Botella de Agua Grande";
-T_ONISMALLOIL = "Botella de Aceite Pequeña";
 T_ONIMEDOIL = "Botella de Aceite Mediana";
 T_ONILARGEOIL = "Botella de Aceite Grande";
 T_ONISPIRIT = "Estimulante Espiritual";
@@ -115,7 +120,7 @@ TT_ONIEXPLODER =
 "\n"
 "\cg20mm Mk.299 Tandem HEAT-MP\c-, 5 disparos.\n"
 "El perno tiene que ser accionado manualmente tras cada disparo.";
-TT_rNIPLASMARIFLE =
+TT_ONIPLASMARIFLE =
 "\cg\"Vaya reliquia tenemos aquí.\"\c-\n"
 "\n"
 "\cgCélula de Argón de 60x72mm\c-, 30 disparos.\n"

@@ -1,18 +1,24 @@
 // Item pickup models
 
-Model "OniSmallOil"
+Model "OniCandy"
 {
 	Path "models/extra"
 
 	Model 0 "BaseCube_d.3d"
-	Skin 0 "CHIPTILG"
-	Scale 0.02 0.02 0.02
+	Skin 0 "CHIPTILB"
+	Scale 0.01 0.01 0.01
 	ZOffset 16
 	PitchOffset 30
 	ROTATING
 
 	FrameIndex XZW1 A 0 0
+	FrameIndex XZW1 B 0 0
+	FrameIndex XZW1 C 0 0
+	FrameIndex XZW1 D 0 0
+	FrameIndex XZW1 E 0 0
+	FrameIndex XZW1 F 0 0
 }
+
 Model "OniMedOil"
 {
 	Path "models/extra"
@@ -40,19 +46,6 @@ Model "OniLargeOil"
 	FrameIndex XZW1 A 0 0
 }
 
-Model "OniSmallWater"
-{
-	Path "models/extra"
-
-	Model 0 "BaseCube_d.3d"
-	Skin 0 "CHIPTILB"
-	Scale 0.02 0.02 0.02
-	ZOffset 16
-	PitchOffset 30
-	ROTATING
-
-	FrameIndex XZW1 A 0 0
-}
 Model "OniMedWater"
 {
 	Path "models/extra"

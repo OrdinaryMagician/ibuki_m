@@ -56,25 +56,6 @@ Class OniOilArmor : SWWMArmor
 	}
 }
 
-Class OniSmallOil : SWWMSpareArmor
-{
-	Default
-	{
-		Tag "$T_ONISMALLOIL";
-		Inventory.Icon "graphics/HUD/Icons/I_OniSmallOil.png";
-		Inventory.PickupMessage "$T_ONISMALLOIL";
-		Inventory.MaxAmount 15;
-		Inventory.InterHubAmount 15;
-		SWWMSpareArmor.GiveArmor "OniOilArmor";
-		SWWMSpareArmor.GiveAmount 50;
-	}
-	States
-	{
-	Spawn:
-		XZW1 A -1;
-		Stop;
-	}
-}
 Class OniMedOil : SWWMSpareArmor
 {
 	Default
@@ -85,7 +66,7 @@ Class OniMedOil : SWWMSpareArmor
 		Inventory.MaxAmount 10;
 		Inventory.InterHubAmount 10;
 		SWWMSpareArmor.GiveArmor "OniOilArmor";
-		SWWMSpareArmor.GiveAmount 200;
+		SWWMSpareArmor.GiveAmount 100;
 	}
 	States
 	{
@@ -104,7 +85,7 @@ Class OniLargeOil : SWWMSpareArmor
 		Inventory.MaxAmount 5;
 		Inventory.InterHubAmount 5;
 		SWWMSpareArmor.GiveArmor "OniOilArmor";
-		SWWMSpareArmor.GiveAmount 500;
+		SWWMSpareArmor.GiveAmount 250;
 	}
 	States
 	{

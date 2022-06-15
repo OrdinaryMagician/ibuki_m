@@ -168,11 +168,17 @@ Should be noted that this weapon allows you to strike at enemy projectiles to se
 
 Gotta have some of these too to help in your adventure. **Ibuki** will happily hoard what she doesn't need to use right away. Items that are at max capacity will not be picked up, but nevertheless they will still be tallied and have their script specials activate when touched.
 
-### Water Bottle *[Health Bonus, Stimpack, Medikit, Crystal Vial, Quartz Flask]*
+### Soft Candy *[Health/Armor Bonus, Time Bomb of the Ancients]*
+
+*"Nothing like a sweet little treat to calm my nerves..."*
+
+A small appetizer. Flavors are randomized, each giving anywhere between 1 and 6 HP. Keep in mind **Ibuki** loves snacking as much as **Saya**, so she'll munch on these even if she doesn't need the healing.
+
+### Water Bottle *[Stimpack, Medikit, Crystal Vial, Quartz Flask]*
 
 *"I know a sizable number of people who should drink more of this, because they sure are thirsty..."*
 
-Staying hydrated is important. Available in three sizes, recovering 5 HP, 20 HP and 50 HP each.
+Staying hydrated is important. Available in two sizes, recovering 10 HP and 25 HP each.
 
 ### Spiritual Stimulant *[Soulsphere, Megasphere, Mystic Urn]*
 
@@ -180,7 +186,7 @@ Staying hydrated is important. Available in three sizes, recovering 5 HP, 20 HP 
 
 A potent overheal of 100 HP with no upper cap whatsoever. Note that any healing above 100 will wear off over time, faster the higher it's at. Megaspheres are replaced by two of them, for a 200 HP boost.
 
-### Oil Bottle *[Armor Bonus, Green Armor, Blue Armor, Silver Shield, Enchanted Shield]*
+### Oil Bottle *[Green Armor, Blue Armor, Silver Shield, Enchanted Shield]*
 
 *"Time to oil up..."*
 

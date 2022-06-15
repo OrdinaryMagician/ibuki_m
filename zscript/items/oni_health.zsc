@@ -17,25 +17,36 @@ Class OniSpiritHeal : Health
 	}
 }
 
-Class OniSmallWater : SWWMHealth
+Class OniCandy : SWWMHealth
 {
+	int ctype;
 	Default
 	{
-		Tag "$T_ONISMALLWATER";
-		Inventory.Icon "graphics/HUD/Icons/I_OniSmallWater.png";
-		Inventory.PickupMessage "$T_ONISMALLWATER";
-		Inventory.MaxAmount 15;
-		Inventory.InterHubAmount 15;
+		Tag "$T_ONICANDY";
+		Inventory.MaxAmount 0;
+		Inventory.InterHubAmount 0;
 		SWWMHealth.GiveHealth "OniBasicHeal";
-		SWWMHealth.GiveAmount 5;
+		SWWMHealth.GiveAmount 1;
+	}
+	override String PickupMessage()
+	{
+		return StringTable.Localize("$T_ONICANDY"..ctype);
+	}
+	void A_SetCandy()
+	{
+		ctype = Random[Candy](0,5);
+		giveamt = ctype+1;
+		SetState(SpawnState+ctype+1);
 	}
 	States
 	{
 	Spawn:
-		XZW1 A -1;
+		XZW1 A 0 NoDelay A_SetCandy();
+		XZW1 ABCDEF -1;
 		Stop;
 	}
 }
+
 Class OniMedWater : SWWMHealth
 {
 	Default
@@ -46,7 +57,7 @@ Class OniMedWater : SWWMHealth
 		Inventory.MaxAmount 10;
 		Inventory.InterHubAmount 10;
 		SWWMHealth.GiveHealth "OniBasicHeal";
-		SWWMHealth.GiveAmount 20;
+		SWWMHealth.GiveAmount 10;
 	}
 	States
 	{
@@ -65,7 +76,7 @@ Class OniLargeWater : SWWMHealth
 		Inventory.MaxAmount 5;
 		Inventory.InterHubAmount 5;
 		SWWMHealth.GiveHealth "OniBasicHeal";
-		SWWMHealth.GiveAmount 50;
+		SWWMHealth.GiveAmount 25;
 	}
 	States
 	{
