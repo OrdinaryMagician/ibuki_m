@@ -92,10 +92,6 @@ Class OniStatScreen : SWWMStatScreen
 		}
 	}
 	// heh
-	private clearscope double smerp( double a ) const
-	{
-		return (sin((a-.5)*180.)+1.)/2.;
-	}
 	override void drawSWWMBg()
 	{
 		double GameSecs = (bcnt+fractic)/double(GameTicRate);
@@ -118,7 +114,7 @@ Class OniStatScreen : SWWMStatScreen
 		if ( !ibukitex[2] ) ibukitex[2] = TexMan.CheckForTexture("graphics/title_ibuki_eye.png",TexMan.Type_Any);
 		double ofs;
 		if ( sp_state >= 2 ) ofs = 120;
-		else ofs = 120*smerp(clamp(GameSecs,0.,1.));
+		else ofs = 120*SWWMUtility.smerp(clamp(GameSecs,0.,1.));
 		Screen.DrawTexture(ibukitex[0],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
 		Screen.DrawTexture(ibukitex[1],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,.5);
 		Screen.DrawTexture(ibukitex[2],false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight()+450*texscl,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);

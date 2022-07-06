@@ -10,7 +10,6 @@ Class OniPlasmaRifle : SWWMWeapon
 		Tag "$T_ONIPLASMARIFLE";
 		Inventory.PickupMessage "$I_ONIPLASMARIFLE";
 		SWWMWeapon.Tooltip "$TT_ONIPLASMARIFLE";
-		Inventory.Icon "graphics/HUD/Icons/W_OniPlasmaRifle.png";
 		Weapon.SlotNumber 7;
 		Weapon.SlotPriority 1.;
 		Weapon.SelectionOrder 100;

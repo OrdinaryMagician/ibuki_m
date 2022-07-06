@@ -12,7 +12,6 @@ Class OniSlayer : SWWMWeapon
 		Inventory.PickupMessage "$I_ONISLAYER";
 		Inventory.PickupSound "misc/w_pkup_vip";
 		SWWMWeapon.Tooltip "$TT_ONISLAYER";
-		Inventory.Icon "graphics/HUD/Icons/W_OniSlayer.png";
 		Weapon.SlotNumber 9;
 		Weapon.SlotPriority 1.;
 		Weapon.SelectionOrder 8000;

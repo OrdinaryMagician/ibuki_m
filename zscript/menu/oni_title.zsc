@@ -105,12 +105,6 @@ Class OniTitleStuff : EventHandler
 		titletimer++;
 	}
 
-	// heh
-	private clearscope double smerp( double a ) const
-	{
-		return (sin((a-.5)*180.)+1.)/2.;
-	}
-
 	private ui void RenderSmokeLayer( RenderEvent e, double GameSecs, bool back, double alpha = 1., double disp = 0., bool zoomout = false )
 	{
 		double zoomscl = Screen.GetHeight()/(zoomout?600:400.);
@@ -185,7 +179,7 @@ Class OniTitleStuff : EventHandler
 		if ( titletimer < (42*GameTicRate) )
 		{
 			alf = clamp(GameSecs/40.,.2,1.);
-			double disp = smerp(clamp((GameSecs-16)/25.,0,1));
+			double disp = SWWMUtility.smerp(clamp((GameSecs-16)/25.,0,1));
 			RenderSmokeLayer(e,GameSecs,true,clamp(alf*2.,.2,1.),200.*disp);
 			Screen.DrawTexture(ibukitex[0],false,Screen.GetWidth()/2+zoomscl*50,Screen.GetHeight()+zoomscl*1700.*disp,DTA_ScaleX,zoomscl,DTA_ScaleY,zoomscl,DTA_ColorOverlay,Color(255-int(alf*255),0,0,0));
 			RenderSmokeLayer(e,GameSecs,false,clamp(alf*2.,.2,1.)*.5,400.*disp);

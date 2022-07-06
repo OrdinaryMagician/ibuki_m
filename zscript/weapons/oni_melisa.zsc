@@ -6,7 +6,6 @@ Class OniMachinegun : SWWMWeapon
 		Tag "$T_ONIMACHINEGUN";
 		Inventory.PickupMessage "$I_ONIMACHINEGUN";
 		SWWMWeapon.Tooltip "$TT_ONIMACHINEGUN";
-		Inventory.Icon "graphics/HUD/Icons/W_OniMachinegun.png";
 		Weapon.SlotNumber 5;
 		Weapon.SlotPriority 1.;
 		Weapon.SelectionOrder 100;

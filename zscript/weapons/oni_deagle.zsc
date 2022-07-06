@@ -11,7 +11,6 @@ Class OniBeagle : SWWMWeapon
 		Tag "$T_ONIBEAGLE";
 		Inventory.PickupMessage "$I_ONIBEAGLE";
 		SWWMWeapon.Tooltip "$TT_ONIBEAGLE";
-		Inventory.Icon "graphics/HUD/Icons/W_OniBeagle.png";
 		Weapon.SlotNumber 3;
 		Weapon.SlotPriority 1.;
 		Weapon.SelectionOrder 100;

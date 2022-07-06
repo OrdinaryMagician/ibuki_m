@@ -10,7 +10,6 @@ Class OniHRifle : SWWMWeapon
 		Tag "$T_ONIHRIFLE";
 		Inventory.PickupMessage "$I_ONIHRIFLE";
 		SWWMWeapon.Tooltip "$TT_ONIHRIFLE";
-		Inventory.Icon "graphics/HUD/Icons/W_OniHRifle.png";
 		Weapon.SlotNumber 4;
 		Weapon.SlotPriority 1.;
 		Weapon.SelectionOrder 100;
